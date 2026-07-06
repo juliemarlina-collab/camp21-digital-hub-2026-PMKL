@@ -1,0 +1,234 @@
+/* ==========================================================================
+   CAMP21 GLOBAL NEO-HERITAGE STYLING ARCHITECTURE
+   ========================================================================== */
+:root {
+  /* Design Tokens from index.html */
+  --neo-ultraviolet: #4A00E0; 
+  --neo-tangerine: #FF512F;   
+  --neo-jade: #00E676;        
+  --neo-gold: #FFD700;        
+  --neo-ink: #111111;
+  --bg-crisp: #FFFCF8;
+  
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --radius-sequence: 28px;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Free-Flow Layout Rules */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-crisp);
+  color: var(--neo-ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: 5.5rem;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.wide { width: min(100% - 48px, 1240px); margin-inline: auto; }
+
+/* Scroll Reveal Engine */
+.reveal { opacity: 0; transform: translateY(30px); transition: var(--transition-smooth); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   HEADER & FLOATING NAVIGATION (Clean, Light, Borderless)
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255, 252, 248, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.05);
+  padding: 1.2rem 0;
+}
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 900; font-size: 1.5rem; color: var(--neo-ink); letter-spacing: -0.03em; }
+.brand span { color: var(--neo-tangerine); }
+
+.nav-links { display: flex; gap: 2.2rem; align-items: center; }
+.nav-links a { font-weight: 700; font-size: 0.95rem; transition: color 0.3s ease; }
+.nav-links a:hover { color: var(--neo-tangerine); }
+
+.btn-primary {
+  background: var(--neo-ink); color: #fff;
+  padding: 0.8rem 1.6rem; border-radius: 999px;
+  font-weight: 800; font-size: 0.9rem;
+  transition: var(--transition-smooth);
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--neo-ultraviolet); transform: translateY(-2px); }
+
+/* ==========================================================================
+   UNBOXED PATHWAYS & GENERAL INTERFACE ROWS
+   ========================================================================== */
+.fluid-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 2.5rem 0; border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  transition: var(--transition-smooth); cursor: pointer;
+}
+.fluid-row:hover { padding-left: 1.5rem; border-bottom-color: var(--neo-tangerine); }
+.fluid-title { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; text-transform: uppercase; color: rgba(17,17,17,0.25); transition: var(--transition-smooth); }
+.fluid-row:hover .fluid-title { color: var(--neo-ink); }
+.fluid-desc { font-weight: 500; max-width: 350px; color: #555; opacity: 0; transition: var(--transition-smooth); }
+.fluid-row:hover .fluid-desc { opacity: 1; }
+.fluid-arrow { font-size: 2.5rem; color: var(--neo-tangerine); opacity: 0; transform: translateX(-15px); transition: var(--transition-smooth); }
+.fluid-row:hover .fluid-arrow { opacity: 1; transform: translateX(0); }
+
+/* ==========================================================================
+   SOLID MIX-MATCH SEQUENCE BLOCKS (Exact 1:1 Match to image_4afb20.png)
+   ========================================================================== */
+.sequence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.sequence-block {
+  border-radius: var(--radius-sequence);
+  padding: 2.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  transition: var(--transition-smooth);
+  position: relative;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+.sequence-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(74, 0, 224, 0.12);
+}
+
+.sequence-block h3 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.sequence-block p {
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.stage-badge {
+  display: inline-table;
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+/* Strict Color Assignment from image_4afb20.png */
+.seq-purple { background-color: var(--neo-ultraviolet); color: #fff; }
+.seq-purple .stage-badge { background-color: var(--neo-tangerine); color: #fff; }
+
+.seq-jade { background-color: var(--neo-jade); color: var(--neo-ink); }
+.seq-jade .stage-badge { background-color: var(--neo-ink); color: var(--neo-jade); }
+
+.seq-tangerine { background-color: var(--neo-tangerine); color: #fff; }
+.seq-tangerine .stage-badge { background-color: var(--neo-ultraviolet); color: #fff; }
+
+.seq-dark { background-color: var(--neo-ink); color: #fff; }
+.seq-dark .stage-badge { background-color: var(--neo-gold); color: var(--neo-ink); }
+
+/* General Unboxed Containers (Non-sequential areas) */
+.unboxed-card {
+  background: transparent;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .sequence-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .sequence-grid { grid-template-columns: 1fr; }
+  .fluid-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .fluid-desc { opacity: 1; }
+}
+/* ==========================================================================
+   SHARED HEADER & FOOTER — matches index.html master design
+   ========================================================================== */
+:root {
+  --navy:   #14104a;
+  --rose:   #e23c74;
+  --gold:   #c8952c;
+  --cream:  #fff8ef;
+  --ink:    #1a1060;
+  --muted:  #6b6b8a;
+  --border: rgba(20,16,74,0.10);
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+}
+
+/* ── HEADER ── */
+header {
+  position: fixed; inset: 0 0 auto; z-index: 100;
+  background: rgba(255,248,239,0.94); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); padding: 0.85rem 0;
+}
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: 0.55rem; font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem; color: var(--navy); letter-spacing: -0.01em; text-decoration: none; }
+.brand-icon { width: 46px; height: 46px; border-radius: 50%; object-fit: contain; }
+.brand span { color: var(--rose); }
+.nav-links { display: flex; gap: 1.6rem; align-items: center; }
+.nav-links a { font-weight: 700; font-size: 0.9rem; color: var(--ink); transition: color 0.25s; text-decoration: none; }
+.nav-links a:hover { color: var(--rose); }
+.btn-nav { background: var(--rose) !important; color: #fff !important; padding: 0.65rem 1.3rem; border-radius: 999px; font-weight: 900; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.25s, transform 0.25s; }
+.btn-nav:hover { background: #c4205a !important; color: #fff !important; transform: translateY(-1px); }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--navy); font-size: 1.5rem; }
+@media (max-width: 768px) { .nav-links { display: none; } .menu-btn { display: block; } }
+
+/* ── FOOTER ── */
+footer { background: var(--navy); color: #fff; padding: 3.5rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 2.4rem; margin-bottom: 2.8rem; }
+.footer-brand .brand { color: #fff; margin-bottom: 0.8rem; }
+.footer-brand .brand span { color: var(--rose); }
+.footer-brand p { color: rgba(255,248,239,0.6); font-size: 0.9rem; line-height: 1.55; max-width: 240px; }
+.footer-col h4 { color: var(--gold); font-size: 0.75rem; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; list-style: none; padding: 0; }
+.footer-col a, .footer-col p { color: rgba(255,248,239,0.65); font-size: 0.9rem; transition: color 0.2s; }
+.footer-col a:hover { color: var(--rose); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.footer-bottom .copy { color: rgba(255,248,239,0.4); font-size: 0.82rem; }
+.footer-bottom .dates { color: rgba(179,157,219,0.9); font-weight: 700; font-size: 0.82rem; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+
+/* ==========================================================================
+   PAGE HERO — shared dark navy hero for inner pages (not homepage)
+   ========================================================================== */
+.page-hero {
+  background: var(--navy);
+  padding: 6rem 0 2.5rem;
+  color: #fff;
+}
+.page-hero .wide { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.page-hero-eyebrow { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
+.page-hero-title { font-family: var(--font-serif,'Cormorant Garamond',serif); font-size: clamp(2.2rem,5vw,3.8rem); font-weight: 600; line-height: 1.05; margin-bottom: 0.8rem; color: #fff; }
+.page-hero-sub { font-size: 1rem; color: rgba(255,255,255,0.6); max-width: 520px; font-weight: 500; line-height: 1.6; }
