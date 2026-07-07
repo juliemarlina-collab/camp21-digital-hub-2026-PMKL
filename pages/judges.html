@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMP21 Judges Hub | Day 4 Evaluation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#151044; --indigo:#26105A; --cream:#FFF8EF; --paper:#FFFFFF;
+      --gold:#D7A62F; --rose:#E83B78; --violet:#6B3BE8; --teal:#18BFB4;
+      --green:#2E8B45; --orange:#E96B16; --ink:#15142F; --muted:#67657C;
+      --line:#E7E2D8; --shadow:0 18px 50px rgba(21,16,68,.12);
+    }
+    *{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif} a{text-decoration:none;color:inherit}.wide{width:min(1180px,92vw);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,248,239,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(21,16,68,.08)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--navy)}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:26px;align-items:center;color:#5f5a76;font-weight:700}.btn-nav{background:var(--rose);color:white;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 10px 24px rgba(232,59,120,.25)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(21,16,68,.98),rgba(38,16,90,.95));color:white;padding:5rem 0 3.5rem}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 18%,rgba(232,59,120,.32),transparent 28%),radial-gradient(circle at 15% 70%,rgba(24,191,180,.22),transparent 30%)}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end}.eyebrow{display:inline-flex;background:var(--gold);color:var(--navy);padding:.35rem 1rem;border-radius:999px;text-transform:uppercase;font-weight:900;letter-spacing:.13em;font-size:.75rem;margin-bottom:1.1rem}.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5.4rem);line-height:.9;margin:.2rem 0 1rem}.hero p{max-width:680px;color:#d9d1ef;font-size:1.08rem;line-height:1.65;margin:0}.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:1.2rem}.stat b{display:block;color:var(--gold);font-size:2rem}.stat span{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:#cfc4e8;font-weight:900}
+    .alert{background:var(--gold);color:var(--navy);font-weight:800}.alert .wide{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:1rem 0}.alert strong{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}.section{padding:4rem 0}.section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.1rem,4vw,3.2rem);margin:0 0 .4rem;color:var(--navy)}.section-lead{color:var(--muted);font-size:1rem;max-width:760px;line-height:1.65;margin:0 0 2rem}
+    .grid{display:grid;gap:1.2rem}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:1.5rem;box-shadow:var(--shadow)}.dark-card{background:var(--navy);color:white}.gold-card{background:var(--gold);color:var(--navy)}.rose-card{background:var(--rose);color:white}.violet-card{background:var(--violet);color:white}.teal-card{background:var(--teal);color:white}.card h3{margin:.2rem 0 .7rem;font-size:1.25rem}.card p{margin:0;color:inherit;opacity:.78;line-height:1.6}.pill{display:inline-flex;align-items:center;border-radius:999px;padding:.32rem .7rem;font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.18);margin-bottom:.7rem}.light-pill{background:#F4EDDF;color:var(--navy)}
+    .timeline{display:grid;grid-template-columns:repeat(4,1fr);border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}.slot{padding:1.4rem;color:white;min-height:210px}.slot small{display:block;text-transform:uppercase;font-weight:900;letter-spacing:.12em;opacity:.6}.slot h3{font-size:1.4rem;margin:.65rem 0 .7rem}.slot ul{padding-left:1.1rem;margin:.6rem 0 0;line-height:1.55;font-size:.9rem}.s1{background:var(--navy)}.s2{background:var(--violet)}.s3{background:#858515}.s4{background:#A84E26}
+    .table-wrap{overflow:auto;background:white;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:1rem;border-bottom:1px solid #eee;text-align:left;vertical-align:top}th{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--navy);background:#FAF4EA}td{font-size:.92rem;color:#2b2944}.status{display:inline-flex;border-radius:999px;padding:.3rem .6rem;background:#F2F0F8;font-weight:900;font-size:.72rem}.ready{background:#DDF7E8;color:#14682D}.pending{background:#FFF0D1;color:#8A5A00}.review{background:#E9E3FF;color:#4620B6}
+    .rubric{display:grid;gap:1rem}.rubric-row{display:grid;grid-template-columns:90px 1fr 140px;gap:1rem;align-items:center;background:white;border:1px solid var(--line);border-radius:20px;padding:1rem}.score{font-size:1.6rem;font-weight:900;color:var(--rose)}.rubric-row h4{margin:0 0 .25rem}.rubric-row p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}.checklist{display:grid;gap:.85rem}.check{display:flex;gap:.85rem;align-items:flex-start;background:white;border:1px solid var(--line);border-radius:18px;padding:1rem}.box{width:22px;height:22px;border:2px solid var(--violet);border-radius:6px;flex:0 0 auto;margin-top:.1rem}.smartdt{background:var(--navy);color:white}.smartdt .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);box-shadow:none}.footer{background:#21113F;color:#d6cbe8;padding:3rem 0}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem}.footer h4{color:var(--gold);margin:0 0 .8rem}.footer p,.footer a{color:#d6cbe8;line-height:1.7}.print-btn{border:0;background:var(--gold);color:var(--navy);border-radius:999px;padding:.85rem 1.2rem;font-weight:900;cursor:pointer}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-stats,.grid-3,.grid-4,.timeline,.footer-grid{grid-template-columns:1fr}.navlinks{display:none}.rubric-row{grid-template-columns:1fr}.slot{min-height:auto}.alert .wide{align-items:flex-start;flex-direction:column}}
+    @media print{header,.alert,.print-btn{display:none}.section{padding:1.5rem 0}.card,.table-wrap,.rubric-row{box-shadow:none}.hero{padding:2rem 0}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wide nav">
+      <a href="../index.html" class="brand">CAMP<span>21</span></a>
+      <nav class="navlinks">
+        <a href="../index.html">Home</a><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="contacts.html">Help</a><a href="registration.html" class="btn-nav">Register now →</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wide hero-inner">
+      <div>
+        <span class="eyebrow">Judges View</span>
+        <h1>Judges Hub</h1>
+        <p>Day 4 evaluation workspace for reviewing participant submissions, observing final pitch presentations, checking prototype evidence and recording fair assessment decisions.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>10</b><span>Groups</span></div>
+        <div class="stat"><b>14</b><span>Smart DT Templates</span></div>
+        <div class="stat"><b>8+5</b><span>Pitch + Q&A</span></div>
+        <div class="stat"><b>100</b><span>Total Marks</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="alert">
+    <div class="wide">
+      <strong>Day 4 Judge Reminder</strong>
+      <span>Use participant submissions as supporting evidence. Final judgement should be based on pitch performance, prototype clarity, DT process evidence, testing reflection and Q&A response.</span>
+      <button class="print-btn" onclick="window.print()">Print Judge Guide</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="wide">
+        <h2>Day 4 Evaluation Flow</h2>
+        <p class="section-lead">Judges follow the final presentation sequence. Participant Smart DT submissions are supporting evidence; the live pitch and Q&A remain the main evaluation moment.</p>
+        <div class="timeline">
+          <div class="slot s1"><small>08:30 AM</small><h3>Judge Briefing</h3><ul><li>Receive rubric quietly</li><li>Confirm scoring method</li><li>Keep evaluation confidential</li></ul></div>
+          <div class="slot s2"><small>Presentation Slot</small><h3>Team Pitch</h3><ul><li>8-slide framework</li><li>8 minutes presentation</li><li>Prototype shown clearly</li></ul></div>
+          <div class="slot s3"><small>Q&A</small><h3>Judge Questions</h3><ul><li>5 minutes Q&A</li><li>Ask evidence-based questions</li><li>Check design decisions</li></ul></div>
+          <div class="slot s4"><small>After Pitch</small><h3>Score & Notes</h3><ul><li>Record score individually</li><li>Refer to T12 evidence</li><li>Submit final marks</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff;">
+      <div class="wide">
+        <h2>Participant Submission Evidence</h2>
+        <p class="section-lead">Judges may refer to the team’s submitted Smart DT templates, badge/progress completion and TikTok reflection status before or during final evaluation.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Evidence Area</th><th>What Judges Check</th><th>Templates / Source</th><th>Status Meaning</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Empathise</strong></td><td>User observation, interview questions, transcript evidence and empathy map.</td><td>T01–T04</td><td><span class="status ready">Evidence of user understanding</span></td></tr>
+              <tr><td><strong>Define</strong></td><td>Persona, user needs, insight and clear design challenge.</td><td>T05–T06</td><td><span class="status ready">Problem is framed</span></td></tr>
+              <tr><td><strong>Ideate</strong></td><td>Idea quantity, SCAMPER improvement and prioritisation logic.</td><td>T07–T09</td><td><span class="status review">Idea process visible</span></td></tr>
+              <tr><td><strong>Prototype</strong></td><td>Prototype direction, key features, materials and sketch/visual plan.</td><td>T10–T11</td><td><span class="status pending">Build direction verified</span></td></tr>
+              <tr><td><strong>Test & Improve</strong></td><td>User feedback and improvement actions based on testing.</td><td>T12–T13</td><td><span class="status ready">Testing evidence available</span></td></tr>
+              <tr><td><strong>Pitch</strong></td><td>8-slide final pitch structure and readiness.</td><td>T14</td><td><span class="status review">Presentation guide completed</span></td></tr>
+              <tr><td><strong>Daily TikTok Reflection</strong></td><td>Day 1, Day 2 and Day 3 reflections show learning progress and teamwork.</td><td>Auto-detected from daily submissions</td><td><span class="status pending">Reflection support evidence</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wide">
+        <h2>Judging Rubric</h2>
+        <p class="section-lead">Suggested final scoring structure. Adjust only if the official secretariat rubric differs.</p>
+        <div class="rubric">
+          <div class="rubric-row"><div class="score">20</div><div><h4>Problem & User Need</h4><p>Clear problem statement, strong user evidence and meaningful empathy findings.</p></div><span class="status">PT1</span></div>
+          <div class="rubric-row"><div class="score">20</div><div><h4>Design Thinking Process</h4><p>Visible progression from Empathise to Test, supported by Smart DT submissions.</p></div><span class="status">PT2</span></div>
+          <div class="rubric-row"><div class="score">20</div><div><h4>Innovation, Heritage & Sustainability</h4><p>Solution is creative, connected to cultural heritage and shows sustainability value.</p></div><span class="status">PT3</span></div>
+          <div class="rubric-row"><div class="score">20</div><div><h4>Prototype & Testing Evidence</h4><p>Prototype is understandable, relevant, tested, and improved using feedback.</p></div><span class="status">PT4</span></div>
+          <div class="rubric-row"><div class="score">20</div><div><h4>Pitch Delivery & Q&A</h4><p>Presentation flow, team confidence, storytelling, time management and response to questions.</p></div><span class="status">PT5</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section smartdt">
+      <div class="wide">
+        <h2 style="color:white;">Judge Checklist Before Scoring</h2>
+        <p class="section-lead" style="color:#d6cbe8;">Use this as a quick conduct guide while watching the pitch presentation.</p>
+        <div class="grid grid-3">
+          <div class="card"><span class="pill">Before Pitch</span><h3>Review Evidence</h3><p>Check team submissions, daily reflection status and prototype evidence if available.</p></div>
+          <div class="card"><span class="pill">During Pitch</span><h3>Observe Fairly</h3><p>Focus on the team’s explanation, confidence, clarity and connection to the DT process.</p></div>
+          <div class="card"><span class="pill">After Q&A</span><h3>Score Individually</h3><p>Record marks and comments before discussing with other judges to reduce bias.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wide">
+        <h2>Important Judge Guidelines</h2>
+        <div class="checklist">
+          <div class="check"><span class="box"></span><div><strong>Use submissions as evidence, not as the full score.</strong><br>Final score should reflect both submitted work and live pitch performance.</div></div>
+          <div class="check"><span class="box"></span><div><strong>Do not request new work on Day 4.</strong><br>Teams should present what has already been developed, tested and prepared.</div></div>
+          <div class="check"><span class="box"></span><div><strong>Keep rubrics and internal notes confidential.</strong><br>Only official results should be announced by the secretariat.</div></div>
+          <div class="check"><span class="box"></span><div><strong>Ask neutral questions.</strong><br>Questions should clarify process, impact, prototype decisions and user feedback.</div></div>
+          <div class="check"><span class="box"></span><div><strong>Look for improvement evidence.</strong><br>T12–T13 should show how user feedback shaped the final prototype or pitch.</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wide footer-grid">
+      <div><a class="brand" href="../index.html" style="color:white">CAMP<span>21</span></a><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p></div>
+      <div><h4>Judge Access</h4><p><a href="#">Participant Submissions</a><br><a href="#">Rubric Form</a><br><a href="#">Pitch Schedule</a></p></div>
+      <div><h4>Support</h4><p><a href="contacts.html">Help Desk</a><br><a href="resources.html">Resources</a><br><a href="programme.html">Programme</a></p></div>
+    </div>
+  </footer>
+</body>
+</html>
