@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMP21: Organiser Sync Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    :root{
+      --navy:#1b123f; --ink:#12112f; --cream:#fff8ef; --gold:#d8ad33; --rose:#e23c74;
+      --violet:#5f37d5; --jade:#23823c; --orange:#ef4f00; --red:#cf252b; --blue:#22a7df;
+      --line:#e9e2d8; --muted:#6e6a80; --white:#fff;
+      --radius:24px; --shadow:0 16px 40px rgba(27,18,63,.10);
+      --font-serif:'Cormorant Garamond', serif; --font-sans:'Plus Jakarta Sans', sans-serif;
+    }
+    *{box-sizing:border-box} body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-sans);}
+    a{text-decoration:none;color:inherit}.wide{width:min(1180px,92vw);margin:auto}
+    header{position:sticky;top:0;z-index:30;background:rgba(255,248,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-wrap{height:74px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{font-family:var(--font-serif);font-size:1.7rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:.6rem}.brand span{color:var(--gold)}.brand-icon{width:34px;height:34px;object-fit:contain}.nav-links{display:flex;align-items:center;gap:1.5rem;color:#5e5873;font-weight:700}.btn-nav{padding:.75rem 1.2rem;border-radius:999px;background:var(--rose);color:#fff!important}.menu-btn{display:none;background:transparent;border:0;font-size:1.5rem}
+    .hero{margin:3rem auto 4rem;min-height:520px;border-radius:0;overflow:hidden;position:relative;background:linear-gradient(135deg,rgba(27,18,63,.95),rgba(43,21,81,.82)),url('../assets/images/kompleks-kraf-kl.png') center/cover;display:flex;align-items:center}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(216,173,51,.18),transparent 36%),linear-gradient(90deg,rgba(27,18,63,.95),rgba(27,18,63,.60),rgba(27,18,63,.70))}.hero-content{position:relative;z-index:1;padding:4.5rem 4.8rem;color:#fff}.eyebrow{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:var(--navy);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900;border-radius:999px;padding:.45rem 1rem}.hero h1{font-family:var(--font-serif);font-size:clamp(3rem,6vw,5.3rem);line-height:.95;margin:1.3rem 0 1rem}.hero p{font-size:1.35rem;line-height:1.65;max-width:760px;color:rgba(255,255,255,.78)}.stats{display:flex;flex-wrap:wrap;gap:1.75rem;margin:2.3rem 0}.stat b{font-size:2.3rem;color:var(--gold);display:block;line-height:1}.stat span{font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.64);font-size:.76rem}.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}.btn{border:0;border-radius:999px;padding:.95rem 1.35rem;font-weight:900;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer}.btn.gold{background:var(--gold);color:var(--navy)}.btn.dark{background:var(--navy);color:#fff}.btn.ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:#fff}.section{padding:4rem 0}.section.cream{background:var(--cream)}.section.dark{background:var(--navy);color:#fff}.section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:2rem}.section h2{font-family:var(--font-serif);font-size:clamp(2.2rem,4.2vw,3.6rem);margin:0}.section-sub{color:var(--muted);max-width:720px;font-size:1.05rem;line-height:1.55}.dark .section-sub{color:rgba(255,255,255,.65)}
+    .grid{display:grid;gap:1.2rem}.grid.two{grid-template-columns:repeat(2,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}.grid.five{grid-template-columns:repeat(5,1fr)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.55rem}.card h3{font-size:1.25rem;margin:.2rem 0 .6rem}.card p{color:#5d596f;line-height:1.55}.solid{color:#fff;border:0}.solid p{color:rgba(255,255,255,.82)}.purple{background:var(--navy)}.violet{background:var(--violet)}.green{background:var(--jade)}.gold{background:var(--gold);color:var(--navy)}.orange{background:var(--orange)}.rose{background:var(--rose)}.blue{background:var(--blue)}.brown{background:#8f3e16}.tag{display:inline-flex;border-radius:999px;padding:.35rem .72rem;font-size:.72rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase;background:rgba(255,255,255,.20);color:inherit}.mini{font-size:.8rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.solid .mini{color:rgba(255,255,255,.68)}
+    .tabs{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}.tab{border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:900;padding:.75rem 1.1rem;cursor:pointer}.tab.active{background:var(--navy);color:#fff}.schedule-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}.slot{background:#fff9f0;border:1px solid var(--line);border-radius:22px;padding:1.5rem;display:flex;gap:1.2rem;align-items:flex-start}.slot .bar{width:7px;align-self:stretch;border-radius:99px;background:var(--violet)}.slot time{font-weight:900;color:#5c5573;font-size:1.05rem}.slot h3{margin:.35rem 0 .6rem}.chips{display:flex;gap:.5rem;flex-wrap:wrap}.chip{border-radius:999px;background:#efe6d7;color:var(--navy);font-weight:900;font-size:.75rem;padding:.32rem .7rem}.chip.purple{background:var(--violet);color:#fff}.chip.green{background:#2f8b3f;color:#fff}.chip.gold{background:var(--gold);color:var(--navy)}.chip.grey{background:#aaa;color:#fff}.chip.rose{background:var(--rose);color:#fff}.chip.warn{background:#f1bd2b;color:#fff}
+    table{width:100%;border-collapse:collapse;background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}th,td{padding:1rem;border-bottom:1px solid var(--line);text-align:left}th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#625d78;background:#fff}tr:hover{background:#fffaf2}.status{display:inline-flex;border-radius:999px;padding:.32rem .7rem;font-weight:900;font-size:.75rem}.done{background:#2f8b3f;color:#fff}.pending{background:#aaa;color:#fff}.progress{background:#d9ad31;color:#fff}.need{background:var(--rose);color:#fff}.ready{background:#2f8b3f;color:#fff}.locked{background:#efe6d7;color:var(--navy)}
+    .tracker-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.tracker-item{background:#fff;border:1px solid var(--line);border-radius:999px;padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.dot{width:12px;height:12px;border-radius:50%;background:#ddd;display:inline-block;margin-right:.6rem}.dot.on{background:var(--gold)}.dot.done{background:#2f8b3f}.ops{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.check{background:#fff9f0;border:1px solid var(--line);border-radius:18px;padding:1rem 1.1rem;display:flex;gap:.9rem;align-items:flex-start;font-weight:800}.check input{width:22px;height:22px;accent-color:var(--gold);flex:0 0 auto}.notice{border-left:6px solid var(--gold);padding:1rem 1.2rem;background:#fff;border-radius:16px;box-shadow:var(--shadow)}.notice strong{display:block;margin-bottom:.25rem}.broadcast{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}.field{width:100%;border:1px solid var(--line);border-radius:16px;padding:1rem 1.1rem;font:inherit;font-weight:700;background:#fff}.textarea{height:130px;resize:vertical}.quicklinks{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.quick{background:rgba(255,255,255,.08);border-radius:20px;padding:1.1rem 1.2rem;color:#fff;display:flex;justify-content:space-between;align-items:center}.quick span{color:rgba(255,255,255,.60);font-size:.85rem}
+    footer{background:#210f3b;color:#fff;padding:4rem 0 1.5rem}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem}.footer-grid p,.footer-grid a{color:rgba(255,255,255,.68);line-height:1.7}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:2rem;padding-top:1.2rem;color:rgba(255,255,255,.55);font-size:.9rem}
+    @media(max-width:900px){.grid.three,.grid.four,.grid.five,.quicklinks,.footer-grid,.broadcast{grid-template-columns:1fr 1fr}.schedule-grid,.grid.two,.tracker-list,.ops{grid-template-columns:1fr}.hero-content{padding:3rem 2rem}.nav-links{display:none}.menu-btn{display:block}.table-wrap{overflow:auto}.hero{margin:0;min-height:620px}.stats{gap:1rem}.stat b{font-size:1.8rem}}
+    @media(max-width:560px){.grid.three,.grid.four,.grid.five,.quicklinks,.footer-grid,.broadcast{grid-template-columns:1fr}.hero h1{font-size:3rem}.hero p{font-size:1.05rem}.hero-actions{flex-direction:column}.btn{justify-content:center;width:100%}.section-head{display:block}.tracker-item{border-radius:18px;align-items:flex-start;flex-direction:column}th,td{padding:.8rem}.brand{font-size:1.4rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wide nav-wrap">
+    <a href="../index.html" class="brand"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html">Home</a><a href="programme.html">Programme</a><a href="participants.html">Participants</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a><a href="judges.html">Judges</a><a href="registration.html" class="btn-nav">Register now →</a>
+    </nav><button class="menu-btn" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wide">
+    <div class="hero-content">
+      <span class="eyebrow">Programme Control Centre</span>
+      <h1>Organiser Sync Hub</h1>
+      <p>Central command for CAMP21 operations — live progress, daily schedule, role coordination, submissions, Day 4 judging flow and secretariat actions.</p>
+      <div class="stats">
+        <div class="stat"><b>4</b><span>Days</span></div><div class="stat"><b>10</b><span>Groups</span></div><div class="stat"><b>60</b><span>Participants</span></div><div class="stat"><b>14</b><span>SMART DT Templates</span></div><div class="stat"><b>2</b><span>Judging Teams</span></div><div class="stat"><b>2</b><span>Venues</span></div>
+      </div>
+      <div class="hero-actions"><a class="btn gold" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank">Smart DT App ↗</a><a class="btn ghost" href="participants.html">Participants Workspace</a><a class="btn ghost" href="trainers.html">Trainers Hub</a><a class="btn ghost" href="judges.html">Judges Hub</a></div>
+    </div>
+  </section>
+
+  <section class="section wide">
+    <div class="section-head"><div><h2>Sync Dashboard</h2><p class="section-sub">Updated to match current Participants, Trainers, Facilitators and Judges pages. Use this as the organiser's single monitoring view.</p></div></div>
+    <div class="grid four">
+      <article class="card solid purple"><span class="tag">Participants</span><h3>Team Work Progress</h3><p>Monitor T01–T14 completion, phase badges, portfolio readiness and TikTok reflection submissions. Current status: Not Started until 13/07/2026.</p></article>
+      <article class="card solid violet"><span class="tag">Trainers</span><h3>Phase SOP & Sign-off</h3><p>Check trainer duties, template verification, T10 prototype direction, T11 full prototype outcome and Day 4 standby rules.</p></article>
+      <article class="card solid green"><span class="tag">Facilitators</span><h3>Rotation Monitoring</h3><p>Track facilitators assigned to 10 groups per phase and flag groups needing DT or innovation support.</p></article>
+      <article class="card solid rose"><span class="tag">Judges</span><h3>Day 4 Evaluation</h3><p>Prepare judge packets, venue split, pitch flow, rubric access and confidential scoring links.</p></article>
+    </div>
+  </section>
+
+  <section class="section cream">
+    <div class="wide">
+      <div class="section-head"><div><h2>Programme Schedule</h2><p class="section-sub">13–16 July 2026 · Kompleks Kraf Kuala Lumpur. Day tabs show organiser action points aligned with the latest CAMP21 flow.</p></div></div>
+      <div class="tabs" id="dayTabs"><button class="tab active" data-day="1">Day 1</button><button class="tab" data-day="2">Day 2</button><button class="tab" data-day="3">Day 3</button><button class="tab" data-day="4">Day 4</button></div>
+      <div id="scheduleArea" class="schedule-grid"></div>
+    </div>
+  </section>
+
+  <section class="section wide">
+    <div class="section-head"><div><h2>Announcements & Urgent Updates</h2><p class="section-sub">Items organisers must broadcast or verify so all role pages stay consistent.</p></div></div>
+    <div class="grid three">
+      <div class="notice"><strong>Daily TikTok Reflections</strong>Day 1 = Empathise & Define. Day 2 = Ideate & Prototype. Day 3 = Pitching Practice & Testing. Do not mention special surprise judging category to participants.</div>
+      <div class="notice"><strong>Badge Indicator Locked</strong>All participant badge indicators stay locked until corresponding phase templates are completed during the programme.</div>
+      <div class="notice"><strong>T11 Trainer Sign-off</strong>No group may begin prototype build until T10 idea selection and T11 Prototype Direction Plan are trainer-signed.</div>
+      <div class="notice"><strong>Facilitator Rotation</strong>Facilitators rotate per phase across 10 groups. They support, ask guiding questions and monitor progress — they are not evaluators.</div>
+      <div class="notice"><strong>Day 4 Judging</strong>Judge Team A evaluates Groups 1–5 at Venue 1. Judge Team B evaluates Groups 6–10 at Venue 2. Prepare packets before 8:00 AM.</div>
+      <div class="notice"><strong>Final Pitch Deck</strong>Groups submit final pitch deck PDF before 8:00 AM Day 4. Format: CAMP21_Group[N]_PitchDeck.pdf.</div>
+    </div>
+  </section>
+
+  <section class="section cream">
+    <div class="wide">
+      <div class="section-head"><div><h2>Group Progress Monitor</h2><p class="section-sub">Indicative organiser view for all 10 groups. Row highlight helps secretariat prioritise immediate support.</p></div><button class="btn dark" onclick="randomiseProgress()">Refresh Demo Status</button></div>
+      <div class="table-wrap"><table id="groupTable"><thead><tr><th>Group</th><th>Venue</th><th>DT Phase</th><th>Templates</th><th>TikTok Reflection</th><th>Badge</th><th>Pitch Deck</th><th>Support Needed</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section wide">
+    <div class="section-head"><div><h2>Submission Tracker</h2><p class="section-sub">All required deliverables across participant, trainer, facilitator and judge workflows.</p></div></div>
+    <div class="tracker-list" id="submissionTracker"></div>
+  </section>
+
+  <section class="section dark">
+    <div class="wide">
+      <div class="section-head"><div><h2>Role Coordination</h2><p class="section-sub">Fast cross-check of who handles what. Use this before briefing each group of staff.</p></div></div>
+      <div class="grid four">
+        <article class="card solid purple"><span class="tag">Participants</span><h3>Do the work</h3><p>Complete templates, upload evidence, submit daily TikTok reflections, collect badges and prepare pitch.</p></article>
+        <article class="card solid violet"><span class="tag">Trainers</span><h3>Teach & verify</h3><p>Deliver phase inputs, check minimum output quality, sign off T11 and guide phase SOP.</p></article>
+        <article class="card solid green"><span class="tag">Facilitators</span><h3>Rotate & support</h3><p>Move across assigned groups each phase, monitor delays, support logistics and escalate welfare issues.</p></article>
+        <article class="card solid rose"><span class="tag">Judges</span><h3>Evaluate Day 4</h3><p>Use participant submissions, pitch deck, prototype evidence and Q&A performance for scoring.</p></article>
+      </div>
+      <div style="margin-top:2rem" class="quicklinks"><a class="quick" href="participants.html"><div><b>Participants</b><br><span>Live work progress</span></div>↗</a><a class="quick" href="trainers.html"><div><b>Trainers</b><br><span>Responsibility SOP</span></div>↗</a><a class="quick" href="facilitators.html"><div><b>Facilitators</b><br><span>Rotation monitoring</span></div>↗</a><a class="quick" href="judges.html"><div><b>Judges</b><br><span>Day 4 evaluation</span></div>↗</a></div>
+    </div>
+  </section>
+
+  <section class="section cream">
+    <div class="wide">
+      <div class="section-head"><div><h2>Judging Coordination</h2><p class="section-sub">Day 4 pitch presentation and evaluation setup. Keep judging rubrics and scoring links confidential.</p></div></div>
+      <div class="grid two">
+        <article class="card solid purple"><span class="tag">Judge Team A</span><h3>Venue 1 · Groups 1–5</h3><p>Dr. Siti Zubaidah binti Ibrahim (Chief)<br>Encik Prabagaran Bala Krisnan</p><p><span class="status pending">Scoring: Awaiting Day 4</span> <span class="status progress">Packets: Prepare by Day 3</span></p></article>
+        <article class="card solid violet"><span class="tag">Judge Team B</span><h3>Venue 2 · Groups 6–10</h3><p>Dr. Hajah Noreen binti Kamarudin<br>Encik Richie Arvind bin Pavalani</p><p><span class="status pending">Scoring: Awaiting Day 4</span> <span class="status progress">Packets: Prepare by Day 3</span></p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wide">
+    <div class="section-head"><div><h2>Operations Checklist <span id="opsCount" style="color:var(--gold)">0/16</span></h2><p class="section-sub">Secretariat checklist. Saves in this browser.</p></div><button class="btn gold" onclick="clearOps()">Reset Checklist</button></div>
+    <div class="ops" id="opsList"></div>
+  </section>
+
+  <section class="section cream">
+    <div class="wide broadcast">
+      <div class="card"><h2 style="font-family:var(--font-serif);font-size:2.5rem;margin:0 0 1rem">Broadcast Central</h2><p class="section-sub">Prepare messages for Telegram / workspace announcement bars.</p><form onsubmit="alert('Message copied as organiser broadcast draft.');return false"><select class="field"><option>All channels</option><option>Participants only</option><option>Trainers & facilitators only</option><option>Judges only</option></select><br><br><textarea class="field textarea" placeholder="Type announcement here..." required></textarea><br><br><button class="btn dark" type="submit">Create Broadcast Draft</button></form></div>
+      <div class="card"><h2 style="font-family:var(--font-serif);font-size:2.5rem;margin:0 0 1rem">Issue Reporting</h2><p class="section-sub">Log or escalate any on-ground issue to the correct PIC.</p><div class="grid two"><button class="btn dark">Technical Issue</button><button class="btn" style="background:var(--violet);color:#fff">Group Issue</button><button class="btn" style="background:var(--jade);color:#fff">Venue Issue</button><button class="btn" style="background:var(--rose);color:#fff">Secretariat</button></div><hr style="border:0;border-top:1px solid var(--line);margin:2rem 0"><p><b>Venue:</b> Kompleks Kraf Kuala Lumpur<br><b>Accommodation:</b> Royale Chulan Kuala Lumpur · 0.2 km from venue<br><b>Transport:</b> Bus departs hotel at 07:45 daily</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wide"><div class="footer-grid"><div><a href="../index.html" class="brand" style="color:#fff">CAMP<span>21</span></a><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p></div><div><h4>Explore</h4><p><a href="programme.html">Programme</a><br><a href="resources.html">Resources</a><br><a href="participants.html">Participants</a><br><a href="judges.html">Judges</a></p></div><div><h4>Support</h4><p><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank">Telegram Community ↗</a><br><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank">Smart DT App ↗</a><br><a href="contacts.html">Help Desk</a></p></div></div><div class="footer-bottom">© 2026 CAMP21 Digital Hub. Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</div></div></footer>
+
+<script>
+const schedules={
+  1:[['08:00–09:00','Registration & Check-in','Main Hall','Secretariat'],['09:00–10:30','Opening Ceremony','Main Hall','All Organisers'],['10:30–13:00','Empathy Phase · T01–T04','Workshop A & B','DT Trainers'],['14:00–18:00','Define Phase · T05–T06 + Day 1 Reflection','Workshop A & B','Trainers + Facilitators']],
+  2:[['08:30–09:00','Morning Trainer / Facilitator Briefing','Main Hall','Secretariat'],['09:00–10:30','T07 30 Circle Challenge','Workshop A & B','Phase 03 Team'],['10:30–13:00','T08 SCAMPER · Mahjong Paper Activity','Workshop A & B','Phase 03 Team'],['14:00–16:30','T09 Ideation Matrix Prioritisation · Mahjong Paper Activity','Workshop A & B','Trainer review'],['16:30–18:00','T10 Prototype Direction Plan + Day 2 Reflection','Workspace','Facilitators']],
+  3:[['09:00–10:30','T11 Full Prototype Outcome · Build Evidence','Workshop A & B','Trainers + Facilitators'],['10:30–13:00','Pitching Practice · 8-Slide Framework','Main Hall','Pitch Trainer'],['15:30–17:00','Test Phase · T12 Feedback Capture Grid','Venue / User Area','Phase 05 Team'],['17:00–19:00','T13 Improvement Plan + Day 3 Reflection','Workspace','Trainer review']],
+  4:[['07:30–08:00','T14 Pitch Framework / Final Deck PDF Submission Check','Secretariat Desk','Organisers'],['08:30–09:00','Judge Packets + Confidential Rubric Briefing','Venue 1 & 2','Judges only'],['09:00–13:00','Pitch Presentation · 8 min + 5 min Q&A','Venue 1 & 2','Judge Teams'],['14:00–16:00','Gallery Walk, Score Compilation & Closing','Main Hall','All']],
+};
+function renderSchedule(day=1){const area=document.getElementById('scheduleArea');area.innerHTML=schedules[day].map((s,i)=>`<div class="slot"><div class="bar" style="background:${['#5f37d5','#d8ad33','#23823c','#e23c74'][i%4]}"></div><div><time>${s[0]}</time><h3>${s[1]}</h3><div class="chips"><span class="chip">${s[2]}</span><span class="chip purple">${s[3]}</span></div></div></div>`).join('')}
+renderSchedule();document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderSchedule(btn.dataset.day)}));
+const groups=[
+ ['Group 1','Venue 1','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 2','Venue 1','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 3','Venue 1','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 4','Venue 1','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 5','Venue 1','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 6','Venue 2','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 7','Venue 2','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 8','Venue 2','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 9','Venue 2','Not Started','0/14','Waiting','0 badges','Locked','—'],['Group 10','Venue 2','Not Started','0/14','Waiting','0 badges','Locked','—']
+];
+function renderGroups(data=groups){document.querySelector('#groupTable tbody').innerHTML=data.map(g=>`<tr onclick="this.classList.toggle('selected')"><td><b>${g[0]}</b></td><td>${g[1]}</td><td><span class="status pending">${g[2]}</span></td><td><b>${g[3]}</b></td><td><span class="status ${g[4].includes('Submitted')?'done':g[4].includes('Pending')?'pending':'locked'}">${g[4]}</span></td><td><span class="status locked">${g[5]}</span></td><td><span class="status ${g[6]=='Submitted'?'done':'locked'}">${g[6]}</span></td><td>${g[7]=='—'?'—':`<span class="status need">${g[7]}</span>`}</td></tr>`).join('')}
+renderGroups();function randomiseProgress(){renderGroups(groups.sort(()=>Math.random()-.5));}
+const submissions=['T01 POEMS Observation Framework · Day 1 AM','T02 Interview Guide & Worksheet · Day 1 AM','T03 Audio-to-Text Transcription · Day 1 AM','T04 Empathy Map · Day 1 AM','T05 User Insight · Day 1 PM','T06 Persona, Need & Design Statement · Day 1 PM','T07 30 Circle Challenge · Day 2','T08 SCAMPER · Day 2','T09 Ideation Matrix Prioritisation · Day 2','T10 Prototype Direction Plan · Day 2–3','T11 Full Prototype Outcome · Day 2–3','T12 Feedback Capture Grid · Day 3','T13 Improvement Plan · Day 3','T14 8-Slide Pitch Framework · Day 4','Day 1 TikTok Reflection · Empathy & Define','Day 2 TikTok Reflection · Ideate & Prototype','Day 3 TikTok Reflection · Pitching Practice & Testing','Prototype Evidence Photos','Final Pitch Deck PDF · Day 4 8 AM'];
+document.getElementById('submissionTracker').innerHTML=submissions.map((s,i)=>`<div class="tracker-item"><div><span class="dot"></span><b>${s}</b></div><span class="status locked">Not Started</span></div>`).join('');
+const ops=['Registration counter ready and QR check-in tested','Team grouping list updated from registration','Facilitator rotation assignment published','Trainer SOP, T10 direction plan and T11 full prototype outcome reminder sent','Participant badges indicator checked in workspace','Daily TikTok reflection instructions confirmed','Venue 1 prepared for Groups 1–5','Venue 2 prepared for Groups 6–10','Projector, WiFi and Smart DT App tested','Prayer rooms Level 2 signage posted','Meals and bus announcement template prepared','Judge packets printed and placed before Day 4','Confidential scoring links tested','T14 pitch framework and final deck naming format announced','Certificates and awards list verified','Documentation team briefed'];
+function renderOps(){let saved=JSON.parse(localStorage.getItem('camp21_org_ops')||'{}');let done=ops.filter((_,i)=>saved[i]).length;document.getElementById('opsCount').textContent=`${done}/${ops.length}`;document.getElementById('opsList').innerHTML=ops.map((o,i)=>`<label class="check"><input type="checkbox" ${saved[i]?'checked':''} onchange="toggleOp(${i},this.checked)"><span>${o}</span></label>`).join('')}
+function toggleOp(i,v){let saved=JSON.parse(localStorage.getItem('camp21_org_ops')||'{}');saved[i]=v;localStorage.setItem('camp21_org_ops',JSON.stringify(saved));renderOps()}function clearOps(){localStorage.removeItem('camp21_org_ops');renderOps()}renderOps();
+const menuBtn=document.querySelector('.menu-btn'), navLinks=document.querySelector('.nav-links');if(menuBtn)menuBtn.addEventListener('click',()=>{const open=navLinks.style.display==='flex';navLinks.style.cssText=open?'':'display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--cream);padding:1.5rem 2rem;gap:1rem;z-index:99;box-shadow:0 12px 30px rgba(20,16,74,.12);'});
+</script>
+</body>
+</html>
