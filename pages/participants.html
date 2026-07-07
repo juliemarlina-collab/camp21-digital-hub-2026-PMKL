@@ -1,431 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAMP21 | Participants Workspace Progress</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fff8ef;
-      --panel:#ffffff;
-      --ink:#151236;
-      --muted:#6f6a83;
-      --line:#eadfce;
-      --navy:#14104a;
-      --indigo:#26106b;
-      --rose:#e23c74;
-      --gold:#c8952c;
-      --teal:#21d4c2;
-      --violet:#6b4dff;
-      --magenta:#ff4fcb;
-      --yellow:#ffc83d;
-      --green:#8dff3f;
-      --blue:#3d63ff;
-      --shadow:0 18px 50px rgba(20,16,74,.12);
-      --radius:26px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
-    a{text-decoration:none;color:inherit}
-    button,select{font:inherit}
-    .wide{width:min(1180px,calc(100% - 36px));margin-inline:auto}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CAMP21 Participants Live Workspace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#151044; --indigo:#251052; --cream:#fff8ef; --paper:#fffdf9; --muted:#726b82; --line:#e9dfd0;
+  --gold:#FFC83D; --pink:#FF4FCB; --teal:#21D4C2; --violet:#6B4DFF; --green:#8DFF3F; --blue:#3D63FF; --orange:#f2a13a;
+  --shadow:0 18px 45px rgba(21,16,68,.08); --radius:24px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif} a{text-decoration:none;color:inherit}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}
+.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:var(--pink)}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}
+.nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem}.nav-pill:hover{border-color:var(--violet)}.nav-pill.primary{background:var(--violet);color:#fff;border-color:var(--violet)}.nav-pill.primary:hover{background:#5a3ad4}.app-pill{border-color:var(--teal);color:var(--ink)}.app-pill:hover{background:var(--teal);color:#fff}
+.quick-access{position:relative}.qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}.qa-chev{transition:.25s;display:inline-block;font-size:.7em}.quick-access[open] .qa-chev{transform:rotate(180deg)}.qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:60;animation:qaIn .18s ease}.qa-group{padding:10px 8px}.qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px}.qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);transition:background .15s}.qa-link:hover{background:rgba(109,70,238,.07);color:var(--violet)}.qa-divider{height:1px;background:var(--line);margin:4px 16px}@keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.hero{background:radial-gradient(circle at 82% 10%,rgba(242,79,180,.22),transparent 34%),linear-gradient(120deg,#183d70 0%,#251052 45%,#3b124c 100%);color:#fff;padding:58px 28px 50px}.hero-inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}.eyebrow{display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.6rem,7vw,7rem);line-height:.88;margin:35px 0 22px;letter-spacing:-.055em}.hero p{font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.65;color:rgba(255,255,255,.78);max-width:780px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.stat-card{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);border-radius:22px;padding:24px}.stat-card b{display:block;font-size:2.5rem;color:var(--gold);line-height:1}.stat-card span{font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.wrap{max-width:1440px;margin:auto;padding:36px 28px 80px}.control-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-64px;position:relative;z-index:5}.control-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}.control-card .label{font-size:.75rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.control-card .value{font-size:1.5rem;font-weight:900;margin-top:8px}.status-dot{width:10px;height:10px;background:#aaa;border-radius:50%;display:inline-block;margin-right:8px}.status-waiting{color:#777}.section{background:#fffdf9;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);margin:28px 0;overflow:hidden}.section summary{list-style:none;cursor:pointer;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:18px}.section summary::-webkit-details-marker{display:none}.summary-left{display:flex;align-items:center;gap:16px}.section-icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,rgba(109,70,238,.18),rgba(242,79,180,.18))}.section h2{margin:0;font-size:1.45rem}.section-sub{margin:4px 0 0;color:var(--muted);font-weight:600}.chev{font-weight:900;font-size:1.3rem;transition:.25s}.section[open] .chev{transform:rotate(180deg)}.section-body{border-top:1px solid var(--line);padding:28px 30px 34px}.info-note{background:#fff4da;border:1px solid #f4d98f;border-radius:18px;padding:18px 20px;margin-bottom:24px;color:#5c4520;font-weight:700}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.tab-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:11px 16px;font-weight:900;color:var(--ink);cursor:pointer}.tab-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}.tab-panel{display:none}.tab-panel.active{display:block}.phase-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.phase-info{border:1px solid var(--line);background:#fff;border-radius:24px;overflow:hidden}.phase-head{padding:20px 24px;color:#fff;display:flex;justify-content:space-between;align-items:flex-end}.phase-title{font-size:1.6rem;font-weight:900}.phase-time{font-weight:900;opacity:.72}.phase-count{font-size:2rem;font-weight:900}.phase-body{padding:18px 20px}.template-list{display:grid;gap:10px}.template-row{display:grid;grid-template-columns:44px 64px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.checkbox{width:24px;height:24px;border:2px solid #d8cec0;border-radius:8px}.code{font-weight:900;color:#e9367d}.t-name{font-weight:900}.t-desc{display:block;color:var(--muted);font-size:.86rem;margin-top:2px}.badge-status,.pill{border-radius:999px;padding:8px 12px;font-size:.78rem;font-weight:900;text-transform:uppercase;white-space:nowrap}.not-started{background:#f2eee6;color:#777}.locked{background:#f2eee6;color:#777}.waiting{background:#f2eee6;color:#777}.activity-box{margin-top:16px;background:#f7f3ed;border:1px dashed #d8cbb9;border-radius:18px;padding:16px;font-weight:800}.activity-box span{color:#9b6b00}.table-scroll{overflow:auto;border:1px solid var(--line);border-radius:22px;background:#fff}.progress-table{width:100%;border-collapse:collapse;min-width:1040px}.progress-table th,.progress-table td{padding:15px 14px;text-align:center;border-bottom:1px solid var(--line);font-weight:800}.progress-table th{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#5e5870;background:#fbf7f0}.progress-table td:first-child,.progress-table th:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:2}.progress-table th:first-child{background:#fbf7f0}.tiny-bar{height:8px;border-radius:999px;background:#eee7dd;overflow:hidden;margin-top:8px}.tiny-fill{height:100%;width:0;background:var(--teal)}.team-status{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:2px solid #e0d8cc;background:#f6f1e9;color:#777;font-weight:900}.team-status.locked{background:#f6f1e9}.team-status.complete{background:var(--green);border-color:var(--green);color:#13310c}.badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}.badge-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;border-top:7px solid var(--blue)}.badge-card:nth-child(2){border-top-color:var(--teal)}.badge-card:nth-child(3){border-top-color:var(--violet)}.badge-card:nth-child(4){border-top-color:var(--pink)}.badge-card:nth-child(5){border-top-color:var(--gold)}.badge-card:nth-child(6){border-top-color:var(--green)}.badge-card:nth-child(7){border-top-color:var(--blue)}.badge-card:nth-child(8){border-top-color:#c8952c}.badge-icon{width:68px;height:68px;border-radius:20px;display:grid;place-items:center;font-size:2rem;background:linear-gradient(135deg,rgba(71,114,255,.24),rgba(242,79,180,.18));margin-bottom:14px}.badge-card h3{margin:0 0 8px;font-size:1.25rem}.badge-card p{margin:0 0 18px;color:var(--muted);font-weight:600;line-height:1.45}.badge-team-table{min-width:1120px}.reflection-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}.reflection-card{border:1px solid var(--line);background:#fff;border-radius:22px;padding:20px}.reflection-card h3{margin:0 0 10px}.reflection-card p{color:var(--muted);line-height:1.55;margin:0 0 14px;font-weight:600}.mark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mark-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}.mark-card b{display:block;font-size:2.2rem;color:var(--gold);margin-bottom:6px}.mark-card h3{margin:0 0 8px}.mark-card p{margin:0;color:var(--muted);font-weight:600;line-height:1.45}.footer-note{text-align:center;color:var(--muted);font-weight:700;margin-top:34px}.phase-empathy{background:var(--teal)}.phase-define{background:var(--violet)}.phase-ideate{background:var(--pink)}.phase-prototype{background:var(--gold);color:var(--ink)}.phase-test{background:var(--green);color:var(--ink)}.phase-pitch{background:var(--blue)}
 
-    .topbar{position:sticky;top:0;z-index:20;background:rgba(255,248,239,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(20,16,74,.08)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.01em;color:var(--navy)}
-    .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--blue),var(--magenta));color:white;box-shadow:0 10px 26px rgba(61,99,255,.28)}
-    .nav-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .pill{border:1px solid rgba(20,16,74,.12);background:#fff;border-radius:999px;padding:10px 14px;color:var(--navy);font-size:13px;font-weight:800;box-shadow:0 8px 20px rgba(20,16,74,.06)}
-    .pill.primary{background:var(--rose);color:#fff;border-color:transparent}
-
-    .hero{padding:44px 0 28px;background:linear-gradient(135deg,var(--navy),#24104f 54%,#10091f);color:#fff;position:relative;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 82% 20%,rgba(255,79,203,.26),transparent 25%),radial-gradient(circle at 25% 20%,rgba(33,212,194,.22),transparent 25%),radial-gradient(circle at 50% 120%,rgba(255,200,61,.25),transparent 30%);opacity:.9}
-    .hero-inner{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:end}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,200,61,.16);border:1px solid rgba(255,200,61,.32);color:#f9dda0;border-radius:999px;padding:8px 14px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px}
-    h1{font-family:Cormorant Garamond,serif;font-size:clamp(44px,7vw,82px);line-height:.95;letter-spacing:-.03em;margin-bottom:16px}
-    .hero p{max-width:690px;color:rgba(255,255,255,.72);font-size:17px;line-height:1.65}
-    .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:16px;min-height:95px}
-    .stat strong{font-size:34px;line-height:1;color:var(--yellow);display:block}.stat span{font-size:12px;font-weight:900;color:rgba(255,255,255,.62);text-transform:uppercase;letter-spacing:.12em}
-
-    main{padding:30px 0 54px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .control-panel{padding:22px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;margin-bottom:22px}
-    .control-title h2{font-size:26px;margin-bottom:6px}.control-title p{color:var(--muted);line-height:1.55}
-    .team-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.team-select{border:1px solid #ddd1c2;border-radius:16px;background:#fff;color:var(--navy);padding:12px 16px;font-weight:900}.btn{border:none;border-radius:16px;padding:12px 16px;font-weight:900;cursor:pointer;background:var(--navy);color:#fff}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn.gold{background:var(--gold)}
-
-    .progress-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;margin-bottom:22px}.progress-card{padding:24px}.progress-card h3{font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:16px}.big-progress{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px}.big-progress strong{font-size:58px;line-height:.9;color:var(--navy)}.big-progress span{font-size:24px;color:var(--gold);font-weight:900}.bar{height:14px;background:#f0e6d8;border-radius:999px;overflow:hidden}.bar-fill{height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--teal),var(--violet),var(--magenta));transition:.35s}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.mini{background:#fbf6ef;border:1px solid #eee2d2;border-radius:18px;padding:14px}.mini b{font-size:20px}.mini span{display:block;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;margin-top:4px}
-
-    .timeline{padding:24px}.timeline h3{font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:18px}.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.step{text-align:center;position:relative}.step-dot{width:48px;height:48px;border-radius:18px;margin:0 auto 8px;display:grid;place-items:center;color:#fff;font-weight:900;border:3px solid rgba(255,255,255,.5);box-shadow:0 10px 28px rgba(20,16,74,.18)}.step small{display:block;color:var(--muted);font-size:11px;font-weight:900}.step b{font-size:12px}.step.complete .step-dot::after{content:"✓"}.step.active .step-dot{outline:4px solid rgba(33,212,194,.2)}
-
-    .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.phase-card{overflow:hidden}.phase-head{padding:18px 18px 14px;color:#fff;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.phase-head .day{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;opacity:.72}.phase-head h3{font-size:24px;line-height:1.1;margin-top:4px}.phase-score{font-size:32px;font-weight:900}.phase-progress{height:5px;background:rgba(255,255,255,.25)}.phase-progress span{display:block;height:100%;width:0%;background:#fff;transition:.35s}.template-list{list-style:none}.template-row{border-top:1px solid #f1e7da}.template-row button{width:100%;display:grid;grid-template-columns:34px 48px 1fr auto;gap:10px;align-items:center;background:#fff;border:none;text-align:left;padding:14px 16px;cursor:pointer}.template-row button:hover{background:#fffbf5}.check{width:24px;height:24px;border-radius:8px;border:2px solid #d9d2ca;display:grid;place-items:center;color:#fff;font-size:14px;font-weight:900}.code{font-weight:900;color:var(--rose)}.name{font-size:14px;font-weight:700;line-height:1.35}.status{font-size:11px;font-weight:900;text-transform:uppercase;color:var(--muted);border:1px solid #e7ded2;border-radius:999px;padding:5px 9px;white-space:nowrap}.template-row.done .check{background:#22c55e;border-color:#22c55e}.template-row.done .name{text-decoration:line-through;color:#9890a7}.template-row.inprogress .check{background:var(--blue);border-color:var(--blue)}.template-row.inprogress .status{color:var(--blue);border-color:rgba(61,99,255,.24);background:rgba(61,99,255,.06)}
-
-    .workspace-cta{margin-top:24px;background:linear-gradient(135deg,var(--navy),#221060);color:#fff;border-radius:var(--radius);padding:26px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;box-shadow:var(--shadow)}.workspace-cta h2{font-size:30px;margin-bottom:8px}.workspace-cta p{color:rgba(255,255,255,.66);line-height:1.55;max-width:670px}.workspace-cta .btn{background:var(--gold)}
-
-    .footer{padding:30px 0;color:var(--muted);text-align:center;font-size:13px}
-
-    @media(max-width:900px){.hero-inner,.progress-layout,.workspace-cta{grid-template-columns:1fr}.hero-stats{grid-template-columns:repeat(4,1fr)}.phase-grid{grid-template-columns:1fr 1fr}.control-panel{grid-template-columns:1fr}.team-tools{justify-content:flex-start}.journey{grid-template-columns:repeat(3,1fr);gap:16px}}
-    @media(max-width:620px){.wide{width:min(100% - 24px,1180px)}.nav{height:auto;padding:12px 0;align-items:flex-start}.nav-actions{justify-content:flex-end}.pill{font-size:12px;padding:8px 10px}.hero{padding:34px 0 24px}.hero-stats{grid-template-columns:repeat(2,1fr)}.phase-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr}.template-row button{grid-template-columns:30px 42px 1fr}.status{display:none}.workspace-cta .btn{width:100%;justify-content:center}.control-title h2{font-size:22px}}
-
-
-    .reflection-panel{margin-top:24px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .reflection-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-bottom:18px}
-    .reflection-eyebrow{display:inline-flex;width:max-content;background:rgba(226,60,116,.10);color:var(--rose);border:1px solid rgba(226,60,116,.18);border-radius:999px;padding:7px 12px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
-    .reflection-head h2{font-size:30px;line-height:1.1;margin-bottom:8px;color:var(--navy)}
-    .reflection-head p{color:var(--muted);line-height:1.55;max-width:780px}
-    .reflection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
-    .reflection-card{border:1px solid #eadfce;background:#fffbf5;border-radius:20px;padding:16px;min-height:176px;position:relative;overflow:hidden}
-    .reflection-card::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:var(--accent,#d7d0c5);opacity:.85}
-    .reflection-card b{display:block;color:var(--navy);font-size:18px;margin-bottom:6px}
-    .reflection-card span{display:inline-flex;margin-bottom:10px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#fff;background:var(--accent,var(--navy));border-radius:999px;padding:5px 9px}
-    .reflection-card p{font-size:13px;line-height:1.45;color:var(--muted);margin-bottom:12px}
-    .reflection-status{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:900;text-transform:uppercase;border-radius:999px;padding:7px 10px;background:#f2eee7;color:#837568}
-    .reflection-status.done{background:rgba(34,197,94,.12);color:#13803d}.reflection-status.active{background:rgba(61,99,255,.10);color:var(--blue)}
-    .reflection-mini-bar{height:9px;background:#eee6dc;border-radius:999px;overflow:hidden;margin-top:12px}.reflection-mini-bar span{display:block;height:100%;width:0%;border-radius:999px;background:var(--accent,var(--gold));transition:.35s}
-    .auto-map{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .auto-map-item{border:1px solid #eadfce;background:#fff;border-radius:16px;padding:12px;color:var(--ink);font-size:13px;line-height:1.4}
-    .auto-map-item strong{display:block;color:var(--navy);margin-bottom:4px}.auto-map-item span{color:var(--muted)}
-    .reflection-note{margin-top:16px;border-left:5px solid var(--gold);background:#fff7e5;border-radius:14px;padding:14px 16px;color:#5c4320;font-size:14px;line-height:1.5}
-    @media(max-width:900px){.reflection-head{grid-template-columns:1fr}.reflection-grid{grid-template-columns:repeat(2,1fr)}.auto-map{grid-template-columns:1fr 1fr}}
-    @media(max-width:620px){.reflection-grid,.auto-map{grid-template-columns:1fr}}
-
-
-    .badges-panel{margin-top:24px;padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .badges-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;margin-bottom:18px}
-    .badges-eyebrow{display:inline-flex;width:max-content;background:rgba(255,200,61,.16);color:#8a6200;border:1px solid rgba(255,200,61,.32);border-radius:999px;padding:7px 12px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
-    .badges-head h2{font-size:30px;line-height:1.1;margin-bottom:8px;color:var(--navy)}
-    .badges-head p{color:var(--muted);line-height:1.55;max-width:780px}
-    .badge-total{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:999px;padding:12px 16px;font-weight:900;white-space:nowrap}
-    .badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .badge-card{position:relative;min-height:184px;border:1px solid #eadfce;background:#fffbf5;border-radius:22px;padding:16px;overflow:hidden;transition:.25s ease}
-    .badge-card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--accent,var(--gold));opacity:.9}
-    .badge-card .badge-icon{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,var(--gold)),rgba(255,255,255,.7));box-shadow:0 14px 30px rgba(20,16,74,.14);font-size:30px;margin-bottom:12px}
-    .badge-card b{display:block;color:var(--navy);font-size:17px;line-height:1.2;margin-bottom:6px}
-    .badge-card p{color:var(--muted);font-size:12.5px;line-height:1.45;margin-bottom:12px}
-    .badge-status{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:900;text-transform:uppercase;border-radius:999px;padding:7px 10px;background:#f2eee7;color:#837568}
-    .badge-card.earned{background:linear-gradient(180deg,#fff,rgba(33,212,194,.08));border-color:rgba(34,197,94,.45);box-shadow:0 16px 38px rgba(34,197,94,.12)}
-    .badge-card.earned .badge-status{background:rgba(34,197,94,.14);color:#13803d}
-    .badge-card.active .badge-status{background:rgba(61,99,255,.10);color:var(--blue)}
-    .badge-mini-bar{height:9px;background:#eee6dc;border-radius:999px;overflow:hidden;margin-top:12px}.badge-mini-bar span{display:block;height:100%;width:0%;border-radius:999px;background:var(--accent,var(--gold));transition:.35s}
-    @media(max-width:900px){.badges-head{grid-template-columns:1fr}.badge-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:620px){.badge-grid{grid-template-columns:1fr}}
-
-    @media print{.topbar,.team-tools,.workspace-cta .btn{display:none}.hero{background:#fff;color:#111}.hero p{color:#555}.panel,.workspace-cta{box-shadow:none}.phase-grid{grid-template-columns:repeat(2,1fr)}body{background:#fff}}
-  </style>
+.camp-footer{background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px}.camp-footer-inner{max-width:1440px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.footer-brand{display:flex;align-items:center;gap:14px;font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700}.footer-brand span{color:#f24fb4}.footer-col h4{color:var(--gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700}.score-note{background:#fff4da;border:1px solid #f4d98f;border-radius:18px;padding:18px 20px;margin-bottom:20px;color:#5c4520;font-weight:800}.day-merge-note{margin:0 0 18px;color:var(--muted);font-weight:700}.section-clean-note{margin-top:16px;color:var(--muted);font-weight:700}.mark-card.score80 b{color:var(--violet)}.mark-card.score20 b{color:var(--pink)}.mark-card.score100 b{color:var(--green)}
+@media(max-width:980px){.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{display:block}.camp-footer{padding-left:18px;padding-right:18px}}
+.phase-grid-2col{grid-template-columns:repeat(2,1fr)}.phase-grid-3col{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1100px){.phase-grid-3col{grid-template-columns:1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+@media(max-width:980px){.hero-inner{grid-template-columns:1fr}.control-panel{grid-template-columns:repeat(2,1fr);margin-top:20px}.phase-card-grid,.phase-grid-2col,.phase-grid-3col,.badge-grid,.reflection-card-grid,.mark-grid{grid-template-columns:1fr}.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.hero h1{font-size:4rem}.qa-dropdown{left:-8px;right:-8px;min-width:auto}}
+@media(max-width:560px){.stats,.control-panel{grid-template-columns:1fr}.hero,.wrap{padding-left:18px;padding-right:18px}.section summary,.section-body{padding-left:18px;padding-right:18px}.brand-icon{width:38px;height:38px}.template-row{grid-template-columns:34px 52px 1fr}.badge-status{grid-column:1/-1;justify-self:start}.hero h1{font-size:3.2rem}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}}
+@media print{.topbar,.nav-actions,.tabs,.chev,.quick-access,.activity-box{display:none}.section,.section[open]{break-inside:avoid;border:none;box-shadow:none}.section summary{pointer-events:none}.section .section-body,.section:not([open]) .section-body{display:block!important}.tab-panel{display:block!important;margin-bottom:18px}.tab-panel::before{content:attr(data-panel);display:block;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--violet);margin-bottom:12px;padding-top:8px;border-top:1px solid var(--line)}.hero{background:#fff!important;color:#111!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.hero p{color:#333}.control-panel{margin-top:0}.phase-head{-webkit-print-color-adjust:exact;print-color-adjust:exact}.badge-card{break-inside:avoid}.camp-footer{display:none}body{background:#fff}}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wide nav">
-      <a class="brand" href="#"><span class="brand-mark">DT</span><span>CAMP21 Participant Workspace</span></a>
-      <div class="nav-actions">
-        <a class="pill" href="#progress">Live Progress</a>
-        <a class="pill" href="#tiktok-reflection">TikTok Reflection</a>
-        <a class="pill" href="#badges">Badges</a>
-        <a class="pill" href="#workspace">Smart DT App</a>
-        <button class="pill primary" onclick="window.print()">Print Report</button>
-      </div>
-    </div>
-  </header>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
+    <nav class="nav-actions">
+      <details class="quick-access">
+        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+        <div class="qa-dropdown">
+          <div class="qa-group">
+            <span class="qa-label">CAMP21 Pages</span>
+            <a class="qa-link" href="../index.html">🏠 Home</a>
+            <a class="qa-link" href="programme.html">📅 Programme</a>
+            <a class="qa-link" href="facilitators.html">🤝 Facilitators</a>
+            <a class="qa-link" href="judges.html">⚖️ Judges</a>
+            <a class="qa-link" href="resources.html">📚 Resources</a>
+            <a class="qa-link" href="contacts.html">📞 Help Desk</a>
+          </div>
+        </div>
+      </details>
+      <a class="nav-pill app-pill" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a>
+      <button class="nav-pill primary" onclick="printAll()">🖨️ Print PDF</button>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="wide hero-inner">
-      <div>
-        <span class="eyebrow">Innovator Hub</span>
-        <h1>Participants<br>Live Workspace</h1>
-        <p>Track each team’s Smart DT Guide progress from Empathise to Pitch, including auto-detected daily TikTok reflections linked to submitted work.</p>
-      </div>
-      <div class="hero-stats" aria-label="CAMP21 stats">
-        <div class="stat"><strong>10</strong><span>Teams</span></div>
-        <div class="stat"><strong>14</strong><span>Templates</span></div>
-        <div class="stat"><strong>5</strong><span>DT Phases</span></div>
-        <div class="stat"><strong>1</strong><span>Final Pitch</span></div>
-      </div>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Innovator Hub</span>
+      <h1>Participants<br>Live Workspace</h1>
+      <p>Track each team's Smart DT Guide progress from Empathy to Pitch, including template submissions, phase badges, daily TikTok reflection challenge and final evaluation readiness.</p>
     </div>
+    <div class="stats">
+      <div class="stat-card"><b>10</b><span>Teams</span></div>
+      <div class="stat-card"><b>14</b><span>Templates</span></div>
+      <div class="stat-card"><b>5</b><span>DT Phases</span></div>
+      <div class="stat-card"><b>1</b><span>Final Pitch</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="control-panel" aria-label="Pre-event status">
+    <div class="control-card"><div class="label">Programme Mode</div><div class="value status-waiting"><span class="status-dot"></span>Pre-Event</div></div>
+    <div class="control-card"><div class="label">Activation Date</div><div class="value">13/07/2026</div></div>
+    <div class="control-card"><div class="label">Template Progress</div><div class="value">0 / 14</div></div>
+    <div class="control-card"><div class="label">Team Status</div><div class="value">Not Started</div></div>
   </section>
 
-  <main id="progress" class="wide">
-    <section class="panel control-panel">
-      <div class="control-title">
-        <h2>My Team Progress</h2>
-        <p>Select a team, update each template status, and monitor live progress. Progress is saved automatically in this browser.</p>
+  <details class="section" id="template-submission" open>
+    <summary>
+      <div class="summary-left"><div class="section-icon">📋</div><div><h2>SMART DT Template Submission</h2><p class="section-sub">All team work progress by day, phase and template. All indicators remain Not Started until 13 July 2026.</p></div></div>
+      <div class="chev">⌄</div>
+    </summary>
+    <div class="section-body">
+      <div class="info-note">Students can refer to this section to see exactly what work must be completed each day. Mahjong paper activities are included under the relevant phase.</div>
+      <div class="tabs" data-tab-group="templates">
+        <button class="tab-btn active" data-tab="day1">Day 1 · Empathy & Define</button>
+        <button class="tab-btn" data-tab="day2ideate">Day 2 · Ideate & Prototype</button>
+        <button class="tab-btn" data-tab="day3submission">Day 3 · Prototype Outcome, Test & Pitch</button>
+        <button class="tab-btn" data-tab="allteams">All 10 Teams Tracker</button>
       </div>
-      <div class="team-tools">
-        <label for="teamSelect" style="font-size:12px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em">Your Team</label>
-        <select id="teamSelect" class="team-select" aria-label="Select team"></select>
-        <button class="btn ghost" onclick="resetTeam()">Reset Team</button>
-      </div>
-    </section>
 
-    <section class="progress-layout">
-      <div class="panel progress-card">
-        <h3>Overall Completion</h3>
-        <div class="big-progress"><strong id="doneCount">0/14</strong><span id="pctText">0%</span></div>
-        <div class="bar"><div id="overallFill" class="bar-fill"></div></div>
-        <div class="summary-grid">
-          <div class="mini"><b id="approvedCount">0</b><span>Approved</span></div>
-          <div class="mini"><b id="submittedCount">0</b><span>Submitted</span></div>
-          <div class="mini"><b id="badgeCount">0/8</b><span>Badges</span></div>
-          <div class="mini"><b id="activePhase">Intro</b><span>Current</span></div>
-        </div>
-      </div>
-      <div class="panel timeline">
-        <h3>DT Journey</h3>
-        <div id="journey" class="journey"></div>
-      </div>
-    </section>
-
-    <section id="phaseGrid" class="phase-grid"></section>
-
-
-    <section id="tiktok-reflection" class="reflection-panel">
-      <div class="reflection-head">
-        <div>
-          <span class="reflection-eyebrow">Auto-Detected Daily Reflection</span>
-          <h2>Team Daily Video Reflection</h2>
-          <p>The reflection status follows the same logic as template submission. Once the group submits the required templates for the day, the reflection milestone is automatically marked as ready for the daily TikTok reflection.</p>
+      <div class="tab-panel active" data-panel="day1">
+        <p class="day-merge-note">Day 1 shows the two starting phases together so participants can track morning and afternoon work without jumping page by page.</p>
+        <div class="phase-card-grid">
+          <article class="phase-info"><div class="phase-head phase-empathy"><div><div class="phase-time">Day 1 AM</div><div class="phase-title">Empathy</div></div><div class="phase-count">0/4</div></div><div class="phase-body"><div class="template-list" id="list-empathy"></div><div class="activity-box"><span>Activity:</span> Mahjong Paper – T04 Empathy Map</div></div></article>
+          <article class="phase-info"><div class="phase-head phase-define"><div><div class="phase-time">Day 1 PM</div><div class="phase-title">Define</div></div><div class="phase-count">0/2</div></div><div class="phase-body"><div class="template-list" id="list-define"></div><div class="activity-box"><span>Activity:</span> Mahjong Paper – T06 Persona, Need & Design Statement</div></div></article>
         </div>
       </div>
 
-      <div class="reflection-grid" aria-label="Daily TikTok reflection auto-detection cards">
-        <div class="reflection-card" style="--accent:#21d4c2" id="reflect-day1">
-          <span>Day 1</span>
-          <b>Empathy &amp; Define Reflection</b>
-          <p>Auto-detected when T01–T06 are submitted. Video should show POEMS, interview findings, empathy map, persona and needs statement.</p>
-          <div class="reflection-status" id="reflect-day1-status">Waiting for submissions</div>
-          <div class="reflection-mini-bar"><span id="reflect-day1-fill"></span></div>
+      <div class="tab-panel" data-panel="day2ideate">
+        <p class="day-merge-note">Day 2 is focused on idea generation, selection and prototype direction. Teams complete the creativity warm-up, expand ideas using SCAMPER, choose the strongest idea, then plan the prototype format, tools, materials, features and roles before building.</p>
+        <div class="phase-card-grid phase-grid-2col">
+          <article class="phase-info"><div class="phase-head phase-ideate"><div><div class="phase-time">Day 2</div><div class="phase-title">Ideate</div></div><div class="phase-count">0/3</div></div><div class="phase-body"><div class="template-list" id="list-ideate"></div><div class="activity-box"><span>Activity:</span> Mahjong Paper – T08 SCAMPER & T09 Ideation Matrix Prioritisation</div></div></article>
+          <article class="phase-info"><div class="phase-head phase-prototype"><div><div class="phase-time">Day 2</div><div class="phase-title">Prototype</div></div><div class="phase-count">0/1</div></div><div class="phase-body"><div class="template-list" id="list-prototype-plan"></div><div class="activity-box"><span>Activity:</span> Prototype Direction Planning before full build begins</div></div></article>
         </div>
-        <div class="reflection-card" style="--accent:#ff4fcb" id="reflect-day2">
-          <span>Day 2</span>
-          <b>Ideate &amp; Prototype Reflection</b>
-          <p>Auto-detected when T07–T11 are submitted. Video should show mind map, SCAMPER, selected idea, prototype direction and sketch.</p>
-          <div class="reflection-status" id="reflect-day2-status">Waiting for submissions</div>
-          <div class="reflection-mini-bar"><span id="reflect-day2-fill"></span></div>
+      </div>
+
+      <div class="tab-panel" data-panel="day3submission">
+        <p class="day-merge-note">Day 3 submission flow: complete the full prototype outcome, collect feedback, plan improvements and prepare the pitch deck before 10.00 PM.</p>
+        <div class="phase-card-grid phase-grid-3col">
+          <article class="phase-info"><div class="phase-head phase-prototype"><div><div class="phase-time">Day 3</div><div class="phase-title">Prototype Outcome</div></div><div class="phase-count">0/1</div></div><div class="phase-body"><div class="template-list" id="list-prototype-outcome"></div><div class="activity-box"><span>Activity:</span> Mahjong Paper / Canva – full prototype outcome for T11</div></div></article>
+          <article class="phase-info"><div class="phase-head phase-test"><div><div class="phase-time">Day 3</div><div class="phase-title">Test</div></div><div class="phase-count">0/2</div></div><div class="phase-body"><div class="template-list" id="list-test"></div><div class="activity-box"><span>Activity:</span> Mahjong Paper – Feedback Capture Grid</div></div></article>
+          <article class="phase-info"><div class="phase-head phase-pitch"><div><div class="phase-time">Day 3</div><div class="phase-title">Pitch</div></div><div class="phase-count">0/1</div></div><div class="phase-body"><div class="template-list" id="list-pitch"></div><div class="activity-box"><span>Activity:</span> 8-Slide Pitch Presentation + Q&A readiness before 10.00 PM</div></div></article>
         </div>
-        <div class="reflection-card" style="--accent:#8dff3f" id="reflect-day3">
-          <span>Day 3</span>
-          <b>Pitching Practice &amp; Testing Reflection</b>
-          <p>Auto-detected when T12–T14 are submitted. Video should show user feedback, improvement plan and pitch practice evidence.</p>
-          <div class="reflection-status" id="reflect-day3-status">Waiting for submissions</div>
-          <div class="reflection-mini-bar"><span id="reflect-day3-fill"></span></div>
-        </div>
-
       </div>
 
-      <div class="auto-map" aria-label="Reflection auto-detection rules">
-        <div class="auto-map-item"><strong>Day 1 Reflection</strong><span>Requires T01, T02, T03, T04, T05 and T06 submitted / approved.</span></div>
-        <div class="auto-map-item"><strong>Day 2 Reflection</strong><span>Requires T07, T08, T09, T10 and T11 submitted / approved.</span></div>
-        <div class="auto-map-item"><strong>Day 3 Reflection</strong><span>Requires T12, T13 and T14 submitted / approved.</span></div>
+      <div class="tab-panel" data-panel="allteams">
+        <div class="info-note">All 10 teams are listed here. This is the main tracker for organisers, trainers and participants to see what has not been completed yet.</div>
+        <div class="table-scroll"><table class="progress-table" id="team-template-table"><thead><tr><th>Team</th><th>Day 1<br>Empathy 0/4</th><th>Day 1<br>Define 0/2</th><th>Day 2<br>Ideate 0/3</th><th>Day 2–3<br>Prototype 0/2</th><th>Day 3<br>Test 0/2</th><th>Day 3<br>Pitch 0/1</th><th>Total<br>0/14</th><th>Need To Do</th></tr></thead><tbody></tbody></table></div>
+        <p class="section-clean-note">Status will remain Not Started until live activation on 13 July 2026.</p>
       </div>
+    </div>
+  </details>
 
-      <div class="reflection-note">
-        <strong>Reminder:</strong> Daily TikTok reflections are not additional Smart DT templates. They are automatically linked to the team’s submitted work progress and serve as daily video evidence for team reflection.
+  <details class="section" id="badges-completion">
+    <summary>
+      <div class="summary-left"><div class="section-icon">🏅</div><div><h2>Badges Completion of DT Phase</h2><p class="section-sub">7 phase badges wired to Smart DT Guide + 1 full auto-completion badge when all 14 templates are submitted.</p></div></div>
+      <div class="chev">⌄</div>
+    </summary>
+    <div class="section-body">
+      <div class="info-note">Badges are not only decorative. They indicate which team has completed each DT milestone. All badges are locked before the programme starts.</div>
+      <div class="badge-grid" id="badge-grid"></div>
+      <div class="table-scroll"><table class="progress-table badge-team-table" id="badge-table"><thead><tr><th>Team</th><th>DT Explorer</th><th>Empathy Champion</th><th>Problem Framer</th><th>Idea Generator</th><th>Prototype Builder</th><th>User Tester</th><th>Pitch Presenter</th><th>Full Completion</th><th>Total</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </details>
+
+  <details class="section" id="tiktok-reflection">
+    <summary>
+      <div class="summary-left"><div class="section-icon">🎥</div><div><h2>TikTok Reflection Challenge</h2><p class="section-sub">Daily team reflection challenge linked to completed work for Day 1, Day 2 and Day 3.</p></div></div>
+      <div class="chev">⌄</div>
+    </summary>
+    <div class="section-body">
+      <div class="reflection-card-grid">
+        <article class="reflection-card"><h3>Day 1 Reflection</h3><p>Focus: Empathy + Define. Teams reflect on POEMS observation, interview insights, empathy map and problem direction.</p><span class="pill waiting">Waiting · T01–T06</span></article>
+        <article class="reflection-card"><h3>Day 2 Reflection</h3><p>Focus: Ideate + Prototype planning. Teams reflect on 30 Circle Challenge, SCAMPER, ideation matrix and prototype direction.</p><span class="pill waiting">Waiting · T07–T10</span></article>
+        <article class="reflection-card"><h3>Day 3 Reflection</h3><p>Focus: Prototype outcome, testing + pitch practice. Teams reflect on full prototype, feedback capture, improvement plan and pitch preparation.</p><span class="pill waiting">Waiting · T11–T14</span></article>
       </div>
-    </section>
+      <div class="table-scroll"><table class="progress-table" id="tiktok-table"><thead><tr><th>Team</th><th>Day 1 Reflection<br>Empathy & Define</th><th>Day 2 Reflection<br>Ideate & Prototype</th><th>Day 3 Reflection<br>Testing & Pitch</th><th>Total</th><th>Need To Do</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </details>
 
-
-
-    <section id="badges" class="badges-panel">
-      <div class="badges-head">
-        <div>
-          <span class="badges-eyebrow">Auto-Detected Achievement</span>
-          <h2>Badges Received Indicator</h2>
-          <p>Badges are automatically unlocked based on completed template submissions. When the required templates are submitted or approved, the badge changes from locked to received.</p>
-        </div>
-        <div class="badge-total" id="badgeTotal">0 / 8 Badges</div>
+  <details class="section" id="evaluation-overview">
+    <summary>
+      <div class="summary-left"><div class="section-icon">📊</div><div><h2>Full Marks Overview</h2><p class="section-sub">Quick scoring information for participants. Total evaluation = 100%.</p></div></div>
+      <div class="chev">⌄</div>
+    </summary>
+    <div class="section-body">
+      <div class="score-note">Participants must keep evidence clear in three areas: SMART DT phase work, TikTok reflection challenge, and final pitch presentation. This section is for scoring awareness only.</div>
+      <div class="mark-grid">
+        <article class="mark-card score80"><b>80%</b><h3>5 DT Phases + Pitch Evidence</h3><p>Marks focus on the complete Design Thinking journey: Empathy, Define, Ideate, Prototype, Test, and Day 4 pitch presentation evidence.</p></article>
+        <article class="mark-card score20"><b>20%</b><h3>TikTok Reflection Challenge</h3><p>Daily team video reflections show what the group learned and completed across Day 1, Day 2 and Day 3.</p></article>
+        <article class="mark-card score100"><b>100%</b><h3>Total Evaluation</h3><p>Final marks combine DT phase evidence and TikTok reflection challenge. All status begins as Not Started before CAMP21 goes live.</p></article>
       </div>
-      <div class="badge-grid" id="badgeGrid" aria-label="Badges received indicator"></div>
-    </section>
+    </div>
+  </details>
 
-    <section id="workspace" class="workspace-cta">
-      <div>
-        <h2>Your Digital Workspace</h2>
-        <p>Open the Smart DT Guide app to complete the actual worksheets. This page is for live progress monitoring, facilitator checking, and team tracking.</p>
+</main>
+
+<footer class="camp-footer">
+  <div class="camp-footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">CAMP<span>21</span></div>
+        <p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p>
+        <p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p>
       </div>
-      <a class="btn" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Launch App Workspace ↗</a>
-    </section>
-  </main>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="programme.html">Programme</a>
+        <a href="resources.html">Resources</a>
+        <a href="updates.html">Live Updates</a>
+        <a href="contacts.html">Help</a>
+      </div>
+      <div class="footer-col">
+        <h4>Workspace</h4>
+        <a href="#template-submission">Template Submission</a>
+        <a href="#badges-completion">Badges Completion</a>
+        <a href="#tiktok-reflection">TikTok Reflection</a>
+        <a href="#evaluation-overview">Full Marks Overview</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a>
+        <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
+        <a href="contacts.html">Help Desk</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CAMP21 Digital Hub.</span>
+      <span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span>
+    </div>
+  </div>
+</footer>
 
-  <footer class="footer wide">© 2026 CAMP21 Digital Hub | Smart DT Guide | Participants Workspace Live Progress</footer>
-
-  <script>
-    const phases = [
-      {id:'empathise', day:'Day 1 AM', name:'Empathise', color:'#21d4c2', templates:[
-        ['T01','POEMS Observation Framework'],
-        ['T02','Interview Guide & Worksheet'],
-        ['T03','Audio-to-Text Transcription'],
-        ['T04','Empathy Map']
-      ]},
-      {id:'define', day:'Day 1 PM', name:'Define', color:'#6b4dff', templates:[
-        ['T05','User Persona Template'],
-        ['T06','User Insight & Needs Statement']
-      ]},
-      {id:'ideate', day:'Day 2', name:'Ideate', color:'#ff4fcb', templates:[
-        ['T07','Ideation Techniques & Mind Map'],
-        ['T08','SCAMPER Template'],
-        ['T09','Idea Prioritisation Matrix']
-      ]},
-      {id:'prototype', day:'Day 2–3', name:'Prototype', color:'#ffc83d', templates:[
-        ['T10','Prototype Direction Plan'],
-        ['T11','Sketching Your Prototype']
-      ]},
-      {id:'test', day:'Day 3', name:'Test', color:'#8dff3f', templates:[
-        ['T12','User Feedback Form'],
-        ['T13','Improvement Plan']
-      ]},
-      {id:'pitch', day:'Final Day', name:'Pitch', color:'#3d63ff', templates:[
-        ['T14','8-Slide Pitch Framework']
-      ]}
-    ];
-    const totalTemplates = phases.reduce((sum,p)=>sum+p.templates.length,0);
-    const statuses = ['not-started','inprogress','submitted','approved'];
-    const labels = {'not-started':'Not Started','inprogress':'In Progress','submitted':'Submitted','approved':'Approved'};
-    const storageKey = 'camp21_smartdt_live_progress_v14';
-    let team = 'Team 1';
-    let data = load();
-
-    function load(){ try { return JSON.parse(localStorage.getItem(storageKey)||'{}'); } catch(e){ return {}; } }
-    function save(){ localStorage.setItem(storageKey, JSON.stringify(data)); }
-    function ensureTeam(){ if(!data[team]) data[team] = {}; }
-    function statusOf(code){ ensureTeam(); return data[team][code] || 'not-started'; }
-    function nextStatus(code){ const current = statusOf(code); return statuses[(statuses.indexOf(current)+1)%statuses.length]; }
-
-    function init(){
-      const select = document.getElementById('teamSelect');
-      for(let i=1;i<=10;i++) select.innerHTML += `<option>Team ${i}</option>`;
-      select.addEventListener('change', e=>{ team=e.target.value; render(); });
-      render();
-    }
-
-    function render(){ renderJourney(); renderPhaseCards(); renderSummary(); renderReflections(); renderBadges(); save(); }
-
-    function renderJourney(){
-      const journey = document.getElementById('journey');
-      journey.innerHTML = phases.map(p=>{
-        const done = p.templates.filter(([c])=>statusOf(c)==='approved' || statusOf(c)==='submitted').length;
-        const approved = p.templates.filter(([c])=>statusOf(c)==='approved').length;
-        const complete = approved === p.templates.length;
-        const active = done > 0 && !complete;
-        return `<div class="step ${complete?'complete':''} ${active?'active':''}">
-          <div class="step-dot" style="background:${complete||active?p.color:'#d7d0c5'}">${complete?'':p.name[0]}</div>
-          <small>${p.day}</small><b>${p.name}</b>
-        </div>`;
-      }).join('');
-    }
-
-    function renderPhaseCards(){
-      const grid = document.getElementById('phaseGrid');
-      grid.innerHTML = phases.map(p=>{
-        const done = p.templates.filter(([c])=>statusOf(c)==='approved' || statusOf(c)==='submitted').length;
-        const pct = Math.round((done/p.templates.length)*100);
-        const rows = p.templates.map(([code,name])=>{
-          const st = statusOf(code);
-          const rowClass = st==='approved' || st==='submitted' ? 'done' : st==='inprogress' ? 'inprogress' : '';
-          const tick = st==='approved' ? '✓' : st==='submitted' ? '●' : st==='inprogress' ? '…' : '';
-          return `<li class="template-row ${rowClass}"><button onclick="cycle('${code}')" title="Click to change status">
-            <span class="check">${tick}</span><span class="code">${code}</span><span class="name">${name}</span><span class="status">${labels[st]}</span>
-          </button></li>`;
-        }).join('');
-        return `<article class="panel phase-card">
-          <div class="phase-head" style="background:${p.color};color:${p.id==='prototype'||p.id==='test'?'#151236':'#fff'}">
-            <div><div class="day">${p.day}</div><h3>${p.name}</h3></div><div class="phase-score">${done}/${p.templates.length}</div>
-          </div>
-          <div class="phase-progress"><span style="width:${pct}%;background:${p.id==='prototype'||p.id==='test'?'#151236':'#fff'}"></span></div>
-          <ul class="template-list">${rows}</ul>
-        </article>`;
-      }).join('');
-    }
-
-    function renderSummary(){
-      let submitted = 0, approved = 0, done = 0;
-      phases.forEach(p=>p.templates.forEach(([c])=>{
-        const st = statusOf(c);
-        if(st==='submitted') submitted++;
-        if(st==='approved') approved++;
-        if(st==='submitted'||st==='approved') done++;
-      }));
-      const pct = Math.round((done/totalTemplates)*100);
-      document.getElementById('doneCount').textContent = `${done}/${totalTemplates}`;
-      document.getElementById('pctText').textContent = `${pct}%`;
-      document.getElementById('overallFill').style.width = pct + '%';
-      document.getElementById('approvedCount').textContent = approved;
-      document.getElementById('submittedCount').textContent = submitted;
-      const current = phases.find(p=>p.templates.some(([c])=>!['submitted','approved'].includes(statusOf(c)))) || {name:'Complete'};
-      document.getElementById('activePhase').textContent = current.name;
-    }
-
-    function cycle(code){ ensureTeam(); data[team][code] = nextStatus(code); render(); }
-    function resetTeam(){ if(confirm(`Reset progress for ${team}?`)){ data[team] = {}; render(); } }
-
-    const reflectionRules = [
-      {id:'day1', codes:['T01','T02','T03','T04','T05','T06']},
-      {id:'day2', codes:['T07','T08','T09','T10','T11']},
-      {id:'day3', codes:['T12','T13','T14']}
-    ];
-    function isSubmitted(code){ return ['submitted','approved'].includes(statusOf(code)); }
-    function setReflectionCard(id, done, total){
-      const pct = Math.round((done/total)*100);
-      const fill = document.getElementById(`reflect-${id}-fill`);
-      const status = document.getElementById(`reflect-${id}-status`);
-      if(fill) fill.style.width = pct + '%';
-      if(status){
-        status.classList.remove('done','active');
-        if(done === total){ status.textContent = `Ready ✓ ${done}/${total}`; status.classList.add('done'); }
-        else if(done > 0){ status.textContent = `In Progress ${done}/${total}`; status.classList.add('active'); }
-        else { status.textContent = `Waiting ${done}/${total}`; }
-      }
-    }
-    function renderReflections(){
-      const results = reflectionRules.map(rule=>{
-        const done = rule.codes.filter(isSubmitted).length;
-        setReflectionCard(rule.id, done, rule.codes.length);
-        return done === rule.codes.length;
-      });
-    }
-
-
-    const badgeRules = [
-      {id:'dt-explorer', icon:'🚀', name:'DT Explorer', desc:'Started the Smart DT Guide journey.', accent:'#3d63ff', codes:['T01']},
-      {id:'empathy-champion', icon:'💙', name:'Empathy Champion', desc:'Completed Empathise templates T01–T04.', accent:'#21d4c2', codes:['T01','T02','T03','T04']},
-      {id:'problem-framer', icon:'🎯', name:'Problem Framer', desc:'Completed Define templates T05–T06.', accent:'#6b4dff', codes:['T05','T06']},
-      {id:'idea-generator', icon:'💡', name:'Idea Generator', desc:'Completed Ideate templates T07–T09.', accent:'#ff4fcb', codes:['T07','T08','T09']},
-      {id:'prototype-builder', icon:'🧩', name:'Prototype Builder', desc:'Completed Prototype templates T10–T11.', accent:'#ffc83d', codes:['T10','T11']},
-      {id:'user-tester', icon:'✅', name:'User Tester', desc:'Completed Test templates T12–T13.', accent:'#8dff3f', codes:['T12','T13']},
-      {id:'pitch-presenter', icon:'🎤', name:'Pitch Presenter', desc:'Completed the 8-Slide Pitch Framework T14.', accent:'#3d63ff', codes:['T14']},
-      {id:'full-portfolio', icon:'📁', name:'Full Portfolio', desc:'Completed all 14 SMART DT templates.', accent:'#c8952c', codes:['T01','T02','T03','T04','T05','T06','T07','T08','T09','T10','T11','T12','T13','T14']}
-    ];
-
-    function badgeProgress(rule){
-      const done = rule.codes.filter(isSubmitted).length;
-      return {done, total: rule.codes.length, earned: done === rule.codes.length, pct: Math.round((done / rule.codes.length) * 100)};
-    }
-
-    function renderBadges(){
-      const grid = document.getElementById('badgeGrid');
-      if(!grid) return;
-      const earnedTotal = badgeRules.filter(rule => badgeProgress(rule).earned).length;
-      const totalLabel = `${earnedTotal} / ${badgeRules.length} Badges`;
-      const badgeTotal = document.getElementById('badgeTotal');
-      if(badgeTotal) badgeTotal.textContent = totalLabel;
-      const badgeCount = document.getElementById('badgeCount');
-      if(badgeCount) badgeCount.textContent = `${earnedTotal}/${badgeRules.length}`;
-
-      grid.innerHTML = badgeRules.map(rule => {
-        const progress = badgeProgress(rule);
-        const stateClass = progress.earned ? 'earned' : progress.done > 0 ? 'active' : '';
-        const statusText = progress.earned ? `Received ✓` : progress.done > 0 ? `In Progress ${progress.done}/${progress.total}` : `Locked ${progress.done}/${progress.total}`;
-        return `<article class="badge-card ${stateClass}" style="--accent:${rule.accent}">
-          <div class="badge-icon">${rule.icon}</div>
-          <b>${rule.name}</b>
-          <p>${rule.desc}</p>
-          <div class="badge-status">${statusText}</div>
-          <div class="badge-mini-bar"><span style="width:${progress.pct}%"></span></div>
-        </article>`;
-      }).join('');
-    }
-
-    init();
-  </script>
+<script>
+const templates = {
+  empathy:[['T01','POEMS Observation Framework','Observe users through People, Objects, Environments, Messages and Services.'],['T02','Interview Guide & Worksheet','Prepare and conduct guided empathy interviews.'],['T03','Audio-to-Text Transcription','Convert interview audio into transcript, quotes and evidence.'],['T04','Empathy Map','Organise findings into Say, Think, Do and Feel.']],
+  define:[['T05','User Insight','Identify meaningful insights from empathy evidence.'],['T06','Persona, Need & Design Statement','Create persona, user needs and focused design statement.']],
+  ideate:[['T07','30 Circle Challenge','Creativity warm-up to generate quick visual ideas.'],['T08','SCAMPER','Improve ideas using SCAMPER prompts.'],['T09','Ideation Matrix Prioritisation','Select the strongest idea using prioritisation criteria.']],
+  prototype:[['T10','Prototype Direction Plan','Plan prototype format, tools, materials, features and roles.'],['T11','Full Prototype Outcome','Produce full prototype outcome using suitable tools or physical mock-up.']],
+  test:[['T12','Feedback Capture Grid','Collect structured feedback from users or peers.'],['T13','Improvement Plan','Plan refinements based on feedback.']],
+  pitch:[['T14','8-Slide Pitch Framework','Prepare final pitch deck and Q&A readiness.']]
+};
+const totals={empathy:4,define:2,ideate:3,prototype:2,test:2,pitch:1};
+const teams=Array.from({length:10},(_,i)=>`Team ${i+1}`);
+const badgeDefs=[['🚀','DT Explorer','Started the Smart DT Guide journey.','0/1'],['💙','Empathy Champion','Completed Empathy templates T01–T04.','0/4'],['🎯','Problem Framer','Completed Define templates T05–T06.','0/2'],['💡','Idea Generator','Completed Ideate templates T07–T09.','0/3'],['🧩','Prototype Builder','Completed Prototype templates T10–T11.','0/2'],['✅','User Tester','Completed Test templates T12–T13.','0/2'],['🎤','Pitch Presenter','Completed the 8-Slide Pitch Framework T14.','0/1'],['📁','Full Completion','Completed all 14 SMART DT templates.','0/14']];
+function templateRow(t){return `<div class="template-row"><span class="checkbox"></span><span class="code">${t[0]}</span><span><span class="t-name">${t[1]}</span><span class="t-desc">${t[2]}</span></span><span class="badge-status not-started">Not Started</span></div>`}
+function fillTemplateLists(){Object.entries(templates).forEach(([k,list])=>{const el=document.getElementById('list-'+k); if(el) el.innerHTML=list.map(templateRow).join('')}); const plan=document.getElementById('list-prototype-plan'); if(plan) plan.innerHTML=templateRow(templates.prototype[0]); const outcome=document.getElementById('list-prototype-outcome'); if(outcome) outcome.innerHTML=templateRow(templates.prototype[1]);}
+function fillTeamTemplateTable(){const tbody=document.querySelector('#team-template-table tbody');tbody.innerHTML=teams.map(team=>`<tr><td>${team}</td><td>0/4<div class="tiny-bar"><div class="tiny-fill"></div></div></td><td>0/2<div class="tiny-bar"><div class="tiny-fill"></div></div></td><td>0/3<div class="tiny-bar"><div class="tiny-fill"></div></div></td><td>0/2<div class="tiny-bar"><div class="tiny-fill"></div></div></td><td>0/2<div class="tiny-bar"><div class="tiny-fill"></div></div></td><td>0/1<div class="tiny-bar"><div class="tiny-fill"></div></div></td><td><strong>0/14</strong><div class="tiny-bar"><div class="tiny-fill"></div></div></td><td><span class="pill not-started">T01–T14 Not Started</span></td></tr>`).join('')}
+function fillBadges(){document.getElementById('badge-grid').innerHTML=badgeDefs.map(b=>`<article class="badge-card"><div class="badge-icon">${b[0]}</div><h3>${b[1]}</h3><p>${b[2]}</p><span class="pill locked">Locked ${b[3]}</span><div class="tiny-bar"><div class="tiny-fill"></div></div></article>`).join('');
+const tbody=document.querySelector('#badge-table tbody');tbody.innerHTML=teams.map(t=>`<tr><td>${t}</td>${badgeDefs.map(()=>`<td><span class="team-status locked">○</span><br><small>Locked</small></td>`).join('')}<td><strong>0/8</strong></td></tr>`).join('')}
+function fillTiktok(){const tbody=document.querySelector('#tiktok-table tbody');tbody.innerHTML=teams.map(t=>`<tr><td>${t}</td><td><span class="pill waiting">Waiting</span><br><small>T01–T06</small></td><td><span class="pill waiting">Waiting</span><br><small>T07–T10</small></td><td><span class="pill waiting">Waiting</span><br><small>T11–T14</small></td><td><strong>0/3</strong></td><td><span class="pill not-started">Not Started</span></td></tr>`).join('')}
+function setupTabs(){document.querySelectorAll('.tabs').forEach(group=>{group.addEventListener('click',e=>{const btn=e.target.closest('.tab-btn'); if(!btn)return; const root=group.closest('.section-body'); root.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); root.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active')); btn.classList.add('active'); root.querySelector(`[data-panel="${btn.dataset.tab}"]`).classList.add('active');})})}
+fillTemplateLists();fillTeamTemplateTable();fillBadges();fillTiktok();setupTabs();
+// Close Capaian Pantas dropdown on outside click or link click
+document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
+document.querySelectorAll('.qa-link').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.quick-access').removeAttribute('open')}));
+// Print PDF — force-open all sections and tabs, print, then restore
+function printAll(){
+  const details=document.querySelectorAll('details.section');
+  const wasClosed=[];
+  details.forEach(d=>{if(!d.open){d.open=true;wasClosed.push(d)}});
+  const panels=document.querySelectorAll('.tab-panel');
+  panels.forEach(p=>p.style.display='block');
+  setTimeout(()=>{
+    window.print();
+    setTimeout(()=>{
+      wasClosed.forEach(d=>d.open=false);
+      panels.forEach(p=>p.style.display='');
+    },600);
+  },200);
+}
+</script>
 </body>
 </html>
