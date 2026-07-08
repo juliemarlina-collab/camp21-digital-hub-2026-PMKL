@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CAMP21 Programme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151044;--indigo:#251052;--cream:#fff8ef;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;--gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#e23c74;--olive:#8a7a2a;--brown:#7a3d1e;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-sans)}a{text-decoration:none;color:inherit}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:var(--pink)}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}.nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem;cursor:pointer}.nav-pill:hover{border-color:var(--violet)}.nav-pill.primary{background:var(--violet);color:#fff;border-color:var(--violet)}.app-pill{border-color:var(--teal);color:var(--ink)}.app-pill:hover{background:var(--teal);color:#fff}
+.quick-access{position:relative}.qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}.qa-chev{transition:.25s;display:inline-block;font-size:.7em}.quick-access[open] .qa-chev{transform:rotate(180deg)}.qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:60;animation:qaIn .18s ease}.qa-group{padding:10px 8px}.qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px}.qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);transition:background .15s}.qa-link:hover{background:rgba(109,70,238,.07);color:var(--violet)}@keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.hero{background:radial-gradient(circle at 82% 10%,rgba(255,199,61,.15),transparent 34%),linear-gradient(120deg,#183d70 0%,#251052 45%,#3b124c 100%);color:#fff;padding:58px 28px 50px}.hero-inner{max-width:1440px;margin:auto}.eyebrow{display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}.hero h1{font-family:var(--font-serif);font-size:clamp(3.6rem,7vw,6rem);line-height:.88;margin:30px 0 18px;letter-spacing:-.055em;font-style:italic}.hero p{font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.78);max-width:780px}
+.wrap{max-width:1440px;margin:auto;padding:48px 28px 80px}.section-head{margin-bottom:2rem}.section-head h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem}.section-head p{color:var(--muted);font-size:1.05rem;line-height:1.55;max-width:720px}.s-gap{margin-bottom:4rem}
+.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:22px;overflow:hidden;margin-bottom:3rem}.ov-card{padding:32px 28px;color:#fff;position:relative;overflow:hidden}.ov-card .day-label{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;opacity:.8}.ov-card .day-theme{font-family:var(--font-serif);font-size:1.6rem;margin:8px 0 0}.ov-card .day-num{position:absolute;bottom:-10px;right:14px;font-family:var(--font-serif);font-size:5rem;font-weight:700;opacity:.12}.ov1{background:var(--indigo)}.ov2{background:var(--pink)}.ov3{background:var(--olive)}.ov4{background:var(--rose)}
+.day-tabs{display:flex;gap:0;border-bottom:2px solid var(--line);margin-bottom:28px;flex-wrap:wrap}.day-tab{padding:14px 24px;font-weight:900;font-size:.95rem;cursor:pointer;border-bottom:3px solid transparent;transition:.2s}.day-tab:hover{color:var(--violet)}.day-tab.active{color:var(--violet);border-bottom-color:var(--violet)}
+.day-panel{display:none}.day-panel.active{display:block}
+.day-header{background:var(--indigo);border-radius:22px;padding:32px;color:#fff;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center}.day-header h3{font-family:var(--font-serif);font-size:2rem;margin:0}.day-header .dh-date{font-family:var(--font-serif);font-size:3rem;font-weight:700;text-align:right;line-height:1}.day-header .dh-date small{display:block;font-size:.82rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;opacity:.6}.day-header .dh-eyebrow{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}.day-header .dh-sub{font-family:var(--font-serif);font-style:italic;opacity:.78;margin-top:4px;font-size:1.1rem}
+.day-overview{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px;margin-bottom:28px}.day-overview h4{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}.day-overview p{margin:0 0 12px;line-height:1.6;color:#444;font-weight:600}.day-overview .focus{background:rgba(107,77,255,.08);border-left:4px solid var(--violet);padding:12px 18px;border-radius:0 12px 12px 0;font-weight:800;color:var(--ink);margin:12px 0}
+.session-label{font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--indigo);margin:28px 0 12px;display:flex;align-items:center;gap:8px}.session-label::before{content:'';width:12px;height:12px;border-radius:50%;background:var(--indigo)}
+.sched-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;margin-bottom:8px;overflow:hidden}.sched-row{display:grid;grid-template-columns:100px 1fr;gap:0}.sched-time{padding:18px 16px;font-weight:900;font-size:.92rem;color:var(--violet);border-right:1px solid var(--line);display:flex;align-items:flex-start}.sched-content{padding:18px 20px}.sched-content h4{margin:0 0 4px;font-weight:900;font-size:1rem}.sched-content p{margin:0;color:#555;font-weight:600;font-size:.92rem}.sched-tag{display:inline-flex;background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 12px;font-size:.68rem;font-weight:900;margin-top:8px}.sched-tag.dt{background:var(--violet);color:#fff}.sched-tag.field{background:var(--teal);color:#fff}.sched-tag.prayer{background:var(--rose);color:#fff}.sched-tag.city{background:var(--blue);color:#fff}.sched-tag.pitch{background:var(--pink);color:#fff}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.detail-box{background:rgba(107,77,255,.04);border:1px solid rgba(107,77,255,.12);border-radius:14px;padding:14px 18px;margin-top:10px}.detail-box p{margin:0 0 6px;font-weight:700;color:#333;font-size:.92rem;line-height:1.5}
+.outputs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}.output-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}.output-card .oc-icon{font-size:1.6rem;margin-bottom:8px}.output-card p{margin:0;font-weight:700;color:#333;font-size:.88rem;line-height:1.4}
+.reflection-box{background:var(--pink);border-radius:22px;overflow:hidden;margin:28px 0;color:#fff}.reflection-header{padding:22px 28px;display:flex;justify-content:space-between;align-items:center}.reflection-header h4{margin:0;font-weight:900;font-size:1.1rem}.reflection-header .dur{background:rgba(255,255,255,.2);border-radius:999px;padding:5px 14px;font-size:.78rem;font-weight:900}.reflection-body{background:var(--paper);color:var(--ink);padding:24px 28px;border-radius:22px 22px 0 0;margin-top:0}.reflection-body p.intro{font-style:italic;color:#444;font-weight:600;margin:0 0 18px;line-height:1.6}.ref-q{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.ref-q:last-child{border-bottom:0}.ref-num{width:28px;height:28px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center;font-weight:900;font-size:.78rem;flex-shrink:0}.ref-q p{margin:0;font-weight:700;line-height:1.5}
+.day-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;margin-top:20px;border-top:1px solid var(--line)}.day-nav a{font-weight:900;color:var(--violet);font-size:1rem}.day-dots{display:flex;gap:8px}.day-dot{width:12px;height:12px;border-radius:50%;background:var(--line)}.day-dot.active{background:var(--indigo)}
+.camp-footer{background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px}.footer-inner{max-width:1440px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.footer-brand{display:flex;align-items:center;gap:14px;font-family:var(--font-serif);font-size:2.2rem;font-weight:700}.footer-brand span{color:var(--pink)}.footer-col h4{color:var(--gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700}
+@media(max-width:980px){.overview-grid{grid-template-columns:1fr}.outputs-grid{grid-template-columns:1fr 1fr}.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.footer-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:4rem}.qa-dropdown{left:-8px;right:-8px;min-width:auto}.sched-row{grid-template-columns:80px 1fr}.day-header{flex-direction:column;gap:16px;text-align:left}}
+@media(max-width:560px){.outputs-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.hero,.wrap{padding-left:18px;padding-right:18px}.brand-icon{width:38px;height:38px}.hero h1{font-size:3.2rem}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}.day-tabs{gap:0}.day-tab{padding:12px 14px;font-size:.82rem}}
+@media print{.topbar,.nav-actions,.quick-access,.day-tabs{display:none}.day-panel{display:block!important}.hero{background:#fff!important;color:#111!important}.hero p{color:#333}.camp-footer{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
+  <nav class="nav-actions">
+    <details class="quick-access"><summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+      <div class="qa-dropdown"><div class="qa-group"><span class="qa-label">CAMP21 Pages</span>
+        <a class="qa-link" href="../index.html">🏠 Home</a><a class="qa-link" href="participants.html">👥 Participants</a><a class="qa-link" href="trainers.html">🧑‍🏫 Trainers</a><a class="qa-link" href="facilitators.html">🤝 Facilitators</a><a class="qa-link" href="judges.html">⚖️ Judges</a><a class="qa-link" href="resources.html">📚 Resources</a><a class="qa-link" href="contacts.html">📞 Help Desk</a>
+    </div></div></details>
+    <a class="nav-pill app-pill" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a>
+    <a class="nav-pill primary" href="participants.html">Participants Hub</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="hero-inner">
+  <span class="eyebrow">Schedule</span>
+  <h1>4 Days of Impact</h1>
+  <p>Move through an immersive innovation sprint fusing traditional heritage craft with Design Thinking methodology.</p>
+</div></section>
+
+<main class="wrap">
+
+<div class="overview-grid">
+  <div class="ov-card ov1"><span class="day-label">Day 1 · 13 Jul</span><div class="day-theme">Empathise & Define</div><span class="day-num">1</span></div>
+  <div class="ov-card ov2"><span class="day-label">Day 2 · 14 Jul</span><div class="day-theme">Ideate & Build</div><span class="day-num">2</span></div>
+  <div class="ov-card ov3"><span class="day-label">Day 3 · 15 Jul</span><div class="day-theme">Test & Refine</div><span class="day-num">3</span></div>
+  <div class="ov-card ov4"><span class="day-label">Day 4 · 16 Jul</span><div class="day-theme">Pitch & Impact</div><span class="day-num">4</span></div>
+</div>
+
+<div class="day-tabs" id="dayTabs"></div>
+<div id="dayPanels"></div>
+
+</main>
+
+<footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
+  <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
+  <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
+  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a></div>
+  <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
+</div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
+
+<script>
+const days=[
+{num:1,date:'13',month:'July 2026',title:'Heritage Immersion',sub:'Empathise & Define · KL Exploration',focus:'Phase 1 — Empathise & Phase 2 — Define',overview:'Day 1 launches the CAMP21 journey through heritage immersion, Design Thinking orientation, and group exploration. Participants begin with briefing and ice-breaking, then move directly into the Design Thinking process. Guided craft gallery tours, motif exploration, and artisan interviews anchor the empathy stage. By afternoon, groups frame their initial problem statements. The day closes with KL Exploration and a short group video reflection.',color:'var(--indigo)',tags:['Design Thinking','Kompleks Kraf KL','Hop-On Hop-Off','TikTok Challenge'],
+sessions:[
+{label:'Morning — Orientation',items:[
+{time:'7:00 am',title:'Pick-up of participants',venue:'Pick-up points',tag:''},
+{time:'8:30–9:00',title:'Registration & breakfast',venue:'Main Seminar Hall',tag:''},
+{time:'9:00–9:30',title:'Programme Briefing · Smart Green & AI Briefing',venue:'Main Seminar Hall',tag:''},
+{time:'9:30–10:00',title:'Ice breaking & group formation',venue:'Main Seminar Hall',tag:''}]},
+{label:'Mid-Morning — Empathise (DT Phase 1)',pic:'Julie Marlina binti Hasan',assist:'Mohd Alfi bin Mohamed, Muzimah Aida binti Md Mustafa',items:[
+{time:'10:00–12:30',title:'Design Thinking Workshop — introduction & Phase 1 Empathy preparation',venue:'Main Seminar Hall',tag:'dt',details:['POEMS — structured observation framework (People, Objects, Environments, Messages, Services)','Constructing Interview Questions — preparing empathy-based interview questions for artisan engagement']},
+{time:'10:00–12:30',title:'Guided craft gallery tour · motif exploration · artisan interview',venue:'Kompleks Kraf area',tag:'field',details:['Empathy Map — capturing what users Say, Think, Do & Feel through gallery observation and artisan engagement']}]},
+{label:'Lunch',items:[{time:'12:30–2:00',title:'Lunch & Zohor prayer',venue:'Hall & Surau',tag:'prayer'}]},
+{label:'Afternoon — Define (DT Phase 2)',pic:'Nor Haniza binti Mustafar Kamar',assist:'Mohd Ridhuan Ismail, Siti Hani-Syazana binti Mohamad',items:[
+{time:'2:00–3:30',title:'Empathy insights sharing & Define phase preparation',venue:'Main Seminar Hall',tag:'dt'},
+{time:'3:30–5:00',title:'Phase 2: Define — problem framing & design challenge development',venue:'Main Seminar Hall',tag:'dt',details:['Persona Creation — building a representative user profile from interview and empathy data','Unpacking interview data — Share → Unpack → Synthesize: identifying users\' pain points from raw field data','Identifying insights & needs — drawing meaningful conclusions to frame the core design challenge']}]},
+{label:'Evening — KL Exploration',items:[
+{time:'5:00–5:30',title:'Day 1 reflection & Asar prayer',venue:'Hall & Surau',tag:'prayer'},
+{time:'5:30–7:00',title:'Dinner & Maghrib prayer',venue:'Main Seminar Hall',tag:'prayer'},
+{time:'8:30–10:30',title:'KL Exploration — Hop-On Hop-Off Bus & group reflection',venue:'Around Kuala Lumpur',tag:'city'},
+{time:'10:30 pm',title:'Sending off participants',venue:'Kompleks Kraf Kuala Lumpur',tag:''}]}],
+outputs:['Group formation & role assignment','POEMS observation notes from craft gallery & motif exploration','Interview questions for artisan engagement','Completed Empathy Map from gallery & artisan engagement','User Persona built from interview & empathy data','Identified insights & needs — draft design challenge','Group video reflection — Day 1 close'],
+reflection:{title:'Day 1 Video Reflection',sub:'Exploration · Empathy · Define Phase',qs:['What cultural heritage element did you discover today?','What issue or challenge did your group observe?','What did you learn from the artisan or gallery exploration?','How did your group work together today?','What is one insight that can help define your Design Thinking challenge?']}},
+
+{num:2,date:'14',month:'July 2026',title:'Creative Sprint',sub:'Ideate & Build',focus:'Phase 3 — Ideate & Phase 4 — Prototype (Direction)',overview:'Day 2 shifts into idea generation and creative problem-solving. Teams warm up with the 30 Circle Challenge, then explore SCAMPER techniques and concept sketching. By afternoon, the focus moves to the Ideation Matrix for idea selection and the Prototype Direction Plan that requires trainer sign-off before any build work begins.',color:'var(--olive)',tags:['30 Circle Challenge','SCAMPER','Mahjong Paper','Prototype Planning'],
+sessions:[
+{label:'Morning — Ideate (DT Phase 3)',pic:'Nurfarhanah binti Omar',assist:'Katherine Livan Khing binti Abdullah, Nur Salina binti Saywalludin',items:[
+{time:'7:00 am',title:'Pick-up of participants',venue:'Pick-up points',tag:''},
+{time:'8:30–9:00',title:'Morning briefing with Phase 03 lead (Nurfarhanah Omar)',venue:'Main Seminar Hall',tag:''},
+{time:'9:00–9:30',title:'AI Input 3 (Ts. Sathya): T07 30 Circle Challenge',venue:'Main Seminar Hall',tag:'dt'},
+{time:'9:30–12:30',title:'T08 SCAMPER Activity & T09 Ideation Matrix Prioritisation',venue:'Main Seminar Hall',tag:'dt',details:['Mahjong Paper — large-format SCAMPER and sticky-note sorting activity','T09 Ideation Matrix Prioritisation — team consensus on selected idea']}]},
+{label:'Lunch',items:[{time:'12:30–2:00',title:'Lunch & Zohor prayer',venue:'Hall & Surau',tag:'prayer'}]},
+{label:'Afternoon — Prototype Direction (DT Phase 4)',pic:'Ts. Mohammed Farid bin Ishak',assist:'Sara Ruran Fabian, Muhammad Zaki bin Yahya',items:[
+{time:'2:00–3:30',title:'T10 Prototype Direction Plan',venue:'Main Seminar Hall',tag:'dt',details:['Format, materials, features, task distribution and development direction','Trainer sign-off required before any build begins']},
+{time:'3:30–5:00',title:'Begin prototype build work',venue:'Workshop area',tag:'dt'}]},
+{label:'Evening',items:[
+{time:'5:00–5:30',title:'Day 2 reflection & Asar prayer',venue:'Hall & Surau',tag:'prayer'},
+{time:'5:30–7:00',title:'Dinner & Maghrib prayer',venue:'Main Seminar Hall',tag:'prayer'},
+{time:'7:30–10:00',title:'Continue prototype build & upload T07–T11 to Smart DT App',venue:'Workshop area',tag:'dt'},
+{time:'10:30 pm',title:'Sending off participants',venue:'Kompleks Kraf Kuala Lumpur',tag:''}]}],
+outputs:['T07 30 Circle Challenge completed','T08 SCAMPER Activity — all 7 lenses','T09 Ideation Matrix Prioritisation — team consensus','T10 Prototype Direction Plan — trainer signed','T11 Full Prototype Outcome (in progress)','Group video reflection — Day 2 close'],
+reflection:{title:'Day 2 Video Reflection',sub:'Ideate & Prototype Phase',qs:['What creative technique worked best for your team today?','How did your team narrow down from many ideas to one?','What is your prototype concept and how does it connect to heritage?','What was the biggest challenge in planning your prototype?','What will your team focus on building tomorrow?']}},
+
+{num:3,date:'15',month:'July 2026',title:'Test & Polish',sub:'Test & Refine',focus:'Phase 4 — Prototype (Build) & Phase 5 — Testing',overview:'Day 3 opens with the Pitching Input session by Prabagaran Bala Krisnan, followed by pitch deck refinement support. Prototype build continues with T11 completion. The afternoon shifts to Phase 05 Testing — structured peer feedback using T12 Feedback Capture Grid and T13 Improvement Plan. The day closes with completed pitch decks ready for Day 4.',color:'var(--brown)',tags:['Pitching Input','Slide Refinement','Feedback Grid','Pitch Deck'],
+sessions:[
+{label:'Morning — Pitching & Prototype',items:[
+{time:'7:00 am',title:'Pick-up of participants',venue:'Pick-up points',tag:''},
+{time:'8:30–9:00',title:'Morning briefing',venue:'Main Seminar Hall',tag:''},
+{time:'9:00–10:00',title:'Guest Slot: Prabagaran Bala Krisnan — 8-Slide Pitch Framework',venue:'Main Seminar Hall',tag:'pitch'},
+{time:'10:00–10:30',title:'AI Input 4 (Ts. Sathya): pitch deck refinement support',venue:'Main Seminar Hall',tag:'dt'}]},
+{label:'Mid-Morning — Prototype Build (DT Phase 4)',pic:'Ts. Mohammed Farid bin Ishak',assist:'Sara Ruran Fabian, Muhammad Zaki bin Yahya',items:[
+{time:'10:30–12:30',title:'Prototype build continues — T11 Full Prototype Outcome completion',venue:'Workshop area',tag:'dt',details:['T10 must already be trainer-signed before this session','Complete physical prototype or presentation materials']}]},
+{label:'Lunch',items:[{time:'12:30–2:00',title:'Lunch & Zohor prayer',venue:'Hall & Surau',tag:'prayer'}]},
+{label:'Afternoon — Testing (DT Phase 5)',pic:'Noor Darliza binti Mohamad Zamri',assist:'Muhammad Syrazi bin Suhaimi, Mohd Ridhuan bin Ismail',items:[
+{time:'2:00–3:30',title:'Continue prototype refinement',venue:'Workshop area',tag:'dt'},
+{time:'3:30–5:00',title:'Phase 05: T12 Feedback Capture Grid — structured peer and user testing',venue:'Main Seminar Hall',tag:'dt',details:['At least 5 structured feedback entries required','Each T12 row must have a completed Action Item / Refinement Action','T13 Improvement Plan — action items based on T12 feedback']}]},
+{label:'Evening',items:[
+{time:'5:00–5:30',title:'Day 3 reflection & Asar prayer',venue:'Hall & Surau',tag:'prayer'},
+{time:'5:30–7:00',title:'Dinner & Maghrib prayer',venue:'Main Seminar Hall',tag:'prayer'},
+{time:'7:30–10:00',title:'8-Slide Pitch Framework — final deck completion & trainer review by 7:00 PM',venue:'Workshop area',tag:'pitch'},
+{time:'10:30 pm',title:'Sending off participants',venue:'Kompleks Kraf Kuala Lumpur',tag:''}]}],
+outputs:['T11 Full Prototype Outcome completed','T12 Feedback Capture Grid — 5+ entries','T13 Improvement Plan completed','8-Slide Pitch deck drafted & trainer-reviewed','Physical prototype ready for display','Group video reflection — Day 3 close'],
+reflection:{title:'Day 3 Video Reflection',sub:'Test & Refine Phase',qs:['What feedback did your team receive during testing?','How did you improve your prototype based on feedback?','What is the strongest part of your pitch?','How does your solution preserve or promote cultural heritage?','What final preparation does your team need for tomorrow?']}},
+
+{num:4,date:'16',month:'July 2026',title:'Pitch Day',sub:'Pitch & Impact',focus:'Final Presentations & Closing Celebration',overview:'Day 4 is the culmination of CAMP21. Teams deliver their 8-Slide Pitch presentations to the judging panel (8 minutes + 5 minutes Q&A). Trainers are on standby only — no further assistance to groups. Rubrics are distributed confidentially to judges. The day closes with the awards ceremony and closing celebration.',color:'var(--rose)',tags:['Gallery Walk','8-Slide Pitch','Q&A','Awards Ceremony'],
+sessions:[
+{label:'Morning — Preparation',items:[
+{time:'7:00 am',title:'Pick-up of participants',venue:'Pick-up points',tag:''},
+{time:'8:00–8:30',title:'T14 8-Slide Pitch deck PDF submission check',venue:'Main Seminar Hall',tag:'pitch'},
+{time:'8:30–9:00',title:'Final briefing & rubrics distributed to judges (confidential)',venue:'Main Seminar Hall',tag:''}]},
+{label:'Morning — Gallery Walk & Pitching',items:[
+{time:'9:00–10:00',title:'Gallery Walk — teams display prototypes and evidence boards',venue:'Exhibition Hall',tag:'pitch'},
+{time:'10:00–12:30',title:'Pitching sessions — 8 minutes + 5 minutes Q&A per group',venue:'Two venues simultaneously',tag:'pitch',details:['Venue 1: Judge Team A (Groups 1–5) — Dr. Siti Zubaidah & Encik Prabagaran','Venue 2: Judge Team B (Groups 6–10) — Dr. Hajah Noreen & Encik Richie Arvind','T12 Feedback Capture Grid available as evidence of testing process for judges']}]},
+{label:'Lunch',items:[{time:'12:30–2:00',title:'Lunch & Zohor prayer',venue:'Hall & Surau',tag:'prayer'}]},
+{label:'Afternoon — Results & Closing',items:[
+{time:'2:00–3:30',title:'Judges deliberation & score compilation',venue:'Judges room (confidential)',tag:''},
+{time:'3:30–4:00',title:'Awards ceremony — Best Group, Best Speaker, Special Awards',venue:'Main Seminar Hall',tag:'pitch'},
+{time:'4:00–5:00',title:'Closing ceremony & group photos',venue:'Main Seminar Hall',tag:''},
+{time:'5:00 pm',title:'Collect all physical templates & send-off',venue:'Main entrance',tag:''}]}],
+outputs:['T14 8-Slide Pitch deck PDF submitted','Gallery Walk display completed','All pitching sessions delivered','Awards announced','Physical templates collected'],
+reflection:null}
+];
+
+// Day tabs
+document.getElementById('dayTabs').innerHTML=days.map(d=>`<div class="day-tab${d.num===1?' active':''}" onclick="showDay(${d.num},this)">Day ${d.num} · ${d.date} Jul</div>`).join('');
+
+// Day panels
+document.getElementById('dayPanels').innerHTML=days.map(d=>{
+  let html=`<div class="day-panel${d.num===1?' active':''}" id="day${d.num}">`;
+  html+=`<div class="day-header" style="background:${d.color}"><div><div class="dh-eyebrow">CAMP21 · Day ${d.num} of 4</div><h3>${d.title}</h3><div class="dh-sub">${d.sub}</div><div class="tag-row">${d.tags.map(t=>`<span class="sched-tag">${t}</span>`).join('')}</div></div><div class="dh-date">${d.date}<small>${d.month}</small></div></div>`;
+  html+=`<div class="day-overview"><h4>Overview</h4><p>${d.overview}</p><div class="focus">Learning focus: ${d.focus}</div></div>`;
+  d.sessions.forEach(s=>{
+    html+=`<div class="session-label">${s.label}</div>`;
+    if(s.pic)html+=`<div style="margin:-6px 0 12px 20px;font-size:.88rem"><strong style="color:var(--violet)">PIC:</strong> <strong>${s.pic}</strong> <span style="color:var(--muted);font-weight:600">· Assisted by: ${s.assist}</span></div>`;
+    html+=`<div class="sched-card">`;
+    s.items.forEach(it=>{
+      html+=`<div class="sched-row"><div class="sched-time">${it.time}</div><div class="sched-content"><h4>${it.title}</h4><p>${it.venue}</p>`;
+      if(it.tag)html+=`<span class="sched-tag ${it.tag}">${{dt:'DT Workshop',field:'Heritage Field',prayer:'Prayer break',city:'City Exploration',pitch:'Pitching'}[it.tag]||it.tag}</span>`;
+      if(it.details)html+=`<div class="detail-box">${it.details.map(dd=>`<p>• ${dd}</p>`).join('')}</div>`;
+      html+=`</div></div>`;
+    });
+    html+=`</div>`;
+  });
+  html+=`<div class="session-label">Expected Outputs</div><div class="outputs-grid">${d.outputs.map(o=>`<div class="output-card"><p>${o}</p></div>`).join('')}</div>`;
+  if(d.reflection){
+    html+=`<div class="session-label">Day ${d.num} Close — Group Video Reflection</div><div class="reflection-box"><div class="reflection-header"><h4>${d.reflection.title}</h4><span class="dur">under 5 min</span></div><div class="reflection-body"><p class="intro">${d.reflection.sub} — Each group records a short video together reflecting on the day's journey.</p>${d.reflection.qs.map((q,i)=>`<div class="ref-q"><span class="ref-num">${i+1}</span><p>${q}</p></div>`).join('')}</div></div>`;
+  }
+  html+=`<div class="day-nav"><a href="#" onclick="event.preventDefault();navDay(${d.num-1})">${d.num>1?'← Day '+(d.num-1):''}</a><div class="day-dots">${days.map(dd=>`<span class="day-dot${dd.num===d.num?' active':''}"></span>`).join('')}</div><a href="#" onclick="event.preventDefault();navDay(${d.num+1})">${d.num<4?'Day '+(d.num+1)+' →':''}</a></div>`;
+  html+=`</div>`;
+  return html;
+}).join('');
+
+function showDay(n,el){
+  document.querySelectorAll('.day-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.day-panel').forEach(p=>p.classList.remove('active'));
+  if(el)el.classList.add('active');
+  else document.querySelectorAll('.day-tab')[n-1]?.classList.add('active');
+  document.getElementById('day'+n)?.classList.add('active');
+  window.scrollTo({top:document.getElementById('dayTabs').offsetTop-80,behavior:'smooth'});
+}
+function navDay(n){if(n>=1&&n<=4)showDay(n)}
+
+document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
+document.querySelectorAll('.qa-link').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.quick-access').removeAttribute('open')}));
+</script>
+</body>
+</html>
