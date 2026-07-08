@@ -1,87 +1,202 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMP21: Document Vault</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/main.js" defer></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CAMP21 Resources & Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151044;--indigo:#251052;--cream:#fff8ef;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;--gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#e23c74;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-sans)}a{text-decoration:none;color:inherit}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:var(--pink)}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}.nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem;cursor:pointer}.nav-pill:hover{border-color:var(--violet)}.nav-pill.primary{background:var(--violet);color:#fff;border-color:var(--violet)}.app-pill{border-color:var(--teal);color:var(--ink)}.app-pill:hover{background:var(--teal);color:#fff}
+.quick-access{position:relative}.qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}.qa-chev{transition:.25s;display:inline-block;font-size:.7em}.quick-access[open] .qa-chev{transform:rotate(180deg)}.qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:60;animation:qaIn .18s ease}.qa-group{padding:10px 8px}.qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px}.qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);transition:background .15s}.qa-link:hover{background:rgba(109,70,238,.07);color:var(--violet)}@keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.hero{background:radial-gradient(circle at 82% 10%,rgba(255,199,61,.18),transparent 34%),linear-gradient(120deg,#183d70 0%,#251052 45%,#3b124c 100%);color:#fff;padding:58px 28px 50px}.hero-inner{max-width:1440px;margin:auto}.eyebrow{display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}.hero h1{font-family:var(--font-serif);font-size:clamp(3.2rem,6vw,5rem);line-height:.92;margin:30px 0 18px;letter-spacing:-.05em}.hero p{font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.78);max-width:700px}
+.wrap{max-width:1440px;margin:auto;padding:48px 28px 80px}.section-head{margin-bottom:2rem}.section-head h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem}.section-head p{color:var(--muted);font-size:1.05rem;line-height:1.55;max-width:720px}.s-gap{margin-bottom:4rem}
+.res-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+.doc-list{display:grid;gap:12px}.doc-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;cursor:pointer;transition:border-color .2s}.doc-card:hover{border-color:var(--violet)}.doc-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-weight:900;font-size:.78rem;flex-shrink:0;color:#fff}.doc-card h4{margin:0 0 4px;font-size:1.05rem;font-weight:900}.doc-card p{margin:0;color:var(--muted);font-weight:600;font-size:.88rem;line-height:1.4}.doc-arrow{margin-left:auto;font-size:1.3rem;color:var(--gold);align-self:center;flex-shrink:0}
+.workspace-card{background:var(--indigo);border-radius:22px;padding:36px 32px;color:#fff}.workspace-card .ws-tag{display:inline-flex;background:var(--gold);color:var(--ink);border-radius:999px;padding:6px 16px;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}.workspace-card h3{font-family:var(--font-serif);font-size:1.8rem;margin:0 0 12px}.workspace-card p{color:rgba(255,255,255,.78);font-weight:600;line-height:1.6;margin:0 0 24px}.workspace-card a{display:block;background:var(--gold);color:var(--ink);border-radius:14px;padding:16px;text-align:center;font-weight:900;font-size:1rem}
+.doc-note{color:var(--muted);font-weight:700;font-size:.92rem;margin-top:16px;font-style:italic}
+.pitch-section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;margin-bottom:3rem}.pitch-section .pitch-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}.pitch-section h3{font-family:var(--font-serif);font-size:1.8rem;margin:0}.pitch-tag{display:inline-flex;background:var(--rose);color:#fff;border-radius:999px;padding:5px 14px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.pitch-section>p{color:#444;font-weight:600;line-height:1.6;margin:0 0 20px}.pitch-download{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 24px;display:flex;gap:18px;align-items:center}.pitch-download .doc-icon{background:var(--gold)}
+.slides-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.slide-pill{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:800;font-size:.82rem}
+.phase-res{background:var(--paper);border:1px solid var(--line);border-radius:22px;margin-bottom:12px;overflow:hidden;transition:opacity .3s}.phase-res.locked{opacity:.55}.phase-res.locked .pr-body{display:none}.phase-res summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;gap:16px}.phase-res summary::-webkit-details-marker{display:none}.pr-num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;font-size:1rem;flex-shrink:0}.pr-info{flex:1}.pr-info h3{margin:0;font-size:1.1rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.pr-info .pr-meta{color:var(--muted);font-weight:700;font-size:.85rem;margin-top:2px}.pr-tag{display:inline-flex;border-radius:999px;padding:4px 12px;font-size:.68rem;font-weight:900}.pr-status{font-weight:900;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;display:flex;align-items:center;gap:6px}.pr-chev{font-weight:900;font-size:1.2rem;transition:.25s;margin-left:8px}.phase-res[open] .pr-chev{transform:rotate(180deg)}.pr-body{border-top:1px solid var(--line);padding:24px}.pr-templates{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pr-tpl{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}.pr-tpl-code{display:inline-flex;font-weight:900;color:#fff;border-radius:8px;padding:4px 10px;font-size:.78rem;margin-bottom:6px}.pr-tpl h5{margin:0 0 2px;font-size:.92rem;font-weight:900}.pr-tpl p{margin:0;color:var(--muted);font-weight:600;font-size:.82rem;line-height:1.4}.pr-open-app{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:var(--violet);color:#fff;border-radius:999px;padding:12px 22px;font-weight:900;font-size:.88rem}
+.camp-footer{background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px}.footer-inner{max-width:1440px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.footer-brand{display:flex;align-items:center;gap:14px;font-family:var(--font-serif);font-size:2.2rem;font-weight:700}.footer-brand span{color:var(--pink)}.footer-col h4{color:var(--gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700}
+@media(max-width:980px){.res-layout{grid-template-columns:1fr}.pr-templates{grid-template-columns:1fr}.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.footer-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:3.6rem}.qa-dropdown{left:-8px;right:-8px;min-width:auto}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}.hero,.wrap{padding-left:18px;padding-right:18px}.brand-icon{width:38px;height:38px}.hero h1{font-size:3rem}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}.pitch-download{flex-direction:column;text-align:center}}
+@media print{.topbar,.nav-actions,.quick-access{display:none}.hero{background:#fff!important;color:#111!important}.hero p{color:#333}.camp-footer{display:none}body{background:#fff}}
+</style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="wide nav-wrap">
-      <a href="../index.html" class="brand">
-        <img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">
-        CAMP<span>21</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="../index.html">Home</a>
-        <a href="programme.html">Programme</a>
-        <a href="resources.html">Resources</a>
-        <a href="contacts.html">Help</a>
-        <a href="registration.html" class="btn-nav">Register now &rarr;</a>
-      </nav>
-      <button class="menu-btn" aria-label="Toggle menu">&#9776;</button>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
+  <nav class="nav-actions">
+    <details class="quick-access"><summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+      <div class="qa-dropdown"><div class="qa-group"><span class="qa-label">CAMP21 Pages</span>
+        <a class="qa-link" href="../index.html">🏠 Home</a><a class="qa-link" href="programme.html">📅 Programme</a><a class="qa-link" href="participants.html">👥 Participants</a><a class="qa-link" href="trainers.html">🧑‍🏫 Trainers</a><a class="qa-link" href="facilitators.html">🤝 Facilitators</a><a class="qa-link" href="judges.html">⚖️ Judges</a><a class="qa-link" href="contacts.html">📞 Help Desk</a>
+      </div></div>
+    </details>
+    <a class="nav-pill app-pill" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a>
+    <a class="nav-pill primary" href="participants.html">Participants Hub</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="hero-inner">
+  <span class="eyebrow">Document Vault</span>
+  <h1>Resources & Templates</h1>
+  <p>Download approved assessment models, framework sheets, and printable support documents.</p>
+</div></section>
+
+<main class="wrap">
+
+<section class="s-gap">
+  <div class="res-layout">
+    <div>
+      <div class="section-head"><h2>Authorized Document Packets</h2><p>These documents are officially approved for CAMP21 participants and faculty.</p></div>
+      <div class="doc-list">
+        <a class="doc-card" href="https://drive.google.com/drive/folders/1VuIoJBKhBlQUIxKZ4NkcuBI2Ss5XhAf3?usp=sharing" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--rose)">PDF</div>
+          <div><h4>Official Evaluation Rubrics Packet (.PDF)</h4><p>Full 5-criterion structural dimension guide for final placements. Pitching & Prototype (80%) + TikTok Reflection (20%) = 100%.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a class="doc-card" href="#gd-workbook" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--violet)">PDF</div>
+          <div><h4>CAMP21 Participant Workbook (.PDF)</h4><p>Full participant and trainer guide — camp overview, phase descriptions, and daily checklists.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a class="doc-card" href="#gd-programme" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--indigo)">PDF</div>
+          <div><h4>Programme Tentative (.PDF)</h4><p>Official 4-day schedule — 13 to 16 July 2026 at Kompleks Kraf Kuala Lumpur.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a class="doc-card" href="#gd-tiktok-guide" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--teal)">PDF</div>
+          <div><h4>TikTok Reflection Guide (.PDF)</h4><p>Daily short-video reflection brief — 5 guided questions per day, under 5 minutes each.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+      </div>
+      <p class="doc-note">Documents are distributed on Day 4 (rubrics for judges only). Click to check availability status.</p>
     </div>
-  </header>
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="wide">
-      <span class="page-hero-eyebrow">CAMP21 &middot; 13&ndash;16 July 2026</span>
-      <h1 class="page-hero-title">Resources &amp; Templates</h1>
-      <p class="page-hero-sub">All camp materials, template downloads, and reference guides in one place.</p>
+    <aside>
+      <div class="workspace-card">
+        <span class="ws-tag">Workspace Terminal</span>
+        <h3>Smart DT Project</h3>
+        <p>Your main digital workspace for CAMP21. Complete 14 guided templates across five Design Thinking phases — Empathise, Define, Ideate, Prototype and Testing. All submissions and milestone records are managed inside the companion app.</p>
+        <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank">Launch App Workspace ↗</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="s-gap" id="phaseResourceSection">
+  <div class="section-head"><h2>Phase Resources</h2><p>Templates and guides unlock automatically when each phase begins. Check back during camp for live access.</p></div>
+  <div id="phaseResources"></div>
+  <div style="display:flex;align-items:center;gap:12px;margin-top:16px;color:var(--muted);font-weight:700;font-size:.88rem"><span>🔒 Locked — not yet available</span><span style="margin-left:16px">🔓 Unlocked — phase is live or completed</span></div>
+</section>
+
+<section class="s-gap">
+  <div class="pitch-section">
+    <div class="pitch-head">
+      <h3>Pitching Resource</h3>
+      <span class="pitch-tag">Not a Smart DT Template</span>
+    </div>
+    <p>Used as the final presentation guide for Gallery Walk, Pitching and Evaluation on Day 3 and Day 4. Separate from the T01–T13 template set — delivered by Prabagaran Bala Krisnan during the 30 min Pitching Input session on Day 3 AM.</p>
+    <a class="pitch-download" href="https://drive.google.com/drive/folders/1rnPhbkEA0u7OlIpm0hJE86i5Ghp2PEnh?usp=sharing" target="_blank" rel="noopener">
+      <div class="doc-icon" style="background:var(--gold)">PPTX</div>
+      <div><h4>8-Slide Pitch Framework (.PPTX)</h4><p>Final presentation guide for Gallery Walk, Pitching and Evaluation on Day 3 and Day 4.</p></div>
+      <span class="doc-arrow">→</span>
+    </a>
+    <div class="slides-grid">
+      <span class="slide-pill">Slide 1: Hook & Problem</span>
+      <span class="slide-pill">Slide 2: Solution</span>
+      <span class="slide-pill">Slide 3: Prototype</span>
+      <span class="slide-pill">Slide 4: Heritage Value</span>
+      <span class="slide-pill">Slide 5: Sustainability</span>
+      <span class="slide-pill">Slide 6: Team</span>
+      <span class="slide-pill">Slide 7: Call to Action</span>
+      <span class="slide-pill">Slide 8: Q&A Readiness</span>
     </div>
   </div>
+</section>
 
+</main>
 
-  <main class="wide" style="padding-top: 4rem;">
-    
-    <div style="margin-bottom: 5rem; max-width: 800px;" class="reveal">
-      <span style="color: var(--neo-tangerine); font-weight: 800; font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; display: block; margin-bottom: 0.5rem;">Vault 📂</span>
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 1.1;">Resources &amp; Templates</h1>
-      <p style="font-size: 1.15rem; color: #444; font-weight: 500; margin-top: 1rem;">Download approved assessment models, framework sheets, and printable support documents.</p>
-    </div>
+<footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
+  <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
+  <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
+  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a></div>
+  <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
+</div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
 
-    <section class="reveal" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; padding-bottom: 6rem; align-items: start;">
-      
-      <div>
-        <h3 style="font-size: 1.2rem; text-transform: uppercase; font-weight: 900; margin-bottom: 1.5rem; color: var(--neo-ultraviolet); letter-spacing: 0.05em;">Authorized Document Packets</h3>
-        
-        <div class="fluid-row" style="padding: 1.8rem 0;" onclick="alert('Downloading master evaluation rubric matrices package.')">
-          <div>
-            <div style="font-weight: 800; font-size: 1.15rem;">Official Evaluation Rubrics Packet (.PDF)</div>
-            <div style="font-size: 0.85rem; color: #555; font-weight: 600; margin-top: 0.1rem;">Full 5-criterion structural dimension guide for final placements.</div>
-          </div>
-          <span style="font-size: 1.5rem; color: var(--neo-tangerine);">➔</span>
+<script>
+// Phase resources with time-gated unlock
+// Camp dates: Day 1 = 13 Jul, Day 2 = 14 Jul, Day 3 = 15 Jul, Day 4 = 16 Jul
+const phaseData=[
+  {num:'01',name:'Empathise',color:'var(--teal)',tag:'Phase 1 · T01–T04',day:'Day 1 AM · 13 July',unlockDate:'2026-07-13T09:00:00+08:00',pic:'Julie Marlina binti Hasan',gd:'https://drive.google.com/drive/folders/1nnDHH3uT_zWVAjq--My9Ypq7fxyF8SR9?usp=sharing',
+   templates:[
+     {code:'T01',color:'var(--teal)',title:'POEMS Observation Framework',desc:'Field observation across People, Objects, Environments, Messages & Services'},
+     {code:'T02',color:'var(--teal)',title:'Interview Guide & Worksheet',desc:'Empathy-based interview questions for artisan, user or visitor'},
+     {code:'T03',color:'var(--teal)',title:'Audio-to-Text Transcription',desc:'Clean transcript, key quotes and evidence from interviews'},
+     {code:'T04',color:'var(--teal)',title:'Empathy Map',desc:'Say, Think, Do and Feel synthesis from interview findings'}]},
+  {num:'02',name:'Define',color:'var(--violet)',tag:'Phase 2 · T05–T06',day:'Day 1 PM · 13 July',unlockDate:'2026-07-13T14:00:00+08:00',pic:'Nor Haniza binti Mustafar Kamar',gd:'https://drive.google.com/drive/folders/11e_BuHXu-02HS6wgxT8hAVlgaRUHeXGh?usp=sharing',
+   templates:[
+     {code:'T05',color:'var(--violet)',title:'User Persona Template',desc:'Representative user profile with pain points, needs and context'},
+     {code:'T06',color:'var(--violet)',title:'User Insight & Needs Statement',desc:'Clear problem statement, insights and actionable design challenge'}]},
+  {num:'03',name:'Ideate',color:'var(--pink)',tag:'Phase 3 · T07–T09',day:'Day 2 · 14 July',unlockDate:'2026-07-14T09:00:00+08:00',pic:'Nurfarhanah binti Omar',gd:'https://drive.google.com/drive/folders/1DL0bMqcX1skbqED30KZk_Q3IcDxX3wQq?usp=sharing',
+   templates:[
+     {code:'T07',color:'var(--pink)',title:'30 Circle Challenge',desc:'Creativity warm-up — generate rapid idea directions from the design challenge'},
+     {code:'T08',color:'var(--pink)',title:'SCAMPER',desc:'Expand ideas using all 7 SCAMPER lenses'},
+     {code:'T09',color:'var(--pink)',title:'Ideation Matrix Prioritisation',desc:'Evaluate and select the best idea with team consensus'}]},
+  {num:'04',name:'Prototype',color:'var(--gold)',tag:'Phase 4 · T10–T11',day:'Day 2–3 · 14–15 July',unlockDate:'2026-07-14T14:00:00+08:00',pic:'Ts. Mohammed Farid bin Ishak',textColor:'var(--ink)',gd:'https://drive.google.com/drive/folders/1-eA1QZ0zyqK2yo9Av7V7cD7doLLKWRP0?usp=sharing',
+   templates:[
+     {code:'T10',color:'var(--gold)',title:'Prototype Direction Plan',desc:'Format, materials, features, task distribution — trainer sign-off required'},
+     {code:'T11',color:'var(--gold)',title:'Full Prototype Outcome',desc:'Completed prototype with documentation and evidence photos'}]},
+  {num:'05',name:'Testing',color:'var(--rose)',tag:'Phase 5 · T12–T13',day:'Day 3 · 15 July',unlockDate:'2026-07-15T14:00:00+08:00',pic:'Noor Darliza binti Mohamad Zamri',gd:'https://drive.google.com/drive/folders/19zpgzUCkz8dX_bMq0HrAvc6SJYkUaAT1?usp=sharing',
+   templates:[
+     {code:'T12',color:'var(--rose)',title:'Feedback Capture Grid',desc:'Structured peer and user testing — at least 5 feedback entries with action items'},
+     {code:'T13',color:'var(--rose)',title:'Improvement Plan',desc:'Refinement actions based on T12 feedback'}]},
+  {num:'⚡',name:'Pitch',color:'var(--blue)',tag:'T14 · 8-Slide Pitch',day:'Day 3–4 · 15–16 July',unlockDate:'2026-07-15T09:00:00+08:00',pic:'Prabagaran Bala Krisnan',gd:'https://drive.google.com/drive/folders/1rnPhbkEA0u7OlIpm0hJE86i5Ghp2PEnh?usp=sharing',
+   templates:[
+     {code:'T14',color:'var(--blue)',title:'8-Slide Pitch Framework',desc:'Hook & Problem, Solution, Prototype, Heritage Value, Sustainability, Team, Call to Action, Q&A Readiness'}]}
+];
+
+function renderPhaseResources(){
+  const now=new Date();
+  const container=document.getElementById('phaseResources');
+  container.innerHTML=phaseData.map(ph=>{
+    const unlock=new Date(ph.unlockDate);
+    const isUnlocked=now>=unlock;
+    const statusText=isUnlocked?'🔓 Unlocked':'🔒 Locked';
+    const statusColor=isUnlocked?'var(--teal)':'var(--muted)';
+    return `<details class="phase-res${isUnlocked?'':' locked'}"${isUnlocked?' open':''}>
+      <summary>
+        <div class="pr-num" style="background:${ph.color};${ph.textColor?'color:'+ph.textColor:''}">${ph.num}</div>
+        <div class="pr-info">
+          <h3>${ph.name} <span class="pr-tag" style="background:${ph.color};color:${ph.textColor||'#fff'}">${ph.tag}</span></h3>
+          <div class="pr-meta">${ph.day} · PIC: ${ph.pic}</div>
         </div>
-
-        <div class="fluid-row" style="padding: 1.8rem 0;" onclick="alert('Downloading standardized 8-slide presentation template.')">
-          <div>
-            <div style="font-weight: 800; font-size: 1.15rem;">8-Slide Pitch Deck Core Template (.PPTX)</div>
-            <div style="font-size: 0.85rem; color: #555; font-weight: 600; margin-top: 0.1rem;">Standard layout structure taught by faculty for Day 4 presentations.</div>
-          </div>
-          <span style="font-size: 1.5rem; color: var(--neo-tangerine);">➔</span>
-        </div>
+        <span class="pr-status" style="color:${statusColor}">${statusText}</span>
+        <span class="pr-chev">›</span>
+      </summary>
+      <div class="pr-body">
+        <div class="pr-templates">${ph.templates.map(t=>`<div class="pr-tpl">
+          <span class="pr-tpl-code" style="background:${t.color}">${t.code}</span>
+          <h5>${t.title}</h5>
+          <p>${t.desc}</p>
+        </div>`).join('')}</div>
+        ${isUnlocked?`<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px"><a class="pr-open-app" href="${ph.gd}" target="_blank" rel="noopener">📂 Open Templates Folder ↗</a><a class="pr-open-app" style="background:var(--teal)" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">🚀 Open Smart DT App ↗</a></div>`:`<p style="color:var(--muted);font-weight:700;font-size:.88rem;margin:18px 0 0;font-style:italic">🔒 This phase unlocks on ${unlock.toLocaleDateString('en-MY',{day:'numeric',month:'long',year:'numeric'})} at ${unlock.toLocaleTimeString('en-MY',{hour:'2-digit',minute:'2-digit'})}.</p>`}
       </div>
+    </details>`;
+  }).join('');
+}
 
-      <aside>
-        <div class="sequence-block seq-dark" style="min-height: auto; padding: 3.5rem 2.5rem; box-shadow: 0 15px 45px rgba(0,0,0,0.04);">
-          <span class="stage-badge" style="background: var(--neo-gold); color: var(--neo-ink);">Workspace Terminal</span>
-          <h2 style="font-size: 1.8rem; text-transform: uppercase; margin-bottom: 0.8rem; color:#fff;">Smart DT Project</h2>
-          <p style="font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 2.5rem;">
-            All Design Thinking canvas submissions, task checklists, and live TikTok window URLs are processed and managed strictly inside the companion workspace app.
-          </p>
-          <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" class="btn-primary" style="background: var(--neo-jade); color: var(--neo-ink); font-weight: 900; width: 100%; text-align: center; display: block; border-radius: 12px; padding: 1rem;">Launch App Workspace</a>
-        </div>
-      </aside>
+renderPhaseResources();
+// Auto-refresh every 5 minutes to unlock phases as camp progresses
+setInterval(renderPhaseResources,5*60*1000);
 
-    </section>
-  </main>
+document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
+document.querySelectorAll('.qa-link').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.quick-access').removeAttribute('open')}));
+</script>
 </body>
 </html>
