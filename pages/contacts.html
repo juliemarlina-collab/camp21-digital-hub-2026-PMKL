@@ -1,191 +1,115 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMP21: Support Desk</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/main.js" defer></script>
-  
-  <style>
-    /* Clean Free-Flow Accordion System styling */
-    .faq-block-element {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-      padding-bottom: 1.5rem;
-    }
-    .faq-title-trigger {
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: var(--neo-ink);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: var(--transition-smooth);
-    }
-    .faq-title-trigger:hover {
-      color: var(--neo-ultraviolet);
-    }
-    .faq-body-panel {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #555;
-      line-height: 1.6;
-      margin-top: 0.8rem;
-      display: none;
-      padding-right: 2rem;
-    }
-    .faq-block-element.active .faq-body-panel {
-      display: block;
-    }
-    .faq-block-element.active .faq-title-trigger {
-      color: var(--neo-tangerine);
-    }
-
-    /* ===== CAMP21 Neo-Heritage header/footer (approved palette + type) ===== */
-    :root{
-      --brand-indigo:var(--neo-ink,#20103E);
-      --brand-purple:var(--neo-ultraviolet,#5A36C9);
-      --brand-pink:var(--neo-pink,#F05AA6);
-      --brand-gold:var(--neo-gold,#D9AF37);
-      --brand-lavender:var(--neo-lavender,#B39DDB);
-      --brand-cream:var(--neo-cream,#F8F2EA);
-      --brand-charcoal:var(--neo-charcoal,#2B2733);
-      --brand-line:#e3d9c6;
-      --brand-muted:#726b82;
-    }
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(248,242,234,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(32,16,62,.08)}
-    .topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}
-    .topbar .brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif,'Playfair Display',serif);font-weight:700;font-size:1.5rem;color:var(--brand-indigo);letter-spacing:-.01em}
-    .topbar .brand span{color:var(--brand-pink)}
-    .topbar .brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}
-    .nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    .nav-pill{border:1px solid var(--brand-line);background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(32,16,62,.05);font-size:.92rem;cursor:pointer;font-family:var(--font-sans,'Plus Jakarta Sans',sans-serif);color:var(--brand-indigo)}
-    .nav-pill:hover{border-color:var(--brand-purple);color:var(--brand-purple)}
-    .app-pill{border-color:var(--brand-purple);background:var(--brand-purple);color:#fff}
-    .app-pill:hover{background:var(--brand-indigo);border-color:var(--brand-indigo);color:#fff}
-    .quick-access{position:relative}
-    .qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}
-    .qa-chev{transition:.25s;display:inline-block;font-size:.7em}
-    .quick-access[open] .qa-chev{transform:rotate(180deg)}
-    .qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--brand-line);border-radius:20px;box-shadow:0 24px 56px rgba(32,16,62,.16);padding:8px 0;z-index:60;animation:qaIn .18s ease}
-    .qa-group{padding:10px 8px}
-    .qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--brand-muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px;font-family:var(--font-sans,'Plus Jakarta Sans',sans-serif)}
-    .qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--brand-indigo);transition:background .15s;font-family:var(--font-sans,'Plus Jakarta Sans',sans-serif)}
-    .qa-link:hover{background:rgba(90,54,201,.08);color:var(--brand-purple)}
-    @keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-    .camp-footer{background:var(--brand-indigo);color:#fff;margin-top:48px;padding:56px 28px 26px}
-    .camp-footer .footer-inner{max-width:1440px;margin:auto}
-    .camp-footer .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
-    .camp-footer .footer-brand{display:flex;align-items:center;gap:14px;font-family:var(--font-serif,'Playfair Display',serif);font-size:2.2rem;font-weight:700}
-    .camp-footer .footer-brand span{color:var(--brand-pink)}
-    .camp-footer .footer-col h4{color:var(--brand-gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em;font-family:var(--font-sans,'Plus Jakarta Sans',sans-serif)}
-    .camp-footer .footer-col p,.camp-footer .footer-col a{display:block;color:rgba(255,255,255,.74);line-height:1.7;font-weight:600;margin:0 0 7px;font-family:var(--font-sans,'Plus Jakarta Sans',sans-serif)}
-    .camp-footer .footer-col a:hover{color:var(--brand-lavender)}
-    .camp-footer .footer-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700;font-family:var(--font-sans,'Plus Jakarta Sans',sans-serif)}
-    @media(max-width:980px){.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.camp-footer .footer-grid{grid-template-columns:1fr 1fr}.qa-dropdown{left:-8px;right:-8px;min-width:auto}}
-    @media(max-width:560px){.camp-footer .footer-grid{grid-template-columns:1fr}.topbar .brand-icon{width:38px;height:38px}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}}
-    @media print{.topbar,.nav-actions,.quick-access{display:none}.camp-footer{display:none}}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CAMP21 Help & Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151044;--indigo:#251052;--cream:#fff8ef;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;--gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--rose:#e23c74;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-sans)}a{text-decoration:none;color:inherit}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:var(--pink)}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}.nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem;cursor:pointer}.nav-pill:hover{border-color:var(--violet)}.nav-pill.primary{background:var(--violet);color:#fff;border-color:var(--violet)}.app-pill{border-color:var(--teal);color:var(--ink)}.app-pill:hover{background:var(--teal);color:#fff}
+.quick-access{position:relative}.qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}.qa-chev{transition:.25s;display:inline-block;font-size:.7em}.quick-access[open] .qa-chev{transform:rotate(180deg)}.qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:60;animation:qaIn .18s ease}.qa-group{padding:10px 8px}.qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px}.qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);transition:background .15s}.qa-link:hover{background:rgba(109,70,238,.07);color:var(--violet)}@keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.hero{background:radial-gradient(circle at 82% 10%,rgba(33,212,194,.15),transparent 34%),linear-gradient(120deg,rgba(24,61,112,.72),rgba(37,16,82,.68) 45%,rgba(59,18,76,.65)),url('../assets/images/hero-contacts.jpg') center/cover;color:#fff;padding:58px 28px 50px}.hero-inner{max-width:1440px;margin:auto}.eyebrow{display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}.hero h1{font-family:var(--font-serif);font-size:clamp(3.2rem,6vw,5rem);line-height:.92;margin:30px 0 18px;letter-spacing:-.05em}.hero p{font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.78);max-width:700px}
+.wrap{max-width:1440px;margin:auto;padding:48px 28px 80px}.section-head{margin-bottom:2rem}.section-head h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem}.section-head p{color:var(--muted);font-size:1.05rem;line-height:1.55;max-width:720px}
+.help-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+.faq-item{border-bottom:1px solid var(--line);padding:20px 0}.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:1.05rem;gap:12px}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary .faq-chev{transition:.25s;font-size:1.2rem}.faq-item[open] .faq-chev{transform:rotate(45deg)}.faq-answer{margin-top:12px;color:#444;font-weight:600;line-height:1.6;font-size:.95rem;padding-right:2rem}
+.contact-aside{background:#fff;border-radius:22px;padding:32px 28px;box-shadow:0 15px 45px rgba(0,0,0,.02)}.contact-aside h3{font-family:var(--font-serif);font-size:1.4rem;margin:0 0 14px}.contact-aside p{color:#333;font-weight:600;line-height:1.7;margin:0 0 8px}.divider{border:0;border-top:1px dashed var(--line);margin:20px 0}.pic-item{margin:0 0 10px}.pic-item strong{display:block;font-size:1rem}.pic-meta{color:var(--muted);font-size:.85rem;font-weight:600}
+.action-btn{display:block;text-align:center;font-weight:900;border-radius:14px;padding:16px;font-size:1rem;margin-top:10px}.wa-btn{background:var(--teal);color:var(--ink)}.tg-btn{background:var(--violet);color:#fff}
+.quick-contacts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.qc-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center}.qc-card .qc-icon{font-size:1.8rem;margin-bottom:8px}.qc-card h4{margin:0 0 4px;font-size:.92rem;font-weight:900}.qc-card p{margin:0;color:var(--muted);font-weight:600;font-size:.82rem}
+.camp-footer{background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px}.footer-inner{max-width:1440px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.footer-brand{font-family:var(--font-serif);font-size:2.2rem;font-weight:700}.footer-brand span{color:var(--pink)}.footer-col h4{color:var(--gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700}
+@media(max-width:980px){.help-layout{grid-template-columns:1fr}.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.footer-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:3.6rem}.qa-dropdown{left:-8px;right:-8px;min-width:auto}}
+@media(max-width:560px){.footer-grid,.quick-contacts{grid-template-columns:1fr}.hero,.wrap{padding-left:18px;padding-right:18px}.brand-icon{width:38px;height:38px}.hero h1{font-size:3rem}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}}
+@media print{.topbar,.nav-actions,.quick-access{display:none}.hero{background:#fff!important;color:#111!important}.camp-footer{display:none}body{background:#fff}}
+</style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="topbar"><div class="topbar-inner">
-    <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
-    <nav class="nav-actions">
-      <details class="quick-access"><summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
-        <div class="qa-dropdown"><div class="qa-group"><span class="qa-label">CAMP21 Pages</span>
-          <a class="qa-link" href="../index.html">🏠 Home</a><a class="qa-link" href="programme.html">📅 Programme</a><a class="qa-link" href="participants.html">👥 Participants</a><a class="qa-link" href="trainers.html">🧑‍🏫 Trainers</a><a class="qa-link" href="facilitators.html">🤝 Facilitators</a><a class="qa-link" href="resources.html">📚 Resources</a><a class="qa-link" href="contacts.html">📞 Help Desk</a>
-        </div></div>
-      </details>
-      <a class="nav-pill" href="registration.html">Register now →</a>
-      <a class="nav-pill app-pill" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a>
-    </nav>
-  </div></header>
-  <!-- PAGE HERO -->
-<section class="hero" style="background:radial-gradient(circle at 82% 10%,rgba(33,212,194,.15),transparent 34%),linear-gradient(120deg,rgba(24,61,112,.72),rgba(37,16,82,.68) 45%,rgba(59,18,76,.65)),url('../assets/images/hero-contacts.jpg') center/cover;color:#fff;padding:58px 28px 50px"><div style="max-width:1440px;margin:auto">
-  <span class="eyebrow" style="display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem">Support Desk</span>
-  <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6vw,5rem);line-height:.92;margin:30px 0 18px;letter-spacing:-.05em">Help & Support</h1>
-  <p style="font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.78);max-width:700px">Contact the secretariat, join the Telegram community, or access the Smart DT App for any camp-related queries.</p>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
+  <nav class="nav-actions">
+    <details class="quick-access"><summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+      <div class="qa-dropdown"><div class="qa-group"><span class="qa-label">CAMP21 Pages</span>
+        <a class="qa-link" href="../index.html">🏠 Home</a><a class="qa-link" href="programme.html">📅 Programme</a><a class="qa-link" href="participants.html">👥 Participants</a><a class="qa-link" href="trainers.html">🧑‍🏫 Trainers</a><a class="qa-link" href="facilitators.html">🤝 Facilitators</a><a class="qa-link" href="judges.html">⚖️ Judges</a><a class="qa-link" href="resources.html">📚 Resources</a>
+    </div></div></details>
+    <a class="nav-pill app-pill" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a>
+    <a class="nav-pill primary" href="participants.html">Participants Hub</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="hero-inner">
+  <span class="eyebrow">Support Desk</span>
+  <h1>Help & Support</h1>
+  <p>Contact the secretariat, join the Telegram community, or access the Smart DT App for any camp-related queries.</p>
 </div></section>
 
+<main class="wrap">
+<section>
+  <div class="help-layout">
+    <div>
+      <div class="section-head"><h2>Frequently Asked Questions</h2></div>
 
-  <main class="wide" style="padding-top: 4rem;">
-    
-    <div style="margin-bottom: 5rem; max-width: 800px;" class="reveal">
-      <span style="color: var(--neo-tangerine); font-weight: 800; font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; display: block; margin-bottom: 0.5rem;">Support Desk 💬</span>
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 1.1;">Frictionless Help Desk</h1>
-      <p style="font-size: 1.15rem; color: #444; font-weight: 500; margin-top: 1rem;">Access role-based answers and contact the organizational secretariat safely without security leakage.</p>
+      <details class="faq-item"><summary>⏰ When is the hard deadline for pitch deck submission? <span class="faq-chev">＋</span></summary><div class="faq-answer">All final pitch presentations must be completed and trainer-reviewed by Day 3 evening. Pitch duration is 8–10 minutes + 3 minutes Q&A (2 questions max).</div></details>
+
+      <details class="faq-item"><summary>⚖️ How are tie-breakers resolved? <span class="faq-chev">＋</span></summary><div class="faq-answer">Ties are resolved by comparing the isolated Content & Innovative Thinking score (45%) first, followed by the Feasibility & Impact score (20%). Chief Judge Dr. Siti Zubaidah binti Ibrahim holds final authority on all judging decisions.</div></details>
+
+      <details class="faq-item"><summary>🔄 Do accompanying lecturers moderate their own polytechnic's team? <span class="faq-chev">＋</span></summary><div class="faq-answer">No. Accompanying lecturers operate as unbiased, rotating facilitators across all 10 teams. They are strictly barred from remaining stationed with groups from their home institution.</div></details>
+
+      <details class="faq-item"><summary>📱 How do I submit templates on the Smart DT App? <span class="faq-chev">＋</span></summary><div class="faq-answer">Open the Smart DT App, select your team, navigate to the current phase, and fill in each template (T01–T14). Templates auto-save and sync to the central dashboard. Your trainer can view your progress in real-time.</div></details>
+
+      <details class="faq-item"><summary>🎥 What is the TikTok Reflection Challenge? <span class="faq-chev">＋</span></summary><div class="faq-answer">Each team creates one 2–3 minute TikTok-style vertical video reflecting on their entire DT journey — covering Empathise, Define, Ideate, Prototype and Test/Reflect phases. This is evaluated separately by trainers (/15 raw → /100). It's about genuine reflection, not perfect editing.</div></details>
+
+      <details class="faq-item"><summary>📋 Does T10 Prototype Direction Plan need trainer sign-off? <span class="faq-chev">＋</span></summary><div class="faq-answer">Yes. T10 must be reviewed and signed off by your assigned phase trainer before any prototype build work begins. This is a mandatory checkpoint.</div></details>
+
+      <details class="faq-item"><summary>👔 What is the attire guideline? <span class="faq-chev">＋</span></summary><div class="faq-answer">Workshop days: Smart-casual. Closing Ceremony (Thursday): Batik. Don't forget to bring outerwear for the Hop-On Hop-Off night activity on Day 1.</div></details>
+
+      <details class="faq-item"><summary>🎒 What should I bring? <span class="faq-chev">＋</span></summary><div class="faq-answer">Laptop/Tablet (required for workshops), stationery, extension socket (to share power), mobile phone with sufficient mobile data, and your medicine if needed. Breakfast, lunch and dinner are provided for participants.</div></details>
     </div>
 
-    <section class="reveal" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; padding-bottom: 6rem; align-items: start;">
-      
-      <div>
-        <h3 style="font-size: 1.2rem; text-transform: uppercase; font-weight: 900; margin-bottom: 2rem; color: var(--neo-ultraviolet); letter-spacing: 0.05em;">Frequently Asked Queries</h3>
-        
-        <div class="faq-block-element" onclick="this.classList.toggle('active')">
-          <div class="faq-title-trigger">⏰ When is the hard deadline for slide submission? <span>＋</span></div>
-          <div class="faq-body-panel">All final presentation decks must be fully submitted via the app portal terminal by Day 3 at 9:00 PM strictly. Late submissions automatically trigger a lock state.</div>
-        </div>
+    <aside class="contact-aside">
+      <h3>📍 Headquarters</h3>
+      <p><strong>Kompleks Kraf Kuala Lumpur</strong><br>Jalan Conlay, 50450 Kuala Lumpur</p>
+      <p><strong>Accommodation:</strong><br>Royale Chulan KL (0.2 km from venue)</p>
+      <p><strong>Transport:</strong><br>MRT Conlay Station (opposite Kompleks Kraf)</p>
 
-        <div class="faq-block-element" onclick="this.classList.toggle('active')">
-          <div class="faq-title-trigger">⚖️ How do tie-breaker sequences resolve overall ties? <span>＋</span></div>
-          <div class="faq-body-panel">Ties collapse strictly following the isolated evaluation value of Cultural Heritage Relevance first, followed by the isolated Prototype Quality score. Chief Judge Dr. Siti Zubaidah renders ultimate decisions.</div>
-        </div>
+      <hr class="divider">
+      <h3>📞 Contact PIC</h3>
+      <div class="pic-item"><strong>Pn. Jasmine</strong> 012-6224979<br><span class="pic-meta">General info about Camp 21</span></div>
+      <div class="pic-item"><strong>Pn. Radhiah</strong> 013-3393001<br><span class="pic-meta">General info about Camp 21</span></div>
+      <div class="pic-item"><strong>Pn. Herlina</strong> 013-8465354<br><span class="pic-meta">Registration</span></div>
+      <div class="pic-item"><strong>Ustaz Alif</strong> 014-8392936<br><span class="pic-meta">Accommodation</span></div>
 
-        <div class="faq-block-element" onclick="this.classList.toggle('active')">
-          <div class="faq-title-trigger">🔄 Do accompanying lecturers moderate their own polytechnics? <span>＋</span></div>
-          <div class="faq-body-panel">No. Accompanying lecturers operate as unbiased, rotating facilitators across all teams and are strictly barred from staying with groups originating from their home institutions.</div>
-        </div>
-      </div>
+      <hr class="divider">
+      <h3>🚌 Pick-up Points</h3>
+      <p>1. PMKL<br>2. Avenue K Drop-Off Bay (Jalan Ampang)<br>3. Pavilion KL Bus / Coach Bay</p>
 
-      <aside style="background: #ffffff; padding: 3rem 2.5rem; border-radius: 22px; box-shadow: 0 15px 45px rgba(0,0,0,0.02);">
-        <h3 style="text-transform: uppercase; font-size: 1.3rem; margin-bottom: 1rem; letter-spacing: -0.01em;">📍 Headquarters</h3>
-        <p style="font-size: 1rem; font-weight: 600; color: #333; line-height: 1.6;">
-          <strong>Kompleks Kraf Kuala Lumpur</strong><br>
-          Jalan Conlay, 50450 Kuala Lumpur<br><br>
-          <strong>Accommodation:</strong><br>
-          Royale Chulan KL (0.2 km from venue)<br><br>
-          <strong>Transport:</strong><br>
-          MRT Conlay Station (opposite Kompleks Kraf)
-        </p>
-        <div style="margin-top: 2rem; border-top: 1px dashed rgba(17,17,17,0.1); padding-top: 2rem;">
-          <h3 style="font-size: 1.1rem; margin: 0 0 14px;">📞 Contact PIC</h3>
-          <p style="font-weight:700;color:#333;line-height:1.8;margin:0 0 6px"><strong>Pn. Jasmine</strong> · 012-6224979<br><span style="color:#726b82;font-size:.85rem">General info about Camp 21</span></p>
-          <p style="font-weight:700;color:#333;line-height:1.8;margin:0 0 6px"><strong>Pn. Radhiah</strong> · 013-3393001<br><span style="color:#726b82;font-size:.85rem">General info about Camp 21</span></p>
-          <p style="font-weight:700;color:#333;line-height:1.8;margin:0 0 6px"><strong>Pn. Herlina</strong> · 013-8465354<br><span style="color:#726b82;font-size:.85rem">Registration</span></p>
-          <p style="font-weight:700;color:#333;line-height:1.8;margin:0 0 6px"><strong>Ustaz Alif</strong> · 014-8392936<br><span style="color:#726b82;font-size:.85rem">Accommodation</span></p>
-        </div>
-        <div style="margin-top: 1.5rem; border-top: 1px dashed rgba(17,17,17,0.1); padding-top: 1.5rem;">
-          <h3 style="font-size: 1.1rem; margin: 0 0 10px;">🚌 Pick-up Points</h3>
-          <p style="font-weight:700;color:#333;line-height:1.8;margin:0">1. PMKL<br>2. Avenue K Drop-Off Bay (Jalan Ampang)<br>3. Pavilion KL Bus / Coach Bay</p>
-        </div>
-        <div style="margin-top: 2rem; border-top: 1px dashed rgba(17,17,17,0.1); padding-top: 2rem; display:grid; gap:10px;">
-          <a href="https://wa.me/60126224979" target="_blank" rel="noopener" style="text-align:center;display:block;background:#21D4C2;color:#151044;font-weight:900;border-radius:14px;padding:1rem">💬 WhatsApp Help Desk</a>
-          <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener" style="text-align:center;display:block;background:#6B4DFF;color:#fff;font-weight:900;border-radius:14px;padding:1rem">📢 Telegram Community</a>
-        </div>
-      </aside>
+      <hr class="divider">
+      <a class="action-btn wa-btn" href="https://wa.me/60126224979" target="_blank" rel="noopener">💬 WhatsApp Help Desk</a>
+      <a class="action-btn tg-btn" href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">📢 Telegram Community</a>
+    </aside>
+  </div>
 
-    </section>
-  </main>
+  <div class="quick-contacts" style="margin-top:3rem">
+    <div class="qc-card"><div class="qc-icon">🏥</div><h4>Welfare</h4><p>Report to secretariat table immediately</p></div>
+    <div class="qc-card"><div class="qc-icon">🖨️</div><h4>Printing</h4><p>Request via facilitator on duty</p></div>
+    <div class="qc-card"><div class="qc-icon">🔌</div><h4>Technical</h4><p>Smart DT App issues — contact trainer</p></div>
+    <div class="qc-card"><div class="qc-icon">🚌</div><h4>Transport</h4><p>Bus departs hotel 7:00 AM daily</p></div>
+  </div>
+</section>
+</main>
 
-  <!-- FOOTER -->
-  <footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
-    <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
-    <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
-    <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a></div>
-    <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
-  </div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
+<footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
+  <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
+  <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
+  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a></div>
+  <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
+</div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
 
-  <script>
-    document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
-    document.querySelectorAll('.qa-link').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.quick-access').removeAttribute('open')}));
-  </script>
+<script>
+document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
+document.querySelectorAll('.qa-link').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.quick-access').removeAttribute('open')}));
+</script>
 </body>
 </html>
