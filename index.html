@@ -594,23 +594,22 @@ body::before{
 }
 
 
-/* === CAMP21 HOMEPAGE HERO GOLDEN HERITAGE BACKGROUND === */
+
+/* === CAMP21 GOLDEN HERITAGE BG 80%: HERO + THREE PILLARS ===
+   Uses assets/decors/hero-golden-heritage-bg.png for homepage hero and Three Pillars section. */
 .hero{
   position:relative !important;
   overflow:hidden !important;
   background:
-    linear-gradient(90deg,rgba(255,248,239,.96) 0%,rgba(255,244,224,.90) 43%,rgba(255,230,176,.78) 100%),
-    url('assets/images/hero-golden-heritage-bg.png') center/cover no-repeat !important;
+    linear-gradient(90deg,rgba(255,248,239,.18) 0%,rgba(255,244,224,.16) 44%,rgba(255,231,184,.12) 100%),
+    url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
 }
 .hero::before{
   content:'' !important;
   position:absolute !important;
   inset:0 !important;
-  background:
-    radial-gradient(circle at 18% 18%,rgba(255,200,61,.26),transparent 28%),
-    radial-gradient(circle at 84% 26%,rgba(226,60,116,.14),transparent 26%),
-    linear-gradient(90deg,rgba(255,248,239,.38),rgba(255,232,185,.12)) !important;
-  opacity:1 !important;
+  background:url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
+  opacity:.80 !important;
   pointer-events:none !important;
   z-index:0 !important;
 }
@@ -618,8 +617,11 @@ body::before{
   content:'' !important;
   position:absolute !important;
   inset:0 !important;
-  background:url('assets/decors/songket-pattern.png') center/310px repeat !important;
-  opacity:.045 !important;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,200,61,.14),transparent 28%),
+    radial-gradient(circle at 86% 25%,rgba(226,60,116,.10),transparent 24%),
+    linear-gradient(90deg,rgba(255,248,239,.22),rgba(255,234,190,.10)) !important;
+  opacity:1 !important;
   pointer-events:none !important;
   z-index:0 !important;
 }
@@ -633,12 +635,56 @@ body::before{
 }
 .hero h1,
 .hero .hero-title{
-  text-shadow:0 6px 28px rgba(255,255,255,.72) !important;
+  text-shadow:0 8px 30px rgba(255,255,255,.72),0 2px 8px rgba(255,248,239,.55) !important;
 }
 .hero p,
 .hero .hero-subtitle,
 .hero .hero-desc{
-  color:rgba(21,16,68,.78) !important;
+  color:rgba(21,16,68,.82) !important;
+}
+.framework{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    linear-gradient(180deg,rgba(255,253,249,.14) 0%,rgba(255,246,234,.12) 100%),
+    url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
+}
+.framework::before{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
+  opacity:.80 !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+.framework::after{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  width:auto !important;
+  height:auto !important;
+  right:auto !important;
+  top:auto !important;
+  background:
+    linear-gradient(180deg,rgba(255,253,249,.20),rgba(255,248,239,.16)),
+    radial-gradient(circle at 18% 20%,rgba(217,175,55,.14),transparent 30%),
+    radial-gradient(circle at 86% 18%,rgba(226,60,116,.10),transparent 24%) !important;
+  opacity:1 !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+.framework > .wide,
+.framework > .pillars-section,
+.framework .infographic-showcase,
+.framework .infographic-grid,
+.framework .infographic-card{
+  position:relative !important;
+  z-index:1 !important;
+}
+.infographic-card{
+  background:rgba(255,253,249,.88) !important;
+  backdrop-filter:blur(2px) !important;
 }
 
 </style>
