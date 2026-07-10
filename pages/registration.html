@@ -6,20 +6,20 @@
   <title>CAMP21: Registration</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/main.js" defer></script>
   <style>
     :root {
-      --navy: #14104a;
-      --rose: #e23c74;
-      --gold: #c8952c;
-      --cream: #fff8ef;
+      --navy: #20103E;
+      --rose: #F05AA6;
+      --gold: #D9AF37;
+      --cream: #F8F2EA;
       --line:#e9dfd0;
       --muted:#726b82;
       --pink:#FF4FCB;
       --violet:#6B4DFF;
-      --font-serif:'Cormorant Garamond',serif;
+      --font-serif:'Playfair Display',serif;
       --font-sans:'Plus Jakarta Sans',sans-serif;
     }
 
@@ -32,7 +32,7 @@
     .topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}
     .topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}
     .brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--navy);letter-spacing:-.01em;text-decoration:none}
-    .brand span{color:#e23c74}
+    .brand span{color:#F05AA6}
     .brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}
     .nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem;cursor:pointer;color:var(--navy);text-decoration:none;font-family:var(--font-sans)}
@@ -57,7 +57,7 @@
     }
     .reg-hero .wide { max-width: 1440px; margin: 0 auto; padding: 0; display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center; }
     .reg-eyebrow { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
-    .reg-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; line-height: 1.05; margin-bottom: 0.8rem; }
+    .reg-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; line-height: 1.05; margin-bottom: 0.8rem; }
     .reg-sub { font-size: 1.05rem; color: rgba(255,255,255,0.76); max-width: 680px; font-weight: 500; line-height: 1.6; }
     .reg-insight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .reg-insight-card{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.09);backdrop-filter:blur(8px);border-radius:22px;padding:24px;box-shadow:0 18px 45px rgba(21,16,68,.08)}
@@ -101,7 +101,7 @@
       box-shadow: 0 4px 24px rgba(20,16,74,0.05);
     }
     .form-card-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       color: var(--navy);
       margin-bottom: 0.3rem;
@@ -169,7 +169,7 @@
       gap: 0.5rem;
       transition: background 0.2s, transform 0.2s;
     }
-    .btn-register:hover { background: #c4205a; transform: translateY(-1px); }
+    .btn-register:hover { background: #d43e8b; transform: translateY(-1px); }
     .btn-register:disabled { background: #ccc; cursor: not-allowed; transform: none; }
     .submit-note { font-size: 0.78rem; color: #999; font-weight: 500; }
 
@@ -188,7 +188,7 @@
       margin-bottom: 1rem;
     }
     .already-checked-panel h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       color: var(--navy);
       font-size: 2.1rem;
       margin: 0 0 .6rem;
@@ -223,7 +223,7 @@
     }
     .success-panel.show { display: block; }
     .success-icon { font-size: 3rem; margin-bottom: 1rem; }
-    .success-panel h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 0.5rem; color: #fff; }
+    .success-panel h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.5rem; color: #fff; }
     .success-panel p { color: rgba(255,255,255,0.7); font-size: 0.95rem; max-width: 480px; margin: 0 auto 1.5rem; }
     .success-badge { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 900; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1.2rem; border-radius: 999px; margin-bottom: 1.2rem; }
     .success-detail { background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.2rem 1.5rem; text-align: left; margin-top: 1.2rem; font-size: 0.9rem; line-height: 1.8; }
@@ -265,7 +265,7 @@ main img:not(.brand-icon),section img:not(.brand-icon){border:none!important;box
 header .brand span,
 .footer-brand span,
 .footer-brand .brand span,
-.camp-footer .brand span { color: #e23c74 !important; }
+.camp-footer .brand span { color: #F05AA6 !important; }
 
 </style>
 </head>
@@ -560,7 +560,7 @@ header .brand span,
                     <option>AI Input 3 — SCAMPER Prompting Matrix (Day 2 AM)</option>
                     <option>AI Input 4 — Concept Poster Mockup Sprint (Day 3 AM)</option>
                     <option>Guest Speaker — Pitch Framework (Day 3 AM)</option>
-                    <option>Phase 01 & 02 Lead — Empathise & Define</option>
+                    <option>Phase 01 & 02 Lead — Empathy & Define</option>
                     <option>Phase 03 Lead — Ideate</option>
                     <option>Phase 04 Lead — Prototype</option>
                     <option>Phase 05 Lead — Test & Refine</option>
@@ -793,9 +793,9 @@ header .brand span,
   <footer style="background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px">
     <div style="max-width:1440px;margin:auto">
       <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px">
-        <div><div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700">CAMP<span style="color:#FF4FCB">21</span></div><p style="color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:12px 0 0">CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p style="color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:8px 0 0">AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700">CAMP<span style="color:#FF4FCB">21</span></div><p style="color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:12px 0 0">CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p style="color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:8px 0 0">AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
         <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Explore</h4><a href="programme.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Programme</a><a href="resources.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Resources</a><a href="updates.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Live Updates</a><a href="contacts.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Help</a></div>
-        <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Stakeholders</h4><a href="participants.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Participants Hub</a><a href="trainers.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Trainers</a><a href="facilitators.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Facilitators</a></div>
+        <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Stakeholders</h4><a href="participants.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Participants Hub</a><a href="trainers.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Trainers</a><a href="facilitators.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Facilitators</a><a href="judges.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Judges</a><a href="organiser.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Organiser</a></div>
         <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Smart DT Guide & Template Hub ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Telegram Community ↗</a><a href="contacts.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Help Desk</a></div>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div>

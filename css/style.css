@@ -176,15 +176,15 @@ header {
    SHARED HEADER & FOOTER — matches index.html master design
    ========================================================================== */
 :root {
-  --navy:   #14104a;
-  --rose:   #e23c74;
-  --gold:   #c8952c;
-  --cream:  #fff8ef;
-  --ink:    #1a1060;
+  --navy:   #20103E;
+  --rose:   #F05AA6;
+  --gold:   #D9AF37;
+  --cream:  #F8F2EA;
+  --ink:    #2B2733;
   --muted:  #6b6b8a;
   --border: rgba(20,16,74,0.10);
   --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-serif: 'Cormorant Garamond', serif;
+  --font-serif: 'Playfair Display', serif;
 }
 
 /* ── HEADER ── */
@@ -201,7 +201,7 @@ header {
 .nav-links a { font-weight: 700; font-size: 0.9rem; color: var(--ink); transition: color 0.25s; text-decoration: none; }
 .nav-links a:hover { color: var(--rose); }
 .btn-nav { background: var(--rose) !important; color: #fff !important; padding: 0.65rem 1.3rem; border-radius: 999px; font-weight: 900; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.25s, transform 0.25s; }
-.btn-nav:hover { background: #c4205a !important; color: #fff !important; transform: translateY(-1px); }
+.btn-nav:hover { background: #d43e8b !important; color: #fff !important; transform: translateY(-1px); }
 .menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--navy); font-size: 1.5rem; }
 @media (max-width: 768px) { .nav-links { display: none; } .menu-btn { display: block; } }
 
@@ -230,5 +230,5 @@ footer { background: var(--navy); color: #fff; padding: 3.5rem 0 2rem; border-to
 }
 .page-hero .wide { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 .page-hero-eyebrow { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
-.page-hero-title { font-family: var(--font-serif,'Cormorant Garamond',serif); font-size: clamp(2.2rem,5vw,3.8rem); font-weight: 600; line-height: 1.05; margin-bottom: 0.8rem; color: #fff; }
+.page-hero-title { font-family: var(--font-serif,'Playfair Display',serif); font-size: clamp(2.2rem,5vw,3.8rem); font-weight: 600; line-height: 1.05; margin-bottom: 0.8rem; color: #fff; }
 .page-hero-sub { font-size: 1rem; color: rgba(255,255,255,0.6); max-width: 520px; font-weight: 500; line-height: 1.6; }
