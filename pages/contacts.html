@@ -92,6 +92,19 @@ header .brand span,
 .footer-brand .brand span,
 .camp-footer .brand span { color: #F05AA6 !important; }
 
+
+/* === Slim header nav === */
+.nav-link{font-weight:800;font-size:.95rem;color:#20103E;text-decoration:none;padding:8px 2px;border-bottom:2px solid transparent;transition:color .2s}
+.nav-link:hover{color:#5A36C9}
+.nav-link.active{color:#5A36C9;border-bottom-color:#F05AA6}
+
+/* === Minimal footer === */
+.footer-min{max-width:1440px;margin:auto;display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap}
+.footer-min-brand p{color:rgba(255,255,255,.65);line-height:1.6;font-weight:600;margin:10px 0 0;max-width:440px}
+.footer-min-links{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;padding-top:14px}
+.footer-min-links a{color:rgba(255,255,255,.78);font-weight:700;text-decoration:none}
+.footer-min-links a:hover{color:#F05AA6}
+.footer-min-bottom{max-width:1440px;margin:34px auto 0;border-top:1px solid rgba(255,255,255,.14);padding-top:20px;color:rgba(255,255,255,.55);font-weight:600;font-size:.85rem}
 </style>
 </head>
 <body>
@@ -100,11 +113,11 @@ header .brand span,
   <div class="topbar-inner">
     <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
     <nav class="nav-actions" aria-label="Primary">
-      <a class="nav-pill" href="programme.html">📅 Programme</a>
-      <a class="nav-pill" href="resources.html">📚 Resources</a>
-      <a class="nav-pill" href="updates.html">📢 Live Updates</a>
+      <a class="nav-link" href="programme.html">Programme</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="updates.html">Live Updates</a>
       <details class="quick-access">
-        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+        <summary class="nav-pill qa-trigger">Quick Access <span class="qa-chev">▾</span></summary>
         <div class="qa-dropdown">
           <div class="qa-group">
             <span class="qa-label">Role & Operations</span>
@@ -252,12 +265,21 @@ header .brand span,
 </main>
 
 <img src="../assets/decors/gold-divider.png" class="gold-divider" alt="" style="display:block;width:min(400px,60%);height:auto;margin:28px auto;opacity:.5">
-<footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
-  <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
-  <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
-  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a><a href="judges.html">Judges</a><a href="organiser.html">Organiser</a></div>
-  <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide & Template Hub ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
-</div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
+<footer class="camp-footer">
+  <div class="footer-min">
+    <div class="footer-min-brand">
+      <div class="footer-brand">CAMP<span>21</span></div>
+      <p>AI-Powered Design Thinking for Sustainable Cultural Heritage<br>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
+    </div>
+    <nav class="footer-min-links" aria-label="Footer">
+      <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
+      <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
+      <a href="registration.html">Registration</a>
+      <a href="contacts.html">Help Desk</a>
+    </nav>
+  </div>
+  <div class="footer-min-bottom">© 2026 CAMP21 Digital Hub · Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</div>
+</footer>
 
 <script>
 document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});

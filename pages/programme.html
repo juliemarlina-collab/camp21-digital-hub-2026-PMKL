@@ -92,6 +92,28 @@
 @media(max-width:980px){.hub-guide-head{flex-direction:column}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.hub-use-guide{padding:20px 16px;border-radius:22px}.hub-guide-grid{grid-template-columns:1fr}.hub-quick-map{grid-template-columns:1fr}.hub-guide-badge{width:100%}}
 
+
+/* === Slim header nav === */
+.nav-link{font-weight:800;font-size:.95rem;color:#20103E;text-decoration:none;padding:8px 2px;border-bottom:2px solid transparent;transition:color .2s}
+.nav-link:hover{color:#5A36C9}
+.nav-link.active{color:#5A36C9;border-bottom-color:#F05AA6}
+
+/* === Minimal footer === */
+.footer-min{max-width:1440px;margin:auto;display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap}
+.footer-min-brand p{color:rgba(255,255,255,.65);line-height:1.6;font-weight:600;margin:10px 0 0;max-width:440px}
+.footer-min-links{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;padding-top:14px}
+.footer-min-links a{color:rgba(255,255,255,.78);font-weight:700;text-decoration:none}
+.footer-min-links a:hover{color:#F05AA6}
+.footer-min-bottom{max-width:1440px;margin:34px auto 0;border-top:1px solid rgba(255,255,255,.14);padding-top:20px;color:rgba(255,255,255,.55);font-weight:600;font-size:.85rem}
+
+/* === Outputs checklist === */
+.outputs-check{background:#fff;border:1px solid #e9dfd0;border-radius:22px;padding:8px 22px;margin-bottom:10px;box-shadow:0 12px 30px rgba(21,16,68,.05)}
+.outputs-check ul{list-style:none;margin:0;padding:0}
+.outputs-check li{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #f0e9db;font-weight:700}
+.outputs-check li:last-child{border-bottom:0}
+.ock{width:26px;height:26px;border-radius:50%;background:#2f8b3f;color:#fff;display:grid;place-items:center;font-size:.78rem;font-weight:900;flex:0 0 auto}
+.out-chip{margin-left:auto;background:#f8edd0;border:1px solid #D9AF37;color:#5c4520;border-radius:999px;padding:4px 12px;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;flex:0 0 auto;white-space:nowrap}
+@media(max-width:620px){.outputs-check li{flex-wrap:wrap}.out-chip{margin-left:38px}}
 </style>
 </head>
 <body>
@@ -100,11 +122,11 @@
   <div class="topbar-inner">
     <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
     <nav class="nav-actions" aria-label="Primary">
-      <a class="nav-pill" href="programme.html">📅 Programme</a>
-      <a class="nav-pill" href="resources.html">📚 Resources</a>
-      <a class="nav-pill" href="updates.html">📢 Live Updates</a>
+      <a class="nav-link active" href="programme.html">Programme</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="updates.html">Live Updates</a>
       <details class="quick-access">
-        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+        <summary class="nav-pill qa-trigger">Quick Access <span class="qa-chev">▾</span></summary>
         <div class="qa-dropdown">
           <div class="qa-group">
             <span class="qa-label">Role & Operations</span>
@@ -218,12 +240,21 @@
 
 </main>
 
-<footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
-  <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
-  <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
-  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a><a href="judges.html">Judges</a><a href="organiser.html">Organiser</a></div>
-  <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
-</div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
+<footer class="camp-footer">
+  <div class="footer-min">
+    <div class="footer-min-brand">
+      <div class="footer-brand">CAMP<span>21</span></div>
+      <p>AI-Powered Design Thinking for Sustainable Cultural Heritage<br>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
+    </div>
+    <nav class="footer-min-links" aria-label="Footer">
+      <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
+      <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
+      <a href="registration.html">Registration</a>
+      <a href="contacts.html">Help Desk</a>
+    </nav>
+  </div>
+  <div class="footer-min-bottom">© 2026 CAMP21 Digital Hub · Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</div>
+</footer>
 
 <script>
 const days=[
@@ -321,7 +352,7 @@ document.getElementById('dayPanels').innerHTML=days.map(d=>{
     });
     html+=`</div>`;
   });
-  html+=`<div class="session-label" id="day${d.num}-outputs">Expected Outputs</div><div class="outputs-grid">${d.outputs.map(o=>`<div class="output-card"><p>${o}</p></div>`).join('')}</div>`;
+  html+=`<div class="session-label" id="day${d.num}-outputs">Expected Outputs</div><div class="outputs-check"><ul>${d.outputs.map(o=>{const mp=o.includes('— Mahjong Paper outcome');const any=o.includes('optional format:');let txt=o.replace(' — Mahjong Paper outcome','').replace(/ \(optional format:[^)]*\)/,'');return `<li><span class="ock">✓</span><span>${txt}</span>${mp?'<span class="out-chip">Mahjong Paper</span>':any?'<span class="out-chip">Any Format</span>':''}</li>`}).join('')}</ul></div>`;
   if(d.num===4)html+=`<div class="final-pitch-programme-alert" id="day4-final-pitch"><div><h4>Final Pitch Evaluation Reminder</h4><p>Final Pitch = 100%. Evaluated by Judges. Presentation is 8–10 minutes with 3 minutes Q&A and maximum 2 questions. Teams should bring prototype evidence and all completed Smart DT materials.</p></div><div class="score"><b>100%</b><span>Final Pitch</span></div></div>`;
   if(d.reflection){
     html+=`<div class="session-label" id="day${d.num}-tiktok">Day ${d.num} Close — TikTok Reflection Challenge</div><div class="reflection-box"><div class="reflection-header"><h4>${d.reflection.title}</h4><span class="dur">1–3 min · vertical</span></div><div class="reflection-body"><p class="intro">${d.reflection.sub} — Each group records a short TikTok-style video together reflecting on the day's journey.</p>${d.reflection.qs.map((q,i)=>`<div class="ref-q"><span class="ref-num">${i+1}</span><p>${q}</p></div>`).join('')}</div></div>`;

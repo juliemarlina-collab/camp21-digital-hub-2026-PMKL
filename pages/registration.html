@@ -287,6 +287,22 @@ header .brand span,
 @media(max-width:980px){.hub-guide-head{flex-direction:column}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.hub-use-guide{padding:20px 16px;border-radius:22px}.hub-guide-grid{grid-template-columns:1fr}.hub-quick-map{grid-template-columns:1fr}.hub-guide-badge{width:100%}}
 
+
+/* === Slim header nav === */
+.nav-link{font-weight:800;font-size:.95rem;color:#20103E;text-decoration:none;padding:8px 2px;border-bottom:2px solid transparent;transition:color .2s}
+.nav-link:hover{color:#5A36C9}
+.nav-link.active{color:#5A36C9;border-bottom-color:#F05AA6}
+
+/* === Minimal footer === */
+.footer-min{max-width:1440px;margin:auto;display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap}
+.footer-min-brand p{color:rgba(255,255,255,.65);line-height:1.6;font-weight:600;margin:10px 0 0;max-width:440px}
+.footer-min-links{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;padding-top:14px}
+.footer-min-links a{color:rgba(255,255,255,.78);font-weight:700;text-decoration:none}
+.footer-min-links a:hover{color:#F05AA6}
+.footer-min-bottom{max-width:1440px;margin:34px auto 0;border-top:1px solid rgba(255,255,255,.14);padding-top:20px;color:rgba(255,255,255,.55);font-weight:600;font-size:.85rem}
+
+.camp-footer{background:#20103E;color:#fff;margin-top:48px;padding:56px 28px 26px}
+.footer-brand{display:flex;align-items:center;gap:14px;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700}.footer-brand span{color:#F05AA6}
 </style>
 </head>
 <body>
@@ -295,11 +311,11 @@ header .brand span,
   <div class="topbar-inner">
     <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
     <nav class="nav-actions" aria-label="Primary">
-      <a class="nav-pill" href="programme.html">📅 Programme</a>
-      <a class="nav-pill" href="resources.html">📚 Resources</a>
-      <a class="nav-pill" href="updates.html">📢 Live Updates</a>
+      <a class="nav-link" href="programme.html">Programme</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <a class="nav-link" href="updates.html">Live Updates</a>
       <details class="quick-access">
-        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
+        <summary class="nav-pill qa-trigger">Quick Access <span class="qa-chev">▾</span></summary>
         <div class="qa-dropdown">
           <div class="qa-group">
             <span class="qa-label">Role & Operations</span>
@@ -841,17 +857,21 @@ header .brand span,
     </div><!-- end reg-layout -->
   </div><!-- end reg-body -->
 
-  <footer style="background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px">
-    <div style="max-width:1440px;margin:auto">
-      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px">
-        <div><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700">CAMP<span style="color:#FF4FCB">21</span></div><p style="color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:12px 0 0">CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p style="color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:8px 0 0">AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
-        <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Explore</h4><a href="programme.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Programme</a><a href="resources.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Resources</a><a href="updates.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Live Updates</a><a href="contacts.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Help</a></div>
-        <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Stakeholders</h4><a href="participants.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Participants Hub</a><a href="trainers.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Trainers</a><a href="facilitators.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Facilitators</a><a href="judges.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Judges</a><a href="organiser.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Organiser</a></div>
-        <div><h4 style="color:#FFC83D;margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em">Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Smart DT Guide & Template Hub ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Telegram Community ↗</a><a href="contacts.html" style="display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px;text-decoration:none">Help Desk</a></div>
-      </div>
-      <div style="border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div>
+  <footer class="camp-footer">
+  <div class="footer-min">
+    <div class="footer-min-brand">
+      <div class="footer-brand">CAMP<span>21</span></div>
+      <p>AI-Powered Design Thinking for Sustainable Cultural Heritage<br>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
     </div>
-  </footer>
+    <nav class="footer-min-links" aria-label="Footer">
+      <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
+      <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
+      <a href="registration.html">Registration</a>
+      <a href="contacts.html">Help Desk</a>
+    </nav>
+  </div>
+  <div class="footer-min-bottom">© 2026 CAMP21 Digital Hub · Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</div>
+</footer>
 <script>
     // Quick Access dropdown close
     document.addEventListener('click',e=>{const qa=document.querySelector('.quick-access');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
