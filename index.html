@@ -271,6 +271,86 @@ header .brand span,
 .footer-brand .brand span,
 .camp-footer .brand span { color: #e23c74 !important; }
 
+
+/* === CAMP21 BATIK & PILLARS REFINEMENT === */
+body::before{
+  opacity:.06 !important;
+  background-size:320px !important;
+}
+.framework{
+  position:relative !important;
+  isolation:isolate;
+  background:linear-gradient(180deg,#fffdf9 0%,#fff6ea 100%) !important;
+}
+.framework::before{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:url('assets/decors/songket-pattern.png') center/300px repeat !important;
+  opacity:.07 !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+.framework > .wide,
+.framework > .pillars-section{
+  position:relative;
+  z-index:1;
+}
+.pillars-section{
+  padding:0 0 1.5rem !important;
+}
+.pillar-card{
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 18px 38px rgba(20,16,74,.14);
+  border:1px solid rgba(255,255,255,.12);
+}
+.pillar-card::after{
+  content:'';
+  position:absolute;
+  inset:auto -35px -35px auto;
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+}
+.pillar-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:.9rem;
+}
+.pillar-icon{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.24);
+  color:#fff;
+  font-size:1.25rem;
+  box-shadow:0 10px 20px rgba(0,0,0,.10);
+  flex-shrink:0;
+}
+.pillar-tag{
+  margin-bottom:.35rem !important;
+}
+.pillar-title{
+  margin:0 !important;
+}
+.pillar-desc{
+  color:rgba(255,255,255,.84) !important;
+  font-size:13px !important;
+  line-height:1.65 !important;
+  margin:0 0 1.1rem !important;
+  max-width:34ch;
+}
+.sdg-row-sub{
+  color:rgba(255,255,255,.72) !important;
+}
+
 </style>
   <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 </head>
@@ -495,9 +575,14 @@ header .brand span,
 
         <!-- Card 1 · Design Thinking -->
         <div class="pillar-card pillar-card-dt reveal">
-          <div class="pillar-tag">Design Thinking</div>
-          <h3 class="pillar-title">The 5-Phase Journey</h3>
-          <p class="pillar-desc">Empathise → Define → Ideate → Prototype → Test. A human-centred methodology that turns cultural insights into real solutions.</p>
+          <div class="pillar-head">
+            <div class="pillar-icon" aria-hidden="true">🧠</div>
+            <div>
+              <div class="pillar-tag">Design Thinking</div>
+              <h3 class="pillar-title">The 5-Phase Journey</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">A guided 5-phase journey that transforms cultural observations into meaningful ideas, tested prototypes and real heritage-based solutions.</p>
           <div class="dt-flow">
             <div class="dt-phase">
               <div class="dt-dot">01</div>
@@ -543,9 +628,14 @@ header .brand span,
 
         <!-- Card 2 · AI Empowerment -->
         <div class="pillar-card pillar-card-ai reveal" style="transition-delay:0.1s;">
-          <div class="pillar-tag">AI Empowerment</div>
-          <h3 class="pillar-title">AI as Co-Pilot</h3>
-          <p class="pillar-desc">Using artificial intelligence responsibly as a co-pilot — to support brainstorming, visualise ideas, and enhance cultural storytelling.</p>
+          <div class="pillar-head">
+            <div class="pillar-icon" aria-hidden="true">✨</div>
+            <div>
+              <div class="pillar-tag">AI Empowerment</div>
+              <h3 class="pillar-title">AI as Co-Pilot</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">AI supports interviewing, synthesis, ideation and storytelling, helping teams work smarter while keeping human judgment and heritage sensitivity at the centre.</p>
           <div class="ai-chips">
             <div class="ai-chip">
               <span class="ai-chip-day">Day 1</span>
@@ -572,9 +662,14 @@ header .brand span,
 
         <!-- Card 3 · SDG Alignment -->
         <div class="pillar-card pillar-card-sdg reveal" style="transition-delay:0.2s;">
-          <div class="pillar-tag">Sustainability</div>
-          <h3 class="pillar-title">SDG Alignment</h3>
-          <p class="pillar-desc">Aligning creative outputs with global sustainability goals — from education and innovation to climate action and partnerships.</p>
+          <div class="pillar-head">
+            <div class="pillar-icon" aria-hidden="true">🌍</div>
+            <div>
+              <div class="pillar-tag">Sustainability</div>
+              <h3 class="pillar-title">SDG Alignment</h3>
+            </div>
+          </div>
+          <p class="pillar-desc">Each solution connects heritage innovation to education, sustainable communities, responsible making, climate awareness and collaborative impact.</p>
           <div class="sdg-rows">
             <div class="sdg-row">
               <div class="sdg-badge" style="background:#C5192D;"><span class="sdg-badge-num">4</span></div>
@@ -585,14 +680,11 @@ header .brand span,
               </div>
             </div>
             <div class="sdg-row">
-              <div class="sdg-badge" style="background:#DD1367;"><span class="sdg-badge-num">17</span></div>
-            </div>
-            <div class="sdg-row">
               <div class="sdg-badge" style="background:#FD9D24;"><span class="sdg-badge-num">11</span></div>
               <div class="sdg-row-text">
                 <span class="sdg-row-emoji">🏙️</span>
                 <span class="sdg-row-name">SDG 11</span>
-                <span class="sdg-row-sub">Sustainable Cities</span>
+                <span class="sdg-row-sub">Sustainable Communities</span>
               </div>
             </div>
             <div class="sdg-row">
