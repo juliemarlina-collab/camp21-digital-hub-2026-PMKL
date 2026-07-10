@@ -322,9 +322,6 @@ document.getElementById('dayPanels').innerHTML=days.map(d=>{
     html+=`</div>`;
   });
   html+=`<div class="session-label" id="day${d.num}-outputs">Expected Outputs</div><div class="outputs-grid">${d.outputs.map(o=>`<div class="output-card"><p>${o}</p></div>`).join('')}</div>`;
-  if(d.num===1)html+=`<div class="visual-outcome-note"><strong>Visual outcome reminder:</strong> T04 Empathy Map and T05 User Persona + T06 User Insight & Needs Statement / Design Statement should be prepared as mahjong paper outcomes.</div>`;
-  if(d.num===2)html+=`<div class="visual-outcome-note"><strong>Visual outcome reminder:</strong> T08 SCAMPER and T09 Idea Prioritisation Matrix should be prepared as mahjong paper outcomes.</div>`;
-  if(d.num===3)html+=`<div class="visual-outcome-note"><strong>Visual outcome reminder:</strong> T11 Full Prototype Outcome may use Mahjong Paper / Canva / PPT / Storyboard format. T12 User Feedback Form should be prepared as a mahjong paper outcome.</div>`;
   if(d.num===4)html+=`<div class="final-pitch-programme-alert" id="day4-final-pitch"><div><h4>Final Pitch Evaluation Reminder</h4><p>Final Pitch = 100%. Evaluated by Judges. Presentation is 8–10 minutes with 3 minutes Q&A and maximum 2 questions. Teams should bring prototype evidence and all completed Smart DT materials.</p></div><div class="score"><b>100%</b><span>Final Pitch</span></div></div>`;
   if(d.reflection){
     html+=`<div class="session-label" id="day${d.num}-tiktok">Day ${d.num} Close — TikTok Reflection Challenge</div><div class="reflection-box"><div class="reflection-header"><h4>${d.reflection.title}</h4><span class="dur">1–3 min · vertical</span></div><div class="reflection-body"><p class="intro">${d.reflection.sub} — Each group records a short TikTok-style video together reflecting on the day's journey.</p>${d.reflection.qs.map((q,i)=>`<div class="ref-q"><span class="ref-num">${i+1}</span><p>${q}</p></div>`).join('')}</div></div>`;
