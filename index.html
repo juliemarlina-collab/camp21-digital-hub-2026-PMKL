@@ -351,6 +351,248 @@ body::before{
   color:rgba(255,255,255,.72) !important;
 }
 
+
+/* === CAMP21 INFOGRAPHIC HOMEPAGE UPDATE === */
+.framework{
+  position:relative !important;
+  background:linear-gradient(180deg,#fffdf9 0%,#fff6ea 100%) !important;
+}
+.framework::before{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:url('assets/decors/songket-pattern.png') center/290px repeat !important;
+  opacity:.08 !important;
+  pointer-events:none !important;
+}
+.framework > .wide,
+.framework > .pillars-section{
+  position:relative;
+  z-index:1;
+}
+.infographic-showcase{
+  padding:0 0 1.5rem;
+}
+.infographic-intro{
+  max-width:760px;
+  margin:0 0 1.35rem;
+  color:rgba(20,16,74,.72);
+  line-height:1.7;
+  font-size:.98rem;
+}
+.infographic-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.5rem;
+}
+.infographic-card{scroll-margin-top:110px;}
+.infographic-card{
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(217,175,55,.30);
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 18px 40px rgba(20,16,74,.10);
+  backdrop-filter:blur(3px);
+}
+.infographic-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1.15rem 1.35rem .85rem;
+}
+.infographic-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  padding:.55rem 1rem;
+  border-radius:999px;
+  border:1px solid rgba(32,16,62,.10);
+  background:linear-gradient(180deg,#fffaf2 0%,#fff4e1 100%);
+  color:var(--indigo);
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+.infographic-title{
+  margin:0;
+  color:var(--indigo);
+  font-family:var(--font-serif);
+  font-size:1.6rem;
+  line-height:1.15;
+}
+.infographic-sub{
+  margin:.4rem 0 0;
+  color:rgba(20,16,74,.65);
+  font-size:.95rem;
+  line-height:1.6;
+  max-width:60ch;
+}
+.infographic-image-wrap{
+  padding:0 1.2rem 1.2rem;
+}
+.infographic-image{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:20px;
+  border:1px solid rgba(217,175,55,.25);
+  background:#fff;
+}
+@media (max-width:768px){
+  .infographic-card-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .infographic-title{
+    font-size:1.35rem;
+  }
+}
+
+
+/* === CAMP21 THREE INFOGRAPHICS BEAUTIFUL HOMEPAGE TUNING === */
+.framework{
+  padding:5rem 0 4.5rem !important;
+  overflow:hidden;
+}
+.framework::after{
+  content:'';
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-180px;
+  top:80px;
+  background:radial-gradient(circle,rgba(226,60,116,.10),transparent 68%);
+  pointer-events:none;
+  z-index:0;
+}
+.framework .section-header{
+  margin-bottom:1.1rem !important;
+}
+.framework .section-title{
+  font-size:clamp(2.2rem,4.5vw,4.1rem) !important;
+  letter-spacing:-.04em;
+}
+.infographic-intro{
+  max-width:900px !important;
+  margin:0 auto 2.6rem !important;
+  text-align:center !important;
+  font-size:1.06rem !important;
+  color:rgba(21,16,68,.76) !important;
+}
+.infographic-showcase .wide{
+  max-width:1380px;
+}
+.infographic-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:1.25rem !important;
+  align-items:start;
+}
+.infographic-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  border-radius:30px !important;
+  background:linear-gradient(180deg,rgba(255,253,249,.96),rgba(255,248,239,.92)) !important;
+  border:1px solid rgba(217,175,55,.42) !important;
+  box-shadow:0 24px 60px rgba(21,16,68,.12) !important;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.infographic-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 32px 76px rgba(21,16,68,.16) !important;
+  border-color:rgba(226,60,116,.38) !important;
+}
+.infographic-card-head{
+  padding:1.25rem 1.25rem .85rem !important;
+  min-height:178px;
+}
+.infographic-badge{
+  margin-bottom:.8rem;
+  background:linear-gradient(135deg,#fffaf2,#fff0d7) !important;
+  border-color:rgba(217,175,55,.48) !important;
+  color:#251052 !important;
+  box-shadow:0 8px 18px rgba(217,175,55,.10);
+}
+.infographic-title{
+  font-size:1.42rem !important;
+  letter-spacing:-.02em;
+}
+.infographic-sub{
+  font-size:.91rem !important;
+  line-height:1.58 !important;
+  color:rgba(21,16,68,.68) !important;
+}
+.infographic-image-wrap{
+  padding:0 1rem 1rem !important;
+  margin-top:auto;
+}
+.infographic-image{
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:22px !important;
+  border:1px solid rgba(217,175,55,.34) !important;
+  box-shadow:0 14px 36px rgba(21,16,68,.10);
+}
+.infographic-card:nth-child(1) .infographic-badge{color:#251052!important}
+.infographic-card:nth-child(2) .infographic-badge{color:#e23c74!important}
+.infographic-card:nth-child(3) .infographic-badge{color:#8a5d08!important}
+.infographic-cta-row{
+  margin:2.2rem auto 0;
+  max-width:900px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.7rem;
+}
+.infographic-cta-row span{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding:.72rem 1rem;
+  border-radius:999px;
+  background:rgba(255,255,255,.76);
+  border:1px solid rgba(217,175,55,.34);
+  color:#251052;
+  font-weight:900;
+  font-size:.82rem;
+  box-shadow:0 10px 24px rgba(21,16,68,.06);
+}
+@media(max-width:1180px){
+  .infographic-grid{
+    grid-template-columns:1fr !important;
+    gap:1.5rem !important;
+  }
+  .infographic-card{
+    max-width:980px;
+    margin:0 auto;
+  }
+  .infographic-card-head{
+    min-height:auto;
+  }
+  .infographic-image{
+    object-fit:contain;
+    background:#fffaf2;
+  }
+}
+@media(max-width:768px){
+  .framework{
+    padding:3.6rem 0 3.5rem !important;
+  }
+  .infographic-card-head{
+    padding:1.05rem 1.05rem .75rem !important;
+  }
+  .infographic-image-wrap{
+    padding:0 .8rem .8rem !important;
+  }
+  .infographic-title{
+    font-size:1.22rem !important;
+  }
+}
+
 </style>
   <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 </head>
@@ -560,160 +802,63 @@ body::before{
     </div>
   </section>
 
-  <!-- 3 PILLARS / WHAT IS CAMP21 -->
+  <!-- CAMP21 INFOGRAPHICS / WHAT IS CAMP21 -->
   <section class="framework" id="framework">
     <div class="wide">
       <div class="section-header reveal">
         <div>
           <p class="section-eyebrow">What is CAMP21?</p>
-          <h2 class="section-title">Three Pillars of the Programme</h2>
+          <h2 class="section-title">Three Pillars of CAMP21</h2>
         </div>
       </div>
+      <p class="infographic-intro reveal">
+        CAMP21 is built on three connected pillars: Design Thinking, AI Empowerment and SDG Impact. These visual guides help participants understand the learning journey, responsible AI support and sustainability outcomes behind the programme.
+      </p>
     </div>
-    <div class="pillars-section">
-      <div class="pillars-grid">
 
-        <!-- Card 1 · Design Thinking -->
-        <div class="pillar-card pillar-card-dt reveal">
-          <div class="pillar-head">
-            <div class="pillar-icon" aria-hidden="true">🧠</div>
-            <div>
-              <div class="pillar-tag">Design Thinking</div>
-              <h3 class="pillar-title">The 5-Phase Journey</h3>
-            </div>
-          </div>
-          <p class="pillar-desc">A guided 5-phase journey that transforms cultural observations into meaningful ideas, tested prototypes and real heritage-based solutions.</p>
-          <div class="dt-flow">
-            <div class="dt-phase">
-              <div class="dt-dot">01</div>
-              <div class="dt-info">
-                <span class="dt-phase-name">Empathise</span>
-                <span class="dt-phase-sub">Gallery tour · Artisan interview · Empathy Map</span>
+    <div class="pillars-section infographic-showcase">
+      <div class="wide">
+        <div class="infographic-grid">
+          <article class="infographic-card reveal">
+            <div class="infographic-card-head">
+              <div>
+                <span class="infographic-badge">✨ DT Journey</span>
+                <h3 class="infographic-title">5-Phase Design Thinking Journey</h3>
+                <p class="infographic-sub">A visual guide to the Empathise, Define, Ideate, Prototype and Test phases used throughout CAMP21.</p>
               </div>
             </div>
-            <div class="dt-arrow">↓</div>
-            <div class="dt-phase">
-              <div class="dt-dot">02</div>
-              <div class="dt-info">
-                <span class="dt-phase-name">Define</span>
-                <span class="dt-phase-sub">Persona · Insights · How Might We question</span>
+            <div class="infographic-image-wrap">
+              <img class="infographic-image" src="assets/infographics/dt-journey-infographic.jpg" alt="CAMP21 Design Thinking Journey infographic">
+            </div>
+          </article>
+
+          <article class="infographic-card reveal" style="transition-delay:0.04s;">
+            <div class="infographic-card-head">
+              <div>
+                <span class="infographic-badge">🤖 AI Empowerment</span>
+                <h3 class="infographic-title">Responsible AI Empowerment</h3>
+                <p class="infographic-sub">A visual summary of how AI supports literacy, research, insight synthesis, ideation, prototyping, pitching and responsible digital practice throughout CAMP21.</p>
               </div>
             </div>
-            <div class="dt-arrow">↓</div>
-            <div class="dt-phase">
-              <div class="dt-dot">03</div>
-              <div class="dt-info">
-                <span class="dt-phase-name">Ideate</span>
-                <span class="dt-phase-sub">SCAMPER · 3D Circle Challenge · Idea Prioritisation</span>
+            <div class="infographic-image-wrap">
+              <img class="infographic-image" src="assets/infographics/ai-empowerment-infographic.jpg" alt="CAMP21 AI Empowerment infographic">
+            </div>
+          </article>
+
+
+          <article class="infographic-card reveal" style="transition-delay:0.08s;">
+            <div class="infographic-card-head">
+              <div>
+                <span class="infographic-badge">🌍 SDG Impact</span>
+                <h3 class="infographic-title">Sustainable Development Goals Impact</h3>
+                <p class="infographic-sub">A summary of how CAMP21 contributes to education, innovation, sustainable communities, responsible production and collaborative partnerships.</p>
               </div>
             </div>
-            <div class="dt-arrow">↓</div>
-            <div class="dt-phase">
-              <div class="dt-dot">04</div>
-              <div class="dt-info">
-                <span class="dt-phase-name">Prototype</span>
-                <span class="dt-phase-sub">Build · Direction plan · Trainer sign-off</span>
-              </div>
+            <div class="infographic-image-wrap">
+              <img class="infographic-image" src="assets/infographics/sdg-impact-infographic.jpg" alt="CAMP21 SDG Impact infographic">
             </div>
-            <div class="dt-arrow">↓</div>
-            <div class="dt-phase">
-              <div class="dt-dot">05</div>
-              <div class="dt-info">
-                <span class="dt-phase-name">Test</span>
-                <span class="dt-phase-sub">User Feedback Form · Improvement Plan · Final Pitch</span>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
-
-        <!-- Card 2 · AI Empowerment -->
-        <div class="pillar-card pillar-card-ai reveal" style="transition-delay:0.1s;">
-          <div class="pillar-head">
-            <div class="pillar-icon" aria-hidden="true">✨</div>
-            <div>
-              <div class="pillar-tag">AI Empowerment</div>
-              <h3 class="pillar-title">AI as Co-Pilot</h3>
-            </div>
-          </div>
-          <p class="pillar-desc">AI supports interviewing, synthesis, ideation and storytelling, helping teams work smarter while keeping human judgment and heritage sensitivity at the centre.</p>
-          <div class="ai-chips">
-            <div class="ai-chip">
-              <span class="ai-chip-day">Day 1</span>
-              <span class="ai-chip-label">T02 — AI Interview Question Generator</span>
-              <span class="ai-chip-sub">ChatGPT interview framing for artisan engagement</span>
-            </div>
-            <div class="ai-chip">
-              <span class="ai-chip-day">Day 1</span>
-              <span class="ai-chip-label">T03 — Audio-to-Text Transcription</span>
-              <span class="ai-chip-sub">AI transcription of artisan interview recordings</span>
-            </div>
-            <div class="ai-chip">
-              <span class="ai-chip-day">Day 1</span>
-              <span class="ai-chip-label">T06 — User Insight, Needs &amp; Design Statement</span>
-              <span class="ai-chip-sub">Synthesising findings into actionable insights</span>
-            </div>
-            <div class="ai-chip">
-              <span class="ai-chip-day">Day 2</span>
-              <span class="ai-chip-label">T07 — 3D Circle Challenge</span>
-              <span class="ai-chip-sub">Creative idea generation from design challenge</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 · SDG Alignment -->
-        <div class="pillar-card pillar-card-sdg reveal" style="transition-delay:0.2s;">
-          <div class="pillar-head">
-            <div class="pillar-icon" aria-hidden="true">🌍</div>
-            <div>
-              <div class="pillar-tag">Sustainability</div>
-              <h3 class="pillar-title">SDG Alignment</h3>
-            </div>
-          </div>
-          <p class="pillar-desc">Each solution connects heritage innovation to education, sustainable communities, responsible making, climate awareness and collaborative impact.</p>
-          <div class="sdg-rows">
-            <div class="sdg-row">
-              <div class="sdg-badge" style="background:#C5192D;"><span class="sdg-badge-num">4</span></div>
-              <div class="sdg-row-text">
-                <span class="sdg-row-emoji">📚</span>
-                <span class="sdg-row-name">SDG 4</span>
-                <span class="sdg-row-sub">Quality Education</span>
-              </div>
-            </div>
-            <div class="sdg-row">
-              <div class="sdg-badge" style="background:#FD9D24;"><span class="sdg-badge-num">11</span></div>
-              <div class="sdg-row-text">
-                <span class="sdg-row-emoji">🏙️</span>
-                <span class="sdg-row-name">SDG 11</span>
-                <span class="sdg-row-sub">Sustainable Communities</span>
-              </div>
-            </div>
-            <div class="sdg-row">
-              <div class="sdg-badge" style="background:#BF8B2E;"><span class="sdg-badge-num">12</span></div>
-              <div class="sdg-row-text">
-                <span class="sdg-row-emoji">♻️</span>
-                <span class="sdg-row-name">SDG 12</span>
-                <span class="sdg-row-sub">Responsible Consumption</span>
-              </div>
-            </div>
-            <div class="sdg-row">
-              <div class="sdg-badge" style="background:#3F7E44;"><span class="sdg-badge-num">13</span></div>
-              <div class="sdg-row-text">
-                <span class="sdg-row-emoji">🌿</span>
-                <span class="sdg-row-name">SDG 13</span>
-                <span class="sdg-row-sub">Climate Action</span>
-              </div>
-            </div>
-            <div class="sdg-row">
-              <div class="sdg-badge" style="background:#19486A;"><span class="sdg-badge-num">17</span></div>
-              <div class="sdg-row-text">
-                <span class="sdg-row-emoji">🤝</span>
-                <span class="sdg-row-name">SDG 17</span>
-                <span class="sdg-row-sub">Partnerships for Goals</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
