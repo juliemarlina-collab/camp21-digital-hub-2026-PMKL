@@ -6,9 +6,9 @@
 <title>CAMP21 Programme</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#151044;--indigo:#251052;--cream:#fff8ef;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;--gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#e23c74;--olive:#8a7a2a;--brown:#7a3d1e;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+:root{--ink:#151044;--indigo:#251052;--cream:#F8F2EA;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;--gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#F05AA6;--olive:#8a7a2a;--brown:#7a3d1e;--font-serif:'Playfair Display',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-sans)}a{text-decoration:none;color:inherit}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:var(--pink)}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}.nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem;cursor:pointer}.nav-pill:hover{border-color:var(--violet)}.nav-pill.primary{background:var(--violet);color:#fff;border-color:var(--violet)}.app-pill{border-color:var(--teal);color:var(--ink)}.app-pill:hover{background:var(--teal);color:#fff}
 .quick-access{position:relative}.qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}.qa-chev{transition:.25s;display:inline-block;font-size:.7em}.quick-access[open] .qa-chev{transform:rotate(180deg)}.qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:60;animation:qaIn .18s ease}.qa-group{padding:10px 8px}.qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px}.qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);transition:background .15s}.qa-link:hover{background:rgba(109,70,238,.07);color:var(--violet)}@keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
@@ -51,7 +51,7 @@
 .programme-action-card:nth-child(1){background:linear-gradient(135deg,#160d45,#251052)}
 .programme-action-card:nth-child(2){background:linear-gradient(135deg,#d62f75,#ff4fcb)}
 .programme-action-card:nth-child(3){background:linear-gradient(135deg,#7a3d1e,#8a7a2a)}
-.programme-action-card:nth-child(4){background:linear-gradient(135deg,#e23c74,#6B4DFF)}
+.programme-action-card:nth-child(4){background:linear-gradient(135deg,#F05AA6,#6B4DFF)}
 .programme-action-card::after{content:attr(data-day);position:absolute;right:14px;bottom:-22px;font-family:var(--font-serif);font-size:5.6rem;font-weight:700;line-height:1;color:rgba(255,255,255,.16)}
 .programme-action-pill{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.14);border-radius:999px;padding:8px 14px;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
 .programme-action-card h3{position:relative;z-index:1;margin:18px 0 10px;font-size:1.15rem;color:inherit}
@@ -120,61 +120,13 @@
 <main class="wrap">
 
 
-<section class="programme-action-alert" id="programme-action-reminder">
-  <div class="programme-action-head">
-    <div>
-      <span class="programme-kicker">Programme Action Reminder</span>
-      <h2>Your 4-Day CAMP21 Flow</h2>
-      <p>Use these quick cards to stay aligned with the Participants Hub and Trainers Hub requirements.</p>
-    </div>
-    <div class="programme-alert-note">TikTok = 100% · Final Pitch = 100%</div>
-  </div>
-  <div class="programme-action-grid">
-    <article class="programme-action-card" data-day="1">
-      <span class="programme-action-pill">Day 1 · 13 Jul</span>
-      <h3>Empathise &amp; Define</h3>
-      <ul>
-        <li>Complete T01–T06 evidence</li>
-        <li>Prepare Day 1 TikTok Reflection</li>
-        <li>Produce T04 and T05/T06 mahjong outcomes</li>
-      </ul>
-    </article>
-    <article class="programme-action-card" data-day="2">
-      <span class="programme-action-pill">Day 2 · 14 Jul</span>
-      <h3>Ideate &amp; Prototype Plan</h3>
-      <ul>
-        <li>Complete T07–T10</li>
-        <li>Prepare Day 2 TikTok Reflection</li>
-        <li>Produce T08 and T09 mahjong outcomes</li>
-      </ul>
-    </article>
-    <article class="programme-action-card" data-day="3">
-      <span class="programme-action-pill">Day 3 · 15 Jul</span>
-      <h3>Prototype, Test &amp; Pitch Prep</h3>
-      <ul>
-        <li>Complete T11–T13 and draft T14</li>
-        <li>Prepare Day 3 TikTok Reflection</li>
-        <li>Complete T12 User Feedback Form</li>
-      </ul>
-    </article>
-    <article class="programme-action-card" data-day="4">
-      <span class="programme-action-pill">Day 4 · 16 Jul</span>
-      <h3>Pitch &amp; Impact</h3>
-      <ul>
-        <li>Present Final Pitch</li>
-        <li>Prepare for Q&amp;A</li>
-        <li>Final Pitch is evaluated by Judges</li>
-      </ul>
-    </article>
-  </div>
-</section>
 
 
 
 <div class="overview-grid">
   <div class="ov-card ov1">
     <span class="day-label">Day 1 · 13 Jul</span>
-    <div class="day-theme">Empathise &amp; Define</div>
+    <div class="day-theme">Empathy &amp; Define</div>
     <p class="day-desc">Begin with heritage immersion, observation and interviews. Turn findings into user needs, persona and a clear design direction.</p>
     <div class="day-checks"><span>T01–T06</span><span>T04 Mahjong</span><span>T06 Mahjong</span><span>Day 1 TikTok</span></div>
     <span class="day-num">1</span>
@@ -203,7 +155,7 @@
 </div>
 
 <nav class="programme-quick-pills" aria-label="Programme quick links">
-  <a href="#day1" onclick="event.preventDefault();jumpToDay(1)">Day 1 · Empathise &amp; Define</a>
+  <a href="#day1" onclick="event.preventDefault();jumpToDay(1)">Day 1 · Empathy &amp; Define</a>
   <a href="#day2" onclick="event.preventDefault();jumpToDay(2)">Day 2 · Ideate &amp; Prototype</a>
   <a href="#day3" onclick="event.preventDefault();jumpToDay(3)">Day 3 · Test &amp; Pitch Prep</a>
   <a href="#day4" onclick="event.preventDefault();jumpToDay(4)">Day 4 · Final Pitch</a>
@@ -219,24 +171,24 @@
 <footer class="camp-footer"><div class="footer-inner"><div class="footer-grid">
   <div class="footer-col"><div class="footer-brand">CAMP<span>21</span></div><p>CAMP21 Digital Hub 2026<br>13–16 July 2026<br>Kompleks Kraf Kuala Lumpur</p><p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p></div>
   <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
-  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a></div>
+  <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a><a href="judges.html">Judges</a><a href="organiser.html">Organiser</a></div>
   <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT App ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
 </div><div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div></div></footer>
 
 <script>
 const days=[
-{num:1,date:'13',month:'July 2026',title:'Heritage Immersion',sub:'Empathise & Define · KL Exploration',focus:'Phase 1 — Empathise & Phase 2 — Define',overview:'Day 1 launches the CAMP21 journey through heritage immersion, Design Thinking orientation, and group exploration. Participants begin with briefing and ice-breaking, then move directly into the Design Thinking process. Guided craft gallery tours, motif exploration, and artisan interviews anchor the empathy stage. By afternoon, groups frame their initial problem statements. The day closes with KL Exploration and a short group video reflection.',color:'var(--indigo)',tags:['Design Thinking','Kompleks Kraf KL','Hop-On Hop-Off','TikTok Reflection Challenge'],
+{num:1,date:'13',month:'July 2026',title:'Heritage Immersion',sub:'Empathy & Define · KL Exploration',focus:'Phase 1 — Empathy & Phase 2 — Define',overview:'Day 1 launches the CAMP21 journey through heritage immersion, Design Thinking orientation, and group exploration. Participants begin with briefing and ice-breaking, then move directly into the Design Thinking process. Guided craft gallery tours, motif exploration, and artisan interviews anchor the empathy stage. By afternoon, groups frame their initial problem statements. The day closes with KL Exploration and a short group video reflection.',color:'var(--indigo)',tags:['Design Thinking','Kompleks Kraf KL','Hop-On Hop-Off','TikTok Reflection Challenge'],
 sessions:[
 {label:'Morning — Orientation',items:[
 {time:'7:00 am',title:'Pick-up of participants',venue:'Pick Up 1: PMKL · Pick Up 2: Avenue K · Pick Up 3: Pavilion',tag:''},
 {time:'8:30–9:00',title:'Registration & breakfast',venue:'Main Seminar Hall',tag:''},
 {time:'9:30–10:30',title:'Programme Briefing & Ice Breaking',venue:'Main Seminar Hall',tag:''}]},
-{label:'Mid-Morning — Empathise (DT Phase 1)',pic:'Julie Marlina binti Hasan',assist:'Mohd Alfi bin Mohamed, Muzimah Aida binti Md Mustafa',items:[
+{label:'Mid-Morning — Empathy (DT Phase 1)',pic:'Julie Marlina binti Hasan',assist:'Mohd Alfi bin Mohamed, Muzimah Aida binti Md Mustafa',items:[
 {time:'10:00–12:30',title:'Guided Craft Gallery Tour / Motif Exploration & Artisan Interview',venue:'Main Seminar Hall & Kompleks Kraf area',tag:'field',details:['POEMS — structured observation framework (People, Objects, Environments, Messages, Services)','Empathy Map — capturing what users Say, Think, Do & Feel through gallery observation and artisan engagement']}]},
 {label:'Lunch',items:[{time:'12:30–2:00',title:'Lunch & Zohor prayer',venue:'Hall & Surau',tag:'prayer'}]},
 {label:'Afternoon — Define (DT Phase 2)',pic:'Nor Haniza binti Mustafar Kamar',assist:'Mohd Ridhuan Ismail, Siti Hani-Syazana binti Mohamad',items:[
 {time:'2:00 pm',title:'AI Tools Exploration (Ts. Sathya a/p Manoharan)',venue:'Main Seminar Hall',tag:'dt'},
-{time:'3:30 pm',title:'Design Thinking Workshop: Empathise & Define',venue:'Main Seminar Hall',tag:'dt',details:['Persona Creation — building a representative user profile from interview and empathy data','Unpacking interview data — Share → Unpack → Synthesize','Identifying insights & needs — drawing meaningful conclusions to frame the core design challenge']}]},
+{time:'3:30 pm',title:'Design Thinking Workshop: Empathy & Define',venue:'Main Seminar Hall',tag:'dt',details:['Persona Creation — building a representative user profile from interview and empathy data','Unpacking interview data — Share → Unpack → Synthesize','Identifying insights & needs — drawing meaningful conclusions to frame the core design challenge']}]},
 {label:'Evening — KL Exploration',items:[
 {time:'5:00–5:30',title:'Day 1 reflection & Asar prayer',venue:'Hall & Surau',tag:'prayer'},
 {time:'6:00–7:00',title:'Dinner & Maghrib prayer',venue:'KLCC',tag:'prayer'},

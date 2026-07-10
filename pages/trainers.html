@@ -6,19 +6,19 @@
 <title>CAMP21 Trainers Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#151044;--indigo:#251052;--cream:#fff8ef;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;
-  --gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#e23c74;--olive:#8a7a2a;--brown:#7a3d1e;
+  --ink:#151044;--indigo:#251052;--cream:#F8F2EA;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;
+  --gold:#FFC83D;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#F05AA6;--olive:#8a7a2a;--brown:#7a3d1e;
   --shadow:0 18px 45px rgba(21,16,68,.08);--radius:24px;
-  --font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif;
+  --font-serif:'Playfair Display',serif;--font-sans:'Plus Jakarta Sans',sans-serif;
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-sans)}a{text-decoration:none;color:inherit}
 
 /* HEADER */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(21,16,68,.08)}
-.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:#e23c74}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}
+.topbar-inner{max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px}.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand span{color:#F05AA6}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}
 .nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:13px 22px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.92rem}.nav-pill:hover{border-color:var(--violet)}.nav-pill.primary{background:var(--violet);color:#fff;border-color:var(--violet)}.app-pill{border-color:var(--teal);color:var(--ink)}.app-pill:hover{background:var(--teal);color:#fff}
 .quick-access{position:relative}.qa-trigger{cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}.qa-chev{transition:.25s;display:inline-block;font-size:.7em}.quick-access[open] .qa-chev{transform:rotate(180deg)}.qa-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:60;animation:qaIn .18s ease}.qa-group{padding:10px 8px}.qa-label{display:block;font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px}.qa-link{display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);transition:background .15s}.qa-link:hover{background:rgba(109,70,238,.07);color:var(--violet)}@keyframes qaIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 
@@ -90,7 +90,7 @@
 .app-cta{background:var(--ink);border-radius:22px;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#fff;margin-bottom:3rem}.app-cta h3{font-family:var(--font-serif);font-size:1.8rem;margin:0 0 6px}.app-cta p{color:rgba(255,255,255,.7);margin:0;font-weight:600}.app-cta a{background:var(--gold);color:var(--ink);border-radius:999px;padding:14px 28px;font-weight:900;white-space:nowrap}
 
 /* FOOTER */
-.camp-footer{background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px}.footer-inner{max-width:1440px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.footer-brand{display:flex;align-items:center;gap:14px;font-family:var(--font-serif);font-size:2.2rem;font-weight:700}.footer-brand span{color:#e23c74}.footer-col h4{color:var(--gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700}
+.camp-footer{background:#251052;color:#fff;margin-top:48px;padding:56px 28px 26px}.footer-inner{max-width:1440px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.footer-brand{display:flex;align-items:center;gap:14px;font-family:var(--font-serif);font-size:2.2rem;font-weight:700}.footer-brand span{color:#F05AA6}.footer-col h4{color:var(--gold);margin:0 0 14px;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,.72);line-height:1.7;font-weight:600;margin:0 0 7px}.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(255,255,255,.65);font-weight:700}
 
 
 /* MIDNIGHT SECTION DIVIDERS */
@@ -186,7 +186,7 @@
 .trainer-action-card{position:relative;overflow:hidden;min-height:205px;border-radius:24px;padding:22px;color:#fff;box-shadow:0 18px 42px rgba(21,16,68,.09)}
 .trainer-action-card:nth-child(1){background:linear-gradient(135deg,#160d45,#251052)}
 .trainer-action-card:nth-child(2){background:linear-gradient(135deg,#5c36d8,#6B4DFF)}
-.trainer-action-card:nth-child(3){background:linear-gradient(135deg,#c8952c,#ffc83d);color:#160d45}
+.trainer-action-card:nth-child(3){background:linear-gradient(135deg,#D9AF37,#ffc83d);color:#160d45}
 .trainer-action-card:nth-child(4){background:linear-gradient(135deg,#d62f75,#ff4fcb)}
 .trainer-action-card::after{content:attr(data-step);position:absolute;right:14px;bottom:-22px;font-family:var(--font-serif);font-size:5.6rem;font-weight:700;line-height:1;color:rgba(255,255,255,.16)}
 .trainer-action-card:nth-child(3)::after{color:rgba(21,16,68,.13)}
@@ -313,7 +313,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('../ass
 .hub-use-guide:after{content:"";position:absolute;right:-38px;bottom:-46px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(217,175,55,.35);background:rgba(217,175,55,.07);z-index:-1}
 .hub-guide-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}
 .hub-guide-kicker{display:inline-flex;align-items:center;gap:8px;background:#20103E;color:#fff;border:1px solid rgba(217,175,55,.45);border-radius:999px;padding:8px 14px;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(32,16,62,.16)}
-.hub-guide-head h2{margin:12px 0 8px;font-family:var(--font-serif,'Cormorant Garamond',serif);font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:.95;color:#20103E;letter-spacing:-.03em}
+.hub-guide-head h2{margin:12px 0 8px;font-family:var(--font-serif,'Playfair Display',serif);font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:.95;color:#20103E;letter-spacing:-.03em}
 .hub-guide-head p{max-width:820px;margin:0;color:#5f5870;font-weight:650;line-height:1.65}
 .hub-guide-badge{flex:0 0 auto;background:linear-gradient(135deg,#20103E,#5A36C9);color:#fff;border:1px solid rgba(217,175,55,.55);border-radius:22px;padding:14px 18px;text-align:center;min-width:150px;box-shadow:0 14px 34px rgba(32,16,62,.18)}
 .hub-guide-badge b{display:block;color:#FFC83D;font-size:1.35rem;line-height:1}.hub-guide-badge span{font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.78)}
@@ -359,7 +359,7 @@ main img:not(.brand-icon),section img:not(.brand-icon){border:none!important;box
 header .brand span,
 .footer-brand span,
 .footer-brand .brand span,
-.camp-footer .brand span { color: #e23c74 !important; }
+.camp-footer .brand span { color: #F05AA6 !important; }
 
 </style>
 </head>
@@ -516,7 +516,7 @@ header .brand span,
     <div class="trainer-section-body">
 <div class="section-head"><h2>Design Thinking Journey</h2><p>5-phase flow across 4 days — each phase has a dedicated lead trainer and Smart DT templates.</p></div>
     <div class="journey-grid">
-      <div class="journey-card j-empathy"><span class="day">Day 1 AM</span><span class="phase">Phase 01</span><span class="pname">Empathise</span><span class="tpl">T01–T04</span><span class="lead">Julie Marlina binti Hasan</span></div>
+      <div class="journey-card j-empathy"><span class="day">Day 1 AM</span><span class="phase">Phase 01</span><span class="pname">Empathy</span><span class="tpl">T01–T04</span><span class="lead">Julie Marlina binti Hasan</span></div>
       <div class="journey-card j-define"><span class="day">Day 1 PM</span><span class="phase">Phase 02</span><span class="pname">Define</span><span class="tpl">T05–T06</span><span class="lead">Nor Haniza binti Mustafar Kamar</span></div>
       <div class="journey-card j-ideate"><span class="day">Day 2</span><span class="phase">Phase 03</span><span class="pname">Ideate</span><span class="tpl">T07–T09</span><span class="lead">Nurfarhanah binti Omar</span></div>
       <div class="journey-card j-prototype"><span class="day">Day 2–3</span><span class="phase">Phase 04</span><span class="pname">Prototype</span><span class="tpl">T10–T11</span><span class="lead">Ts. Mohammed Farid bin Ishak</span></div>
@@ -718,7 +718,7 @@ header .brand span,
     <div class="resource-grid">
       <article class="resource-card">
         <span class="resource-tag">Phase 01 · T01–T04</span>
-        <h3>Empathise Resources</h3>
+        <h3>Empathy Resources</h3>
         <p>Materials for observation framework, interview guide, audio-to-text transcription and empathy mapping.</p>
         <div class="resource-meta">
           <span><b>Lead</b> Julie Marlina binti Hasan</span>
@@ -1017,7 +1017,7 @@ header .brand span,
         <p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p>
       </div>
       <div class="footer-col"><h4>Explore</h4><a href="programme.html">Programme</a><a href="resources.html">Resources</a><a href="updates.html">Live Updates</a><a href="contacts.html">Help</a></div>
-      <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="facilitators.html">Facilitators</a><a href="judges.html">Judges</a></div>
+      <div class="footer-col"><h4>Stakeholders</h4><a href="participants.html">Participants Hub</a><a href="trainers.html">Trainers</a><a href="facilitators.html">Facilitators</a><a href="judges.html">Judges</a><a href="organiser.html">Organiser</a></div>
       <div class="footer-col"><h4>Support</h4><a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide & Template Hub ↗</a><a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a><a href="contacts.html">Help Desk</a></div>
     </div>
     <div class="footer-bottom"><span>© 2026 CAMP21 Digital Hub.</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div>
@@ -1027,7 +1027,7 @@ header .brand span,
 <script>
 // Phase accordion data
 const phases=[
-  {num:'01',name:'Empathise',tag:'Ph 01 · T01–T04',time:'Day 1 AM · 30 min',color:'var(--indigo)',lead:'Julie Marlina binti Hasan',support:'Mohd Alfi bin Mohamed, Muzimah Aida binti Md Mustafa',focus:'Observation Framework, AI interview questions, interview transcription and empathy map',templates:['T01 Observation Framework','T02 Interview Guide & Notes Worksheet','T03 Audio-to-Text Transcription','T04 Empathy Map']},
+  {num:'01',name:'Empathy',tag:'Ph 01 · T01–T04',time:'Day 1 AM · 30 min',color:'var(--indigo)',lead:'Julie Marlina binti Hasan',support:'Mohd Alfi bin Mohamed, Muzimah Aida binti Md Mustafa',focus:'Observation Framework, AI interview questions, interview transcription and empathy map',templates:['T01 Observation Framework','T02 Interview Guide & Notes Worksheet','T03 Audio-to-Text Transcription','T04 Empathy Map']},
   {num:'02',name:'Define',tag:'Ph 02 · T05–T06',time:'Day 1 PM · 30 min',color:'var(--violet)',lead:'Nor Haniza binti Mustafar Kamar',support:'Mohd Ridhuan Ismail, Siti Hani-Syazana binti Mohamad',focus:'User persona, identifying insights, user needs and design challenge',templates:['T05 User Persona Template','T06 User Insight & Needs Statement / Design Statement']},
   {num:'03',name:'Ideate',tag:'Ph 03 · T07–T09',time:'Day 2 · 30 min',color:'#8a7a2a',lead:'Nurfarhanah binti Omar',support:'Katherine Livan Khing binti Abdullah, Nur Salina binti Saywalludin',focus:'3D Circle Challenge creativity warm-up, SCAMPER idea expansion, Idea Prioritisation Matrix prioritisation',templates:['T07 3D Circle Challenge','T08 SCAMPER','T09 Idea Prioritisation Matrix']},
   {num:'04',name:'Prototype',tag:'Ph 04 · T10–T11',time:'Day 2–3 · 30 min',color:'var(--gold)',lead:'Ts. Mohammed Farid bin Ishak',support:'Sara Ruran Fabian, Muhammad Zaki bin Yahya',focus:'Prototype direction plan — format, materials, features, task distribution and development direction. Full prototype outcome — trainer sign-off required before build begins.',templates:['T10 Prototype Direction Plan','T11 Full Prototype Outcome / Sketching Your Prototype'],textColor:'var(--ink)'},
@@ -1043,7 +1043,7 @@ document.getElementById('phaseAccordion').innerHTML=phases.map(p=>{
 
 // Checkpoint data
 const checks=[
-  {title:'Phase 01 — Empathise',time:'Day 1 AM',color:'var(--indigo)',items:['T01 Observation Framework completed with structured field observations','T02 Interview Questions generated — at least 5 final questions approved by trainer','T03 Interview transcript complete with key quotes highlighted','T04 Empathy Map covers all 4 quadrants (Say, Think, Do, Feel)']},
+  {title:'Phase 01 — Empathy',time:'Day 1 AM',color:'var(--indigo)',items:['T01 Observation Framework completed with structured field observations','T02 Interview Questions generated — at least 5 final questions approved by trainer','T03 Interview transcript complete with key quotes highlighted','T04 Empathy Map covers all 4 quadrants (Say, Think, Do, Feel)']},
   {title:'Phase 02 — Define',time:'Day 1 PM',color:'var(--violet)',items:['T05 User Persona includes user context, pain points and needs','T06 User Insight & Needs Statement / Design Statement shows at least 3 distinct user needs or pain points','T06 Problem Framing includes a clear problem statement and a How Might We question','Design challenge agreed by team and confirmed with trainer before end of Day 1']},
   {title:'Phase 03 — Ideate',time:'Day 2',color:'#8a7a2a',items:['T07 3D Circle Challenge branches cover at least 4 idea directions from the design challenge','T08 SCAMPER covers all 7 lenses with at least one idea per lens','T09 Idea Prioritisation Matrix completed with team consensus on selected idea','T10 Prototype Direction Plan completed and trainer-signed before any build begins']},
   {title:'Phase 04–05 — Prototype & Test',time:'Day 2–3',color:'var(--pink)',items:['T10 Prototype Direction Plan has trainer sign-off before build work begins','T11 Full Prototype Outcome completed','T12 User Feedback Form includes at least 5 structured feedback entries','T13 Improvement Plan completed with action items','Final Pitch deck has all 8 slides drafted and reviewed by trainer before Day 4','Physical prototype or presentation materials ready for display']}
@@ -1052,7 +1052,7 @@ document.getElementById('checkGrid').innerHTML=checks.map(c=>`<div class="check-
 
 // Daily briefing data
 const days=[
-  {date:'13 July 2026',num:'Day 1',theme:'Empathise & Define',color:'b-d1',steps:['Briefing at 8:30 AM — all trainers report to Dewan Utama','Accompany groups for craft gallery walkthrough — guide T01 Observation Framework','AI Input 1 (Ts. Sathya): T02 AI Interview Question Generator — ChatGPT interview framing','Guide groups through T03 Interview Transcription after artisan/visitor interviews','Afternoon: T04 Empathy Map and T05 User Persona synthesis','AI Input 2 (Ts. Sathya): T06 Identifying Insights — Canva AI dataset activity','Ensure Design Challenge finalised before 5:00 PM']},
+  {date:'13 July 2026',num:'Day 1',theme:'Empathy & Define',color:'b-d1',steps:['Briefing at 8:30 AM — all trainers report to Dewan Utama','Accompany groups for craft gallery walkthrough — guide T01 Observation Framework','AI Input 1 (Ts. Sathya): T02 AI Interview Question Generator — ChatGPT interview framing','Guide groups through T03 Interview Transcription after artisan/visitor interviews','Afternoon: T04 Empathy Map and T05 User Persona synthesis','AI Input 2 (Ts. Sathya): T06 Identifying Insights — Canva AI dataset activity','Ensure Design Challenge finalised before 5:00 PM']},
   {date:'14 July 2026',num:'Day 2',theme:'Ideate & Build',color:'b-d2',steps:['Morning briefing at 8:30 AM with Phase 03 lead (Nurfarhanah Omar)','AI Input 3 (Ts. Sathya): T07 3D Circle Challenge — AI-assisted idea branching from design challenge','Guide T08 SCAMPER through morning (all 7 lenses)','Afternoon: T09 Idea Prioritisation Matrix — team reaches consensus on selected idea','T10 Prototype Direction Plan: trainer sign-off required before any prototype build activity','Upload T07–T10 to Smart DT Guide & Template Hub before end of Day 2; T11 is completed on Day 3 after prototype development']},
   {date:'15 July 2026',num:'Day 3',theme:'Test & Refine',color:'b-d3',steps:['Guest Slot at 9:00 AM — Prabagaran Bala Krisnan delivers Final Pitching Template session','AI Input 4 (Ts. Sathya): pitch deck refinement support — AI-assisted slide structure','Prototype build continues — T10 must already be signed before this session','T11 Full Prototype Outcome completed','Phase 05 from 3:30 PM — T12 User Feedback Form: structured peer and user testing','T13 Improvement Plan completed with action items from T12','Final Pitching Template to be completed and trainer-reviewed by 7:00 PM']},
   {date:'16 July 2026',num:'Day 4',theme:'Pitch & Impact',color:'b-d4',steps:['Final presentation day — trainers on standby only, no further assistance to groups','T14 Final Pitch deck PDF submission check before 8:00 AM','Rubrics distributed at 8:30 AM to Judges only — keep confidential','Groups present using Final Pitching Template — 8-10 minutes + 3 minutes Q&A (2 questions max)','T12 User Feedback Form available as evidence of testing process for judges','No new template required for Day 4','Closing ceremony and awards at 4:00 PM — collect all physical templates after']}
