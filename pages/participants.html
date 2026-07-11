@@ -159,7 +159,6 @@ main img:not(.brand-icon),section img:not(.brand-icon){border:none!important;box
 
 
 
-p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview p,.phase-acc-body p,.faq-answer,.reflection-body p,.pitch-section>p,.score-note,.info-note,.phase-res p,.pr-tpl p,.doc-card p,.contact-aside p,.pic-meta,.mark-card p,.trainer-card p,.venue-body p,.brief-step p,.reminder p,.check-item span,.role-card p{text-align:justify!important}
 
 /* === CAMP21 Hub Guide === */
 .hub-use-guide{position:relative;margin:clamp(24px,4vw,46px) 0;padding:clamp(22px,3vw,34px);border-radius:28px;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(248,242,234,.96));border:1px solid rgba(217,175,55,.42);box-shadow:0 22px 55px rgba(32,16,62,.10);overflow:hidden;isolation:isolate}
@@ -208,6 +207,12 @@ p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview 
 .res-panel>summary h2, .panel>summary h2{font-size:clamp(1.3rem,2.2vw,1.6rem)!important}
 .hero-days-badge strong{font-size:3.2rem!important}
 .stats .stat b, .hero-insight strong, .insight-card .num{font-size:1.9rem!important}
+
+/* Quick Access pill: midnight purple gradient */
+summary.qa-trigger, .quick-access > summary, .qa-home > summary{background:linear-gradient(135deg,#20103E,#5A36C9)!important;color:#fff!important;border:none!important;border-radius:999px!important}
+summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
+
+.footer-min-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;text-align:left}
 </style>
 </head>
 <body>
@@ -529,17 +534,6 @@ p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview 
         </div>
         <p class="formula-note">Two separate evaluations, not one combined percentage. Keep all templates, prototype proof, testing feedback, TikTok links and pitch materials organised.</p>
       </div>
-      <div class="marks-alert">
-        <div class="marks-total-panel">
-          <span class="kicker">📊 Marks Awareness</span>
-          <h3>Two Separate 100% Evaluations</h3>
-          <p>Both are compulsory — neither is optional.</p>
-        </div>
-        <div class="marks-breakdown">
-          <div class="marks-chip"><b>100%</b><div><h4>Final Pitch</h4><p>Day 4 presentation supported by T01–T13 Smart DT Process evidence, T14 pitch evidence, prototype outcome, testing feedback, Q&amp;A readiness and language use.</p></div></div>
-          <div class="marks-chip"><b>100%</b><div><h4>TikTok Reflection Challenge</h4><p>Day 1, Day 2 and Day 3 daily team reflection videos with clear learning and evidence.</p></div></div>
-        </div>
-      </div>
       <div class="mark-grid">
         <article class="mark-card score100"><b>100%</b><h3>Final Pitch Evaluation</h3><p>Marks focus on the complete Design Thinking journey and the final presentation.</p><ul><li>Empathy, Define, Ideate, Prototype and Test evidence</li><li>Completed T01–T13 Smart DT Process evidence and T14 Final Pitching Template</li><li>Final prototype outcome and Day 4 pitch readiness</li><li>Balanced team participation, Q&amp;A handling and Language Use through clear professional English</li></ul></article>
         <article class="mark-card score100"><b>100%</b><h3>TikTok Reflection Challenge</h3><p>Marks focus on daily team video reflections across the programme.</p><ul><li>Day 1: Empathy + Define</li><li>Day 2: Ideate + Prototype Planning</li><li>Day 3: Prototype Outcome + Test & Reflect + Pitch Preparation</li><li>Clear learning, evidence and respectful recording</li></ul></article>
@@ -572,7 +566,7 @@ p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview 
       <a href="contacts.html">Help Desk</a>
     </nav>
   </div>
-  <div class="footer-min-bottom">© 2026 CAMP21 Digital Hub · Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</div>
+  <div class="footer-min-bottom"><span>© 2026 CAMP<span style="color:#F05AA6">21</span> Digital Hub ·</span><span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span></div>
 </footer>
 
 <script>

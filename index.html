@@ -960,7 +960,7 @@ header .brand span,
 .footer-links-clean{display:flex;justify-content:center;align-items:center;gap:14px 34px;flex-wrap:wrap;padding:0}
 .footer-links-clean a{color:rgba(255,255,255,.85);font-weight:800;text-decoration:none;font-size:.95rem}
 .footer-links-clean a:hover{color:#F05AA6}
-.camp-footer .footer-min-bottom{display:flex;justify-content:center;gap:10px 26px;flex-wrap:wrap;color:rgba(255,255,255,.6);font-weight:600;font-size:.86rem;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;margin-top:4px;text-align:center}
+.camp-footer .footer-min-bottom{display:flex;justify-content:space-between;gap:10px 26px;flex-wrap:wrap;color:rgba(255,255,255,.6);font-weight:600;font-size:.86rem;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;margin-top:4px;text-align:left}
 @media(max-width:980px){.hub-guide-head{flex-direction:column}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.hub-use-guide{padding:20px 16px;border-radius:22px}.hub-guide-grid{grid-template-columns:1fr}.hub-quick-map{grid-template-columns:1fr}.hub-guide-badge{width:100%}}
 </style>
@@ -1021,6 +1021,14 @@ header .brand span,
 .res-panel>summary h2, .panel>summary h2{font-size:clamp(1.3rem,2.2vw,1.6rem)!important}
 .hero-days-badge strong{font-size:3.2rem!important}
 .stats .stat b, .hero-insight strong, .insight-card .num{font-size:1.9rem!important}
+
+/* Guide section: flat, no card box on homepage */
+.hub-use-guide{background:none!important;border:none!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important}
+.hub-use-guide:before,.hub-use-guide:after{display:none!important}
+
+/* Quick Access pill: midnight purple gradient */
+summary.qa-trigger, .quick-access > summary, .qa-home > summary{background:linear-gradient(135deg,#20103E,#5A36C9)!important;color:#fff!important;border:none!important;border-radius:999px!important}
+summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 </style>
 <script id="camp21-brand-21-rose-script">
 (function(){
