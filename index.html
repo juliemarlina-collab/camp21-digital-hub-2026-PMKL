@@ -6,19 +6,19 @@
   <title>CAMP21: Synergising Literacies 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy:   #20103E;
+      --navy:   #14104a;
       --rose:   #F05AA6;
-      --gold:   #D9AF37;
-      --cream:  #F8F2EA;
-      --ink:    #2B2733;
+      --gold:   #c8952c;
+      --cream:  #fff8ef;
+      --ink:    #1a1060;
       --muted:  #6b6b8a;
       --border: rgba(20,16,74,0.10);
       --font-sans: 'Plus Jakarta Sans', sans-serif;
-      --font-serif: 'Playfair Display', serif;
+      --font-serif: 'Cormorant Garamond', serif;
       --ease: cubic-bezier(0.16,1,0.3,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,7 +47,7 @@
     .nav-links a { font-weight: 700; font-size: 0.9rem; color: var(--ink); transition: color 0.25s; }
     .nav-links a:hover { color: var(--rose); }
     .btn-nav { background: var(--rose); color: #fff !important; padding: 0.65rem 1.3rem; border-radius: 999px; font-weight: 900; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.25s, transform 0.25s; }
-    .btn-nav:hover { background: #d43e8b; color: #fff !important; transform: translateY(-1px); }
+    .btn-nav:hover { background: #c4205a; color: #fff !important; transform: translateY(-1px); }
     .menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--navy); font-size: 1.5rem; }
     .qa-home summary::-webkit-details-marker{display:none}
     .qa-home[open] .qa-h-chev{transform:rotate(180deg)}
@@ -74,7 +74,7 @@
     .hero-desc { font-size: 1.05rem; font-weight: 500; color: var(--muted); max-width: 44ch; margin-bottom: 2rem; line-height: 1.65; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
     .btn-primary { background: var(--rose); color: #fff; padding: 0.85rem 1.7rem; border-radius: 999px; font-weight: 900; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.25s, box-shadow 0.25s; box-shadow: 0 4px 14px rgba(226,60,116,0.30); }
-    .btn-primary:hover { background: #d43e8b; }
+    .btn-primary:hover { background: #c4205a; }
     .btn-outline { background: #fff; color: var(--navy); border: 1.5px solid var(--border); padding: 0.85rem 1.7rem; border-radius: 999px; font-weight: 800; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: border-color 0.25s; }
     .btn-outline:hover { border-color: var(--navy); }
     .hero-visual { position: relative; }
@@ -85,6 +85,56 @@
     .hero-days-badge { position: absolute; right: -1rem; bottom: -1rem; background: var(--navy); color: #fff; border: 4px solid var(--cream); border-radius: 1.2rem; padding: 1rem 1.4rem; box-shadow: 0 8px 24px rgba(20,16,74,0.22); }
     .hero-days-badge strong { font-family: var(--font-serif); font-size: 4.5rem; line-height: 1; color: #f3dfae; display: block; }
     .hero-days-badge small { font-size: 0.75rem; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+
+    /* ── HEADER PILLS / HOME QUICK START / GRADIENT FOOTER ── */
+    .nav-pill-holder{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;justify-content:flex-end}
+    .nav-pill-link,.qa-pill-home{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.96);border:1px solid var(--border);box-shadow:0 8px 18px rgba(20,16,74,.05);font-size:.92rem;font-weight:900;color:var(--navy);transition:.22s ease}
+    .nav-pill-link:hover,.qa-pill-home:hover{transform:translateY(-1px);border-color:rgba(79,59,171,.28);box-shadow:0 12px 24px rgba(20,16,74,.08)}
+    .qa-pill-home{background:linear-gradient(135deg,#22105d,#4c30bf);color:#fff;border-color:transparent;box-shadow:0 14px 28px rgba(55,38,140,.22)}
+    .qa-home[open] .qa-h-chev{transform:rotate(180deg)}
+    @media(max-width:980px){.nav-pill-holder{justify-content:flex-start}}
+
+    .home-quickstart{padding:1.1rem 0 3.6rem;background:linear-gradient(180deg,#fffdf9 0%,#fdf6ef 100%);position:relative}
+    .home-quickstart::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 10%,rgba(240,90,166,.08),transparent 26%),radial-gradient(circle at 90% 0%,rgba(217,175,55,.10),transparent 24%);pointer-events:none}
+    .quickstart-panel{position:relative;z-index:1;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(248,242,234,.95));border:1px solid rgba(217,175,55,.34);border-radius:34px;padding:1.7rem 1.7rem 1.5rem;box-shadow:0 18px 40px rgba(32,16,62,.07)}
+    .quickstart-head{display:flex;justify-content:space-between;gap:1.4rem;align-items:flex-start;margin-bottom:1.35rem}
+    .quickstart-kicker{display:inline-flex;align-items:center;border-radius:999px;background:#20103E;color:#fff;padding:.7rem 1.05rem;font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 22px rgba(32,16,62,.15)}
+    .quickstart-head h2{margin:.9rem 0 .55rem;font-family:var(--font-serif);font-size:clamp(2.15rem,4vw,3.2rem);line-height:.95;letter-spacing:-.03em;color:#20103E}
+    .quickstart-head p{margin:0;max-width:760px;color:var(--muted);font-size:1rem;line-height:1.65;font-weight:700}
+    .quickstart-badge{min-width:170px;border-radius:28px;background:linear-gradient(135deg,#2c1368,#5b3dd9);padding:1rem 1.25rem;color:#fff;box-shadow:0 16px 32px rgba(67,49,173,.20)}
+    .quickstart-badge strong{display:block;font-size:1.7rem;line-height:1;color:#f3c940;font-weight:900}
+    .quickstart-badge span{display:block;margin-top:.35rem;font-size:.86rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+    .quickstart-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:.6rem}
+    .quickstart-card{position:relative;background:#fff;border:1px solid rgba(217,175,55,.35);border-radius:24px;padding:1.2rem 1.15rem 1.15rem;min-height:160px;box-shadow:0 10px 22px rgba(32,16,62,.05)}
+    .quickstart-card h3{margin:0 0 .55rem;font-size:1rem;font-weight:900;color:#20103E;padding-right:46px}
+    .quickstart-card p{margin:0;color:#6f6780;font-size:.96rem;font-weight:700;line-height:1.6}
+    .quickstart-num{position:absolute;right:16px;top:14px;width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#E7BC46,#F05AA6);color:#20103E;font-size:1.08rem;font-weight:900}
+    .quickstart-focus{margin-top:16px;border-radius:28px;background:linear-gradient(90deg,#291257 0%,#4a2db2 55%,#6a47e8 100%);padding:1.1rem 1.25rem;display:flex;align-items:center;gap:14px;color:#fff;box-shadow:0 16px 34px rgba(53,37,143,.18)}
+    .quickstart-focus-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#E4B93E;color:#20103E;font-size:1.35rem;flex-shrink:0}
+    .quickstart-focus h3{margin:0 0 .2rem;color:#ffd765;font-size:1.02rem;font-weight:900}
+    .quickstart-focus p{margin:0;color:rgba(255,255,255,.94);font-size:1rem;font-weight:800;line-height:1.5}
+    .collab-section{padding:0 0 3rem;background:linear-gradient(180deg,#fdf6ef 0%,#fffaf4 100%)}
+    .collab-wrap{border:1px solid rgba(217,175,55,.30);border-radius:28px;background:#fff;box-shadow:0 14px 34px rgba(32,16,62,.05);padding:1.5rem 1.4rem}
+    .collab-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+    .collab-head h2{margin:0;font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.3rem);color:#20103E}
+    .collab-head p{margin:.3rem 0 0;color:var(--muted);font-weight:700}
+    .collab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .collab-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:138px;border-radius:22px;background:linear-gradient(180deg,#fffdf9,#f8f2ea);border:1px solid rgba(217,175,55,.34);padding:1rem;box-shadow:0 8px 20px rgba(32,16,62,.04)}
+    .collab-card img{max-width:120px;max-height:48px;width:auto;height:auto;object-fit:contain;margin-bottom:.7rem}
+    .collab-card span{font-size:.84rem;font-weight:800;color:#20103E;line-height:1.35}
+    .camp-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#11072d 0%,#211054 45%,#3a1770 75%,#5a1f87 100%) !important;color:#fff !important}
+    .camp-footer::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(240,90,166,.18),transparent 22%),radial-gradient(circle at 10% 100%,rgba(106,71,232,.18),transparent 26%);pointer-events:none}
+    .camp-footer .footer-grid,.camp-footer .footer-bottom,.camp-footer .footer-inner,.camp-footer .footer-shell,.camp-footer .footer-min-bottom{position:relative;z-index:1}
+    .camp-footer .footer-brand-line{color:#fff}
+    .camp-footer .footer-brand-line span,.camp-footer .footer-brand span{color:#F05AA6 !important}
+    .camp-footer .footer-brand-block p,.camp-footer .footer-col p,.camp-footer .footer-col a,.camp-footer .footer-min-bottom,.camp-footer .footer-min-bottom span{color:rgba(255,255,255,.84) !important}
+    .camp-footer .footer-col h4{color:#f2cb57 !important}
+    .camp-footer .footer-min-links a{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.14);box-shadow:none}
+    .camp-footer .footer-min-links a:hover{background:rgba(255,255,255,.14);border-color:rgba(240,90,166,.42);color:#fff}
+    @media(max-width:1100px){.quickstart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.collab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.quickstart-head{flex-direction:column}.quickstart-badge{width:100%;max-width:220px}.quickstart-focus{align-items:flex-start}.quickstart-focus-icon{margin-top:2px}}
+    @media(max-width:560px){.quickstart-grid,.collab-grid{grid-template-columns:1fr}.quickstart-panel{padding:1.25rem}.quickstart-focus{flex-direction:column;align-items:flex-start}}
 
     /* ── QUICK FACTS ── */
     .quick-facts { padding: 2.5rem 0 3rem; background: #fff; }
@@ -103,7 +153,7 @@
     .portal-featured:hover { transform: translateY(-4px); }
     .portal-card { position: relative; border-radius: 1.2rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); min-height: 175px; display: flex; flex-direction: column; justify-content: flex-end; transition: transform 0.3s var(--ease); }
     .portal-card:hover { transform: translateY(-3px); }
-    .portal-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #2B2733 0%, #3b2a8a 100%); }
+    .portal-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1060 0%, #3b2a8a 100%); }
     .portal-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
     .portal-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,16,74,0.95) 0%, rgba(20,16,74,0.6) 50%, rgba(20,16,74,0.2) 100%); }
     .portal-featured .portal-overlay { background: linear-gradient(to top, rgba(20,16,74,0.95) 0%, rgba(20,16,74,0.35) 60%, rgba(20,16,74,0.1) 100%); }
@@ -237,6 +287,7 @@
   
 /* Heritage Decor */
 body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('assets/decors/songket-pattern.png') repeat center/400px;opacity:.025;pointer-events:none}
+.camp-footer::before{content:'';position:absolute;top:-60px;right:40px;width:160px;height:160px;background:url('assets/decors/hibiscus-line-art.png') no-repeat center/contain;opacity:.08;pointer-events:none}
 @media(max-width:768px){body::before{background-size:250px}}
   
 
@@ -244,17 +295,17 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('assets
 .gold-divider{display:none !important}
 .hero{position:relative;overflow:hidden}
 .hero::after{display:none !important}
-.quick-facts{position:relative;background:linear-gradient(180deg,#fffdf9 0%,#F8F2EA 100%)!important}
+.quick-facts{position:relative;background:linear-gradient(180deg,#fffdf9 0%,#fff8ef 100%)!important}
 .quick-facts::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 15%,rgba(255,200,61,.12),transparent 28%),radial-gradient(circle at 90% 85%,rgba(240,90,166,.10),transparent 24%);pointer-events:none}
-.programme{position:relative;background:linear-gradient(180deg,#F8F2EA 0%,#ffffff 100%)!important}
+.programme{position:relative;background:linear-gradient(180deg,#fff8ef 0%,#ffffff 100%)!important}
 .programme::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,74,.03),transparent 32%);pointer-events:none}
-.framework{position:relative;background:linear-gradient(180deg,#ffffff 0%,#F8F2EA 100%)!important}
+.framework{position:relative;background:linear-gradient(180deg,#ffffff 0%,#fff8ef 100%)!important}
 .framework::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 82% 10%,rgba(33,212,194,.10),transparent 24%);pointer-events:none}
-.cta-strip{position:relative;background:linear-gradient(180deg,#F8F2EA 0%,#fffdf9 100%)!important}
+.cta-strip{position:relative;background:linear-gradient(180deg,#fff8ef 0%,#fffdf9 100%)!important}
 .cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 50%,rgba(255,200,61,.09),transparent 26%);pointer-events:none}
-.pillars-section{position:relative;padding-top:3rem!important;padding-bottom:3rem!important;background:linear-gradient(180deg,#fffdf9 0%,#F8F2EA 100%)!important}
+.pillars-section{position:relative;padding-top:3rem!important;padding-bottom:3rem!important;background:linear-gradient(180deg,#fffdf9 0%,#fff8ef 100%)!important}
 .pillars-section::before{content:'';position:absolute;inset:0;background:url('assets/decors/songket-pattern.png') center/360px repeat;opacity:.018;pointer-events:none}
-.logos{position:relative;background:linear-gradient(180deg,#20103E 0%,#201058 100%)!important}
+.logos{position:relative;background:linear-gradient(180deg,#14104a 0%,#201058 100%)!important}
 .logos::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 18%,rgba(255,200,61,.12),transparent 18%),radial-gradient(circle at 84% 24%,rgba(240,90,166,.10),transparent 20%);pointer-events:none}
 .logo-tile{border:0!important;box-shadow:0 18px 36px rgba(0,0,0,.18)!important}
 .hero-visual,.hero-copy,.hero-grid,.hero > .wide,.hero > *{position:relative;z-index:1}
@@ -855,43 +906,162 @@ body::before{
 }
 
 
-/* === CAMP21 Hub Guide === */
-.hub-use-guide{position:relative;margin:clamp(24px,4vw,46px) 0;padding:clamp(22px,3vw,34px);border-radius:28px;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(248,242,234,.96));border:1px solid rgba(217,175,55,.42);box-shadow:0 22px 55px rgba(32,16,62,.10);overflow:hidden;isolation:isolate}
-.hub-use-guide:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 15%,rgba(217,175,55,.20),transparent 32%),radial-gradient(circle at 88% 5%,rgba(240,90,166,.14),transparent 30%),linear-gradient(90deg,rgba(32,16,62,.05),transparent 55%);z-index:-1}
-.hub-guide-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}
-.hub-guide-kicker{display:inline-flex;align-items:center;gap:8px;background:#20103E;color:#fff;border:1px solid rgba(217,175,55,.45);border-radius:999px;padding:8px 14px;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(32,16,62,.16)}
-.hub-guide-head h2{margin:12px 0 8px;font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:.95;color:#20103E;letter-spacing:-.03em}
-.hub-guide-head p{max-width:820px;margin:0;color:#5f5870;font-weight:650;line-height:1.65}
-.hub-guide-badge{flex:0 0 auto;background:linear-gradient(135deg,#20103E,#5A36C9);color:#fff;border:1px solid rgba(217,175,55,.55);border-radius:22px;padding:14px 18px;text-align:center;min-width:150px;box-shadow:0 14px 34px rgba(32,16,62,.18)}
-.hub-guide-badge b{display:block;color:#D9AF37;font-size:1.35rem;line-height:1}.hub-guide-badge span{font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.78)}
-.hub-guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
-.hub-guide-card{position:relative;background:#fffdf9;border:1px solid rgba(217,175,55,.34);border-radius:22px;padding:18px 16px 16px;box-shadow:0 16px 34px rgba(32,16,62,.08);min-height:146px;overflow:hidden}
-.hub-guide-card:before{content:attr(data-step);position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:12px;background:linear-gradient(135deg,#D9AF37,#F05AA6);display:grid;place-items:center;color:#20103E;font-weight:1000;font-size:.9rem}
-.hub-guide-card h3{margin:0 42px 8px 0;color:#20103E;font-size:1rem;line-height:1.2}.hub-guide-card p{margin:0;color:#5f5870;font-size:.88rem;line-height:1.55;font-weight:600}
-.hub-guide-focus{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:16px 18px;border-radius:22px;background:linear-gradient(135deg,rgba(32,16,62,.96),rgba(90,54,201,.94));color:#fff;border:1px solid rgba(217,175,55,.46);box-shadow:0 18px 38px rgba(32,16,62,.18)}
-.hub-guide-focus .focus-icon{width:42px;height:42px;border-radius:16px;display:grid;place-items:center;background:#D9AF37;color:#20103E;font-weight:1000;flex:0 0 auto}.hub-guide-focus h3{margin:0 0 5px;color:#D9AF37;font-size:1.02rem}.hub-guide-focus p{margin:0;color:rgba(255,255,255,.84);line-height:1.55;font-weight:600;font-size:.9rem}
-.hub-quick-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}.hub-quick-map a,.hub-quick-map span{display:flex;align-items:center;justify-content:center;min-height:46px;text-align:center;border-radius:16px;background:#fff;border:1px solid rgba(32,16,62,.12);color:#20103E;font-weight:900;font-size:.82rem;box-shadow:0 10px 22px rgba(32,16,62,.06);text-decoration:none}
-@media(max-width:980px){.hub-guide-head{flex-direction:column}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.hub-use-guide{padding:20px 16px;border-radius:22px}.hub-guide-grid{grid-template-columns:1fr}.hub-quick-map{grid-template-columns:1fr}.hub-guide-badge{width:100%}}
+/* CAMP21 brand 21 rose standardisation */
+.brand span,
+.topbar .brand span,
+header .brand span,
+.footer-brand span,
+.footer-brand-line span,
+.footer-brand .brand span,
+.camp-footer .brand span,
+.camp-footer .footer-brand span,
+.camp-footer .footer-brand-line span,
+.footer-min-brand span,
+.footer-brand-block span {
+  color: #F05AA6 !important;
+}
 
 
-/* === Minimal footer === */
-.camp-footer{background:var(--navy);color:#fff;padding:3.5rem 24px 1.6rem}
-.footer-min{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap}
-.camp-footer .footer-brand{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#fff}
-.camp-footer .footer-brand span{color:#F05AA6}
-.footer-min-brand p{color:rgba(255,255,255,.65);line-height:1.6;font-weight:600;margin:10px 0 0;max-width:440px}
-.footer-min-links{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center;padding-top:14px}
-.footer-min-links a{color:rgba(255,255,255,.78);font-weight:700;text-decoration:none}
-.footer-min-links a:hover{color:#F05AA6}
-.footer-min-bottom{max-width:1200px;margin:34px auto 0;border-top:1px solid rgba(255,255,255,.14);padding-top:20px;color:rgba(255,255,255,.55);font-weight:600;font-size:.85rem}
+/* === HERO IMAGE STRONGER COVERAGE OVERRIDE === */
+.hero{padding:7.4rem 0 4rem !important}
+.hero > .wide.hero-grid{grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr) !important;gap:2.2rem !important;align-items:center !important;max-width:1520px}
+.hero-copy{max-width:620px}
+.hero-desc{max-width:34ch !important;font-size:1.08rem !important;line-height:1.72 !important}
+.hero-actions{gap:1rem !important}
+.hero-visual{display:flex;justify-content:flex-end;align-items:center}
+.hero-img-wrap{width:min(100%,740px) !important;max-width:none !important;aspect-ratio:16/10 !important;min-height:540px !important;border-radius:2.2rem !important;overflow:hidden !important;box-shadow:0 34px 70px rgba(20,16,74,.24) !important;position:relative}
+.hero-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,50,.06),rgba(15,10,50,.02) 35%,rgba(15,10,50,.10));pointer-events:none}
+.hero-img-wrap img{width:100% !important;height:100% !important;object-fit:cover !important;object-position:center center !important;transform:scale(1.03)}
+.hero-img-slot{min-height:540px !important}
+.hero-days-badge{right:-1.25rem !important;bottom:-1.35rem !important;padding:1.1rem 1.5rem !important;border-radius:1.35rem !important;box-shadow:0 18px 36px rgba(20,16,74,.24) !important}
+.hero-days-badge strong{font-size:4.8rem !important}
+@media (min-width:1280px){.hero-visual{margin-right:-1.2rem}.hero-img-wrap{width:760px !important;min-height:565px !important}}
+@media (max-width:1100px){.hero > .wide.hero-grid{grid-template-columns:1fr !important;gap:2.2rem !important}.hero-copy{max-width:none}.hero-visual{justify-content:center}.hero-img-wrap{width:100% !important;min-height:440px !important;aspect-ratio:16/11 !important}.hero-days-badge{right:1rem !important;bottom:-1rem !important}}
+@media (max-width:680px){.hero{padding:6.4rem 0 3rem !important}.hero-img-wrap{min-height:320px !important;aspect-ratio:4/3 !important;border-radius:1.6rem !important}.hero-days-badge strong{font-size:3.6rem !important}}
 
-
-/* Pill nav */
-.nav-links a.nav-pill, .nav-pill{border:1px solid #ddd5c9;background:#fff;border-radius:999px;padding:11px 20px;font-weight:900;box-shadow:0 8px 18px rgba(21,16,68,.04);font-size:.9rem;color:var(--ink)}
-.nav-links a.nav-pill:hover{border-color:#5A36C9;color:#5A36C9}
 </style>
   <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+
+<style id="camp21-footer-21-rose-final-fix">
+  :root { --camp21-rose-final: #F05AA6; }
+
+  header .brand span,
+  .brand span,
+  footer .brand span,
+  footer .footer-brand span,
+  footer .footer-brand-line span,
+  .camp-footer .brand span,
+  .camp-footer .footer-brand span,
+  .camp-footer .footer-brand-line span,
+  .footer-brand-block .footer-brand-line span {
+    color: var(--camp21-rose-final) !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: var(--camp21-rose-final) !important;
+  }
+</style>
+
+
+<style id="camp21-brand-21-rose-global">
+  :root { --camp21-brand-rose: #F05AA6; }
+
+  .camp21-brand-number,
+  header .brand span,
+  .topbar .brand span,
+  .brand span,
+  .footer-brand span,
+  .footer-brand-line span,
+  .footer-brand-block .footer-brand-line span,
+  .footer-brand .brand span,
+  .camp-footer .brand span,
+  .camp-footer .footer-brand span,
+  .camp-footer .footer-brand-line span,
+  .camp-footer .footer-brand-block span {
+    color: var(--camp21-brand-rose) !important;
+    -webkit-text-fill-color: var(--camp21-brand-rose) !important;
+    opacity: 1 !important;
+  }
+
+  .camp21-brand-word {
+    white-space: nowrap;
+  }
+
+  .camp21-brand-word .camp21-brand-number {
+    color: var(--camp21-brand-rose) !important;
+    -webkit-text-fill-color: var(--camp21-brand-rose) !important;
+  }
+</style>
+<script id="camp21-brand-21-rose-script">
+(function(){
+  function skipNode(node) {
+    var p = node.parentElement;
+    if (!p) return true;
+    return !!p.closest('script, style, title, textarea, select, option, input, svg, code, pre, .camp21-brand-word');
+  }
+
+  function wrapCamp21TextNode(node) {
+    var value = node.nodeValue;
+    if (!/CAMP\s*21/i.test(value)) return;
+
+    var frag = document.createDocumentFragment();
+    var regex = /(CAMP)(\s*)(21)/gi;
+    var lastIndex = 0;
+    var match;
+
+    while ((match = regex.exec(value)) !== null) {
+      if (match.index > lastIndex) {
+        frag.appendChild(document.createTextNode(value.slice(lastIndex, match.index)));
+      }
+
+      var word = document.createElement('span');
+      word.className = 'camp21-brand-word';
+      word.appendChild(document.createTextNode(match[1] + (match[2] || '')));
+
+      var number = document.createElement('span');
+      number.className = 'camp21-brand-number';
+      number.textContent = match[3];
+
+      word.appendChild(number);
+      frag.appendChild(word);
+      lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < value.length) {
+      frag.appendChild(document.createTextNode(value.slice(lastIndex)));
+    }
+
+    node.parentNode.replaceChild(frag, node);
+  }
+
+  function applyCamp21Branding() {
+    if (!document.body) return;
+
+    var walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function(node) {
+          if (skipNode(node)) return NodeFilter.FILTER_REJECT;
+          return /CAMP\s*21/i.test(node.nodeValue)
+            ? NodeFilter.FILTER_ACCEPT
+            : NodeFilter.FILTER_SKIP;
+        }
+      }
+    );
+
+    var nodes = [];
+    var node;
+    while ((node = walker.nextNode())) nodes.push(node);
+    nodes.forEach(wrapCamp21TextNode);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyCamp21Branding);
+  } else {
+    applyCamp21Branding();
+  }
+})();
+</script>
+
 </head>
 <body>
 
@@ -900,14 +1070,14 @@ body::before{
     <div class="wide nav-wrap">
       <a href="index.html" class="brand">
         <img src="assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">
-        CAMP<span>21</span>
+        CAMP<span style=\"color:#F05AA6!important;-webkit-text-fill-color:#F05AA6!important;opacity:1!important\">21</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a class="nav-pill" href="pages/programme.html">Programme</a>
-        <a class="nav-pill" href="pages/resources.html">Resources</a>
-        <a class="nav-pill" href="pages/updates.html">Live Updates</a>
+      <nav class="nav-links nav-pill-holder" aria-label="Primary">
+        <a class="nav-pill-link" href="pages/programme.html">📅 Programme</a>
+        <a class="nav-pill-link" href="pages/resources.html">📚 Resources</a>
+        <a class="nav-pill-link" href="pages/updates.html">📢 Live Updates</a>
         <details class="qa-home" style="position:relative">
-          <summary style="font-weight:800;font-size:.9rem;cursor:pointer;display:flex;align-items:center;gap:6px;list-style:none;color:var(--ink)">⚡ Quick Access <span class="qa-h-chev" style="transition:.25s;display:inline-block;font-size:.7em">▾</span></summary>
+          <summary class="qa-pill-home" style="cursor:pointer;display:flex;align-items:center;gap:6px;list-style:none;">⚡ Quick Access <span class="qa-h-chev" style="transition:.25s;display:inline-block;font-size:.7em">▾</span></summary>
           <div class="qa-h-drop" style="position:absolute;top:calc(100% + 14px);right:0;min-width:280px;background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:120">
             <div style="padding:10px 8px">
               <span style="display:block;font-size:.68rem;font-weight:900;color:#726b82;text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px">Role & Operations</span>
@@ -956,38 +1126,6 @@ body::before{
     </div>
   </section>
 
-  <div class="wide">
-  <!-- CAMP21 HUB GUIDE: HOW TO USE THIS HUB -->
-  <section class="hub-use-guide" id="how-to-use-this-hub" aria-label="How to use this hub">
-    <div class="hub-guide-head">
-      <div>
-        <span class="hub-guide-kicker">How to Use This Hub</span>
-        <h2>Navigate CAMP21 Digital Hub Smoothly</h2>
-        <p>This hub is designed to help you navigate CAMP21 smoothly. Start by reviewing the page overview, then use the quick sections below to access your role hub, programme, resources and live updates.</p>
-      </div>
-      <div class="hub-guide-badge"><b>GUIDE</b><span>Quick Start</span></div>
-    </div>
-    <div class="hub-guide-grid">
-      <article class="hub-guide-card" data-step="1"><h3>Start with your role</h3><p>Open the Participants, Trainers, Facilitators, Judges or Organiser hub.</p></article>
-<article class="hub-guide-card" data-step="2"><h3>Review the programme</h3><p>Check the 4-day schedule, sessions, venues and expected outputs.</p></article>
-<article class="hub-guide-card" data-step="3"><h3>Open resources</h3><p>Access Smart DT templates T01–T14 and phase folders when unlocked.</p></article>
-<article class="hub-guide-card" data-step="4"><h3>Follow live updates</h3><p>Watch official announcements and schedule changes during camp.</p></article>
-    </div>
-    <div class="hub-guide-focus">
-      <div class="focus-icon">★</div>
-      <div><h3>Page Focus</h3><p>Choose your role portal, follow the 4-day Design Thinking journey and keep aligned with official CAMP21 updates.</p></div>
-    </div>
-    <div class="hub-quick-map" aria-label="Quick links for this hub">
-      <a href="pages/participants.html">Participants</a>
-<a class="nav-pill" href="pages/programme.html">Programme</a>
-<a class="nav-pill" href="pages/resources.html">Resources</a>
-<a href="pages/updates.html">Updates</a>
-<a href="pages/contacts.html">Help</a>
-    </div>
-  </section>
-</div>
-
-
   <!-- QUICK FACTS -->
   <section class="quick-facts">
     <div class="wide">
@@ -1011,6 +1149,34 @@ body::before{
           <div class="fact-icon">🧠</div>
           <div class="fact-label">Design Thinking</div>
           <div class="fact-sub">Empathy to final pitch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-quickstart" aria-label="Quick start">
+    <div class="wide">
+      <div class="quickstart-panel reveal">
+        <div class="quickstart-head">
+          <div>
+            <span class="quickstart-kicker">How to Use This Hub</span>
+            <h2>Quick Start for CAMP21</h2>
+            <p>Use this quick guide to move smoothly through the CAMP21 website before and during the programme.</p>
+          </div>
+          <div class="quickstart-badge"><strong>GUIDE</strong><span>Quick Start</span></div>
+        </div>
+        <div class="quickstart-grid">
+          <div class="quickstart-card"><span class="quickstart-num">1</span><h3>Choose role</h3><p>Open the right portal for your task.</p></div>
+          <div class="quickstart-card"><span class="quickstart-num">2</span><h3>Check programme</h3><p>Follow the 4-day journey and timing.</p></div>
+          <div class="quickstart-card"><span class="quickstart-num">3</span><h3>Use resources</h3><p>Access T01–T14 guides and rubrics.</p></div>
+          <div class="quickstart-card"><span class="quickstart-num">4</span><h3>Follow updates</h3><p>Live notices begin on 13 July 2026.</p></div>
+        </div>
+        <div class="quickstart-focus">
+          <div class="quickstart-focus-icon">★</div>
+          <div>
+            <h3>Page Focus</h3>
+            <p>Start with your role, then check the programme, resources and updates to stay ready for CAMP21.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1106,7 +1272,7 @@ body::before{
         <div class="day-card dc-1 reveal">
           <div class="day-num-bg">1</div>
           <span class="day-badge-pill">Day 1 &middot; 13 Jul</span>
-          <h3>Empathy &amp; Define</h3>
+          <h3>Empathise &amp; Define</h3>
           <p>AI orientation, heritage immersion, and problem framing.</p>
         </div>
         <div class="day-card dc-2 reveal" style="transition-delay:0.08s;">
@@ -1153,7 +1319,7 @@ body::before{
               <div>
                 <span class="infographic-badge">✨ DT Journey</span>
                 <h3 class="infographic-title">5-Phase Design Thinking Journey</h3>
-                <p class="infographic-sub">A visual guide to the Empathy, Define, Ideate, Prototype and Test phases used throughout CAMP21.</p>
+                <p class="infographic-sub">A visual guide to the Empathise, Define, Ideate, Prototype and Test phases used throughout CAMP21.</p>
               </div>
             </div>
             <div class="infographic-image-wrap">
@@ -1206,56 +1372,49 @@ body::before{
     </div>
   </section>
 
-  <!-- ORGANISER LOGOS -->
-  <section class="logos">
+
+  <section class="collab-section" aria-label="Collaborators">
     <div class="wide">
-      <p class="logos-eyebrow">Jointly Organised By</p>
-      <div class="logos-grid">
-        <div class="reveal">
-          <div class="logo-tile">
-            <img src="assets/logos/logo-kpt.png" alt="Ministry of Higher Education" onerror="this.style.display='none'">
+      <div class="collab-wrap reveal">
+        <div class="collab-head">
+          <div>
+            <p class="logos-eyebrow" style="margin-bottom:.25rem;color:var(--gold)">Collaborators</p>
+            <h2>Official Collaborators</h2>
+            <p>Key institutions supporting CAMP21 Digital Hub 2026.</p>
           </div>
-          <p class="logo-label">Ministry of Higher Education</p>
         </div>
-        <div class="reveal" style="transition-delay:0.08s;">
-          <div class="logo-tile">
-            <img src="assets/logos/logo-pmkl.png" alt="Politeknik Metro KL" onerror="this.style.display='none'">
-          </div>
-          <p class="logo-label">Politeknik Metro KL</p>
-        </div>
-        <div class="reveal" style="transition-delay:0.16s;">
-          <div class="logo-tile">
-            <img src="assets/logos/logo-polycc.png" alt="PolyCC &amp; Kolej Komuniti" onerror="this.style.display='none'">
-          </div>
-          <p class="logo-label">PolyCC &amp; Kolej Komuniti</p>
-        </div>
-        <div class="reveal" style="transition-delay:0.24s;">
-          <div class="logo-tile">
-            <img src="assets/logos/logo-kompleks-kraf.png" alt="Kompleks Kraf KL" onerror="this.style.display='none'">
-          </div>
-          <p class="logo-label">Kompleks Kraf KL</p>
+        <div class="collab-grid">
+          <div class="collab-card"><img src="assets/logos/logo-kpt.png" alt="Ministry of Higher Education" onerror="this.style.display='none'"><span>Ministry of Higher Education</span></div>
+          <div class="collab-card"><img src="assets/logos/logo-pmkl.png" alt="Politeknik Metro KL" onerror="this.style.display='none'"><span>Politeknik Metro KL</span></div>
+          <div class="collab-card"><img src="assets/logos/logo-polycc.png" alt="PolyCC &amp; Kolej Komuniti" onerror="this.style.display='none'"><span>PolyCC &amp; Kolej Komuniti</span></div>
+          <div class="collab-card"><img src="assets/logos/logo-kompleks-kraf.png" alt="Kompleks Kraf KL" onerror="this.style.display='none'"><span>Kompleks Kraf KL</span></div>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- FOOTER -->
-  <img src="assets/decors/gold-divider.png" class="gold-divider" alt="" style="display:block;width:min(400px,60%);height:auto;margin:28px auto;opacity:.5">
-  <footer class="camp-footer">
-  <div class="footer-min">
-    <div class="footer-min-brand">
-      <div class="footer-brand">CAMP<span>21</span></div>
-      <p>AI-Powered Design Thinking for Sustainable Cultural Heritage<br>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
+<footer class="camp-footer">
+  <div class="wide">
+    <div class="footer-grid" style="grid-template-columns:1.15fr .95fr;gap:26px;align-items:center">
+      <div class="footer-brand-block">
+        <a href="index.html" class="footer-brand-line" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--font-serif);font-size:2rem;font-weight:700;color:#fff"><img src="assets/logos/logo-camp21.png" alt="CAMP21 logo" style="width:44px;height:44px;border-radius:50%;object-fit:contain" onerror="this.style.display='none'">CAMP<span style=\"color:#F05AA6!important;-webkit-text-fill-color:#F05AA6!important;opacity:1!important\">21</span></a>
+        <p style="margin:.7rem 0 0;color:rgba(255,255,255,.85);font-size:1rem;line-height:1.7;font-weight:700">CAMP21 Digital Hub 2026<br>13–16 July 2026 · Kompleks Kraf Kuala Lumpur<br>AI-Powered Design Thinking for Sustainable Cultural Heritage</p>
+      </div>
+      <div class="footer-min-links" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+        <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
+        <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
+        <a href="pages/contacts.html">Help Desk</a>
+      </div>
     </div>
-    <nav class="footer-min-links" aria-label="Footer">
-      <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
-      <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
-      <a href="pages/registration.html">Registration</a>
-      <a href="pages/contacts.html">Help Desk</a>
-    </nav>
+    <div class="footer-min-bottom" style="margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:rgba(255,255,255,.78);font-weight:700;font-size:.92rem">
+      <span>© 2026 CAMP21 Digital Hub.</span>
+      <span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span>
+    </div>
   </div>
-  <div class="footer-min-bottom">© 2026 CAMP21 Digital Hub · Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</div>
 </footer>
+
 
   <script>
     const io = new IntersectionObserver((entries, obs) => {
