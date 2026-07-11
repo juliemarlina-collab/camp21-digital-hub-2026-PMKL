@@ -117,6 +117,9 @@ header .brand span,
 .res-panel[open] .res-chevron{transform:rotate(180deg)}
 .res-panel-body{padding:28px}
 @media(max-width:620px){.res-panel-body{padding:20px}.res-panel>summary h2{font-size:1.35rem}}
+
+/* Pill nav with active state */
+.nav-pill.active{border-color:#5A36C9;color:#5A36C9;box-shadow:0 8px 18px rgba(90,54,201,.12)}
 </style>
 </head>
 <body>
@@ -125,11 +128,11 @@ header .brand span,
   <div class="topbar-inner">
     <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
     <nav class="nav-actions" aria-label="Primary">
-      <a class="nav-link" href="programme.html">Programme</a>
-      <a class="nav-link active" href="resources.html">Resources</a>
-      <a class="nav-link" href="updates.html">Live Updates</a>
+      <a class="nav-pill" href="programme.html">Programme</a>
+      <a class="nav-pill active" href="resources.html">Resources</a>
+      <a class="nav-pill" href="updates.html">Live Updates</a>
       <details class="quick-access">
-        <summary class="nav-pill qa-trigger">Quick Access <span class="qa-chev">▾</span></summary>
+        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
         <div class="qa-dropdown">
           <div class="qa-group">
             <span class="qa-label">Role & Operations</span>

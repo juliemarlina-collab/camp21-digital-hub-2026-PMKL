@@ -197,6 +197,9 @@ p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview 
 /* Footer brand matches header */
 .camp-footer .footer-brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#fff}
 .camp-footer .footer-brand span{color:#F05AA6}
+
+/* Pill nav with active state */
+.nav-pill.active{border-color:#5A36C9;color:#5A36C9;box-shadow:0 8px 18px rgba(90,54,201,.12)}
 </style>
 </head>
 <body>
@@ -204,11 +207,11 @@ p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview 
   <div class="topbar-inner">
     <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
     <nav class="nav-actions" aria-label="Primary">
-      <a class="nav-link" href="programme.html">Programme</a>
-      <a class="nav-link" href="resources.html">Resources</a>
-      <a class="nav-link" href="updates.html">Live Updates</a>
+      <a class="nav-pill" href="programme.html">Programme</a>
+      <a class="nav-pill" href="resources.html">Resources</a>
+      <a class="nav-pill" href="updates.html">Live Updates</a>
       <details class="quick-access">
-        <summary class="nav-pill qa-trigger">Quick Access <span class="qa-chev">▾</span></summary>
+        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
         <div class="qa-dropdown">
           <div class="qa-group">
             <span class="qa-label">Role & Operations</span>
@@ -342,21 +345,6 @@ p,li,.hero-desc,.hero p,.section-head p,.section-sub,.pillar-desc,.day-overview 
   </nav>
 
 
-  <details class="section" id="student-action-checklist" open>
-    <summary>
-      <div class="summary-left"><div class="section-icon">✅</div><div><h2>Student Action Checklist</h2><p class="section-sub">Use this checklist to confirm what your team must complete, submit and prepare during CAMP21.</p></div></div>
-      <div class="chev">⌄</div>
-    </summary>
-    <div class="section-body">
-      <div class="checklist-grid">
-        <div class="checklist-item"><span class="checklist-tick">1</span><div><strong>Submit your templates</strong><br>T01–T14, tracked by day and phase.</div></div>
-        <div class="checklist-item"><span class="checklist-tick">2</span><div><strong>Earn your badges</strong><br>Unlocked as each phase is completed.</div></div>
-        <div class="checklist-item"><span class="checklist-tick">3</span><div><strong>Post daily TikTok reflections</strong><br>One video per day, Day 1–3.</div></div>
-        <div class="checklist-item"><span class="checklist-tick">4</span><div><strong>Prepare your Final Pitch</strong><br>8-slide deck, presented Day 4.</div></div>
-        <div class="checklist-item"><span class="checklist-tick">5</span><div><strong>Check the Marks Overview</strong><br>Pitch and TikTok are each scored separately.</div></div>
-      </div>
-    </div>
-  </details>
   <details class="section" id="template-submission" open>
     <summary>
       <div class="summary-left"><div class="section-icon">📋</div><div><h2>SMART DT Template Submission</h2><p class="section-sub">All team work progress by day, phase and template. All indicators remain Not Started until 13 July 2026.</p></div></div>

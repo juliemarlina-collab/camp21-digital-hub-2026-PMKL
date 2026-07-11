@@ -307,6 +307,9 @@ header .brand span,
 /* Footer brand matches header */
 .camp-footer .footer-brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#fff}
 .camp-footer .footer-brand span{color:#F05AA6}
+
+/* Pill nav with active state */
+.nav-pill.active{border-color:#5A36C9;color:#5A36C9;box-shadow:0 8px 18px rgba(90,54,201,.12)}
 </style>
 </head>
 <body>
@@ -315,11 +318,11 @@ header .brand span,
   <div class="topbar-inner">
     <a class="brand" href="../index.html"><img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">CAMP<span>21</span></a>
     <nav class="nav-actions" aria-label="Primary">
-      <a class="nav-link" href="programme.html">Programme</a>
-      <a class="nav-link" href="resources.html">Resources</a>
-      <a class="nav-link" href="updates.html">Live Updates</a>
+      <a class="nav-pill" href="programme.html">Programme</a>
+      <a class="nav-pill" href="resources.html">Resources</a>
+      <a class="nav-pill" href="updates.html">Live Updates</a>
       <details class="quick-access">
-        <summary class="nav-pill qa-trigger">Quick Access <span class="qa-chev">▾</span></summary>
+        <summary class="nav-pill qa-trigger">⚡ Quick Access <span class="qa-chev">▾</span></summary>
         <div class="qa-dropdown">
           <div class="qa-group">
             <span class="qa-label">Role & Operations</span>
@@ -385,6 +388,9 @@ header .brand span,
     </div>
   </section>
 </div>
+
+  
+  <div id="checkinLockBanner" style="display:none;max-width:1200px;margin:18px auto 0;padding:16px 22px;border-radius:18px;background:#fff4da;border:1px solid #f4d98f;color:#5c4520;font-weight:800;text-align:center">🔒 On-site check-in opens on <strong>13 July 2026 · 8:30 AM</strong>. Forms are view-only until then.</div>
 
   <!-- ROLE TABS (hidden until gate opens) -->
   <div class="role-tabs-wrap" id="regTabs">
@@ -932,8 +938,13 @@ header .brand span,
       document.getElementById('form-' + role).classList.add('active');
     }
 
+    const CHECKIN_OPEN_AT = new Date('2026-07-13T08:30:00+08:00');
     function submitForm(event, role) {
       event.preventDefault();
+      if (new Date() < CHECKIN_OPEN_AT) {
+        alert('On-site check-in opens on 13 July 2026 at 8:30 AM. The form is locked until then.');
+        return;
+      }
       const form = event.target;
       const btn = form.querySelector('.btn-register');
 
@@ -978,7 +989,14 @@ header .brand span,
       panel.classList.add('show');
       panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  </script>
+  
+    // Show lock banner and disable submits before opening time
+    if (new Date() < CHECKIN_OPEN_AT) {
+      const b = document.getElementById('checkinLockBanner');
+      if (b) b.style.display = 'block';
+      document.querySelectorAll('.btn-register').forEach(btn => { btn.disabled = true; btn.style.opacity = '.55'; btn.style.cursor = 'not-allowed'; });
+    }
+</script>
 
 </body>
 </html>
