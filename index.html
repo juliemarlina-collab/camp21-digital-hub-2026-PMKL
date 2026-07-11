@@ -6,7 +6,7 @@
   <title>CAMP21: Synergising Literacies 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,7 +18,7 @@
       --muted:  #6b6b8a;
       --border: rgba(20,16,74,0.10);
       --font-sans: 'Plus Jakarta Sans', sans-serif;
-      --font-serif: 'Cormorant Garamond', serif;
+      --font-serif: 'Playfair Display', serif;
       --ease: cubic-bezier(0.16,1,0.3,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1013,6 +1013,14 @@ header .brand span,
     color: var(--camp21-brand-rose) !important;
     -webkit-text-fill-color: var(--camp21-brand-rose) !important;
   }
+
+/* === CAMP21 refined type scale: calmer display sizes === */
+.hero h1, .page-hero-title{font-size:clamp(2.2rem,4vw,3.4rem)!important;line-height:1.05!important;letter-spacing:-.02em!important}
+.section-head h2, .section-title, .quickstart-head h2{font-size:clamp(1.6rem,2.8vw,2.2rem)!important;line-height:1.1!important}
+.hub-guide-head h2{font-size:clamp(1.5rem,2.5vw,2rem)!important;line-height:1.08!important}
+.res-panel>summary h2, .panel>summary h2{font-size:clamp(1.3rem,2.2vw,1.6rem)!important}
+.hero-days-badge strong{font-size:3.2rem!important}
+.stats .stat b, .hero-insight strong, .insight-card .num{font-size:1.9rem!important}
 </style>
 <script id="camp21-brand-21-rose-script">
 (function(){
@@ -1234,33 +1242,6 @@ header .brand span,
     </div>
   </section>
 
-  <section class="home-quickstart" aria-label="Quick start">
-    <div class="wide">
-      <div class="quickstart-panel reveal">
-        <div class="quickstart-head">
-          <div>
-            <span class="quickstart-kicker">How to Use This Hub</span>
-            <h2>Quick Start for CAMP21</h2>
-            <p>Use this quick guide to move smoothly through the CAMP21 website before and during the programme.</p>
-          </div>
-          <div class="quickstart-badge"><strong>GUIDE</strong><span>Quick Start</span></div>
-        </div>
-        <div class="quickstart-grid">
-          <div class="quickstart-card"><span class="quickstart-num">1</span><h3>Choose role</h3><p>Open the right portal for your task.</p></div>
-          <div class="quickstart-card"><span class="quickstart-num">2</span><h3>Check programme</h3><p>Follow the 4-day journey and timing.</p></div>
-          <div class="quickstart-card"><span class="quickstart-num">3</span><h3>Use resources</h3><p>Access T01–T14 guides and rubrics.</p></div>
-          <div class="quickstart-card"><span class="quickstart-num">4</span><h3>Follow updates</h3><p>Live notices begin on 13 July 2026.</p></div>
-        </div>
-        <div class="quickstart-focus">
-          <div class="quickstart-focus-icon">★</div>
-          <div>
-            <h3>Page Focus</h3>
-            <p>Start with your role, then check the programme, resources and updates to stay ready for CAMP21.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ROLE PORTALS -->
   <section class="portals" id="portals">
