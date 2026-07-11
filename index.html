@@ -35,7 +35,7 @@
 
     /* ── HEADER ── */
     header {
-      position: fixed; inset: 0 0 auto; z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(255,248,239,0.94); backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border); padding: 0.85rem 0;
     }
@@ -54,7 +54,7 @@
     .qa-h-drop a:hover{background:rgba(226,60,116,.06);color:var(--rose)}
 
     /* ── HERO ── */
-    .hero { padding: 8rem 0 4.5rem; position: relative; overflow: hidden; }
+    .hero { padding: 3rem 0 4.5rem; position: relative; overflow: hidden; }
     .hero-heritage-bg {
       position: absolute; inset: 0; z-index: 0;
       background-image: url('assets/decors/hero-golden-heritage-bg.png');
@@ -120,8 +120,8 @@
     .collab-head h2{margin:0;font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.3rem);color:#20103E}
     .collab-head p{margin:.3rem 0 0;color:var(--muted);font-weight:700}
     .collab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .collab-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:138px;border-radius:22px;background:linear-gradient(180deg,#fffdf9,#f8f2ea);border:1px solid rgba(217,175,55,.34);padding:1rem;box-shadow:0 8px 20px rgba(32,16,62,.04)}
-    .collab-card img{max-width:120px;max-height:48px;width:auto;height:auto;object-fit:contain;margin-bottom:.7rem}
+    .collab-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;min-height:100px;border-radius:22px;background:linear-gradient(180deg,#fffdf9,#f8f2ea);border:1px solid rgba(217,175,55,.34);padding:1.1rem 1.2rem;box-shadow:0 8px 20px rgba(32,16,62,.04)}
+    .collab-card img{max-width:120px;max-height:40px;width:auto;height:auto;object-fit:contain;object-position:left;margin-bottom:.6rem}
     .collab-card span{font-size:.84rem;font-weight:800;color:#20103E;line-height:1.35}
     .camp-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#11072d 0%,#211054 45%,#3a1770 75%,#5a1f87 100%) !important;color:#fff !important}
     .camp-footer::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(240,90,166,.18),transparent 22%),radial-gradient(circle at 10% 100%,rgba(106,71,232,.18),transparent 26%);pointer-events:none}
@@ -276,7 +276,7 @@
       .nav-links { display: flex; flex-wrap: wrap; }
       .menu-btn { display: none; }
       .qa-home{width:100%}.qa-h-drop{left:0!important;right:0!important;min-width:auto!important}
-      .hero { padding: 6.5rem 0 3rem; }
+      .hero { padding: 2rem 0 3rem; }
       .portals-grid { grid-template-columns: 1fr; }
       .days-grid { grid-template-columns: 1fr; }
       .cta-box { flex-direction: column; align-items: flex-start; }
@@ -964,6 +964,70 @@ header .brand span,
 @media(max-width:980px){.hub-guide-head{flex-direction:column}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.hub-use-guide{padding:20px 16px;border-radius:22px}.hub-guide-grid{grid-template-columns:1fr}.hub-quick-map{grid-template-columns:1fr}.hub-guide-badge{width:100%}}
 </style>
+
+<style id="camp21-exclusive-homepage-finish">
+  :root {
+    --navy: #151044;
+    --ink: #151044;
+    --rose: #e23c74;
+    --camp21-brand-rose: #e23c74;
+    --camp21-rose-final: #e23c74;
+  }
+
+  /* Consistent editorial typography */
+  h1, h2, h3, .section-title, .portals-title, .portal-title,
+  .quickstart-head h2, .collab-head h2, .footer-brand-line {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 600 !important;
+  }
+
+  /* CAMP21 identity colours */
+  header .brand, .camp21-brand-word, .footer-brand-line { color: #151044; }
+  header .brand span, .brand span, .camp21-brand-number,
+  .footer-brand-line span, .camp-footer .footer-brand-line span,
+  .footer-min-bottom .brand-21 { color: #e23c74 !important; -webkit-text-fill-color:#e23c74 !important; }
+
+  /* Equal-size header pills */
+  .nav-pill-holder { flex-wrap: nowrap; }
+  .nav-pill-link, .qa-pill-home {
+    height: 46px;
+    min-width: 148px;
+    padding: 0 1.15rem;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: .86rem;
+  }
+  .qa-home, .qa-home > summary { min-width: 148px; }
+
+  /* Three distinct hero actions on one straight line */
+  .hero-actions { display:flex; flex-wrap:nowrap !important; align-items:center; gap:.7rem !important; }
+  .hero-actions a {
+    height: 52px;
+    padding: 0 1.25rem;
+    justify-content:center;
+    white-space:nowrap;
+    font-size:.84rem;
+  }
+  .hero-actions .btn-outline { border-color:rgba(21,16,68,.18); box-shadow:0 8px 24px rgba(21,16,68,.07); }
+
+  /* Exclusive, reference-matched footer */
+  .camp-footer { background:#24104f !important; padding:0 !important; }
+  .footer-shell { gap:0; padding:3.2rem 0 1.7rem; }
+  .footer-main { display:grid; grid-template-columns:minmax(360px,1fr) auto; gap:3rem; align-items:start; padding-bottom:2.4rem; }
+  .footer-brand-line { display:block; color:#fff !important; font-size:2rem; line-height:1; margin-bottom:1.2rem; }
+  .footer-brand-block p { margin:0 0 .25rem; color:rgba(255,255,255,.72) !important; font-weight:700; }
+  .footer-links-clean { justify-content:flex-end; align-items:flex-start; gap:.7rem; padding:.25rem 0 0; }
+  .footer-links-clean a { min-height:44px; display:inline-flex; align-items:center; padding:0 1rem; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.07); }
+  .camp-footer .footer-min-bottom { padding-top:1.3rem; color:rgba(255,255,255,.68); }
+
+  @media(max-width:1180px){
+    .nav-pill-holder{flex-wrap:wrap}.hero-actions{flex-wrap:wrap !important}
+  }
+  @media(max-width:760px){
+    .footer-main{grid-template-columns:1fr}.footer-links-clean{justify-content:flex-start}
+    .hero-actions a{width:100%}.nav-pill-link,.qa-home,.qa-home>summary{width:100%;min-width:100%}
+  }
+</style>
   <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
 <style id="camp21-footer-21-rose-final-fix">
@@ -1102,6 +1166,13 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 })();
 </script>
 
+<style id="camp21-exact-colour-final-override">
+  :root{--navy:#151044;--ink:#151044;--rose:#e23c74;--camp21-brand-rose:#e23c74;--camp21-rose-final:#e23c74}
+  header .brand span,.brand span,.camp21-brand-number,.footer-brand span,.footer-brand-line span,
+  .footer-brand-block .footer-brand-line span,.camp-footer .footer-brand-line span,.footer-min-bottom .brand-21{
+    color:#e23c74!important;-webkit-text-fill-color:#e23c74!important
+  }
+</style>
 </head>
 <body>
 
@@ -1110,7 +1181,7 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     <div class="wide nav-wrap">
       <a href="index.html" class="brand">
         <img src="assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">
-        CAMP<span style=\"color:#F05AA6!important;-webkit-text-fill-color:#F05AA6!important;opacity:1!important\">21</span>
+        CAMP<span>21</span>
       </a>
       <nav class="nav-links nav-pill-holder" aria-label="Primary">
         <a class="nav-pill-link" href="pages/programme.html">📅 Programme</a>
@@ -1150,7 +1221,8 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
         <p class="hero-desc">A national creative experience where Politeknik Malaysia and Community Colleges students explore Malaysian craft heritage, use AI with purpose, and design meaningful solutions at Kompleks Kraf Kuala Lumpur.</p>
         <div class="hero-actions">
           <a href="pages/registration.html" class="btn-primary">Register now &rarr;</a>
-          <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener" class="btn-outline">Open Smart DT Guide & Template Hub &#8599;</a>
+          <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener" class="btn-outline">Smart DT Guide &#8599;</a>
+          <a href="pages/resources.html" class="btn-outline">DT Template Hub &#8599;</a>
         </div>
       </div>
       <div class="hero-visual reveal" style="transition-delay:0.15s;">
@@ -1466,20 +1538,22 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
   <!-- FOOTER -->
 <footer class="camp-footer">
   <div class="wide footer-shell">
-    <nav class="footer-min-links footer-links-clean" aria-label="Footer support links">
-      <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">
-        Smart DT Guide &amp; Template Hub ↗
-      </a>
-      <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">
-        Telegram Community ↗
-      </a>
-      <a href="pages/contacts.html">
-        Help Desk
-      </a>
-    </nav>
+    <div class="footer-main">
+      <div class="footer-brand-block">
+        <strong class="footer-brand-line">CAMP <span>21</span></strong>
+        <p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p>
+        <p>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
+      </div>
+      <nav class="footer-min-links footer-links-clean" aria-label="Footer support links">
+        <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
+        <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
+        <a href="pages/registration.html">Registration</a>
+        <a href="pages/contacts.html">Help Desk</a>
+      </nav>
+    </div>
 
     <div class="footer-min-bottom">
-      <span>© 2026 CAMP<span style="color:#F05AA6!important;-webkit-text-fill-color:#F05AA6!important">21</span> Digital Hub.</span>
+      <span>© 2026 CAMP<span class="brand-21">21</span> Digital Hub.</span>
       <span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span>
     </div>
   </div>
