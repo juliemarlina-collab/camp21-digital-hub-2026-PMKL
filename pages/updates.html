@@ -173,6 +173,15 @@ header .brand span,
 
 /* Pill nav with active state */
 .nav-pill.active{border-color:#5A36C9;color:#5A36C9;box-shadow:0 8px 18px rgba(90,54,201,.12)}
+
+/* === Live Updates brand alignment === */
+.sync-status-indicator{color:#5A36C9}
+.pulse-dot{background-color:#D9AF37}
+.filter-badge-pill{border:1px solid rgba(32,16,62,.15);color:#20103E}
+.filter-badge-pill.active,.filter-badge-pill:hover{background:#20103E;color:#fff}
+.fluid-row:hover{border-bottom-color:#F05AA6}
+.fluid-arrow{color:#D9AF37}
+.update-item-row .meta-tag{border-radius:999px;padding:6px 14px;font-size:.78rem}
 </style>
 </head>
 <body>
@@ -246,8 +255,8 @@ header .brand span,
     
 
     <section class="reveal" style="margin-bottom: 5rem;">
-      <div class="sequence-block seq-tangerine" style="min-height: auto; padding: 3rem;">
-        <span class="stage-badge" style="background: #fff; color: var(--neo-tangerine);">Pinned CAMP21 Notice</span>
+      <div class="sequence-block" style="min-height:auto;padding:3rem;background:linear-gradient(135deg,#20103E,#5A36C9);color:#fff">
+        <span class="stage-badge" style="background:#D9AF37;color:#20103E">Pinned CAMP21 Notice</span>
         <h2 id="pinnedNoticeTitle" style="font-size: 2.2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 1rem; color: #fff;">Official Updates Will Appear Here</h2>
         <p id="pinnedNoticeBody" style="font-size: 1.15rem; font-weight: 600; line-height: 1.5; max-width: 900px;">
           This page will be used for official CAMP21 announcements, schedule adjustments, venue reminders and urgent notices during the programme. Please check this page daily during CAMP21.
@@ -279,7 +288,7 @@ header .brand span,
           <div style="font-weight: 700; max-width: 450px; font-size: 0.95rem; color: #333;">
             Latest updates will appear here when the organiser team publishes official announcements through the CAMP21 update stream.
           </div>
-          <span class="meta-tag" style="background: var(--neo-ultraviolet); color:#fff; font-weight:900;">Info</span>
+          <span class="meta-tag" style="background:#5A36C9;color:#fff;font-weight:900;border-radius:999px;padding:6px 14px;font-size:.78rem">Info</span>
         </div>
 
       </div>
@@ -351,7 +360,7 @@ header .brand span,
             <div style="font-size: 0.85rem; color: #666; font-weight: 600;">Pushed: ${msg.timestamp}</div>
           </div>
           <div style="font-weight: 700; max-width: 450px; font-size: 0.95rem; color: #333;">${msg.text}</div>
-          <span class="meta-tag" style="background: ${msg.category === 'Deadlines' ? 'var(--neo-tangerine)' : 'var(--neo-ultraviolet)'}; color:#fff; font-weight:900;">${msg.tagLabel}</span>
+          <span class="meta-tag" style="background: ${msg.category === 'Deadlines' ? '#F05AA6' : '#5A36C9'}; color:#fff; font-weight:900;">${msg.tagLabel}</span>
         `;
         container.appendChild(row);
       });
