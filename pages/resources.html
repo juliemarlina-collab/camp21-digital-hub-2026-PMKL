@@ -1,953 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMP21: Synergising Literacies 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CAMP21 Resources & Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151044;--indigo:#251052;--cream:#F8F2EA;--paper:#fffdf9;--muted:#726b82;--line:#e9dfd0;--gold:#D9AF37;--pink:#FF4FCB;--teal:#21D4C2;--violet:#6B4DFF;--green:#8DFF3F;--blue:#3D63FF;--rose:#e23c74;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-sans)}a{text-decoration:none;color:inherit}
+.wide{width:min(100% - 48px,1200px);margin-inline:auto}header{position:sticky;top:0;z-index:100;background:rgba(255,248,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:.85rem 0}.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{text-decoration:none;display:flex;align-items:center;gap:.55rem;font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:var(--ink);letter-spacing:-.01em}.brand-icon{width:46px;height:46px;border-radius:50%;object-fit:contain}.brand span{color:var(--rose)}.nav-links{display:flex!important;gap:12px;align-items:center;flex-wrap:wrap}.nav-pill-holder{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;justify-content:flex-end}.nav-pill-link,.qa-pill-home{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.96);border:1px solid var(--line);box-shadow:0 8px 18px rgba(20,16,74,.05);font-size:.92rem;font-weight:900;color:var(--ink);transition:.22s ease}.nav-pill-link:hover,.qa-pill-home:hover{transform:translateY(-1px);border-color:rgba(79,59,171,.28);box-shadow:0 12px 24px rgba(20,16,74,.08)}.nav-pill-link.active{background:#20103E;color:#fff;border-color:#20103E}.qa-pill-home{background:linear-gradient(135deg,#22105d,#4c30bf);color:#fff;border-color:transparent;box-shadow:0 14px 28px rgba(55,38,140,.22)}.qa-home summary::-webkit-details-marker{display:none}.qa-home[open] .qa-h-chev{transform:rotate(180deg)}.qa-h-drop a:hover{background:rgba(226,60,116,.06);color:var(--rose)}@media(max-width:980px){.nav-pill-holder{justify-content:flex-start}.nav-wrap{flex-wrap:wrap}}@media(max-width:560px){.brand-icon{width:38px;height:38px}.nav-pill-link,.qa-pill-home{padding:.6rem .85rem;font-size:.82rem}}
 
-  <style>
-    :root {
-      --navy:   #14104a;
-      --rose:   #e23c74;
-      --gold:   #c8952c;
-      --cream:  #fff8ef;
-      --ink:    #1a1060;
-      --muted:  #6b6b8a;
-      --border: rgba(20,16,74,0.10);
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
-      --font-serif: 'Cormorant Garamond', serif;
-      --ease: cubic-bezier(0.16,1,0.3,1);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-sans); background: var(--cream); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    .wide { width: min(100% - 48px, 1200px); margin-inline: auto; }
-    section[id] { scroll-margin-top: 80px; }
+.hero{background:radial-gradient(circle at 82% 10%,rgba(255,199,61,.18),transparent 34%),linear-gradient(120deg,rgba(24,61,112,.72),rgba(37,16,82,.68) 45%,rgba(59,18,76,.65)),url('../assets/images/hero-resources.jpg') center/cover;color:#fff;padding:58px 28px 50px}.hero-inner{max-width:1440px;margin:auto}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}.hero-copy{min-width:0}.eyebrow{display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}.hero h1{font-family:var(--font-serif);font-weight:600;font-size:clamp(3.2rem,6vw,5rem);line-height:.95;margin:30px 0 18px;letter-spacing:-.01em}.hero p{font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.78);max-width:700px}.hero-insights{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hero-insight{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:24px 26px;box-shadow:0 14px 40px rgba(21,16,68,.14);backdrop-filter:blur(10px)}.hero-insight strong{display:block;color:var(--gold);font-size:2.25rem;line-height:1;font-weight:900;margin-bottom:8px}.hero-insight span{display:block;color:rgba(255,255,255,.82);font-weight:900;text-transform:uppercase;letter-spacing:.05em;font-size:.9rem}.hero-insight small{display:block;margin-top:6px;color:rgba(255,255,255,.58);font-weight:700;font-size:.78rem;line-height:1.35}
+.wrap{max-width:1440px;margin:auto;padding:48px 28px 80px}.section-head{margin-bottom:2rem}.section-head h2{font-family:var(--font-serif);font-weight:600;font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;letter-spacing:-.01em}.section-head p{color:var(--muted);font-size:1.05rem;line-height:1.55;max-width:720px}.s-gap{margin-bottom:4rem}
+.res-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+.doc-list{display:grid;gap:12px}.doc-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;cursor:pointer;transition:border-color .2s}.doc-card:hover{border-color:var(--violet)}.doc-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-weight:900;font-size:.78rem;flex-shrink:0;color:#fff}.doc-card h4{margin:0 0 4px;font-size:1.05rem;font-weight:900}.doc-card p{margin:0;color:var(--muted);font-weight:600;font-size:.88rem;line-height:1.4}.doc-arrow{margin-left:auto;font-size:1.3rem;color:var(--gold);align-self:center;flex-shrink:0}
+.workspace-card{background:var(--indigo);border-radius:22px;padding:36px 32px;color:#fff}.workspace-card .ws-tag{display:inline-flex;background:var(--gold);color:var(--ink);border-radius:999px;padding:6px 16px;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}.workspace-card h3{font-family:var(--font-serif);font-weight:600;font-size:1.8rem;margin:0 0 12px;letter-spacing:-.01em}.workspace-card p{color:rgba(255,255,255,.78);font-weight:600;line-height:1.6;margin:0 0 24px}.workspace-card a{display:block;background:var(--gold);color:var(--ink);border-radius:14px;padding:16px;text-align:center;font-weight:900;font-size:1rem}
+.doc-note{color:var(--muted);font-weight:700;font-size:.92rem;margin-top:16px;font-style:italic}
+.doc-note-list{margin:0 0 20px;padding-left:20px;color:#444;font-weight:600;line-height:1.6}
+.doc-note-list li{margin-bottom:6px}
+.doc-note-list li:last-child{margin-bottom:0}
+.pitch-section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;margin-bottom:3rem}.pitch-section .pitch-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}.pitch-section h3{font-family:var(--font-serif);font-weight:600;font-size:1.8rem;margin:0;letter-spacing:-.01em}.pitch-tag{display:inline-flex;background:var(--rose);color:#fff;border-radius:999px;padding:5px 14px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.pitch-section>p{color:#444;font-weight:600;line-height:1.6;margin:0 0 20px}.pitch-download{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 24px;display:flex;gap:18px;align-items:center}.pitch-download .doc-icon{background:var(--gold)}
+.slides-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.slide-pill{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:800;font-size:.82rem}
+.phase-res{background:var(--paper);border:1px solid var(--line);border-radius:22px;margin-bottom:12px;overflow:hidden;transition:opacity .3s}.phase-res.locked{opacity:.55}.phase-res.locked .pr-body{display:none}.phase-res summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;gap:16px}.phase-res summary::-webkit-details-marker{display:none}.pr-num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;font-size:1rem;flex-shrink:0}.pr-info{flex:1}.pr-info h3{margin:0;font-size:1.1rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.pr-info .pr-meta{color:var(--muted);font-weight:700;font-size:.85rem;margin-top:2px}.pr-tag{display:inline-flex;border-radius:999px;padding:4px 12px;font-size:.68rem;font-weight:900}.pr-status{font-weight:900;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;display:flex;align-items:center;gap:6px}.pr-chev{font-weight:900;font-size:1.2rem;transition:.25s;margin-left:8px}.phase-res[open] .pr-chev{transform:rotate(180deg)}.pr-body{border-top:1px solid var(--line);padding:24px}.pr-templates{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pr-tpl{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}.pr-tpl-code{display:inline-flex;font-weight:900;color:#fff;border-radius:8px;padding:4px 10px;font-size:.78rem;margin-bottom:6px}.pr-tpl h5{margin:0 0 2px;font-size:.92rem;font-weight:900}.pr-tpl p{margin:0;color:var(--muted);font-weight:600;font-size:.82rem;line-height:1.4}.pr-open-app{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:var(--violet);color:#fff;border-radius:999px;padding:12px 22px;font-weight:900;font-size:.88rem}
+.camp-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#11072d 0%,#211054 45%,#3a1770 75%,#5a1f87 100%);color:#fff;margin-top:48px}.camp-footer::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(240,90,166,.18),transparent 22%),radial-gradient(circle at 10% 100%,rgba(106,71,232,.18),transparent 26%);pointer-events:none}.footer-shell{position:relative;z-index:1;max-width:1440px;margin:auto;display:flex;flex-direction:column;gap:16px;padding:2.6rem 28px 1.6rem}.footer-main{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap}.footer-brand-block strong.footer-brand-line{font-family:var(--font-serif);font-weight:700;font-size:1.5rem;color:#fff;display:block;margin-bottom:.4rem;letter-spacing:-.01em}.footer-brand-line span{color:var(--rose)}.footer-brand-block p{color:rgba(255,255,255,.72);line-height:1.6;font-weight:600;margin:2px 0 0;max-width:440px}.footer-links-clean{display:flex;justify-content:center;align-items:center;gap:14px 34px;flex-wrap:wrap;padding-top:14px}.footer-links-clean a{color:rgba(255,255,255,.85);font-weight:800;text-decoration:none;font-size:.95rem}.footer-links-clean a:hover{color:#e23c74}.footer-min-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;gap:10px 26px;flex-wrap:wrap;color:rgba(255,255,255,.6);font-weight:600;font-size:.86rem;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;margin:16px 28px 0;max-width:1440px;margin-left:auto;margin-right:auto;text-align:left}.brand-21{color:var(--rose)}@media(max-width:560px){.footer-shell{padding:2.2rem 18px 1.4rem}.footer-min-bottom{margin-left:18px;margin-right:18px}}
+@media(max-width:980px){.res-layout{grid-template-columns:1fr}.pr-templates{grid-template-columns:1fr}.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.footer-grid{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-insights{max-width:640px}.hero h1{font-size:3.6rem}.qa-dropdown{left:-8px;right:-8px;min-width:auto}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}.hero,.wrap{padding-left:18px;padding-right:18px}.brand-icon{width:38px;height:38px}.hero h1{font-size:3rem}.hero-insights{grid-template-columns:1fr}.hero-insight{padding:20px 22px}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}.pitch-download{flex-direction:column;text-align:center}}
+@media print{header,.qa-home{display:none}.hero{background:#fff!important;color:#111!important}.hero p{color:#333}.camp-footer{display:none}body{background:#fff}}
 
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.55s var(--ease), transform 0.55s var(--ease); }
-    .reveal.active { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
-
-    /* ── HEADER ── */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,248,239,0.94); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border); padding: 0.85rem 0;
-    }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .brand { text-decoration: none; display: flex; align-items: center; gap: 0.55rem; font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem; color: var(--navy); letter-spacing: -0.01em; }
-    .brand-icon { width: 46px; height: 46px; border-radius: 50%; object-fit: contain; }
-    .brand span { color: var(--rose); }
-    .nav-links { display: flex !important; gap: 12px; align-items: center; flex-wrap: wrap; }
-    .nav-links a { font-weight: 700; font-size: 0.9rem; color: var(--ink); transition: color 0.25s; }
-    .nav-links a:hover { color: var(--rose); }
-    .btn-nav { background: var(--rose); color: #fff !important; padding: 0.65rem 1.3rem; border-radius: 999px; font-weight: 900; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.25s, transform 0.25s; }
-    .btn-nav:hover { background: #c4205a; color: #fff !important; transform: translateY(-1px); }
-    .menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--navy); font-size: 1.5rem; }
-    .qa-home summary::-webkit-details-marker{display:none}
-    .qa-home[open] .qa-h-chev{transform:rotate(180deg)}
-    .qa-h-drop a:hover{background:rgba(226,60,116,.06);color:var(--rose)}
-
-    /* ── HERO ── */
-    .hero { padding: 3rem 0 4.5rem; position: relative; overflow: hidden; }
-    .hero-heritage-bg {
-      position: absolute; inset: 0; z-index: 0;
-      background-image: url('assets/decors/hero-golden-heritage-bg.png');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.5;
-    }
-    .hero-bg {
-      position: absolute; inset: 0; z-index: 1;
-      background: linear-gradient(90deg, rgba(255,248,239,0.97) 0%, rgba(255,248,239,0.90) 50%, rgba(255,248,239,0.70) 100%);
-    }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; position: relative; z-index: 1; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.75rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); margin-bottom: 1.4rem; }
-    .hero-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); flex-shrink: 0; }
-    .hero h1 { font-family: var(--font-serif); font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.01em; color: var(--navy); margin-bottom: 1.2rem; }
-    .hero h1 em { color: var(--rose); font-style: normal; display: block; }
-    .hero-desc { font-size: 1.05rem; font-weight: 500; color: var(--muted); max-width: 44ch; margin-bottom: 2rem; line-height: 1.65; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-    .btn-primary { background: var(--rose); color: #fff; padding: 0.85rem 1.7rem; border-radius: 999px; font-weight: 900; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.25s, box-shadow 0.25s; box-shadow: 0 4px 14px rgba(226,60,116,0.30); }
-    .btn-primary:hover { background: #c4205a; }
-    .btn-outline { background: #fff; color: var(--navy); border: 1.5px solid var(--border); padding: 0.85rem 1.7rem; border-radius: 999px; font-weight: 800; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; transition: border-color 0.25s; }
-    .btn-outline:hover { border-color: var(--navy); }
-    .hero-visual { position: relative; }
-    .hero-img-wrap { border-radius: 2rem; overflow: hidden; box-shadow: 0 28px 60px rgba(20,16,74,0.18); aspect-ratio: 4/3.2; border: 1px solid rgba(255,255,255,0.5); }
-    .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hero-img-slot { width: 100%; height: 100%; background: linear-gradient(135deg, var(--navy) 0%, #5a36c9 55%, var(--rose) 110%); display: grid; place-items: center; }
-    .hero-img-slot span { color: rgba(255,255,255,0.4); font-size: 0.75rem; font-weight: 700; text-align: center; padding: 1rem; }
-    .hero-days-badge { position: absolute; right: -1rem; bottom: -1rem; background: var(--navy); color: #fff; border: 4px solid var(--cream); border-radius: 1.2rem; padding: 1rem 1.4rem; box-shadow: 0 8px 24px rgba(20,16,74,0.22); }
-    .hero-days-badge strong { font-family: var(--font-serif); font-size: 4.5rem; line-height: 1; color: #f3dfae; display: block; }
-    .hero-days-badge small { font-size: 0.75rem; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
-
-
-    /* ── HEADER PILLS / HOME QUICK START / GRADIENT FOOTER ── */
-    .nav-pill-holder{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;justify-content:flex-end}
-    .nav-pill-link,.qa-pill-home{display:inline-flex;align-items:center;gap:.45rem;padding:.82rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.96);border:1px solid var(--border);box-shadow:0 8px 18px rgba(20,16,74,.05);font-size:.92rem;font-weight:900;color:var(--navy);transition:.22s ease}
-    .nav-pill-link:hover,.qa-pill-home:hover{transform:translateY(-1px);border-color:rgba(79,59,171,.28);box-shadow:0 12px 24px rgba(20,16,74,.08)}
-    .qa-pill-home{background:linear-gradient(135deg,#22105d,#4c30bf);color:#fff;border-color:transparent;box-shadow:0 14px 28px rgba(55,38,140,.22)}
-    .qa-home[open] .qa-h-chev{transform:rotate(180deg)}
-    @media(max-width:980px){.nav-pill-holder{justify-content:flex-start}}
-
-    .home-quickstart{padding:1.1rem 0 3.6rem;background:linear-gradient(180deg,#fffdf9 0%,#fdf6ef 100%);position:relative}
-    .home-quickstart::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 10%,rgba(240,90,166,.08),transparent 26%),radial-gradient(circle at 90% 0%,rgba(217,175,55,.10),transparent 24%);pointer-events:none}
-    .quickstart-panel{position:relative;z-index:1;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(248,242,234,.95));border:1px solid rgba(217,175,55,.34);border-radius:34px;padding:1.7rem 1.7rem 1.5rem;box-shadow:0 18px 40px rgba(32,16,62,.07)}
-    .quickstart-head{display:flex;justify-content:space-between;gap:1.4rem;align-items:flex-start;margin-bottom:1.35rem}
-    .quickstart-kicker{display:inline-flex;align-items:center;border-radius:999px;background:#20103E;color:#fff;padding:.7rem 1.05rem;font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 22px rgba(32,16,62,.15)}
-    .quickstart-head h2{margin:.9rem 0 .55rem;font-family:var(--font-serif);font-size:clamp(2.15rem,4vw,3.2rem);line-height:.95;letter-spacing:-.03em;color:#20103E}
-    .quickstart-head p{margin:0;max-width:760px;color:var(--muted);font-size:1rem;line-height:1.65;font-weight:700}
-    .quickstart-badge{min-width:170px;border-radius:28px;background:linear-gradient(135deg,#2c1368,#5b3dd9);padding:1rem 1.25rem;color:#fff;box-shadow:0 16px 32px rgba(67,49,173,.20)}
-    .quickstart-badge strong{display:block;font-size:1.7rem;line-height:1;color:#f3c940;font-weight:900}
-    .quickstart-badge span{display:block;margin-top:.35rem;font-size:.86rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9)}
-    .quickstart-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:.6rem}
-    .quickstart-card{position:relative;background:#fff;border:1px solid rgba(217,175,55,.35);border-radius:24px;padding:1.2rem 1.15rem 1.15rem;min-height:160px;box-shadow:0 10px 22px rgba(32,16,62,.05)}
-    .quickstart-card h3{margin:0 0 .55rem;font-size:1rem;font-weight:900;color:#20103E;padding-right:46px}
-    .quickstart-card p{margin:0;color:#6f6780;font-size:.96rem;font-weight:700;line-height:1.6}
-    .quickstart-num{position:absolute;right:16px;top:14px;width:38px;height:38px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#E7BC46,#e23c74);color:#20103E;font-size:1.08rem;font-weight:900}
-    .quickstart-focus{margin-top:16px;border-radius:28px;background:linear-gradient(90deg,#291257 0%,#4a2db2 55%,#6a47e8 100%);padding:1.1rem 1.25rem;display:flex;align-items:center;gap:14px;color:#fff;box-shadow:0 16px 34px rgba(53,37,143,.18)}
-    .quickstart-focus-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#E4B93E;color:#20103E;font-size:1.35rem;flex-shrink:0}
-    .quickstart-focus h3{margin:0 0 .2rem;color:#ffd765;font-size:1.02rem;font-weight:900}
-    .quickstart-focus p{margin:0;color:rgba(255,255,255,.94);font-size:1rem;font-weight:800;line-height:1.5}
-    .collab-section{padding:0 0 3rem;background:linear-gradient(180deg,#fdf6ef 0%,#fffaf4 100%)}
-    .collab-wrap{border:1px solid rgba(217,175,55,.30);border-radius:28px;background:#fff;box-shadow:0 14px 34px rgba(32,16,62,.05);padding:1.5rem 1.4rem}
-    .collab-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
-    .collab-head h2{margin:0;font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.3rem);color:#20103E}
-    .collab-head p{margin:.3rem 0 0;color:var(--muted);font-weight:700}
-    .collab-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .collab-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;min-height:120px;border-radius:22px;background:linear-gradient(180deg,#fffdf9,#f8f2ea);border:1px solid rgba(217,175,55,.34);padding:1.1rem 1.2rem;box-shadow:0 8px 20px rgba(32,16,62,.04)}
-    .collab-logo-box{width:76px;height:76px;border-radius:16px;background:#fff;border:1px solid rgba(217,175,55,.3);display:flex;align-items:center;justify-content:center;margin-bottom:.7rem;flex-shrink:0}
-    .collab-card img{max-width:56px;max-height:56px;width:auto;height:auto;object-fit:contain}
-    .collab-card span{font-size:.84rem;font-weight:800;color:#20103E;line-height:1.35}
-    .camp-footer{position:relative;overflow:hidden;background:linear-gradient(135deg,#11072d 0%,#211054 45%,#3a1770 75%,#5a1f87 100%) !important;color:#fff !important}
-    .camp-footer::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(240,90,166,.18),transparent 22%),radial-gradient(circle at 10% 100%,rgba(106,71,232,.18),transparent 26%);pointer-events:none}
-    .camp-footer .footer-grid,.camp-footer .footer-bottom,.camp-footer .footer-inner,.camp-footer .footer-shell,.camp-footer .footer-min-bottom{position:relative;z-index:1}
-    .camp-footer .footer-brand-line{color:#fff}
-    .camp-footer .footer-brand-line span,.camp-footer .footer-brand span{color:#e23c74 !important}
-    .camp-footer .footer-brand-block p,.camp-footer .footer-col p,.camp-footer .footer-col a,.camp-footer .footer-min-bottom,.camp-footer .footer-min-bottom span{color:rgba(255,255,255,.84) !important}
-    .camp-footer .footer-col h4{color:#f2cb57 !important}
-    .camp-footer .footer-min-links a{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.14);box-shadow:none}
-    .camp-footer .footer-min-links a:hover{background:rgba(255,255,255,.14);border-color:rgba(240,90,166,.42);color:#fff}
-    @media(max-width:1100px){.quickstart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.collab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:760px){.quickstart-head{flex-direction:column}.quickstart-badge{width:100%;max-width:220px}.quickstart-focus{align-items:flex-start}.quickstart-focus-icon{margin-top:2px}}
-    @media(max-width:560px){.quickstart-grid,.collab-grid{grid-template-columns:1fr}.quickstart-panel{padding:1.25rem}.quickstart-focus{flex-direction:column;align-items:flex-start}}
-
-    /* ── QUICK FACTS ── */
-    .quick-facts { padding: 2.5rem 0 3rem; background: #fff; }
-    .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-    .fact-card { background: var(--cream); border: 1px solid var(--border); border-radius: 1.2rem; padding: 1.4rem 1.2rem; display: flex; flex-direction: column; gap: 0.2rem; }
-    .fact-icon { font-size: 1.6rem; margin-bottom: 0.9rem; width: 68px; height: 68px; border-radius: 18px; background: #fff; border: 1px solid rgba(217,175,55,.32); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(32,16,62,.05); }
-    .fact-icon img { width: 52px; height: 52px; object-fit: contain; display: block; }
-    .fact-label { font-weight: 800; font-size: 0.95rem; color: var(--navy); line-height: 1.25; }
-    .fact-sub { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
-
-    /* ── PORTALS ── */
-    .portals { padding: 4.5rem 0; background: var(--navy); position: relative; overflow: hidden; }
-    .portals-eyebrow { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: #f3dfae; margin-bottom: 0.5rem; }
-    .portals-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: #fff; margin-bottom: 2.2rem; }
-    .portals-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 1rem; }
-    .portal-featured { grid-row: 1 / 3; position: relative; border-radius: 1.2rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); min-height: 380px; display: flex; flex-direction: column; justify-content: flex-end; transition: transform 0.3s var(--ease); }
-    .portal-featured:hover { transform: translateY(-4px); }
-    .portal-card { position: relative; border-radius: 1.2rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); min-height: 175px; display: flex; flex-direction: column; justify-content: flex-end; transition: transform 0.3s var(--ease); }
-    .portal-card:hover { transform: translateY(-3px); }
-    .portal-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1060 0%, #3b2a8a 100%); }
-    .portal-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
-    .portal-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,16,74,0.95) 0%, rgba(20,16,74,0.6) 50%, rgba(20,16,74,0.2) 100%); }
-    .portal-featured .portal-overlay { background: linear-gradient(to top, rgba(20,16,74,0.95) 0%, rgba(20,16,74,0.35) 60%, rgba(20,16,74,0.1) 100%); }
-    .portal-body { position: relative; z-index: 2; padding: 1.4rem; }
-    .portal-featured .portal-body { padding: 1.8rem; }
-    .portal-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; }
-    .portal-featured .portal-title { font-size: 2.2rem; margin-bottom: 0.6rem; }
-    .portal-desc { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 0.8rem; }
-    .portal-featured .portal-desc { font-size: 0.92rem; margin-bottom: 1rem; }
-    .portal-cta { font-size: 0.8rem; font-weight: 900; color: #f3dfae; }
-
-    /* ── PROGRAMME ── */
-    .programme { padding: 4.5rem 0; background: linear-gradient(to bottom, var(--cream), #fff); }
-    .section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
-    .section-eyebrow { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.4rem; }
-    .section-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--navy); }
-    .section-link { font-weight: 900; font-size: 0.88rem; color: var(--rose); white-space: nowrap; display: inline-flex; align-items: center; gap: 0.3rem; transition: opacity 0.2s; }
-    .section-link:hover { opacity: 0.7; }
-    .days-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.85rem; }
-    .day-card { border-radius: 1.2rem; padding: 1.4rem; min-height: 175px; position: relative; overflow: hidden; color: #fff; display: flex; flex-direction: column; }
-    .day-card .day-num-bg { position: absolute; right: 0.6rem; bottom: -0.1em; font-family: var(--font-serif); font-size: 5.5rem; font-weight: 700; color: rgba(255,255,255,0.13); line-height: 1; pointer-events: none; user-select: none; }
-    .day-badge-pill { display: inline-flex; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.9rem; align-self: flex-start; }
-    .day-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; position: relative; z-index: 1; }
-    .day-card p { font-size: 0.85rem; color: rgba(255,255,255,0.72); line-height: 1.5; position: relative; z-index: 1; }
-    .dc-1 { background: var(--navy); }
-    .dc-2 { background: var(--rose); }
-    .dc-3 { background: var(--gold); }
-    .dc-4 { background: #807b1d; }
-
-    /* ── FRAMEWORK ── */
-    .framework { padding: 4rem 0 1.5rem; background: #fff; }
-    .fw-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
-    .fw-card { background: var(--cream); border: 1px solid var(--border); border-radius: 1.2rem; padding: 2rem 1.8rem; position: relative; overflow: hidden; transition: transform 0.3s var(--ease), box-shadow 0.3s; }
-    .fw-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent, var(--navy)); }
-    .fw-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(20,16,74,0.10); }
-    .fw-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-    .fw-card h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
-    .fw-card p { font-size: 0.94rem; color: var(--muted); line-height: 1.6; }
-    .fw-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.9rem; }
-    .fw-tag { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em; color: var(--accent, var(--navy)); background: rgba(20,16,74,0.08); padding: 0.28rem 0.65rem; border-radius: 999px; }
-
-    /* ── CTA STRIP ── */
-    .cta-strip { padding: 3.5rem 0; background: var(--cream); }
-    .cta-box { background: #fff; border: 1px solid var(--border); border-radius: 1.5rem; padding: 2.2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; box-shadow: 0 4px 20px rgba(20,16,74,0.06); }
-    .cta-box-left .cta-eyebrow { font-size: 0.72rem; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.4rem; }
-    .cta-box-left h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--navy); }
-    .cta-box-left p { color: var(--muted); font-size: 0.95rem; margin-top: 0.4rem; max-width: 46ch; }
-
-    /* ── LOGOS ── */
-    .logos { padding: 4rem 0; background: var(--navy); }
-    .logos-eyebrow { text-align: center; font-size: 0.7rem; font-weight: 900; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 2.5rem; }
-    .logos-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; }
-    .logo-tile { background: #fff; border-radius: 1rem; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; aspect-ratio: 1/1; justify-content: center; max-width: 170px; margin: 0 auto; }
-    .logo-tile img { max-height: 80%; max-width: 88%; width: 100%; height: auto; object-fit: contain; }
-    .logo-tile span { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.55); text-align: center; line-height: 1.35; }
-    .logo-label { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.6); text-align: center; line-height: 1.35; margin: 0.5rem auto 0; max-width: 170px; width: 100%; display: block; }
-
-    /* ── 3 PILLARS ── */
-    .pillars-section { padding: 0 0 1rem; max-width: 100%; }
-    .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; align-items: start; }
-    @media (max-width: 768px) { .pillars-grid { grid-template-columns: 1fr; } }
-    /* Per-card solid colors */
-    .pillar-card { border-radius: 20px; padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: 0; }
-    .pillar-card-dt  { background: var(--navy); }
-    .pillar-card-ai  { background: var(--rose); }
-    .pillar-card-sdg { background: var(--gold); }
-    .pillar-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.9rem; background: rgba(255,255,255,0.18); color: #fff !important; padding: 0.35rem 1rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); }
-    .pillar-title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: #fff; margin: 0 0 0.5rem; line-height: 1.3; }
-    .pillar-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.75; margin: 0 0 1.25rem; }
-    /* DT flow */
-    .dt-flow { display: flex; flex-direction: column; gap: 0; }
-    .dt-phase { display: flex; align-items: flex-start; gap: 10px; }
-    .dt-dot { width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; color: #fff; border: 1px solid rgba(255,255,255,0.2); }
-    .dt-info { display: flex; flex-direction: column; padding-top: 4px; padding-bottom: 2px; }
-    .dt-phase-name { font-size: 12.5px; font-weight: 700; line-height: 1.2; color: #fff; }
-    .dt-phase-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; line-height: 1.4; }
-    .dt-arrow { font-size: 11px; color: rgba(255,255,255,0.25); margin-left: 13px; line-height: 1; padding: 2px 0; }
-    /* AI chips */
-    .ai-chips { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0.85rem; }
-    .ai-chip { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 10px; padding: 8px 12px; display: flex; flex-direction: column; gap: 2px; }
-    .ai-chip-day { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #f3dfae; }
-    .ai-chip-label { font-size: 12px; font-weight: 700; color: #fff; }
-    .ai-chip-sub { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.4; }
-    /* SDG 2-column grid */
-    .sdg-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
-    .sdg-row { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; padding: 7px 9px; }
-    .sdg-badge { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .sdg-badge-num { font-size: 14px; font-weight: 900; color: #fff; line-height: 1; }
-    .sdg-row-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-    .sdg-row-emoji { font-size: 12px; line-height: 1; }
-    .sdg-row-name { font-size: 11px; font-weight: 700; color: #fff; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .sdg-row-sub { font-size: 10px; color: rgba(255,255,255,0.55); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
-    /* ── FOOTER ── */
-    footer { background: var(--navy); color: #fff; padding: 3.5rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 2.4rem; margin-bottom: 2.8rem; }
-    .footer-brand .brand { text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem; }
-    .footer-brand .brand span { color: var(--rose); }
-    .footer-brand p { color: rgba(255,248,239,0.6); font-size: 0.9rem; line-height: 1.55; max-width: 240px; }
-    .footer-col h4 { color: var(--gold); font-size: 0.75rem; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 1.1rem; }
-    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a, .footer-col p { color: rgba(255,248,239,0.65); font-size: 0.9rem; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--rose); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .footer-bottom .copy { color: rgba(255,248,239,0.4); font-size: 0.82rem; }
-    .footer-bottom .dates { color: rgba(179,157,219,0.9); font-weight: 700; font-size: 0.82rem; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .facts-grid { grid-template-columns: repeat(2,1fr); }
-      .portals-grid { grid-template-columns: 1fr 1fr; }
-      .portal-featured { grid-row: auto; }
-      .days-grid { grid-template-columns: repeat(2,1fr); }
-      .fw-grid { grid-template-columns: 1fr; }
-      .logos-grid { grid-template-columns: repeat(2,1fr); }
-      .footer-grid { grid-template-columns: repeat(2,1fr); }
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: flex; flex-wrap: wrap; }
-      .menu-btn { display: none; }
-      .qa-home{width:100%}.qa-h-drop{left:0!important;right:0!important;min-width:auto!important}
-      .hero { padding: 2rem 0 3rem; }
-      .portals-grid { grid-template-columns: 1fr; }
-      .days-grid { grid-template-columns: 1fr; }
-      .cta-box { flex-direction: column; align-items: flex-start; }
-      .logos-grid { grid-template-columns: repeat(2,1fr); }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
-    }
-  
 /* Heritage Decor */
-body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('assets/decors/songket-pattern.png') repeat center/400px;opacity:.025;pointer-events:none}
-
-@media(max-width:768px){body::before{background-size:250px}}
-  
-
-/* === CAMP21 VISUAL REFRESH: stronger hero visibility + cleaner section styling === */
-.gold-divider{display:none !important}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('../assets/decors/songket-pattern.png') repeat center/400px;opacity:.025;pointer-events:none}
+.hero::after{content:'';position:absolute;top:0;right:0;width:220px;height:220px;background:url('../assets/decors/batik-corner-gold.png') no-repeat top right/contain;opacity:.15;pointer-events:none}
 .hero{position:relative;overflow:hidden}
-.hero::after{display:none !important}
-.quick-facts{position:relative;background:linear-gradient(180deg,#fffdf9 0%,#fff8ef 100%)!important}
-.quick-facts::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 15%,rgba(255,200,61,.12),transparent 28%),radial-gradient(circle at 90% 85%,rgba(240,90,166,.10),transparent 24%);pointer-events:none}
-.programme{position:relative;background:linear-gradient(180deg,#fff8ef 0%,#ffffff 100%)!important}
-.programme::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,74,.03),transparent 32%);pointer-events:none}
-.framework{position:relative;background:linear-gradient(180deg,#ffffff 0%,#fff8ef 100%)!important}
-.framework::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 82% 10%,rgba(33,212,194,.10),transparent 24%);pointer-events:none}
-.cta-strip{position:relative;background:linear-gradient(180deg,#fff8ef 0%,#fffdf9 100%)!important}
-.cta-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 50%,rgba(255,200,61,.09),transparent 26%);pointer-events:none}
-.pillars-section{position:relative;padding-top:3rem!important;padding-bottom:3rem!important;background:linear-gradient(180deg,#fffdf9 0%,#fff8ef 100%)!important}
-.pillars-section::before{content:'';position:absolute;inset:0;background:url('assets/decors/songket-pattern.png') center/360px repeat;opacity:.018;pointer-events:none}
-.logos{position:relative;background:linear-gradient(180deg,#14104a 0%,#201058 100%)!important}
-.logos::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 18%,rgba(255,200,61,.12),transparent 18%),radial-gradient(circle at 84% 24%,rgba(240,90,166,.10),transparent 20%);pointer-events:none}
-.logo-tile{border:0!important;box-shadow:0 18px 36px rgba(0,0,0,.18)!important}
-.hero-visual,.hero-copy,.hero-grid,.hero > .wide,.hero > *{position:relative;z-index:1}
-.hero-img-wrap{border:none!important;box-shadow:0 28px 60px rgba(20,16,74,.22)!important}
+.gold-divider{display:block;width:min(400px,60%);height:auto;margin:0 auto;opacity:.5}
+.camp-footer{position:relative;overflow:hidden}
+@media(max-width:768px){body::before{background-size:250px}.hero::after{width:140px;height:140px;opacity:.1}}
 
 
-/* === CAMP21 BRAND ROSE ALIGNMENT ===
-   Match header and footer CAMP 21 brand number with homepage rose.
-   Bright pink variable remains for phase colours only. */
-.topbar .brand span,
-header .brand span,
-.footer-brand span,
-.footer-brand .brand span,
-.camp-footer .brand span { color: #e23c74 !important; }
-
-
-/* === CAMP21 BATIK & PILLARS REFINEMENT === */
-body::before{
-  opacity:.06 !important;
-  background-size:320px !important;
-}
-.framework{
-  position:relative !important;
-  isolation:isolate;
-  background:linear-gradient(180deg,#fffdf9 0%,#fff6ea 100%) !important;
-}
-.framework::before{
-  content:'' !important;
-  position:absolute !important;
-  inset:0 !important;
-  background:url('assets/decors/songket-pattern.png') center/300px repeat !important;
-  opacity:.07 !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
-.framework > .wide,
-.framework > .pillars-section{
-  position:relative;
-  z-index:1;
-}
-.pillars-section{
-  padding:0 0 1.5rem !important;
-}
-.pillar-card{
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 18px 38px rgba(20,16,74,.14);
-  border:1px solid rgba(255,255,255,.12);
-}
-.pillar-card::after{
-  content:'';
-  position:absolute;
-  inset:auto -35px -35px auto;
-  width:130px;
-  height:130px;
-  border-radius:50%;
-  background:rgba(255,255,255,.08);
-}
-.pillar-head{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:.9rem;
-}
-.pillar-icon{
-  width:44px;
-  height:44px;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,.16);
-  border:1px solid rgba(255,255,255,.24);
-  color:#fff;
-  font-size:1.25rem;
-  box-shadow:0 10px 20px rgba(0,0,0,.10);
-  flex-shrink:0;
-}
-.pillar-tag{
-  margin-bottom:.35rem !important;
-}
-.pillar-title{
-  margin:0 !important;
-}
-.pillar-desc{
-  color:rgba(255,255,255,.84) !important;
-  font-size:13px !important;
-  line-height:1.65 !important;
-  margin:0 0 1.1rem !important;
-  max-width:34ch;
-}
-.sdg-row-sub{
-  color:rgba(255,255,255,.72) !important;
-}
-
-
-/* === CAMP21 INFOGRAPHIC HOMEPAGE UPDATE === */
-.framework{
-  position:relative !important;
-  background:linear-gradient(180deg,#fffdf9 0%,#fff6ea 100%) !important;
-}
-.framework::before{
-  content:'' !important;
-  position:absolute !important;
-  inset:0 !important;
-  background:url('assets/decors/songket-pattern.png') center/290px repeat !important;
-  opacity:.08 !important;
-  pointer-events:none !important;
-}
-.framework > .wide,
-.framework > .pillars-section{
-  position:relative;
-  z-index:1;
-}
-.infographic-showcase{
-  padding:0 0 1.5rem;
-}
-.infographic-intro{
-  max-width:760px;
-  margin:0 0 1.35rem;
-  color:rgba(20,16,74,.72);
-  line-height:1.7;
-  font-size:.98rem;
-}
-.infographic-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:1.5rem;
-}
-.infographic-card{scroll-margin-top:110px;}
-.infographic-card{
-  background:rgba(255,255,255,.86);
-  border:1px solid rgba(217,175,55,.30);
-  border-radius:26px;
-  overflow:hidden;
-  box-shadow:0 18px 40px rgba(20,16,74,.10);
-  backdrop-filter:blur(3px);
-}
-.infographic-card-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  padding:1.15rem 1.35rem .85rem;
-}
-.infographic-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-  padding:.55rem 1rem;
-  border-radius:999px;
-  border:1px solid rgba(32,16,62,.10);
-  background:linear-gradient(180deg,#fffaf2 0%,#fff4e1 100%);
-  color:var(--indigo);
-  font-size:.76rem;
-  font-weight:900;
-  letter-spacing:.10em;
-  text-transform:uppercase;
-}
-.infographic-title{
-  margin:0;
-  color:var(--indigo);
-  font-family:var(--font-serif);
-  font-size:1.6rem;
-  line-height:1.15;
-}
-.infographic-sub{
-  margin:.4rem 0 0;
-  color:rgba(20,16,74,.65);
-  font-size:.95rem;
-  line-height:1.6;
-  max-width:60ch;
-}
-.infographic-image-wrap{
-  padding:0 1.2rem 1.2rem;
-}
-.infographic-image{
-  display:block;
-  width:100%;
-  height:auto;
-  border-radius:20px;
-  border:1px solid rgba(217,175,55,.25);
-  background:#fff;
-}
-@media (max-width:768px){
-  .infographic-card-head{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-  .infographic-title{
-    font-size:1.35rem;
-  }
-}
-
-
-/* === CAMP21 THREE INFOGRAPHICS BEAUTIFUL HOMEPAGE TUNING === */
-.framework{
-  padding:5rem 0 4.5rem !important;
-  overflow:hidden;
-}
-.framework::after{
-  content:'';
-  position:absolute;
-  width:520px;
-  height:520px;
-  right:-180px;
-  top:80px;
-  background:radial-gradient(circle,rgba(226,60,116,.10),transparent 68%);
-  pointer-events:none;
-  z-index:0;
-}
-.framework .section-header{
-  margin-bottom:1.1rem !important;
-}
-.framework .section-title{
-  font-size:clamp(2.2rem,4.5vw,4.1rem) !important;
-  letter-spacing:-.04em;
-}
-.infographic-intro{
-  max-width:900px !important;
-  margin:0 auto 2.6rem !important;
-  text-align:center !important;
-  font-size:1.06rem !important;
-  color:rgba(21,16,68,.76) !important;
-}
-.infographic-showcase .wide{
-  max-width:1380px;
-}
-.infographic-grid{
-  display:grid !important;
-  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  gap:1.25rem !important;
-  align-items:start;
-}
-.infographic-card{
-  display:flex;
-  flex-direction:column;
-  min-height:100%;
-  border-radius:30px !important;
-  background:linear-gradient(180deg,rgba(255,253,249,.96),rgba(255,248,239,.92)) !important;
-  border:1px solid rgba(217,175,55,.42) !important;
-  box-shadow:0 24px 60px rgba(21,16,68,.12) !important;
-  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.infographic-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 32px 76px rgba(21,16,68,.16) !important;
-  border-color:rgba(226,60,116,.38) !important;
-}
-.infographic-card-head{
-  padding:1.25rem 1.25rem .85rem !important;
-  min-height:178px;
-}
-.infographic-badge{
-  margin-bottom:.8rem;
-  background:linear-gradient(135deg,#fffaf2,#fff0d7) !important;
-  border-color:rgba(217,175,55,.48) !important;
-  color:#251052 !important;
-  box-shadow:0 8px 18px rgba(217,175,55,.10);
-}
-.infographic-title{
-  font-size:1.42rem !important;
-  letter-spacing:-.02em;
-}
-.infographic-sub{
-  font-size:.91rem !important;
-  line-height:1.58 !important;
-  color:rgba(21,16,68,.68) !important;
-}
-.infographic-image-wrap{
-  padding:0 1rem 1rem !important;
-  margin-top:auto;
-}
-.infographic-image{
-  aspect-ratio:16/9;
-  object-fit:cover;
-  object-position:center top;
-  border-radius:22px !important;
-  border:1px solid rgba(217,175,55,.34) !important;
-  box-shadow:0 14px 36px rgba(21,16,68,.10);
-}
-.infographic-card:nth-child(1) .infographic-badge{color:#251052!important}
-.infographic-card:nth-child(2) .infographic-badge{color:#e23c74!important}
-.infographic-card:nth-child(3) .infographic-badge{color:#8a5d08!important}
-.infographic-cta-row{
-  margin:2.2rem auto 0;
-  max-width:900px;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:.7rem;
-}
-.infographic-cta-row span{
-  display:inline-flex;
-  align-items:center;
-  gap:.45rem;
-  padding:.72rem 1rem;
-  border-radius:999px;
-  background:rgba(255,255,255,.76);
-  border:1px solid rgba(217,175,55,.34);
-  color:#251052;
-  font-weight:900;
-  font-size:.82rem;
-  box-shadow:0 10px 24px rgba(21,16,68,.06);
-}
-@media(max-width:1180px){
-  .infographic-grid{
-    grid-template-columns:1fr !important;
-    gap:1.5rem !important;
-  }
-  .infographic-card{
-    max-width:980px;
-    margin:0 auto;
-  }
-  .infographic-card-head{
-    min-height:auto;
-  }
-  .infographic-image{
-    object-fit:contain;
-    background:#fffaf2;
-  }
-}
-@media(max-width:768px){
-  .framework{
-    padding:3.6rem 0 3.5rem !important;
-  }
-  .infographic-card-head{
-    padding:1.05rem 1.05rem .75rem !important;
-  }
-  .infographic-image-wrap{
-    padding:0 .8rem .8rem !important;
-  }
-  .infographic-title{
-    font-size:1.22rem !important;
-  }
-}
-
-
-
-/* === CAMP21 GOLDEN HERITAGE BG 80%: HERO + THREE PILLARS ===
-   Uses assets/decors/hero-golden-heritage-bg.png for homepage hero and Three Pillars section. */
-.hero{
-  position:relative !important;
-  overflow:hidden !important;
-  background:
-    linear-gradient(90deg,rgba(255,248,239,.18) 0%,rgba(255,244,224,.16) 44%,rgba(255,231,184,.12) 100%),
-    url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
-}
-.hero::before{
-  content:'' !important;
-  position:absolute !important;
-  inset:0 !important;
-  background:url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
-  opacity:.80 !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
-.hero::after{
-  content:'' !important;
-  position:absolute !important;
-  inset:0 !important;
-  background:
-    radial-gradient(circle at 20% 20%,rgba(255,200,61,.14),transparent 28%),
-    radial-gradient(circle at 86% 25%,rgba(226,60,116,.10),transparent 24%),
-    linear-gradient(90deg,rgba(255,248,239,.22),rgba(255,234,190,.10)) !important;
-  opacity:1 !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
-.hero > *,
-.hero .wide,
-.hero .hero-grid,
-.hero .hero-content,
-.hero .hero-visual{
-  position:relative !important;
-  z-index:1 !important;
-}
-.hero h1,
-.hero .hero-title{
-  text-shadow:0 8px 30px rgba(255,255,255,.72),0 2px 8px rgba(255,248,239,.55) !important;
-}
-.hero p,
-.hero .hero-subtitle,
-.hero .hero-desc{
-  color:rgba(21,16,68,.82) !important;
-}
-.framework{
-  position:relative !important;
-  overflow:hidden !important;
-  background:
-    linear-gradient(180deg,rgba(255,253,249,.14) 0%,rgba(255,246,234,.12) 100%),
-    url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
-}
-.framework::before{
-  content:'' !important;
-  position:absolute !important;
-  inset:0 !important;
-  background:url('assets/decors/hero-golden-heritage-bg.png') center/cover no-repeat !important;
-  opacity:.80 !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
-.framework::after{
-  content:'' !important;
-  position:absolute !important;
-  inset:0 !important;
-  width:auto !important;
-  height:auto !important;
-  right:auto !important;
-  top:auto !important;
-  background:
-    linear-gradient(180deg,rgba(255,253,249,.20),rgba(255,248,239,.16)),
-    radial-gradient(circle at 18% 20%,rgba(217,175,55,.14),transparent 30%),
-    radial-gradient(circle at 86% 18%,rgba(226,60,116,.10),transparent 24%) !important;
-  opacity:1 !important;
-  pointer-events:none !important;
-  z-index:0 !important;
-}
-.framework > .wide,
-.framework > .pillars-section,
-.framework .infographic-showcase,
-.framework .infographic-grid,
-.framework .infographic-card{
-  position:relative !important;
-  z-index:1 !important;
-}
-.infographic-card{
-  background:rgba(255,253,249,.88) !important;
-  backdrop-filter:blur(2px) !important;
-}
-
-
-/* === CAMP21 THREE PILLARS VERTICAL STACK LAYOUT === */
-.infographic-showcase .wide{
-  max-width:1120px !important;
-}
-.infographic-grid{
-  display:grid !important;
-  grid-template-columns:1fr !important;
-  gap:1.75rem !important;
-  align-items:stretch !important;
-}
-.infographic-card{
-  display:grid !important;
-  grid-template-columns:minmax(320px, 420px) 1fr !important;
-  align-items:center !important;
-  gap:1.2rem !important;
-  padding:.4rem !important;
-  border-radius:32px !important;
-}
-.infographic-card-head{
-  min-height:auto !important;
-  padding:1.2rem 1.2rem 1rem !important;
-}
-.infographic-title{
-  font-size:1.65rem !important;
-}
-.infographic-sub{
-  font-size:1rem !important;
-  line-height:1.68 !important;
-  max-width:52ch !important;
-}
-.infographic-image-wrap{
-  padding:1rem 1rem 1rem 0 !important;
-}
-.infographic-image{
-  width:100% !important;
-  aspect-ratio:auto !important;
-  object-fit:contain !important;
-  object-position:center !important;
-  border-radius:24px !important;
-  max-height:460px !important;
-  background:#fffaf2 !important;
-}
-.infographic-card:nth-child(even) .infographic-card-head{
-  order:2;
-}
-.infographic-card:nth-child(even) .infographic-image-wrap{
-  order:1;
-  padding:1rem 0 1rem 1rem !important;
-}
-.infographic-card:nth-child(odd) .infographic-card-head{
-  order:1;
-}
-.infographic-card:nth-child(odd) .infographic-image-wrap{
-  order:2;
-}
-.infographic-cta-row{
-  margin-top:2rem !important;
-}
-@media(max-width:980px){
-  .infographic-card{
-    grid-template-columns:1fr !important;
-    gap:.5rem !important;
-  }
-  .infographic-card-head,
-  .infographic-card:nth-child(even) .infographic-card-head,
-  .infographic-card:nth-child(odd) .infographic-card-head{
-    order:1 !important;
-  }
-  .infographic-image-wrap,
-  .infographic-card:nth-child(even) .infographic-image-wrap,
-  .infographic-card:nth-child(odd) .infographic-image-wrap{
-    order:2 !important;
-    padding:0 1rem 1rem !important;
-  }
-  .infographic-image{
-    max-height:none !important;
-  }
-}
-
-
-/* === CAMP21 THREE PILLARS FULL-WIDTH POSTER SHOWCASE === */
-.infographic-showcase .wide{
-  max-width:1280px !important;
-}
-.infographic-grid{
-  display:grid !important;
-  grid-template-columns:1fr !important;
-  gap:2.6rem !important;
-}
-.infographic-card{
-  display:block !important;
-  padding:1.15rem !important;
-  border-radius:34px !important;
-  background:linear-gradient(180deg,rgba(255,253,249,.92),rgba(255,248,239,.88)) !important;
-  border:1px solid rgba(217,175,55,.46) !important;
-  box-shadow:0 28px 80px rgba(21,16,68,.14) !important;
-  overflow:hidden !important;
-}
-.infographic-card-head{
-  min-height:auto !important;
-  padding:1.35rem 1.45rem 1.15rem !important;
-  text-align:center !important;
-  display:flex !important;
-  justify-content:center !important;
-}
-.infographic-card-head > div{
-  max-width:860px !important;
-}
-.infographic-badge{
-  margin:0 auto .85rem !important;
-}
-.infographic-title{
-  font-size:clamp(1.7rem,3.2vw,2.45rem) !important;
-  line-height:1.08 !important;
-}
-.infographic-sub{
-  max-width:780px !important;
-  margin:.65rem auto 0 !important;
-  font-size:1.02rem !important;
-  line-height:1.65 !important;
-  color:rgba(21,16,68,.72) !important;
-}
-.infographic-image-wrap,
-.infographic-card:nth-child(even) .infographic-image-wrap,
-.infographic-card:nth-child(odd) .infographic-image-wrap{
-  padding:0 !important;
-  order:initial !important;
-}
-.infographic-card:nth-child(even) .infographic-card-head,
-.infographic-card:nth-child(odd) .infographic-card-head{
-  order:initial !important;
-}
-.infographic-image{
-  display:block !important;
-  width:100% !important;
-  height:auto !important;
-  max-height:none !important;
-  aspect-ratio:auto !important;
-  object-fit:contain !important;
-  object-position:center !important;
-  border-radius:26px !important;
-  border:1px solid rgba(217,175,55,.38) !important;
-  background:#fffaf2 !important;
-  box-shadow:0 18px 48px rgba(21,16,68,.12) !important;
-}
-.infographic-card:hover{
-  transform:translateY(-5px) !important;
-}
-.infographic-cta-row{
-  margin-top:2.4rem !important;
-}
-@media(max-width:768px){
-  .infographic-grid{
-    gap:1.6rem !important;
-  }
-  .infographic-card{
-    padding:.75rem !important;
-    border-radius:26px !important;
-  }
-  .infographic-card-head{
-    padding:1rem .8rem .9rem !important;
-  }
-  .infographic-image{
-    border-radius:20px !important;
-  }
-}
-
-
-/* CAMP21 brand 21 rose standardisation */
-.brand span,
-.topbar .brand span,
-header .brand span,
-.footer-brand span,
-.footer-brand-line span,
-.footer-brand .brand span,
-.camp-footer .brand span,
-.camp-footer .footer-brand span,
-.camp-footer .footer-brand-line span,
-.footer-min-brand span,
-.footer-brand-block span {
-  color: #e23c74 !important;
-}
-
-
-/* === HERO IMAGE STRONGER COVERAGE OVERRIDE === */
-.hero{padding:7.4rem 0 4rem !important}
-.hero > .wide.hero-grid{grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr) !important;gap:2.2rem !important;align-items:center !important;max-width:1520px}
-.hero-copy{max-width:620px}
-.hero-desc{max-width:34ch !important;font-size:1.08rem !important;line-height:1.72 !important}
-.hero-actions{gap:1rem !important}
-.hero-visual{display:flex;justify-content:flex-end;align-items:center}
-.hero-img-wrap{width:min(100%,740px) !important;max-width:none !important;aspect-ratio:16/10 !important;min-height:540px !important;border-radius:2.2rem !important;overflow:hidden !important;box-shadow:0 34px 70px rgba(20,16,74,.24) !important;position:relative}
-.hero-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,10,50,.06),rgba(15,10,50,.02) 35%,rgba(15,10,50,.10));pointer-events:none}
-.hero-img-wrap img{width:100% !important;height:100% !important;object-fit:cover !important;object-position:center center !important;transform:scale(1.03)}
-.hero-img-slot{min-height:540px !important}
-.hero-days-badge{right:-1.25rem !important;bottom:-1.35rem !important;padding:1.1rem 1.5rem !important;border-radius:1.35rem !important;box-shadow:0 18px 36px rgba(20,16,74,.24) !important}
-.hero-days-badge strong{font-size:4.8rem !important}
-@media (min-width:1280px){.hero-visual{margin-right:-1.2rem}.hero-img-wrap{width:760px !important;min-height:565px !important}}
-@media (max-width:1100px){.hero > .wide.hero-grid{grid-template-columns:1fr !important;gap:2.2rem !important}.hero-copy{max-width:none}.hero-visual{justify-content:center}.hero-img-wrap{width:100% !important;min-height:440px !important;aspect-ratio:16/11 !important}.hero-days-badge{right:1rem !important;bottom:-1rem !important}}
-@media (max-width:680px){.hero{padding:6.4rem 0 3rem !important}.hero-img-wrap{min-height:320px !important;aspect-ratio:4/3 !important;border-radius:1.6rem !important}.hero-days-badge strong{font-size:3.6rem !important}}
-
-
-/* === CAMP21 Hub Guide === */
-.hub-use-guide{position:relative;margin:clamp(24px,4vw,46px) 0;padding:clamp(22px,3vw,34px);border-radius:28px;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(248,242,234,.96));border:1px solid rgba(217,175,55,.42);box-shadow:0 22px 55px rgba(32,16,62,.10);overflow:hidden;isolation:isolate}
-.hub-use-guide:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 15%,rgba(217,175,55,.20),transparent 32%),radial-gradient(circle at 88% 5%,rgba(240,90,166,.14),transparent 30%),linear-gradient(90deg,rgba(32,16,62,.05),transparent 55%);z-index:-1}
+/* === CAMP21 Hub Upgrade: How to Use This Hub + premium borders === */
+.hub-use-guide{position:relative;margin:clamp(24px,4vw,46px) 0;padding:clamp(22px,3vw,34px);border-radius:28px;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(255,248,239,.96));border:1px solid rgba(217,175,55,.42);box-shadow:0 22px 55px rgba(32,16,62,.10);overflow:hidden;isolation:isolate}
+.hub-use-guide:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 15%,rgba(255,200,61,.20),transparent 32%),radial-gradient(circle at 88% 5%,rgba(240,90,166,.14),transparent 30%),linear-gradient(90deg,rgba(32,16,62,.05),transparent 55%);z-index:-1}
+.hub-use-guide:after{content:"";position:absolute;right:-38px;bottom:-46px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(217,175,55,.35);background:rgba(217,175,55,.07);z-index:-1}
 .hub-guide-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}
 .hub-guide-kicker{display:inline-flex;align-items:center;gap:8px;background:#20103E;color:#fff;border:1px solid rgba(217,175,55,.45);border-radius:999px;padding:8px 14px;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(32,16,62,.16)}
-.hub-guide-head h2{margin:12px 0 8px;font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:.95;color:#20103E;letter-spacing:-.03em}
+.hub-guide-head h2{margin:12px 0 8px;font-family:var(--font-serif,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:.95;color:#20103E;letter-spacing:-.01em}
 .hub-guide-head p{max-width:820px;margin:0;color:#5f5870;font-weight:650;line-height:1.65}
 .hub-guide-badge{flex:0 0 auto;background:linear-gradient(135deg,#20103E,#5A36C9);color:#fff;border:1px solid rgba(217,175,55,.55);border-radius:22px;padding:14px 18px;text-align:center;min-width:150px;box-shadow:0 14px 34px rgba(32,16,62,.18)}
 .hub-guide-badge b{display:block;color:#D9AF37;font-size:1.35rem;line-height:1}.hub-guide-badge span{font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.78)}
@@ -957,128 +54,75 @@ header .brand span,
 .hub-guide-card h3{margin:0 42px 8px 0;color:#20103E;font-size:1rem;line-height:1.2}.hub-guide-card p{margin:0;color:#5f5870;font-size:.88rem;line-height:1.55;font-weight:600}
 .hub-guide-focus{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:16px 18px;border-radius:22px;background:linear-gradient(135deg,rgba(32,16,62,.96),rgba(90,54,201,.94));color:#fff;border:1px solid rgba(217,175,55,.46);box-shadow:0 18px 38px rgba(32,16,62,.18)}
 .hub-guide-focus .focus-icon{width:42px;height:42px;border-radius:16px;display:grid;place-items:center;background:#D9AF37;color:#20103E;font-weight:1000;flex:0 0 auto}.hub-guide-focus h3{margin:0 0 5px;color:#D9AF37;font-size:1.02rem}.hub-guide-focus p{margin:0;color:rgba(255,255,255,.84);line-height:1.55;font-weight:600;font-size:.9rem}
-.hub-quick-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}.hub-quick-map a{display:flex;align-items:center;justify-content:center;min-height:46px;text-align:center;border-radius:16px;background:#fff;border:1px solid rgba(32,16,62,.12);color:#20103E;font-weight:900;font-size:.82rem;box-shadow:0 10px 22px rgba(32,16,62,.06);text-decoration:none}
-.footer-shell{display:flex;flex-direction:column;gap:16px;padding:2.6rem 0 1.6rem}
-.footer-links-clean{display:flex;justify-content:center;align-items:center;gap:14px 34px;flex-wrap:wrap;padding:0}
-.footer-links-clean a{color:rgba(255,255,255,.85);font-weight:800;text-decoration:none;font-size:.95rem}
-.footer-links-clean a:hover{color:#e23c74}
-.camp-footer .footer-min-bottom{display:flex;justify-content:space-between;gap:10px 26px;flex-wrap:wrap;color:rgba(255,255,255,.6);font-weight:600;font-size:.86rem;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;margin-top:4px;text-align:left}
+.hub-quick-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}.hub-quick-map a,.hub-quick-map span{display:flex;align-items:center;justify-content:center;min-height:46px;text-align:center;border-radius:16px;background:#fff;border:1px solid rgba(32,16,62,.12);color:#20103E;font-weight:900;font-size:.82rem;box-shadow:0 10px 22px rgba(32,16,62,.06)}
+:where(.card,.doc-card,.judge-card,.support-card,.control-card,.action-card,.trainer-action-card,.fac-action-card,.programme-action-card,.fac-intro-card,.fac-stat-card,.phase-card,.resource-card,.faq-panel,.help-card,.panel,.fac-section,.rubric-card,.step-card,.timeline-card,.info-card,.stat-card,.hero-stat,.insight-card){border:1px solid rgba(217,175,55,.30)!important}
+main img:not(.gold-divider):not(.brand-icon),section img:not(.gold-divider):not(.brand-icon){border-radius:22px;border:1px solid rgba(217,175,55,.36);box-shadow:0 18px 45px rgba(32,16,62,.10)}
+.gold-divider{filter:drop-shadow(0 8px 18px rgba(217,175,55,.20))}
 @media(max-width:980px){.hub-guide-head{flex-direction:column}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.hub-use-guide{padding:20px 16px;border-radius:22px}.hub-guide-grid{grid-template-columns:1fr}.hub-quick-map{grid-template-columns:1fr}.hub-guide-badge{width:100%}}
-</style>
-
-<style id="camp21-exclusive-homepage-finish">
-  :root {
-    --navy: #151044;
-    --ink: #151044;
-    --rose: #e23c74;
-    --camp21-brand-rose: #e23c74;
-    --camp21-rose-final: #e23c74;
-  }
-
-  /* Consistent editorial typography */
-  h1, h2, h3, .section-title, .portals-title, .portal-title,
-  .quickstart-head h2, .collab-head h2, .footer-brand-line {
-    font-family: 'Playfair Display', serif !important;
-    font-weight: 600 !important;
-  }
-
-  /* CAMP21 identity colours */
-  header .brand, .camp21-brand-word, .footer-brand-line { color: #151044; }
-  header .brand span, .brand span, .camp21-brand-number,
-  .footer-brand-line span, .camp-footer .footer-brand-line span,
-  .footer-min-bottom .brand-21 { color: #e23c74 !important; -webkit-text-fill-color:#e23c74 !important; }
-
-  /* Equal-size header pills */
-  .nav-pill-holder { flex-wrap: nowrap; }
-  .nav-pill-link, .qa-pill-home {
-    height: 46px;
-    min-width: 148px;
-    padding: 0 1.15rem;
-    justify-content: center;
-    white-space: nowrap;
-    font-size: .86rem;
-  }
-  .qa-home, .qa-home > summary { min-width: 148px; }
-
-  /* Three distinct hero actions on one straight line */
-  .hero-actions { display:flex; flex-wrap:nowrap !important; align-items:center; gap:.7rem !important; }
-  .hero-actions a {
-    height: 52px;
-    padding: 0 1.25rem;
-    justify-content:center;
-    white-space:nowrap;
-    font-size:.84rem;
-  }
-  .hero-actions .btn-outline { border-color:rgba(21,16,68,.18); box-shadow:0 8px 24px rgba(21,16,68,.07); }
-
-  /* Exclusive, reference-matched footer */
-  .camp-footer { background:#24104f !important; padding:0 !important; }
-  .footer-shell { gap:0; padding:3.2rem 0 1.7rem; }
-  .footer-main { display:grid; grid-template-columns:minmax(360px,1fr) auto; gap:3rem; align-items:start; padding-bottom:2.4rem; }
-  .footer-brand-line { display:block; color:#fff !important; font-size:2rem; line-height:1; margin-bottom:1.2rem; }
-  .footer-brand-block p { margin:0 0 .25rem; color:rgba(255,255,255,.72) !important; font-weight:700; }
-  .footer-links-clean { justify-content:flex-end; align-items:flex-start; gap:.7rem; padding:.25rem 0 0; }
-  .footer-links-clean a { min-height:44px; display:inline-flex; align-items:center; padding:0 1rem; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.07); }
-  .camp-footer .footer-min-bottom { padding-top:1.3rem; color:rgba(255,255,255,.68); }
-
-  @media(max-width:1180px){
-    .nav-pill-holder{flex-wrap:wrap}.hero-actions{flex-wrap:wrap !important}
-  }
-  @media(max-width:760px){
-    .footer-main{grid-template-columns:1fr}.footer-links-clean{justify-content:flex-start}
-    .hero-actions a{width:100%}.nav-pill-link,.qa-home,.qa-home>summary{width:100%;min-width:100%}
-  }
-</style>
-  <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
-
-<style id="camp21-footer-21-rose-final-fix">
-  :root { --camp21-rose-final: #e23c74; }
-
-  header .brand span,
-  .brand span,
-  footer .brand span,
-  footer .footer-brand span,
-  footer .footer-brand-line span,
-  .camp-footer .brand span,
-  .camp-footer .footer-brand span,
-  .camp-footer .footer-brand-line span,
-  .footer-brand-block .footer-brand-line span {
-    color: var(--camp21-rose-final) !important;
-    opacity: 1 !important;
-    -webkit-text-fill-color: var(--camp21-rose-final) !important;
-  }
-</style>
 
 
-<style id="camp21-brand-21-rose-global">
-  :root { --camp21-brand-rose: #e23c74; }
 
-  .camp21-brand-number,
-  header .brand span,
-  .topbar .brand span,
-  .brand span,
-  .footer-brand span,
-  .footer-brand-line span,
-  .footer-brand-block .footer-brand-line span,
-  .footer-brand .brand span,
-  .camp-footer .brand span,
-  .camp-footer .footer-brand span,
-  .camp-footer .footer-brand-line span,
-  .camp-footer .footer-brand-block span {
-    color: var(--camp21-brand-rose) !important;
-    -webkit-text-fill-color: var(--camp21-brand-rose) !important;
-    opacity: 1 !important;
-  }
+/* === CAMP21 VISUAL REFRESH: cleaner heroes, no decorative divider borders === */
+.gold-divider{display:none !important}
+.hero{position:relative !important;overflow:hidden !important;background-position:center center !important;background-size:cover !important}
+.hero::after{display:none !important}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,20,66,.76) 0%,rgba(28,16,78,.72) 48%,rgba(58,18,84,.68) 100%);z-index:0;pointer-events:none}
+.hero > *, .hero .hero-inner, .hero .wrap, .hero .wide, .hero .stats, .hero .fac-hero-stats{position:relative;z-index:1}
+.hero h1,.hero h2,.hero p,.hero .eyebrow,.hero .hero-badge,.hero .hero-kicker{text-shadow:0 2px 18px rgba(0,0,0,.22)}
+.hero p{color:rgba(255,255,255,.90)!important}
+.hero .eyebrow,.hero .hero-badge{background:rgba(255,255,255,.10)!important;border-color:rgba(255,255,255,.28)!important;color:#ffe18a!important;backdrop-filter:blur(6px)}
+.fac-stat-card,.stat-card,.hero-stat,.insight-card{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 18px 40px rgba(0,0,0,.16)!important}
+.fac-stat-card span,.stat-card span,.hero-stat span{color:rgba(255,255,255,.86)!important}
+main img:not(.brand-icon),section img:not(.brand-icon){border:none!important;box-shadow:0 14px 30px rgba(32,16,62,.10)!important;background:transparent!important}
+.hub-use-guide,:where(.card,.doc-card,.judge-card,.support-card,.control-card,.action-card,.trainer-action-card,.fac-action-card,.programme-action-card,.phase-card,.resource-card,.faq-panel,.help-card,.panel,.fac-section,.rubric-card,.step-card,.timeline-card,.info-card){border-color:rgba(217,175,55,.24)!important}
 
-  .camp21-brand-word {
-    white-space: nowrap;
-  }
 
-  .camp21-brand-word .camp21-brand-number {
-    color: var(--camp21-brand-rose) !important;
-    -webkit-text-fill-color: var(--camp21-brand-rose) !important;
-  }
+/* === CAMP21 Schedule Alignment Note === */
+.schedule-master-note{margin:24px 0;padding:18px 20px;border-radius:20px;background:linear-gradient(135deg,rgba(255,253,249,.98),rgba(255,248,239,.96));border:1px solid rgba(217,175,55,.28);box-shadow:0 12px 28px rgba(21,16,68,.06);font-weight:750;color:#4d465f;line-height:1.55}
+.schedule-master-note strong{color:#251052}
+
+
+/* === CAMP21 BRAND ROSE ALIGNMENT ===
+   Match header and footer CAMP 21 brand number with homepage rose.
+   Bright pink variable remains for phase colours only. */
+.topbar .brand span,
+header .brand span,
+.footer-brand span,
+.footer-brand .brand span,
+.camp-footer .brand span { color: inherit !important; }
+
+
+/* === Slim header nav === */
+.nav-link{font-weight:800;font-size:.95rem;color:#20103E;text-decoration:none;padding:8px 2px;border-bottom:2px solid transparent;transition:color .2s}
+.nav-link:hover{color:#5A36C9}
+.nav-link.active{color:#5A36C9;border-bottom-color:#e23c74}
+
+/* === Minimal footer === */
+
+
+
+
+
+
+
+/* Footer brand matches header */
+.camp-footer .footer-brand{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;letter-spacing:0;color:#fff}
+.camp-footer .footer-brand span{color:inherit}
+
+/* === Collapsible resource panels === */
+.res-panel{margin:18px 0;background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:0 18px 44px rgba(32,16,62,.08);overflow:hidden}
+.res-panel>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:radial-gradient(circle at 92% 10%,rgba(240,90,166,.18),transparent 34%),linear-gradient(120deg,#20103E 0%,#2B1454 45%,#3B1D6D 100%);color:#fff}
+.res-panel>summary::-webkit-details-marker{display:none}
+.res-panel>summary h2{margin:0;font-family:var(--font-serif);font-size:1.7rem;line-height:1.05}
+.res-panel>summary p{margin:6px 0 0;color:rgba(255,255,255,.75);font-size:.92rem;font-weight:600}
+.res-chevron{font-size:1.2rem;transition:transform .25s;flex:0 0 auto}
+.res-panel[open] .res-chevron{transform:rotate(180deg)}
+.res-panel-body{padding:28px}
+@media(max-width:620px){.res-panel-body{padding:20px}.res-panel>summary h2{font-size:1.35rem}}
+
+/* Pill nav with active state */
+
 
 /* === CAMP21 refined type scale: calmer display sizes === */
 .hero h1, .page-hero-title{font-size:clamp(2.2rem,4vw,3.4rem)!important;line-height:1.05!important;letter-spacing:-.02em!important}
@@ -1088,92 +132,11 @@ header .brand span,
 .hero-days-badge strong{font-size:3.2rem!important}
 .stats .stat b, .hero-insight strong, .insight-card .num{font-size:1.9rem!important}
 
-/* Guide section: flat, no card box on homepage */
-.hub-use-guide{background:none!important;border:none!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important}
-.hub-use-guide:before,.hub-use-guide:after{display:none!important}
-
 /* Quick Access pill: midnight purple gradient */
 summary.qa-trigger, .quick-access > summary, .qa-home > summary{background:linear-gradient(135deg,#20103E,#5A36C9)!important;color:#fff!important;border:none!important;border-radius:999px!important}
 summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
-</style>
-<script id="camp21-brand-21-rose-script">
-(function(){
-  function skipNode(node) {
-    var p = node.parentElement;
-    if (!p) return true;
-    return !!p.closest('script, style, title, textarea, select, option, input, svg, code, pre, .camp21-brand-word');
-  }
 
-  function wrapCamp21TextNode(node) {
-    var value = node.nodeValue;
-    if (!/CAMP\s*21/i.test(value)) return;
 
-    var frag = document.createDocumentFragment();
-    var regex = /(CAMP)(\s*)(21)/gi;
-    var lastIndex = 0;
-    var match;
-
-    while ((match = regex.exec(value)) !== null) {
-      if (match.index > lastIndex) {
-        frag.appendChild(document.createTextNode(value.slice(lastIndex, match.index)));
-      }
-
-      var word = document.createElement('span');
-      word.className = 'camp21-brand-word';
-      word.appendChild(document.createTextNode(match[1] + (match[2] || '')));
-
-      var number = document.createElement('span');
-      number.className = 'camp21-brand-number';
-      number.textContent = match[3];
-
-      word.appendChild(number);
-      frag.appendChild(word);
-      lastIndex = regex.lastIndex;
-    }
-
-    if (lastIndex < value.length) {
-      frag.appendChild(document.createTextNode(value.slice(lastIndex)));
-    }
-
-    node.parentNode.replaceChild(frag, node);
-  }
-
-  function applyCamp21Branding() {
-    if (!document.body) return;
-
-    var walker = document.createTreeWalker(
-      document.body,
-      NodeFilter.SHOW_TEXT,
-      {
-        acceptNode: function(node) {
-          if (skipNode(node)) return NodeFilter.FILTER_REJECT;
-          return /CAMP\s*21/i.test(node.nodeValue)
-            ? NodeFilter.FILTER_ACCEPT
-            : NodeFilter.FILTER_SKIP;
-        }
-      }
-    );
-
-    var nodes = [];
-    var node;
-    while ((node = walker.nextNode())) nodes.push(node);
-    nodes.forEach(wrapCamp21TextNode);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyCamp21Branding);
-  } else {
-    applyCamp21Branding();
-  }
-})();
-</script>
-
-<style id="camp21-exact-colour-final-override">
-  :root{--navy:#151044;--ink:#151044;--rose:#e23c74;--camp21-brand-rose:#e23c74;--camp21-rose-final:#e23c74}
-  header .brand span,.brand span,.camp21-brand-number,.footer-brand span,.footer-brand-line span,
-  .footer-brand-block .footer-brand-line span,.camp-footer .footer-brand-line span,.footer-min-bottom .brand-21{
-    color:#e23c74!important;-webkit-text-fill-color:#e23c74!important
-  }
 </style>
 <style id="camp21-standard-components">
 :root{--ink:#151044;--rose:#e23c74;--gold:#D9AF37;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
@@ -1215,33 +178,84 @@ header{min-height:94px!important;padding:.75rem 0!important}
 @media(max-width:980px){.brand-icon{width:60px!important;height:60px!important;flex-basis:60px!important}header{min-height:auto!important}.nav-wrap{align-items:flex-start!important;flex-wrap:wrap!important}.nav-links,.nav-pill-holder{width:100%!important;justify-content:flex-start!important}.hub-guide-head{grid-template-columns:1fr!important}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))!important}.footer-main{grid-template-columns:1fr!important}.footer-links-clean{justify-content:flex-start!important}}
 @media(max-width:560px){.wide,.footer-shell,.footer-min-bottom{width:min(100% - 32px,1200px)!important}.brand-icon{width:52px!important;height:52px!important;flex-basis:52px!important}.brand{font-size:1.55rem!important}.nav-links,.nav-pill-holder{display:grid!important;grid-template-columns:1fr!important;width:100%!important}.nav-pill-link,.qa-home,.qa-home>.qa-pill-home{width:100%!important;max-width:100%!important}.nav-pill-link,.qa-pill-home{height:50px!important}.hub-use-guide{padding:1.25rem 1rem!important;border-radius:24px!important}.hub-guide-grid,.hub-quick-map{grid-template-columns:1fr!important}.hub-guide-badge{width:150px!important}.footer-shell{padding-top:2.3rem!important}}
 </style>
+<style id="resources-numbered-section-standard">
+/* Numbered, colour-coded resource section headings only */
+.res-panel.res-numbered>summary{
+  display:grid!important;
+  grid-template-columns:52px minmax(0,1fr) 34px!important;
+  gap:16px!important;
+  align-items:center!important;
+  padding:1.15rem 1.3rem!important;
+  background-image:none!important
+}
+.res-panel.res-numbered>summary:before{
+  content:attr(data-section)!important;
+  width:42px!important;height:42px!important;
+  border-radius:14px!important;
+  display:grid!important;place-items:center!important;
+  background:rgba(255,255,255,.17)!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+  color:inherit!important;font-weight:900!important
+}
+.res-panel.res-numbered>summary>div{min-width:0!important}
+.res-panel.res-numbered>summary h2{
+  margin:0 0 .15rem!important;
+  font-family:var(--font-serif)!important;
+  font-size:1.55rem!important;
+  font-weight:600!important;
+  line-height:1!important;
+  color:inherit!important
+}
+.res-panel.res-numbered>summary p{
+  margin:0!important;
+  color:rgba(255,255,255,.78)!important;
+  font-size:.86rem!important;
+  font-weight:700!important;
+  line-height:1.45!important
+}
+.res-panel.res-numbered .res-chevron{
+  font-size:1.25rem!important;
+  text-align:center!important
+}
+.res-panel.res-theme-navy>summary{background:#20103E!important;color:#fff!important}
+.res-panel.res-theme-violet>summary{background:#6540dd!important;color:#fff!important}
+.res-panel.res-theme-gold>summary{background:#D9AF37!important;color:#151044!important}
+.res-panel.res-theme-gold>summary:before{background:rgba(21,16,68,.12)!important;border-color:rgba(21,16,68,.18)!important}
+.res-panel.res-theme-gold>summary p{color:rgba(21,16,68,.72)!important}
+.res-panel.res-theme-rose>summary{background:#e23c74!important;color:#fff!important}
+@media(max-width:620px){
+  .res-panel.res-numbered>summary{grid-template-columns:44px minmax(0,1fr) 28px!important;padding:1rem!important;gap:12px!important}
+  .res-panel.res-numbered>summary:before{width:38px!important;height:38px!important;border-radius:12px!important}
+  .res-panel.res-numbered>summary h2{font-size:1.25rem!important}
+  .res-panel.res-numbered>summary p{display:none!important}
+}
+</style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
+<header>
     <div class="wide nav-wrap">
-      <a href="index.html" class="brand">
-        <img src="assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">
+      <a href="../index.html" class="brand">
+        <img src="../assets/logos/logo-camp21.png" alt="CAMP21 logo" class="brand-icon" onerror="this.style.display='none'">
         CAMP<span>21</span>
       </a>
       <nav class="nav-links nav-pill-holder" aria-label="Primary">
-        <a class="nav-pill-link" href="pages/programme.html">📅 Programme</a>
-        <a class="nav-pill-link" href="pages/resources.html">📚 Resources</a>
-        <a class="nav-pill-link" href="pages/updates.html">📢 Live Updates</a>
+        <a class="nav-pill-link" href="programme.html">📅 Programme</a>
+        <a class="nav-pill-link active" href="resources.html">📚 Resources</a>
+        <a class="nav-pill-link" href="updates.html">📢 Live Updates</a>
         <details class="qa-home" style="position:relative">
           <summary class="qa-pill-home" style="cursor:pointer;display:flex;align-items:center;gap:6px;list-style:none;">⚡ Quick Access <span class="qa-h-chev" style="transition:.25s;display:inline-block;font-size:.7em">▾</span></summary>
-          <div class="qa-h-drop" style="position:absolute;top:calc(100% + 14px);right:0;min-width:280px;background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:120">
+          <div class="qa-h-drop" style="position:absolute;top:calc(100% + 14px);right:0;min-width:280px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 56px rgba(21,16,68,.14);padding:8px 0;z-index:120">
             <div style="padding:10px 8px">
-              <span style="display:block;font-size:.68rem;font-weight:900;color:#726b82;text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px">Role & Operations</span>
-              <a href="pages/participants.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">👥 Participants</a>
-              <a href="pages/trainers.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🧑‍🏫 Trainers</a>
-              <a href="pages/facilitators.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🤝 Facilitators</a>
-              <a href="pages/judges.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">⚖️ Judges</a>
-              <a href="pages/organiser.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🗂️ Organiser</a>
-              <a href="pages/registration.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">📋 Registration</a>
-              <a href="pages/scan.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🎥 Scan / QR</a>
-              <a href="pages/contacts.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">📞 Help Desk</a>
+              <span style="display:block;font-size:.68rem;font-weight:900;color:#726b82;text-transform:uppercase;letter-spacing:.12em;padding:6px 16px 8px">Role &amp; Operations</span>
+              <a href="participants.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">👥 Participants</a>
+              <a href="trainers.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🧑‍🏫 Trainers</a>
+              <a href="facilitators.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🤝 Facilitators</a>
+              <a href="judges.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">⚖️ Judges</a>
+              <a href="organiser.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🗂️ Organiser</a>
+              <a href="registration.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">📋 Registration</a>
+              <a href="scan.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">🎥 Scan / QR</a>
+              <a href="contacts.html" style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;font-weight:700;font-size:.92rem;color:#151044;text-decoration:none">📞 Help Desk</a>
             </div>
           </div>
         </details>
@@ -1249,368 +263,306 @@ header{min-height:94px!important;padding:.75rem 0!important}
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-heritage-bg"></div>
-    <div class="hero-bg"></div>
-    <div class="wide hero-grid" style="position:relative;z-index:2;">
-      <div class="reveal">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          AI-Powered Design Thinking
-        </div>
-        <h1>CAMP21:<br><em>Synergising</em> Literacies 2026</h1>
-        <p class="hero-desc">A national creative experience where Politeknik Malaysia and Community Colleges students explore Malaysian craft heritage, use AI with purpose, and design meaningful solutions at Kompleks Kraf Kuala Lumpur.</p>
-        <div class="hero-actions">
-          <a href="pages/registration.html" class="btn-primary">Register now &rarr;</a>
-          <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener" class="btn-outline">Smart DT Guide &#8599;</a>
-          <a href="pages/resources.html" class="btn-outline">DT Template Hub &#8599;</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal" style="transition-delay:0.15s;">
-        <div class="hero-img-wrap">
-          <img src="assets/images/hero-image.jpg" alt="CAMP21 heritage and AI experience" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
-          <div class="hero-img-slot" style="display:none;"><span>hero image</span></div>
-        </div>
-        <div class="hero-days-badge">
-          <strong>4</strong>
-          <small>DAYS</small>
-        </div>
-      </div>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Document Vault</span>
+      <h1>Resources & Templates</h1>
+      <p>Download approved assessment models, framework sheets, phase folders, and printable support documents.</p>
     </div>
-  </section>
+    <div class="hero-insights" aria-label="Resources page insights">
+      <div class="hero-insight"><strong>14</strong><span>Templates</span><small>T01–T13 Smart DT + T14 Pitching</small></div>
+      <div class="hero-insight"><strong>7</strong><span>Drive Folders</span><small>5 DT phases + Pitching + Rubrics</small></div>
+      <div class="hero-insight"><strong>2</strong><span>Rubrics</span><small>Final Pitch + TikTok Reflection</small></div>
+      <div class="hero-insight"><strong>100%</strong><span>Separate Scores</span><small>Pitch by Judges · TikTok by Trainers</small></div>
+    </div>
+  </div>
+</div></section>
+<img src="../assets/decors/gold-divider.png" class="gold-divider" alt="" style="display:block;width:min(400px,60%);height:auto;margin:28px auto;opacity:.5">
+<main class="wrap">
 
-  <div class="wide">
-  <!-- CAMP21 HUB GUIDE: HOW TO USE THIS HUB -->
+
+
+
+  <!-- CAMP21 HUB UPGRADE: HOW TO USE THIS HUB -->
   <section class="hub-use-guide" id="how-to-use-this-hub" aria-label="How to use this hub">
     <div class="hub-guide-head">
       <div>
         <span class="hub-guide-kicker">How to Use This Hub</span>
-        <h2>Navigate CAMP21 Digital Hub Smoothly</h2>
-        <p>This hub is designed to help you navigate CAMP21 smoothly. Start by reviewing the page overview, then use the quick sections below to access your role hub, programme, resources and live updates.</p>
+        <h2>Navigate Resources Hub Smoothly</h2>
+        <p>This hub is designed to help you navigate CAMP21 smoothly. Start by reviewing the page overview, then use the quick sections below to access schedules, roles, templates, rubrics, updates and support information relevant to your role.</p>
       </div>
-      <div class="hub-guide-badge">
-        <b>GUIDE</b>
-        <span>Quick Start</span>
-      </div>
+      <div class="hub-guide-badge"><b>GUIDE</b><span>Quick Start</span></div>
     </div>
-
     <div class="hub-guide-grid">
-      <article class="hub-guide-card" data-step="1">
-        <h3>Start with your role</h3>
-        <p>Open the Participants, Trainers, Facilitators, Judges or Organiser hub.</p>
-      </article>
-
-      <article class="hub-guide-card" data-step="2">
-        <h3>Review the programme</h3>
-        <p>Check the 4-day schedule, sessions, venues and expected outputs.</p>
-      </article>
-
-      <article class="hub-guide-card" data-step="3">
-        <h3>Open resources</h3>
-        <p>Access Smart DT templates T01–T14 and phase folders when unlocked.</p>
-      </article>
-
-      <article class="hub-guide-card" data-step="4">
-        <h3>Follow live updates</h3>
-        <p>Watch official announcements and schedule changes during camp.</p>
-      </article>
+      <article class="hub-guide-card" data-step="1"><h3>Start with packets</h3><p>Open authorised documents and official Drive folders only.</p></article>
+<article class="hub-guide-card" data-step="2"><h3>Use correct template set</h3><p>T01-T13 are Smart DT Process Templates; T14 is the Final Pitching Template.</p></article>
+<article class="hub-guide-card" data-step="3"><h3>Check rubrics</h3><p>Use Final Pitch and TikTok rubrics as separate 100% evaluations.</p></article>
+<article class="hub-guide-card" data-step="4"><h3>Download carefully</h3><p>Open the right phase folder before sharing resources with teams.</p></article>
     </div>
-
     <div class="hub-guide-focus">
       <div class="focus-icon">★</div>
-      <div>
-        <h3>Page Focus</h3>
-        <p>Choose your role portal, follow the 4-day Design Thinking journey and keep aligned with official CAMP21 updates.</p>
-      </div>
+      <div><h3>Page Focus</h3><p>Access T01-T13 Smart DT Process Templates, T14 Final Pitching Template, rubrics and official Google Drive folders.</p></div>
     </div>
-
     <div class="hub-quick-map" aria-label="Quick links for this hub">
-      <a href="pages/participants.html">Participants</a>
-      <a href="pages/programme.html">Programme</a>
-      <a href="pages/resources.html">Resources</a>
-      <a href="pages/updates.html">Updates</a>
-      <a href="pages/contacts.html">Help</a>
+      <a href="#documentPackets">Packets</a>
+<a href="#phaseResourceSection">Phase Folders</a>
+<a href="#templateSection">Templates</a>
+<a href="#rubricSection">Rubrics</a>
+<a href="contacts.html">Help</a>
     </div>
   </section>
+<details class="res-panel res-numbered res-theme-navy" id="documentPackets" data-section="01" open>
+<summary data-section="01"><div><h2>Authorized Document Packets</h2><p>Official rubrics, drive folders and the Smart DT workspace.</p></div><span class="res-chevron">⌄</span></summary>
+<div class="res-panel-body">
+  <div class="res-layout">
+    <div>
+      <div class="doc-list">
+        <a class="doc-card" href="https://drive.google.com/drive/folders/1VuIoJBKhBlQUIxKZ4NkcuBI2Ss5XhAf3?usp=sharing" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--rose)">PDF</div>
+          <div><h4>Official Evaluation Rubrics Packet</h4><p>Judges rubric folder for the Final Pitch 100%. TikTok Reflection Challenge remains a separate trainer-evaluated 100% component.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a class="doc-card" href="#phaseResourceSection">
+          <div class="doc-icon" style="background:var(--violet)">GD</div>
+          <div><h4>Phase Google Drive Folders</h4><p>Empathy, Define / Insight, Ideate, Prototype, Testing and Pitching folders are listed below according to the CAMP21 phase sequence.</p></div>
+          <span class="doc-arrow">↓</span>
+        </a>
+        <a class="doc-card" href="https://drive.google.com/drive/folders/1rnPhbkEA0u7OlIpm0hJE86i5Ghp2PEnh?usp=sharing" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--indigo)">T14</div>
+          <div><h4>Final Pitching Template Folder</h4><p>T14 Final Pitching Template and pitch preparation materials for the final group presentation.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+        <a class="doc-card" href="https://drive.google.com/drive/folders/1VuIoJBKhBlQUIxKZ4NkcuBI2Ss5XhAf3?usp=sharing" target="_blank" rel="noopener">
+          <div class="doc-icon" style="background:var(--teal)">100</div>
+          <div><h4>Final Pitch 100% Rubric</h4><p>Official judging reference for the Final Pitch. Judges evaluate Final Pitch separately from the TikTok Reflection Challenge.</p></div>
+          <span class="doc-arrow">→</span>
+        </a>
+      </div>
+      <ul class="doc-note-list">
+        <li>Phase folders below follow the CAMP21 time-locked access sequence</li>
+        <li>The Define folder includes T05 User Persona Template and T06 User Insight &amp; Needs / Design Statement</li>
+        <li>Rubrics and pitching folders open in Google Drive</li>
+      </ul>
+    </div>
+    <aside>
+      <div class="workspace-card">
+        <span class="ws-tag">Workspace Terminal</span>
+        <h3>Smart DT Project</h3>
+        <p>Your main digital workspace for CAMP21. Complete T01–T13 Smart DT Process Templates and T14 Final Pitching Template across the CAMP21 learning journey. All submissions and milestone records are managed inside the companion app.</p>
+        <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank">Launch Template Hub ↗</a>
+      </div>
+    </aside>
+  </div>
+</div>
+</details>
+
+<details class="res-panel res-numbered res-theme-violet" id="phaseResourceSection" data-section="02">
+<summary data-section="02"><div><h2>Phase Resources · T01–T13</h2><p>Templates and Drive folders unlock automatically when each phase begins.</p></div><span class="res-chevron">⌄</span></summary>
+<div class="res-panel-body">
+  <div style="background:#f7f3ff;border:1px solid rgba(88,58,174,.18);border-radius:18px;padding:18px 22px;margin-bottom:24px;color:#251052;font-weight:700;line-height:1.65">💡 <strong>Insight Checkpoint:</strong> The <strong>Define folder</strong> includes <strong>T06 User Insight & Needs Statement / Design Statement</strong>. This is the key bridge from empathy evidence to the final design challenge.</div>
+  <div id="phaseResources"></div>
+  <div style="display:flex;align-items:center;gap:12px;margin-top:16px;color:var(--muted);font-weight:700;font-size:.88rem"><span>🔒 Locked — not yet available</span><span style="margin-left:16px">🔓 Unlocked — phase is live or completed</span></div>
+</div>
+</details>
+
+<details class="res-panel res-numbered res-theme-gold" id="templateSection" data-section="03">
+<summary data-section="03"><div><h2>Pitching Resource · T14</h2><p>Final Pitching Template and the 8-slide framework for Day 3–4.</p></div><span class="res-chevron">⌄</span></summary>
+<div class="res-panel-body">
+  <div class="pitch-section">
+    <div class="pitch-head">
+      <h3>Pitching Resource</h3>
+      <span class="pitch-tag">Final Pitching Template</span>
+    </div>
+    <ul class="doc-note-list">
+      <li>Used as the final presentation guide for Gallery Walk, Pitching and Evaluation on Day 3 and Day 4</li>
+      <li>T14 is the Final Pitching Template, separate from T01–T13 Smart DT Process Templates</li>
+      <li>Delivered by Prabagaran Bala Krisnan during the 30-min Pitching Input session on Day 3 AM</li>
+    </ul>
+    <a class="pitch-download" href="https://drive.google.com/drive/folders/1rnPhbkEA0u7OlIpm0hJE86i5Ghp2PEnh?usp=sharing" target="_blank" rel="noopener">
+      <div class="doc-icon" style="background:var(--gold)">PPTX</div>
+      <div><h4>Final Pitching Template (.PPTX)</h4><p>Final presentation guide for Gallery Walk, Pitching and Evaluation on Day 3 and Day 4.</p></div>
+      <span class="doc-arrow">→</span>
+    </a>
+    <div class="slides-grid">
+      <span class="slide-pill">Slide 1: Title & Team Introduction</span>
+      <span class="slide-pill">Slide 2: Crafts & Heritage Challenge</span>
+      <span class="slide-pill">Slide 3: Your Solution</span>
+      <span class="slide-pill">Slide 4-5: How It Works</span>
+      <span class="slide-pill">Slide 6: Implementation & Stakeholders</span>
+      <span class="slide-pill">Slide 7: Impact & SDG Alignment</span>
+      <span class="slide-pill">Slide 8: Call to Action & Closing</span>
+    </div>
+  </div>
+</div>
+</details>
+
+<details class="res-panel res-numbered res-theme-rose" id="rubricSection" data-section="04">
+<summary data-section="04"><div><h2>Evaluation Rubrics</h2><p>Final Pitch (Judges) and TikTok Reflection (Trainers) — two separate 100% scores.</p></div><span class="res-chevron">⌄</span></summary>
+<div class="res-panel-body">
+  <div style="background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;margin-bottom:2rem">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px"><h3 style="font-family:var(--font-serif);font-size:1.8rem;margin:0">TikTok Reflection Challenge Rubric</h3><span style="display:inline-flex;background:var(--teal);color:var(--ink);border-radius:999px;padding:5px 14px;font-size:.68rem;font-weight:900;text-transform:uppercase">50 raw marks × 2 = 100%</span></div>
+    <ul class="doc-note-list">
+      <li>Each team submits daily TikTok-style reflection videos for Day 1, Day 2 and Day 3</li>
+      <li>Assessed separately from Final Pitch 100%</li>
+      <li>Trainers evaluate 10 scoring criteria worth 5 marks each</li>
+    </ul>
+    <div style="display:grid;gap:8px">
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Daily Design Thinking Reflection — Day 1, Day 2 and Day 3 reflections</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">15 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Learning, Insight &amp; Evidence — learning, insight and template proof</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">15 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Teamwork, Communication &amp; Clarity — team roles and clear explanation</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">10 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Creativity, Ethics &amp; TikTok Presentation — creative, respectful and suitable video</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">10 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:var(--indigo);border-radius:14px;font-weight:900;color:#fff;align-items:center"><span>Total raw marks</span><span style="font-size:1.1rem">50 × 2 = 100%</span></div>
+    </div>
+    <div style="margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-weight:800;font-size:.85rem"><strong style="color:var(--teal)">Day 1</strong><br>Empathy + Define</div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-weight:800;font-size:.85rem"><strong style="color:var(--pink)">Day 2</strong><br>Ideate + Prototype Plan</div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-weight:800;font-size:.85rem"><strong style="color:var(--rose)">Day 3</strong><br>Prototype Outcome + Test & Reflect + Pitch Prep</div>
+    </div>
+  </div>
+  <div style="background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;margin-bottom:2rem">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px"><h3 style="font-family:var(--font-serif);font-size:1.8rem;margin:0">Final Pitch Rubric</h3><span style="display:inline-flex;background:var(--violet);color:#fff;border-radius:999px;padding:5px 14px;font-size:.68rem;font-weight:900;text-transform:uppercase">50 raw marks × 2 = 100%</span></div>
+    <ul class="doc-note-list">
+      <li>Evaluated separately as 100% by Judges, using the T14 Final Pitching Template</li>
+      <li>Duration: 8–10 min presentation + 3 min Q&amp;A</li>
+      <li>Assessed separately from TikTok 100%</li>
+      <li>10 scoring criteria × 5 marks = 50 raw marks; Pitching Score = Raw Score × 2 = /100</li>
+    </ul>
+    <div style="display:grid;gap:8px">
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Presentation &amp; Communication — 2 criteria × 5 marks</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">10 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Content &amp; Innovative Thinking — 5 DT phase criteria × 5 marks</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">25 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Feasibility, Heritage &amp; SDG Impact — 1 criterion × 5 marks</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">5 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Team Collaboration &amp; Q&amp;A Handling — balanced participation with evidence-based answers</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">5 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid var(--line);font-weight:800;align-items:center"><span>Language Use — clear, appropriate and professional English</span><span style="background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 14px;font-size:.82rem;font-weight:900">5 marks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto;padding:14px 18px;background:var(--indigo);border-radius:14px;font-weight:900;color:#fff;align-items:center"><span>10 scoring criteria × 5 marks = 50 raw marks</span><span style="font-size:1.1rem">Raw × 2 = 100%</span></div>
+    </div>
+  </div>
+</div>
+</details>
+
+<details class="res-panel res-numbered res-theme-navy" id="guidesSection" data-section="05">
+<summary data-section="05"><div><h2>Mahjong Paper & Submission Guides</h2><p>Required physical outcomes per phase and what to submit, when and to whom.</p></div><span class="res-chevron">⌄</span></summary>
+<div class="res-panel-body">
+  <div style="background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;margin-bottom:2rem">
+    <h3 style="font-family:var(--font-serif);font-size:1.8rem;margin:0 0 8px">Mahjong Paper Outcome Guide</h3>
+    <p style="color:#726b82;font-weight:600;margin:0 0 18px;line-height:1.5">Mahjong Paper Outcomes are selected group activity outputs used for discussion, trainer review and pitch preparation.</p>
+    <div style="display:grid;gap:8px">
+      <div style="display:grid;grid-template-columns:120px 100px 1fr;gap:12px;padding:12px 16px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:800;font-size:.88rem"><span style="color:#21D4C2">Empathy</span><span style="color:#6B4DFF">T04</span><span>Empathy Map</span></div>
+      <div style="display:grid;grid-template-columns:120px 100px 1fr;gap:12px;padding:12px 16px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:800;font-size:.88rem"><span style="color:#6B4DFF">Define</span><span style="color:#6B4DFF">T06</span><span>User Insight / Needs &amp; Design Statement</span></div>
+      <div style="display:grid;grid-template-columns:120px 100px 1fr;gap:12px;padding:12px 16px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:800;font-size:.88rem"><span style="color:#FF4FCB">Ideate</span><span style="color:#6B4DFF">T08 + T09</span><span>SCAMPER + Idea Prioritisation Matrix</span></div>
+      <div style="display:grid;grid-template-columns:120px 100px 1fr;gap:12px;padding:12px 16px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:800;font-size:.88rem"><span style="color:#D9AF37">Prototype</span><span style="color:#6B4DFF">T11</span><span>Full Prototype Outcome / Sketch / Storyboard / Mock-up</span></div>
+      <div style="display:grid;grid-template-columns:120px 100px 1fr;gap:12px;padding:12px 16px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:800;font-size:.88rem"><span style="color:#e23c74">Test</span><span style="color:#6B4DFF">T12</span><span>User Feedback Form</span></div>
+    </div>
   </div>
 
-
-  <!-- QUICK FACTS -->
-  <section class="quick-facts">
-    <div class="wide">
-      <div class="facts-grid">
-        <div class="fact-card reveal">
-          <div class="fact-icon"><img src="assets/icons/icon-calendar.png" alt=""></div>
-          <div class="fact-label">13–16 July 2026</div>
-          <div class="fact-sub">Four-day national programme</div>
-        </div>
-        <div class="fact-card reveal" style="transition-delay:0.08s;">
-          <div class="fact-icon"><img src="assets/icons/icon-location.png" alt=""></div>
-          <div class="fact-label">Kompleks Kraf KL</div>
-          <div class="fact-sub">Jalan Conlay, Kuala Lumpur</div>
-        </div>
-        <div class="fact-card reveal" style="transition-delay:0.16s;">
-          <div class="fact-icon"><img src="assets/icons/icon-team.png" alt=""></div>
-          <div class="fact-label">10 Teams</div>
-          <div class="fact-sub">Politeknik Malaysia participants</div>
-        </div>
-        <div class="fact-card reveal" style="transition-delay:0.24s;">
-          <div class="fact-icon"><img src="assets/icons/icon-dt.png" alt=""></div>
-          <div class="fact-label">Design Thinking</div>
-          <div class="fact-sub">Empathy to final pitch</div>
-        </div>
-      </div>
+  <div style="background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px">
+    <h3 style="font-family:var(--font-serif);font-size:1.8rem;margin:0 0 8px">Submission Guide</h3>
+    <p style="color:#726b82;font-weight:600;margin:0 0 18px;line-height:1.5">What to submit, when and to whom.</p>
+    <div style="display:grid;gap:8px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:14px 18px;background:var(--indigo);border-radius:14px;font-weight:900;color:#fff;font-size:.82rem"><span>What</span><span>When</span><span>To Whom</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:700;font-size:.88rem"><span>T01–T13 Smart DT Process Templates</span><span>During each phase</span><span>Via Smart DT Guide & Template Hub</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:700;font-size:.88rem"><span>Mahjong Paper Outcomes</span><span>End of each phase</span><span>Trainer review on-site</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:700;font-size:.88rem"><span>TikTok Videos (Day 1, 2, 3)</span><span>End of each day</span><span>Google Form / Telegram / Drive</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:700;font-size:.88rem"><span>T14 Final Pitch Deck (PDF)</span><span>Day 3 evening</span><span>Via Smart DT Guide & Template Hub</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:14px 18px;background:#fff;border-radius:14px;border:1px solid #e9dfd0;font-weight:700;font-size:.88rem"><span>Prototype / Evidence Photos</span><span>Day 3–4</span><span>Display at Gallery Walk</span></div>
     </div>
-  </section>
+  </div>
+</div>
+</details>
+</main>
 
-
-  <!-- ROLE PORTALS -->
-  <section class="portals" id="portals">
-    <div class="wide">
-      <p class="portals-eyebrow reveal">Access portals</p>
-      <h2 class="portals-title reveal">Choose your role</h2>
-      <div class="portals-grid">
-
-        <!-- Participants — featured -->
-        <a href="pages/participants.html" class="portal-featured reveal">
-          <div class="portal-bg">
-            <img src="assets/images/participants-corner.jpg" alt="" onerror="this.style.display='none'">
-          </div>
-          <div class="portal-overlay"></div>
-          <div class="portal-body">
-            <div class="portal-title">Participants</div>
-            <div class="portal-desc">Open the Smart DT guide, templates, resources, and team tasks.</div>
-            <div class="portal-cta">Enter participant hub &rarr;</div>
-          </div>
-        </a>
-
-        <!-- Trainers -->
-        <a href="pages/trainers.html" class="portal-card reveal" style="transition-delay:0.05s;">
-          <div class="portal-bg">
-            <img src="assets/images/trainer-support.jpg" alt="" onerror="this.style.display='none'">
-          </div>
-          <div class="portal-overlay"></div>
-          <div class="portal-body">
-            <div class="portal-title" style="font-size:1.2rem;">Trainers</div>
-            <div class="portal-desc">Lead phase inputs, briefings, and learning direction.</div>
-            <div class="portal-cta">Open view &rarr;</div>
-          </div>
-        </a>
-
-        <!-- Facilitators -->
-        <a href="pages/facilitators.html" class="portal-card reveal" style="transition-delay:0.10s;">
-          <div class="portal-bg">
-            <img src="assets/images/facilitators.jpg" alt="" onerror="this.style.display='none'">
-          </div>
-          <div class="portal-overlay"></div>
-          <div class="portal-body">
-            <div class="portal-title" style="font-size:1.2rem;">Facilitators</div>
-            <div class="portal-desc">Assist teams on-site, guide checkpoints, and support smooth movement.</div>
-            <div class="portal-cta">Open view &rarr;</div>
-          </div>
-        </a>
-
-        <!-- Organisers -->
-        <a href="pages/organiser.html" class="portal-card reveal" style="transition-delay:0.15s;">
-          <div class="portal-bg">
-            <img src="assets/images/venue-kompleks-kraf.jpg" alt="" onerror="this.style.display='none'">
-          </div>
-          <div class="portal-overlay"></div>
-          <div class="portal-body">
-            <div class="portal-title" style="font-size:1.2rem;">Organisers</div>
-            <div class="portal-desc">Manage updates, logistics, and secretariat coordination.</div>
-            <div class="portal-cta">Open view &rarr;</div>
-          </div>
-        </a>
-
-        <!-- Judges -->
-        <a href="pages/judges.html" class="portal-card reveal" style="transition-delay:0.20s;">
-          <div class="portal-bg">
-            <img src="assets/images/judging-panel.jpg" alt="" onerror="this.style.display='none'">
-          </div>
-          <div class="portal-overlay"></div>
-          <div class="portal-body">
-            <div class="portal-title" style="font-size:1.2rem;">Judges</div>
-            <div class="portal-desc">Access rubrics and scoring panel.</div>
-            <div class="portal-cta">Open view &rarr;</div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROGRAMME PREVIEW -->
-  <section class="programme" id="programme">
-    <div class="wide">
-      <div class="section-header reveal">
-        <div>
-          <p class="section-eyebrow">Programme preview</p>
-          <h2 class="section-title">4 days, one clear journey</h2>
-        </div>
-        <a href="pages/programme.html" class="section-link">View full schedule &rarr;</a>
-      </div>
-      <div class="days-grid">
-        <div class="day-card dc-1 reveal">
-          <div class="day-num-bg">1</div>
-          <span class="day-badge-pill">Day 1 &middot; 13 Jul</span>
-          <h3>Empathise &amp; Define</h3>
-          <p>AI orientation, heritage immersion, and problem framing.</p>
-        </div>
-        <div class="day-card dc-2 reveal" style="transition-delay:0.08s;">
-          <div class="day-num-bg">2</div>
-          <span class="day-badge-pill">Day 2 &middot; 14 Jul</span>
-          <h3>Ideate &amp; Build</h3>
-          <p>Idea generation and rapid craft-inspired prototyping.</p>
-        </div>
-        <div class="day-card dc-3 reveal" style="transition-delay:0.16s;">
-          <div class="day-num-bg">3</div>
-          <span class="day-badge-pill">Day 3 &middot; 15 Jul</span>
-          <h3>Test &amp; Refine</h3>
-          <p>Feedback, iteration, and pitch preparation.</p>
-        </div>
-        <div class="day-card dc-4 reveal" style="transition-delay:0.24s;">
-          <div class="day-num-bg">4</div>
-          <span class="day-badge-pill">Day 4 &middot; 16 Jul</span>
-          <h3>Pitch &amp; Impact</h3>
-          <p>Final presentation, judging, and closing celebration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAMP21 INFOGRAPHICS / WHAT IS CAMP21 -->
-  <section class="framework" id="framework">
-    <div class="wide">
-      <div class="section-header reveal">
-        <div>
-          <p class="section-eyebrow">What is CAMP21?</p>
-          <h2 class="section-title">Three Pillars of CAMP21</h2>
-        </div>
-      </div>
-      <p class="infographic-intro reveal">
-        CAMP21 is built on three connected pillars: Design Thinking, AI Empowerment and SDG Impact. Each pillar is presented as a full-width poster showcase so participants can view the Design Thinking journey, AI empowerment and sustainability impact clearly.
-      </p>
-    </div>
-
-    <div class="pillars-section infographic-showcase">
-      <div class="wide">
-        <div class="infographic-grid">
-          <article class="infographic-card reveal">
-            <div class="infographic-card-head">
-              <div>
-                <span class="infographic-badge">✨ DT Journey</span>
-                <h3 class="infographic-title">5-Phase Design Thinking Journey</h3>
-                <p class="infographic-sub">A visual guide to the Empathise, Define, Ideate, Prototype and Test phases used throughout CAMP21.</p>
-              </div>
-            </div>
-            <div class="infographic-image-wrap">
-              <img class="infographic-image" src="assets/infographics/dt-journey-infographic.jpg" alt="CAMP21 Design Thinking Journey infographic">
-            </div>
-          </article>
-
-          <article class="infographic-card reveal" style="transition-delay:0.04s;">
-            <div class="infographic-card-head">
-              <div>
-                <span class="infographic-badge">🤖 AI Empowerment</span>
-                <h3 class="infographic-title">Responsible AI Empowerment</h3>
-                <p class="infographic-sub">A visual summary of how AI supports literacy, research, insight synthesis, ideation, prototyping, pitching and responsible digital practice throughout CAMP21.</p>
-              </div>
-            </div>
-            <div class="infographic-image-wrap">
-              <img class="infographic-image" src="assets/infographics/ai-empowerment-infographic.jpg" alt="CAMP21 AI Empowerment infographic">
-            </div>
-          </article>
-
-
-          <article class="infographic-card reveal" style="transition-delay:0.08s;">
-            <div class="infographic-card-head">
-              <div>
-                <span class="infographic-badge">🌍 SDG Impact</span>
-                <h3 class="infographic-title">Sustainable Development Goals Impact</h3>
-                <p class="infographic-sub">A summary of how CAMP21 contributes to education, innovation, sustainable communities, responsible production and collaborative partnerships.</p>
-              </div>
-            </div>
-            <div class="infographic-image-wrap">
-              <img class="infographic-image" src="assets/infographics/sdg-impact-infographic.jpg" alt="CAMP21 SDG Impact infographic">
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA STRIP -->
-  <section class="cta-strip">
-    <div class="wide">
-      <div class="cta-box reveal">
-        <div class="cta-box-left">
-          <p class="cta-eyebrow">Start here</p>
-          <h2>Ready for CAMP21?</h2>
-          <p>Register, check your role portal, and use the Smart DT Guide & Template Hub as your main guide throughout the programme.</p>
-        </div>
-        <a href="pages/registration.html" class="btn-primary">Register now &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="collab-section" aria-label="Collaborators">
-    <div class="wide">
-      <div class="collab-wrap reveal">
-        <div class="collab-head">
-          <div>
-            <p class="logos-eyebrow" style="margin-bottom:.25rem;color:var(--gold)">Collaborators</p>
-            <h2>Official Collaborators</h2>
-            <p>Key institutions supporting CAMP21 Digital Hub 2026.</p>
-          </div>
-        </div>
-        <div class="collab-grid">
-          <div class="collab-card"><div class="collab-logo-box"><img src="assets/logos/logo-kpt.png" alt="Ministry of Higher Education" onerror="this.parentElement.style.display='none'"></div><span>Ministry of Higher Education</span></div>
-          <div class="collab-card"><div class="collab-logo-box"><img src="assets/logos/logo-pmkl.png" alt="Politeknik Metro KL" onerror="this.parentElement.style.display='none'"></div><span>Politeknik Metro KL</span></div>
-          <div class="collab-card"><div class="collab-logo-box"><img src="assets/logos/logo-polycc.png" alt="PolyCC & Kolej Komuniti" onerror="this.parentElement.style.display='none'"></div><span>PolyCC &amp; Kolej Komuniti</span></div>
-          <div class="collab-card"><div class="collab-logo-box"><img src="assets/logos/logo-kompleks-kraf.png" alt="Kompleks Kraf KL" onerror="this.parentElement.style.display='none'"></div><span>Kompleks Kraf KL</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
+<img src="../assets/decors/gold-divider.png" class="gold-divider" alt="" style="display:block;width:min(400px,60%);height:auto;margin:28px auto;opacity:.5">
 <footer class="camp-footer">
   <div class="wide footer-shell">
     <div class="footer-main">
       <div class="footer-brand-block">
         <strong class="footer-brand-line">CAMP <span>21</span></strong>
-        <p>AI-Powered Design Thinking for Sustainable Cultural Heritage</p>
-        <p>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
+        <p>AI-Powered Design Thinking for Sustainable Cultural Heritage<br>13–16 July 2026 · Kompleks Kraf Kuala Lumpur</p>
       </div>
-      <nav class="footer-min-links footer-links-clean" aria-label="Footer support links">
+      <nav class="footer-links-clean" aria-label="Footer support links">
         <a href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">Smart DT Guide &amp; Template Hub ↗</a>
         <a href="https://t.me/+vTPGEFIaXMs5Mjhl" target="_blank" rel="noopener">Telegram Community ↗</a>
-        <a href="pages/registration.html">Registration</a>
-        <a href="pages/contacts.html">Help Desk</a>
+        <a href="registration.html">Registration</a>
+        <a href="contacts.html">Help Desk</a>
       </nav>
     </div>
-
-    <div class="footer-min-bottom">
-      <span>© 2026 CAMP<span class="brand-21">21</span> Digital Hub.</span>
-      <span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span>
-    </div>
+  </div>
+  <div class="footer-min-bottom">
+    <span>© 2026 CAMP<span class="brand-21">21</span> Digital Hub.</span>
+    <span>Created and developed by Julie Marlina binti Hasan, Politeknik Port Dickson.</span>
   </div>
 </footer>
 
+<script>
+// Phase resources with time-gated unlock
+// Camp dates: Day 1 = 13 Jul, Day 2 = 14 Jul, Day 3 = 15 Jul, Day 4 = 16 Jul
+const phaseData=[
+  {num:'01',name:'Empathy',color:'var(--teal)',tag:'Phase 1 · T01–T04',day:'Day 1 AM · 13 July',unlockDate:'2026-07-13T09:00:00+08:00',pic:'Julie Marlina binti Hasan',gd:'https://drive.google.com/drive/folders/1nnDHH3uT_zWVAjq--My9Ypq7fxyF8SR9?usp=sharing',
+   templates:[
+     {code:'T01',color:'var(--teal)',title:'Observation Framework',desc:'Field observation across People, Objects, Environments, Messages & Services'},
+     {code:'T02',color:'var(--teal)',title:'Interview Guide & Notes Worksheet',desc:'Empathy-based interview questions for artisan, user or visitor'},
+     {code:'T03',color:'var(--teal)',title:'Audio-to-Text Transcription',desc:'Clean transcript, key quotes and evidence from interviews'},
+     {code:'T04',color:'var(--teal)',title:'Empathy Map',desc:'Say, Think, Do and Feel synthesis from interview findings'}]},
+  {num:'02',name:'Define / Insight',color:'var(--violet)',tag:'Phase 2 · T05–T06',day:'Day 1 PM · 13 July',unlockDate:'2026-07-13T14:00:00+08:00',pic:'Nor Haniza binti Mustafar Kamar',gd:'https://drive.google.com/drive/folders/11e_BuHXu-02HS6wgxT8hAVlgaRUHeXGh?usp=sharing',
+   templates:[
+     {code:'T05',color:'var(--violet)',title:'User Persona Template',desc:'Representative user profile with pain points, needs and context'},
+     {code:'T06',color:'var(--violet)',title:'User Insight & Needs Statement / Design Statement',desc:'Key insight checkpoint: clear user need, problem statement and actionable design challenge'}]},
+  {num:'03',name:'Ideate',color:'var(--pink)',tag:'Phase 3 · T07–T09',day:'Day 2 · 14 July',unlockDate:'2026-07-14T09:00:00+08:00',pic:'Nurfarhanah binti Omar',gd:'https://drive.google.com/drive/folders/1DL0bMqcX1skbqED30KZk_Q3IcDxX3wQq?usp=sharing',
+   templates:[
+     {code:'T07',color:'var(--pink)',title:'3D Circle Challenge',desc:'Creativity warm-up — generate rapid idea directions from the design challenge'},
+     {code:'T08',color:'var(--pink)',title:'SCAMPER',desc:'Expand ideas using all 7 SCAMPER lenses'},
+     {code:'T09',color:'var(--pink)',title:'Idea Prioritisation Matrix',desc:'Evaluate and select the best idea with team consensus'}]},
+  {num:'04',name:'Prototype',color:'var(--gold)',tag:'Phase 4 · T10–T11',day:'Day 2–3 · 14–15 July',unlockDate:'2026-07-14T14:00:00+08:00',pic:'Ts. Mohammed Farid bin Ishak',textColor:'var(--ink)',gd:'https://drive.google.com/drive/folders/1-eA1QZ0zyqK2yo9Av7V7cD7doLLKWRP0?usp=sharing',
+   templates:[
+     {code:'T10',color:'var(--gold)',title:'Prototype Direction Plan',desc:'Format, materials, features, task distribution — trainer sign-off required'},
+     {code:'T11',color:'var(--gold)',title:'Full Prototype Outcome',desc:'Completed prototype with documentation and evidence photos'}]},
+  {num:'05',name:'Testing',color:'var(--rose)',tag:'Phase 5 · T12–T13',day:'Day 3 · 15 July',unlockDate:'2026-07-15T14:00:00+08:00',pic:'Noor Darliza binti Mohamad Zamri',gd:'https://drive.google.com/drive/folders/19zpgzUCkz8dX_bMq0HrAvc6SJYkUaAT1?usp=sharing',
+   templates:[
+     {code:'T12',color:'var(--rose)',title:'User Feedback Form',desc:'Structured peer and user testing — at least 5 feedback entries with action items'},
+     {code:'T13',color:'var(--rose)',title:'Improvement Plan',desc:'Refinement actions based on T12 feedback'}]},
+  {num:'⚡',name:'Pitch',color:'var(--blue)',tag:'T14 · Final Pitch',day:'Day 3–4 · 15–16 July',unlockDate:'2026-07-15T09:00:00+08:00',pic:'Prabagaran Bala Krisnan',gd:'https://drive.google.com/drive/folders/1rnPhbkEA0u7OlIpm0hJE86i5Ghp2PEnh?usp=sharing',
+   templates:[
+     {code:'T14',color:'var(--blue)',title:'Final Pitching Template',desc:'Hook & Problem, Solution, Prototype, Heritage Value, Sustainability, Team, Call to Action, Q&A Readiness'}]}
+];
 
-  <script>
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => { if (!e.isIntersecting) return; e.target.classList.add('active'); obs.unobserve(e.target); });
-    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+function renderPhaseResources(){
+  const now=new Date();
+  const container=document.getElementById('phaseResources');
+  container.innerHTML=phaseData.map(ph=>{
+    const unlock=new Date(ph.unlockDate);
+    const isUnlocked=now>=unlock;
+    const statusText=isUnlocked?'🔓 Unlocked':'🔒 Locked';
+    const statusColor=isUnlocked?'var(--teal)':'var(--muted)';
+    return `<details class="phase-res${isUnlocked?'':' locked'}"${isUnlocked?' open':''}>
+      <summary>
+        <div class="pr-num" style="background:${ph.color};${ph.textColor?'color:'+ph.textColor:''}">${ph.num}</div>
+        <div class="pr-info">
+          <h3>${ph.name} <span class="pr-tag" style="background:${ph.color};color:${ph.textColor||'#fff'}">${ph.tag}</span></h3>
+          <div class="pr-meta">${ph.day} · PIC: ${ph.pic}</div>
+        </div>
+        <span class="pr-status" style="color:${statusColor}">${statusText}</span>
+        <span class="pr-chev">›</span>
+      </summary>
+      <div class="pr-body">
+        <div class="pr-templates">${ph.templates.map(t=>`<div class="pr-tpl">
+          <span class="pr-tpl-code" style="background:${t.color}">${t.code}</span>
+          <h5>${t.title}</h5>
+          <p>${t.desc}</p>
+        </div>`).join('')}</div>
+        ${isUnlocked?`<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px"><a class="pr-open-app" href="${ph.gd}" target="_blank" rel="noopener">📂 Open Templates Folder ↗</a><a class="pr-open-app" style="background:var(--teal)" href="https://smart-dt-project.netlify.app/welcome.html" target="_blank" rel="noopener">🚀 Open Smart DT Guide & Template Hub ↗</a></div>`:`<p style="color:var(--muted);font-weight:700;font-size:.88rem;margin:18px 0 0;font-style:italic">🔒 This phase unlocks on ${unlock.toLocaleDateString('en-MY',{day:'numeric',month:'long',year:'numeric'})} at ${unlock.toLocaleTimeString('en-MY',{hour:'2-digit',minute:'2-digit'})}.</p>`}
+      </div>
+    </details>`;
+  }).join('');
+}
 
-    
-    // Quick Access dropdown close on outside click
-    document.addEventListener('click',e=>{const qa=document.querySelector('.qa-home');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
-  </script>
+renderPhaseResources();
+// Auto-refresh every 5 minutes to unlock phases as camp progresses
+setInterval(renderPhaseResources,5*60*1000);
+
+document.addEventListener('click',e=>{const qa=document.querySelector('.qa-home');if(qa&&!qa.contains(e.target))qa.removeAttribute('open')});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const d=document.querySelector(a.getAttribute('href'));if(d&&d.tagName==='DETAILS')d.open=true}));
+if(location.hash){const d=document.querySelector(location.hash);if(d&&d.tagName==='DETAILS')d.open=true}
+document.querySelectorAll('.qa-h-drop a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.qa-home').removeAttribute('open')}));
+</script>
 </body>
 </html>

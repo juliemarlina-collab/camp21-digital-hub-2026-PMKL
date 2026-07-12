@@ -270,6 +270,266 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 
 .footer-min-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;text-align:left}
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap">
+<style id="camp21-master-standard-v2">
+:root{--ink:#151044;--rose:#e23c74;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+h1,h2,h3,.brand,.footer-brand,.footer-brand-line{font-family:var(--font-serif)!important}
+h1,h2,h3{font-weight:600!important;letter-spacing:-.015em!important}
+.brand span,.footer-brand span,.footer-brand-line span,.brand-21{color:#e23c74!important;-webkit-text-fill-color:#e23c74!important}
+
+/* Shared header: supports topbar and header variants */
+.topbar,header{min-height:94px!important}
+.topbar-inner,.nav-wrap{width:min(100% - 48px,1200px)!important;max-width:1200px!important;min-height:68px!important;margin-inline:auto!important;padding:.75rem 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:1.25rem!important}
+.brand{font-size:1.75rem!important;font-weight:600!important;white-space:nowrap!important}
+.brand-icon{width:68px!important;height:68px!important;flex:0 0 68px!important;object-fit:contain!important;border-radius:50%!important}
+.nav-actions,.nav-links,.nav-pill-holder{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:12px!important;flex-wrap:wrap!important}
+.nav-pill,.nav-pill-link,.qa-pill-home{width:auto!important;min-width:0!important;max-width:none!important;height:46px!important;padding:0 1.15rem!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;border-radius:999px!important;white-space:nowrap!important;font-family:var(--font-sans)!important;font-size:.88rem!important;font-weight:800!important}
+.qa-home,.qa-home>.qa-pill-home{width:auto!important;min-width:0!important;max-width:none!important}
+.qa-pill-home{background:linear-gradient(135deg,#22105d,#5a36c9)!important;color:#fff!important;border-color:transparent!important}
+
+/* Shared Quick Start */
+.hub-use-guide{position:relative!important;isolation:isolate!important;width:100%!important;max-width:1200px!important;margin:clamp(2rem,4vw,3rem) auto!important;padding:clamp(1.5rem,3vw,2.25rem)!important;border:1px solid rgba(217,175,55,.42)!important;border-radius:30px!important;background:linear-gradient(112deg,#fff9e9 0%,#fffdf9 50%,#fff0f4 100%)!important;box-shadow:0 22px 55px rgba(21,16,68,.10)!important;overflow:hidden!important}
+.hub-use-guide:before{content:''!important;display:block!important;position:absolute!important;inset:0!important;background:radial-gradient(circle at 10% 10%,rgba(217,175,55,.14),transparent 28%),radial-gradient(circle at 92% 8%,rgba(226,60,116,.09),transparent 26%)!important;pointer-events:none!important;z-index:-1!important}
+.hub-use-guide:after{display:none!important}
+.hub-guide-head{display:grid!important;grid-template-columns:minmax(0,1fr) 150px!important;gap:2rem!important;align-items:start!important;margin-bottom:1.4rem!important}
+.hub-guide-head h2{font-size:clamp(2rem,3.5vw,3rem)!important;line-height:1.02!important;color:#151044!important}
+.hub-guide-head p{max-width:78ch!important;color:#655e78!important;font-weight:650!important;line-height:1.65!important}
+.hub-guide-badge{width:150px!important;min-width:150px!important;padding:1rem .8rem!important;border-radius:21px!important;background:linear-gradient(135deg,#2a145c,#6841d1)!important;border:1px solid rgba(217,175,55,.6)!important;box-shadow:0 14px 28px rgba(47,27,111,.18)!important}
+.hub-guide-badge b{color:#e5bd29!important;font-size:1.6rem!important}
+.hub-guide-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;margin-bottom:1rem!important}
+.hub-guide-card{min-height:150px!important;height:100%!important;padding:1.2rem 1rem!important;border-radius:22px!important;background:#fffdfa!important;border:1px solid rgba(217,175,55,.42)!important;box-shadow:0 12px 26px rgba(21,16,68,.06)!important}
+.hub-guide-card h3{font-size:1.15rem!important}
+.hub-guide-card p{color:#686079!important;font-weight:650!important;line-height:1.55!important}
+.hub-guide-focus{width:100%!important;margin:0 0 1rem!important;padding:1rem 1.2rem!important;border-radius:22px!important;background:linear-gradient(120deg,#2a1458,#7043dc)!important}
+.hub-guide-focus h3{color:#e5bd29!important}
+.hub-quick-map{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important;margin:0!important}
+.hub-quick-map a{min-height:46px!important;display:flex!important;align-items:center!important;justify-content:center!important;border-radius:15px!important;background:#fff!important;border:1px solid rgba(21,16,68,.10)!important;color:#151044!important;font-weight:800!important}
+
+/* Shared footer: supports both footer markup systems */
+.camp-footer{background:linear-gradient(135deg,#11072d,#211054 45%,#3a1770 75%,#5a1f87)!important;color:#fff!important;padding:0!important}
+.footer-inner,.footer-shell{width:min(100% - 48px,1200px)!important;max-width:1200px!important;margin-inline:auto!important;padding:3rem 0 1.4rem!important}
+.footer-brand{font-size:2rem!important;font-weight:600!important}
+.footer-grid{display:grid!important;grid-template-columns:1.4fr repeat(3,1fr)!important;gap:2rem!important}
+.footer-main{display:grid!important;grid-template-columns:minmax(340px,1fr) auto!important;gap:3rem!important;align-items:start!important}
+.footer-brand-line{font-size:2rem!important;font-weight:600!important;color:#fff!important}
+.footer-links-clean{display:flex!important;justify-content:flex-end!important;align-items:flex-start!important;gap:.7rem!important;flex-wrap:wrap!important}
+.footer-links-clean a{min-height:44px!important;padding:0 1rem!important;display:inline-flex!important;align-items:center!important;border-radius:999px!important;background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.14)!important;color:#fff!important}
+.footer-bottom,.footer-min-bottom{width:100%!important;max-width:1200px!important;box-sizing:border-box!important;margin:1.2rem auto 0!important;padding:1.2rem 0 1.6rem!important;border-top:1px solid rgba(255,255,255,.12)!important;color:rgba(255,255,255,.68)!important}
+
+@media(max-width:980px){.brand-icon{width:60px!important;height:60px!important;flex-basis:60px!important}.topbar,header{min-height:auto!important}.topbar-inner,.nav-wrap{align-items:flex-start!important;flex-wrap:wrap!important}.nav-actions,.nav-links,.nav-pill-holder{width:100%!important;justify-content:flex-start!important}.hub-guide-head{grid-template-columns:1fr!important}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))!important}.footer-grid{grid-template-columns:repeat(2,1fr)!important}.footer-main{grid-template-columns:1fr!important}.footer-links-clean{justify-content:flex-start!important}}
+@media(max-width:560px){.topbar-inner,.nav-wrap,.footer-inner,.footer-shell{width:min(100% - 32px,1200px)!important}.brand-icon{width:52px!important;height:52px!important;flex-basis:52px!important}.brand{font-size:1.55rem!important}.nav-actions,.nav-links,.nav-pill-holder{display:grid!important;grid-template-columns:1fr!important;width:100%!important}.nav-pill,.nav-pill-link,.qa-home,.qa-home>.qa-pill-home{width:100%!important;max-width:100%!important}.nav-pill,.nav-pill-link,.qa-pill-home{height:50px!important}.hub-use-guide{padding:1.25rem 1rem!important;border-radius:24px!important}.hub-guide-grid,.hub-quick-map{grid-template-columns:1fr!important}.footer-grid{grid-template-columns:1fr!important}.footer-bottom,.footer-min-bottom{width:100%!important}}
+</style>
+<style id="camp21-footer-pill-fix">
+.camp-footer .footer-min{
+  width:min(100% - 48px,1200px)!important;max-width:1200px!important;margin:0 auto!important;
+  padding:3rem 0 1.4rem!important;display:grid!important;
+  grid-template-columns:minmax(340px,1fr) auto!important;gap:3rem!important;align-items:start!important
+}
+.camp-footer .footer-min-brand .footer-brand{
+  font-family:var(--font-serif)!important;font-size:2rem!important;font-weight:600!important;
+  line-height:1!important;color:#fff!important;margin-bottom:1rem!important
+}
+.camp-footer .footer-min-brand p{
+  margin:0!important;max-width:520px!important;color:rgba(255,255,255,.72)!important;
+  font-weight:600!important;line-height:1.6!important
+}
+.camp-footer .footer-min-links{
+  display:flex!important;justify-content:flex-end!important;align-items:flex-start!important;
+  gap:.7rem!important;flex-wrap:wrap!important;padding:.2rem 0 0!important
+}
+.camp-footer .footer-min-links a{
+  min-height:44px!important;padding:0 1rem!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;border-radius:999px!important;
+  background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.15)!important;
+  color:#fff!important;font-family:var(--font-sans)!important;font-size:.88rem!important;
+  font-weight:800!important;text-decoration:none!important;box-shadow:none!important;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease!important
+}
+.camp-footer .footer-min-links a:hover,.camp-footer .footer-min-links a:focus-visible{
+  background:rgba(255,255,255,.15)!important;border-color:rgba(226,60,116,.55)!important;
+  color:#fff!important;transform:translateY(-1px)!important
+}
+.camp-footer .footer-min-bottom{
+  width:min(100% - 48px,1200px)!important;max-width:1200px!important;margin:0 auto!important;
+  padding:1.2rem 0 1.6rem!important;display:flex!important;justify-content:space-between!important;
+  gap:10px 26px!important;flex-wrap:wrap!important;border-top:1px solid rgba(255,255,255,.12)!important
+}
+@media(max-width:980px){
+  .camp-footer .footer-min{grid-template-columns:1fr!important}
+  .camp-footer .footer-min-links{justify-content:flex-start!important}
+}
+@media(max-width:560px){
+  .camp-footer .footer-min,.camp-footer .footer-min-bottom{width:min(100% - 32px,1200px)!important}
+  .camp-footer .footer-min-links{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
+  .camp-footer .footer-min-links a{width:100%!important;min-height:48px!important}
+  .camp-footer .footer-min-bottom{flex-direction:column!important}
+}
+</style>
+<style id="organiser-numbered-section-standard">
+/* Numbered, colour-coded organiser dropdown headings */
+.panel.organiser-numbered>summary{
+  display:grid!important;
+  grid-template-columns:52px minmax(0,1fr) auto!important;
+  gap:16px!important;
+  align-items:center!important;
+  padding:1.15rem 1.3rem!important;
+  background-image:none!important;
+  border-bottom:0!important
+}
+.panel.organiser-numbered>summary:before{
+  content:attr(data-section)!important;
+  width:42px!important;height:42px!important;
+  border-radius:14px!important;
+  display:grid!important;place-items:center!important;
+  background:rgba(255,255,255,.17)!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+  color:inherit!important;font-weight:900!important
+}
+.panel.organiser-numbered>summary>div:first-of-type{min-width:0!important}
+.panel.organiser-numbered>summary h2{
+  margin:0 0 .15rem!important;
+  font-family:var(--font-serif)!important;
+  font-size:1.55rem!important;font-weight:600!important;
+  line-height:1!important;color:inherit!important
+}
+.panel.organiser-numbered>summary p{
+  margin:0!important;color:rgba(255,255,255,.78)!important;
+  font-size:.86rem!important;font-weight:700!important;line-height:1.45!important
+}
+.panel.organiser-numbered .summary-right{display:flex!important;align-items:center!important;gap:12px!important}
+.panel.organiser-numbered .summary-chevron{font-size:1.25rem!important;text-align:center!important}
+.panel.organiser-theme-navy>summary{background:#20103E!important;color:#fff!important}
+.panel.organiser-theme-violet>summary{background:#6540dd!important;color:#fff!important}
+.panel.organiser-theme-gold>summary{background:#D9AF37!important;color:#151044!important}
+.panel.organiser-theme-gold>summary:before{background:rgba(21,16,68,.12)!important;border-color:rgba(21,16,68,.18)!important}
+.panel.organiser-theme-gold>summary p{color:rgba(21,16,68,.72)!important}
+.panel.organiser-theme-rose>summary{background:#e23c74!important;color:#fff!important}
+
+/* Overview & Command Snapshot: four solid theme cards */
+#overview .grid.four{
+  gap:6px!important;
+  border-radius:24px!important;
+  overflow:hidden!important
+}
+#overview .grid.four>.card{
+  min-height:280px!important;
+  border-radius:0!important;
+  border:0!important;
+  padding:2rem 1.7rem!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  box-shadow:none!important
+}
+#overview .grid.four>.card:nth-child(1){background:#20103E!important;color:#fff!important}
+#overview .grid.four>.card:nth-child(2){background:#6540dd!important;color:#fff!important}
+#overview .grid.four>.card:nth-child(3){background:#D9AF37!important;color:#151044!important}
+#overview .grid.four>.card:nth-child(4){background:#e23c74!important;color:#fff!important}
+#overview .grid.four>.card .mini{color:inherit!important;opacity:.80!important}
+#overview .grid.four>.card h3{color:inherit!important;font-size:1.55rem!important;line-height:1.08!important}
+#overview .grid.four>.card p{color:inherit!important;opacity:.84!important;line-height:1.6!important}
+
+@media(max-width:980px){
+  #overview .grid.four{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:620px){
+  .panel.organiser-numbered>summary{grid-template-columns:44px minmax(0,1fr) 30px!important;padding:1rem!important;gap:12px!important}
+  .panel.organiser-numbered>summary:before{width:38px!important;height:38px!important;border-radius:12px!important}
+  .panel.organiser-numbered>summary h2{font-size:1.25rem!important}
+  .panel.organiser-numbered>summary p,.panel.organiser-numbered .summary-badge{display:none!important}
+  #overview .grid.four{grid-template-columns:1fr!important;gap:4px!important}
+  #overview .grid.four>.card{min-height:220px!important}
+}
+</style>
+<style id="organiser-overview-bullet-fix">
+#overview .snapshot-points{
+  margin:1rem 0 0!important;
+  padding:0!important;
+  list-style:none!important;
+  display:grid!important;
+  gap:.7rem!important
+}
+#overview .snapshot-points li{
+  position:relative!important;
+  margin:0!important;
+  padding-left:1.25rem!important;
+  color:inherit!important;
+  font-size:.93rem!important;
+  font-weight:650!important;
+  line-height:1.48!important;
+  opacity:.88!important
+}
+#overview .snapshot-points li:before{
+  content:'•'!important;
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  color:currentColor!important;
+  font-size:1.1rem!important;
+  font-weight:900!important
+}
+#overview .grid.four>.card:nth-child(3) .snapshot-points li{opacity:.82!important}
+</style>
+<style id="organiser-overview-contrast-fix">
+/* Section 01 strict black/white text contrast */
+#overview>summary,
+#overview>summary h2,
+#overview>summary p,
+#overview>summary .summary-badge,
+#overview>summary .summary-chevron,
+#overview>summary:before{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  opacity:1!important
+}
+#overview>summary p{color:rgba(255,255,255,.88)!important;-webkit-text-fill-color:rgba(255,255,255,.88)!important}
+#overview>summary .summary-badge{
+  background:rgba(255,255,255,.14)!important;
+  border:1px solid rgba(255,255,255,.24)!important
+}
+
+/* White text on navy, violet and rose cards */
+#overview .grid.four>.card:nth-child(1),
+#overview .grid.four>.card:nth-child(2),
+#overview .grid.four>.card:nth-child(4),
+#overview .grid.four>.card:nth-child(1) h3,
+#overview .grid.four>.card:nth-child(2) h3,
+#overview .grid.four>.card:nth-child(4) h3,
+#overview .grid.four>.card:nth-child(1) li,
+#overview .grid.four>.card:nth-child(2) li,
+#overview .grid.four>.card:nth-child(4) li{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  opacity:1!important
+}
+
+/* Black/navy text on gold card */
+#overview .grid.four>.card:nth-child(3),
+#overview .grid.four>.card:nth-child(3) h3,
+#overview .grid.four>.card:nth-child(3) li{
+  color:#151044!important;
+  -webkit-text-fill-color:#151044!important;
+  opacity:1!important
+}
+
+/* Category labels */
+#overview .grid.four>.card:nth-child(1) .mini,
+#overview .grid.four>.card:nth-child(2) .mini,
+#overview .grid.four>.card:nth-child(4) .mini{
+  background:rgba(255,255,255,.16)!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  opacity:1!important
+}
+#overview .grid.four>.card:nth-child(3) .mini{
+  background:rgba(21,16,68,.12)!important;
+  border:1px solid rgba(21,16,68,.20)!important;
+  color:#151044!important;
+  -webkit-text-fill-color:#151044!important;
+  opacity:1!important
+}
+</style>
 </head>
 <body>
 
@@ -351,8 +611,8 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     </div>
   </section>
 
-  <details class="panel" id="overview" open>
-    <summary>
+  <details class="panel organiser-numbered organiser-theme-navy" id="overview" open>
+    <summary data-section="01">
       <div>
         <h2>Overview & Command Snapshot</h2>
         <p>Key organiser highlights, role responsibilities and daily focus checkpoints.</p>
@@ -367,29 +627,50 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
         <article class="card solid-indigo">
           <span class="mini">Mission</span>
           <h3>Keep All Streams Aligned</h3>
-          <p>Ensure the programme schedule, templates, trainer support, judging flow, registration, and communication remain synchronized throughout all four days.</p>
+          <ul class="snapshot-points">
+            <li>Keep the programme schedule on track</li>
+            <li>Coordinate template completion</li>
+            <li>Align trainer and facilitator support</li>
+            <li>Monitor judging and registration flow</li>
+            <li>Maintain clear communication across all four days</li>
+          </ul>
         </article>
         <article class="card solid-gold">
           <span class="mini">Template Control</span>
           <h3>T01–T13 + T14</h3>
-          <p>T01–T13 guide the Smart DT process. T14 is the Final Pitching Template. Monitor completion, submission readiness, Final Pitch 10 criteria × 5 marks calculation and language criterion at each checkpoint.</p>
+          <ul class="snapshot-points">
+            <li>T01–T13 guide the Smart DT process</li>
+            <li>T14 is the Final Pitching Template</li>
+            <li>Monitor completion and submission readiness</li>
+            <li>Verify 10 criteria × 5 marks calculation</li>
+            <li>Check the language criterion at each checkpoint</li>
+          </ul>
         </article>
         <article class="card solid-violet">
           <span class="mini">Assessment Split</span>
           <h3>Separate 100% Scores</h3>
-          <p>Final Pitch is evaluated by Judges as 100%. TikTok Reflection Challenge is evaluated separately by Trainers as 100% through 3 daily videos.</p>
+          <ul class="snapshot-points">
+            <li>Final Pitch: 100% evaluated by Judges</li>
+            <li>TikTok Reflection: separate 100% evaluation</li>
+            <li>Trainers assess three daily reflection videos</li>
+            <li>Do not combine both scores</li>
+          </ul>
         </article>
         <article class="card solid-jade">
           <span class="mini">Critical Sign-Off</span>
           <h3>T10 Trainer Sign-Off</h3>
-          <p>No team may start prototype build until the <b>T10 Prototype Direction Plan</b> has been reviewed and signed by the trainer.</p>
+          <ul class="snapshot-points">
+            <li>Review the T10 Prototype Direction Plan</li>
+            <li>Obtain trainer approval and sign-off</li>
+            <li>Do not begin prototype building before approval</li>
+          </ul>
         </article>
       </div>
     </div>
   </details>
 
-  <details class="panel" id="programme-flow" open>
-    <summary>
+  <details class="panel organiser-numbered organiser-theme-violet" id="programme-flow" open>
+    <summary data-section="02">
       <div>
         <h2>Programme Flow</h2>
         <p>Daily organiser schedule with aligned templates, venue notes and responsible stream owners.</p>
@@ -416,8 +697,8 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     </div>
   </details>
 
-  <details class="panel" id="group-control" open>
-    <summary>
+  <details class="panel organiser-numbered organiser-theme-gold" id="group-control" open>
+    <summary data-section="03">
       <div>
         <h2>Group Control & Submission Monitoring</h2>
         <p>Track team progress, submission readiness and required evidence from templates, TikTok reflections and pitch preparation.</p>
@@ -468,8 +749,8 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     </div>
   </details>
 
-  <details class="panel" id="people-ops" open>
-    <summary>
+  <details class="panel organiser-numbered organiser-theme-rose" id="people-ops" open>
+    <summary data-section="04">
       <div>
         <h2>People, Facilitation & Judging Operations</h2>
         <p>Role-based coordination for trainers, facilitators and judge teams.</p>
@@ -499,8 +780,8 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     </div>
   </details>
 
-  <details class="panel" id="checklist" open>
-    <summary>
+  <details class="panel organiser-numbered organiser-theme-navy" id="checklist" open>
+    <summary data-section="05">
       <div>
         <h2>Operations Checklist <span id="opsCount" style="color:#f4cb54">0/16</span></h2>
         <p>Secretariat checklist for internal use. Progress is saved in this browser.</p>
@@ -522,8 +803,8 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     </div>
   </details>
 
-  <details class="panel" id="broadcast-tools" open>
-    <summary>
+  <details class="panel organiser-numbered organiser-theme-violet" id="broadcast-tools" open>
+    <summary data-section="06">
       <div>
         <h2>Broadcast & Issue Reporting Tools</h2>
         <p>Prepare organiser messages and log or route issues to the correct support stream.</p>

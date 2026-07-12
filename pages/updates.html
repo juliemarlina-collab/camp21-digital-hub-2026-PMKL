@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,10 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/main.js" defer></script>
-  
+
   <style>
 /* === Layout foundation (matches other pages; style.css no longer provides these) === */
 body{margin:0;background:#F8F2EA;color:#2B2733;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6}
@@ -48,7 +48,7 @@ h1,h2,h3{font-family:'Playfair Display',serif}
       background: var(--neo-ink);
       color: #fff;
     }
-    
+
     .sync-status-indicator {
       display: flex;
       align-items: center;
@@ -114,7 +114,7 @@ h1,h2,h3{font-family:'Playfair Display',serif}
     @media(max-width:980px){.nav-actions{width:100%;justify-content:flex-start;gap:8px}.topbar-inner{align-items:flex-start;flex-direction:column;gap:14px}.camp-footer .footer-grid{grid-template-columns:1fr 1fr}.qa-dropdown{left:-8px;right:-8px;min-width:auto}}
     @media(max-width:560px){.camp-footer .footer-grid{grid-template-columns:1fr}.topbar .brand-icon{width:38px;height:38px}.topbar-inner{padding:14px 18px}.nav-pill{padding:10px 16px;font-size:.82rem}.qa-dropdown{position:fixed;left:12px;right:12px;top:auto;border-radius:18px}}
     @media print{.topbar,.nav-actions,.quick-access{display:none}.camp-footer{display:none}}
-  
+
 /* Heritage Decor */
 body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('../assets/decors/songket-pattern.png') repeat center/400px;opacity:.025;pointer-events:none}
 .hero::after{content:'';position:absolute;top:0;right:0;width:220px;height:220px;background:url('../assets/decors/batik-corner-gold.png') no-repeat top right/contain;opacity:.15;pointer-events:none}
@@ -159,7 +159,7 @@ header .brand span,
 .hub-guide-badge{flex:0 0 auto;background:linear-gradient(135deg,#20103E,#5A36C9);color:#fff;border:1px solid rgba(217,175,55,.55);border-radius:22px;padding:14px 18px;text-align:center;min-width:150px;box-shadow:0 14px 34px rgba(32,16,62,.18)}
 .hub-guide-badge b{display:block;color:#D9AF37;font-size:1.35rem;line-height:1}.hub-guide-badge span{font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.78)}
 .hub-guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
-.hub-guide-card{position:relative;background:#fffdf9;border:1px solid rgba(217,175,55,.34);border-radius:22px;padding:18px 16px 16px;box-shadow:0 16px 34px rgba(32,16,62,.08);min-height:146px;overflow:hidden}
+.hub-guide-card{position:relative;background:#fffdf9;border:1px solid rgba(217,175,55,.34);border-radius:22px;padding:18px 16px 16px;box-shadow:0 16px 34px rgba(32,16,62,.08);min-height:0;overflow:hidden}
 .hub-guide-card:before{content:attr(data-step);position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:12px;background:linear-gradient(135deg,#D9AF37,#F05AA6);display:grid;place-items:center;color:#20103E;font-weight:1000;font-size:.9rem}
 .hub-guide-card h3{margin:0 42px 8px 0;color:#20103E;font-size:1rem;line-height:1.2}.hub-guide-card p{margin:0;color:#5f5870;font-size:.88rem;line-height:1.55;font-weight:600}
 .hub-guide-focus{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:16px 18px;border-radius:22px;background:linear-gradient(135deg,rgba(32,16,62,.96),rgba(90,54,201,.94));color:#fff;border:1px solid rgba(217,175,55,.46);box-shadow:0 18px 38px rgba(32,16,62,.18)}
@@ -215,6 +215,117 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 
 .footer-min-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;text-align:left}
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap">
+<style id="camp21-master-standard-v2">
+:root{--ink:#151044;--rose:#e23c74;--font-serif:'Cormorant Garamond',serif;--font-sans:'Plus Jakarta Sans',sans-serif}
+h1,h2,h3,.brand,.footer-brand,.footer-brand-line{font-family:var(--font-serif)!important}
+h1,h2,h3{font-weight:600!important;letter-spacing:-.015em!important}
+.brand span,.footer-brand span,.footer-brand-line span,.brand-21{color:#e23c74!important;-webkit-text-fill-color:#e23c74!important}
+
+/* Shared header: supports topbar and header variants */
+.topbar,header{min-height:94px!important}
+.topbar-inner,.nav-wrap{width:min(100% - 48px,1200px)!important;max-width:1200px!important;min-height:68px!important;margin-inline:auto!important;padding:.75rem 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:1.25rem!important}
+.brand{font-size:1.75rem!important;font-weight:600!important;white-space:nowrap!important}
+.brand-icon{width:68px!important;height:68px!important;flex:0 0 68px!important;object-fit:contain!important;border-radius:50%!important}
+.nav-actions,.nav-links,.nav-pill-holder{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:12px!important;flex-wrap:wrap!important}
+.nav-pill,.nav-pill-link,.qa-pill-home{width:auto!important;min-width:0!important;max-width:none!important;height:46px!important;padding:0 1.15rem!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;border-radius:999px!important;white-space:nowrap!important;font-family:var(--font-sans)!important;font-size:.88rem!important;font-weight:800!important}
+.qa-home,.qa-home>.qa-pill-home{width:auto!important;min-width:0!important;max-width:none!important}
+.qa-pill-home{background:linear-gradient(135deg,#22105d,#5a36c9)!important;color:#fff!important;border-color:transparent!important}
+
+/* Shared Quick Start */
+.hub-use-guide{position:relative!important;isolation:isolate!important;width:100%!important;max-width:1200px!important;margin:clamp(2rem,4vw,3rem) auto!important;padding:clamp(1.5rem,3vw,2.25rem)!important;border:1px solid rgba(217,175,55,.42)!important;border-radius:30px!important;background:linear-gradient(112deg,#fff9e9 0%,#fffdf9 50%,#fff0f4 100%)!important;box-shadow:0 22px 55px rgba(21,16,68,.10)!important;overflow:hidden!important}
+.hub-use-guide:before{content:''!important;display:block!important;position:absolute!important;inset:0!important;background:radial-gradient(circle at 10% 10%,rgba(217,175,55,.14),transparent 28%),radial-gradient(circle at 92% 8%,rgba(226,60,116,.09),transparent 26%)!important;pointer-events:none!important;z-index:-1!important}
+.hub-use-guide:after{display:none!important}
+.hub-guide-head{display:grid!important;grid-template-columns:minmax(0,1fr) 150px!important;gap:2rem!important;align-items:start!important;margin-bottom:1.4rem!important}
+.hub-guide-head h2{font-size:clamp(2rem,3.5vw,3rem)!important;line-height:1.02!important;color:#151044!important}
+.hub-guide-head p{max-width:78ch!important;color:#655e78!important;font-weight:650!important;line-height:1.65!important}
+.hub-guide-badge{width:150px!important;min-width:150px!important;padding:1rem .8rem!important;border-radius:21px!important;background:linear-gradient(135deg,#2a145c,#6841d1)!important;border:1px solid rgba(217,175,55,.6)!important;box-shadow:0 14px 28px rgba(47,27,111,.18)!important}
+.hub-guide-badge b{color:#e5bd29!important;font-size:1.6rem!important}
+.hub-guide-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-auto-rows:1fr!important;gap:14px!important;margin-bottom:1rem!important}
+.hub-guide-card{min-height:0!important;height:auto!important;display:flex!important;flex-direction:column!important;padding:1.2rem 1rem!important;border-radius:22px!important;background:#fffdfa!important;border:1px solid rgba(217,175,55,.42)!important;box-shadow:0 12px 26px rgba(21,16,68,.06)!important}
+.hub-guide-card h3{font-size:1.15rem!important}
+.hub-guide-card p{color:#686079!important;font-weight:650!important;line-height:1.55!important}
+.hub-guide-focus{width:100%!important;margin:0 0 1rem!important;padding:1rem 1.2rem!important;border-radius:22px!important;background:linear-gradient(120deg,#2a1458,#7043dc)!important}
+.hub-guide-focus h3{color:#e5bd29!important}
+.hub-quick-map{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important;margin:0!important}
+.hub-quick-map a{min-height:46px!important;display:flex!important;align-items:center!important;justify-content:center!important;border-radius:15px!important;background:#fff!important;border:1px solid rgba(21,16,68,.10)!important;color:#151044!important;font-weight:800!important}
+
+/* Shared footer: supports both footer markup systems */
+.camp-footer{background:linear-gradient(135deg,#11072d,#211054 45%,#3a1770 75%,#5a1f87)!important;color:#fff!important;padding:0!important}
+.footer-inner,.footer-shell{width:min(100% - 48px,1200px)!important;max-width:1200px!important;margin-inline:auto!important;padding:3rem 0 1.4rem!important}
+.footer-brand{font-size:2rem!important;font-weight:600!important}
+.footer-grid{display:grid!important;grid-template-columns:1.4fr repeat(3,1fr)!important;gap:2rem!important}
+.footer-main{display:grid!important;grid-template-columns:minmax(340px,1fr) auto!important;gap:3rem!important;align-items:start!important}
+.footer-brand-line{font-size:2rem!important;font-weight:600!important;color:#fff!important}
+.footer-links-clean{display:flex!important;justify-content:flex-end!important;align-items:flex-start!important;gap:.7rem!important;flex-wrap:wrap!important}
+.footer-links-clean a{min-height:44px!important;padding:0 1rem!important;display:inline-flex!important;align-items:center!important;border-radius:999px!important;background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.14)!important;color:#fff!important}
+.footer-bottom,.footer-min-bottom{width:100%!important;max-width:1200px!important;box-sizing:border-box!important;margin:1.2rem auto 0!important;padding:1.2rem 0 1.6rem!important;border-top:1px solid rgba(255,255,255,.12)!important;color:rgba(255,255,255,.68)!important}
+
+@media(max-width:980px){.brand-icon{width:60px!important;height:60px!important;flex-basis:60px!important}.topbar,header{min-height:auto!important}.topbar-inner,.nav-wrap{align-items:flex-start!important;flex-wrap:wrap!important}.nav-actions,.nav-links,.nav-pill-holder{width:100%!important;justify-content:flex-start!important}.hub-guide-head{grid-template-columns:1fr!important}.hub-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.hub-quick-map{grid-template-columns:repeat(2,minmax(0,1fr))!important}.footer-grid{grid-template-columns:repeat(2,1fr)!important}.footer-main{grid-template-columns:1fr!important}.footer-links-clean{justify-content:flex-start!important}}
+@media(max-width:560px){.topbar-inner,.nav-wrap,.footer-inner,.footer-shell{width:min(100% - 32px,1200px)!important}.brand-icon{width:52px!important;height:52px!important;flex-basis:52px!important}.brand{font-size:1.55rem!important}.nav-actions,.nav-links,.nav-pill-holder{display:grid!important;grid-template-columns:1fr!important;width:100%!important}.nav-pill,.nav-pill-link,.qa-home,.qa-home>.qa-pill-home{width:100%!important;max-width:100%!important}.nav-pill,.nav-pill-link,.qa-pill-home{height:50px!important}.hub-use-guide{padding:1.25rem 1rem!important;border-radius:24px!important}.hub-guide-grid,.hub-quick-map{grid-template-columns:1fr!important}.footer-grid{grid-template-columns:1fr!important}.footer-bottom,.footer-min-bottom{width:100%!important}}
+</style>
+<style id="camp21-footer-pill-fix">
+.camp-footer .footer-min{
+  width:min(100% - 48px,1200px)!important;max-width:1200px!important;margin:0 auto!important;
+  padding:3rem 0 1.4rem!important;display:grid!important;
+  grid-template-columns:minmax(340px,1fr) auto!important;gap:3rem!important;align-items:start!important
+}
+.camp-footer .footer-min-brand .footer-brand{
+  font-family:var(--font-serif)!important;font-size:2rem!important;font-weight:600!important;
+  line-height:1!important;color:#fff!important;margin-bottom:1rem!important
+}
+.camp-footer .footer-min-brand p{
+  margin:0!important;max-width:520px!important;color:rgba(255,255,255,.72)!important;
+  font-weight:600!important;line-height:1.6!important
+}
+.camp-footer .footer-min-links{
+  display:flex!important;justify-content:flex-end!important;align-items:flex-start!important;
+  gap:.7rem!important;flex-wrap:wrap!important;padding:.2rem 0 0!important
+}
+.camp-footer .footer-min-links a{
+  min-height:44px!important;padding:0 1rem!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;border-radius:999px!important;
+  background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.15)!important;
+  color:#fff!important;font-family:var(--font-sans)!important;font-size:.88rem!important;
+  font-weight:800!important;text-decoration:none!important;box-shadow:none!important;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease!important
+}
+.camp-footer .footer-min-links a:hover,.camp-footer .footer-min-links a:focus-visible{
+  background:rgba(255,255,255,.15)!important;border-color:rgba(226,60,116,.55)!important;
+  color:#fff!important;transform:translateY(-1px)!important
+}
+.camp-footer .footer-min-bottom{
+  width:min(100% - 48px,1200px)!important;max-width:1200px!important;margin:0 auto!important;
+  padding:1.2rem 0 1.6rem!important;display:flex!important;justify-content:space-between!important;
+  gap:10px 26px!important;flex-wrap:wrap!important;border-top:1px solid rgba(255,255,255,.12)!important
+}
+@media(max-width:980px){
+  .camp-footer .footer-min{grid-template-columns:1fr!important}
+  .camp-footer .footer-min-links{justify-content:flex-start!important}
+}
+@media(max-width:560px){
+  .camp-footer .footer-min,.camp-footer .footer-min-bottom{width:min(100% - 32px,1200px)!important}
+  .camp-footer .footer-min-links{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
+  .camp-footer .footer-min-links a{width:100%!important;min-height:48px!important}
+  .camp-footer .footer-min-bottom{flex-direction:column!important}
+}
+</style>
+<style id="updates-live-centre">
+/* Keep Updates content on the same 1200px alignment as the master header/footer. */
+main.wide{width:min(100% - 48px,1200px)!important;max-width:1200px!important;box-sizing:border-box!important;margin-inline:auto!important;padding:1.75rem 0 4rem!important}
+main.wide>.hub-use-guide{width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0 0 2.5rem!important}
+.updates-action-panel{margin:0 0 2rem;padding:24px;border:1px solid rgba(217,175,55,.38);border-radius:24px;background:#fffaf2}.updates-action-panel h2{margin:0 0 6px;color:#151044;font-size:1.65rem}.updates-action-panel>p{margin:0 0 18px;color:#696279;font-weight:650}
+.updates-action-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:6px;overflow:hidden;border-radius:22px}.updates-action-grid article{display:flex;flex-direction:column;min-height:0;padding:22px 22px;border:0;background:#20103e;color:#fff}.updates-action-grid article:nth-child(2){background:#6540dd}.updates-action-grid article:nth-child(3){background:#d9af37;color:#151044}.updates-action-grid article:nth-child(4){background:#e23c74}.updates-action-grid strong{display:block;margin-bottom:12px;color:inherit;font-size:1.08rem}.updates-action-grid ul{margin:0;padding-left:1.15rem;color:inherit;font-weight:700;line-height:1.55}.updates-action-grid li+li{margin-top:.4rem}.updates-action-grid li::marker{color:#fff}.updates-action-grid article:nth-child(3) li::marker{color:#151044}
+.hub-guide-card ul{margin:.65rem 0 0;padding-left:1.15rem;color:#696279;font-weight:700;line-height:1.55}.hub-guide-card li+li{margin-top:.35rem}.hub-guide-card li::marker{color:#e23c74}
+.update-sections{display:grid;gap:16px;margin:0 0 5rem}.update-section{overflow:hidden;border:1px solid rgba(217,175,55,.28);border-radius:26px;background:#fff;box-shadow:0 14px 38px rgba(21,16,68,.07)}
+.update-section>summary{display:grid;grid-template-columns:56px minmax(0,1fr) 34px;gap:18px;align-items:center;padding:22px 26px;color:#fff;cursor:pointer;list-style:none}.update-section>summary::-webkit-details-marker{display:none}.update-section>summary::before{content:attr(data-section);width:52px;height:52px;display:grid;place-items:center;border-radius:15px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.14);font-weight:900}.update-section .section-heading h2{margin:0 0 3px;color:inherit;font-size:1.45rem}.update-section .section-heading p{margin:0;color:inherit;opacity:.82;font-weight:700}.update-section .section-chevron{font-size:1.35rem;font-weight:900;transition:transform .2s}.update-section[open] .section-chevron{transform:rotate(180deg)}
+.update-theme-navy>summary{background:#20103e}.update-theme-violet>summary{background:#6540dd}.update-theme-olive>summary{background:#887a2c}.update-theme-gold>summary{background:#d9af37;color:#151044}.update-theme-rose>summary{background:#e23c74}.update-section-body{padding:24px 26px 28px}
+.update-filter-label{margin:0 0 10px;color:#151044;font-size:.83rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.filter-row-container{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 12px;scrollbar-width:thin}.filter-badge-pill{flex:0 0 auto;min-height:44px;padding:0 17px;border:1px solid #d9d3df;border-radius:999px;background:#fff;color:#151044;font-weight:800;cursor:pointer}.filter-badge-pill:hover,.filter-badge-pill.active{background:#151044;color:#fff;border-color:#151044}.role-filter.active{background:#6540dd;border-color:#6540dd}
+.pinned-update{padding:26px;border-radius:20px;background:linear-gradient(135deg,#20103e,#6540dd);color:#fff}.pinned-update .stage-badge{display:inline-flex;margin-bottom:14px;padding:7px 12px;border-radius:999px;background:#d9af37;color:#151044;font-weight:900}.pinned-update h2{margin:0 0 10px;color:#fff;font-size:1.7rem}.pinned-update p{margin:0;color:rgba(255,255,255,.84);font-weight:650;line-height:1.55}
+.update-stream{display:grid;gap:12px;margin-top:18px}.update-item-row{display:grid!important;grid-template-columns:minmax(190px,.8fr) minmax(260px,1.4fr) auto;gap:20px;align-items:center;padding:20px;border:1px solid #e6ddea;border-left:6px solid #6540dd;border-radius:18px;background:#fff}.update-empty-card{padding:22px;border:1px dashed #d7c9b7;border-radius:18px;background:#fffaf4}.update-empty-card h3{margin:0 0 8px;color:#151044}.update-empty-card ul{margin:0;padding-left:1.2rem;color:#686173;font-weight:650;line-height:1.6}.section-jump{display:inline-flex;align-items:center;min-height:44px;margin-top:16px;padding:0 17px;border-radius:999px;background:#151044;color:#fff!important;font-weight:850;text-decoration:none}.sync-status-indicator{display:flex;gap:10px;align-items:center;margin:0 0 16px;color:#655e70;font-weight:700}.pulse-dot{width:10px;height:10px;border-radius:50%;background:#27a766;box-shadow:0 0 0 6px rgba(39,167,102,.12)}
+@media(max-width:900px){.updates-action-grid{grid-template-columns:repeat(2,1fr)}.update-item-row{grid-template-columns:1fr auto}.update-item-row>div:nth-child(2){grid-column:1/-1;grid-row:2}}
+@media(max-width:620px){main.wide{width:min(100% - 32px,1200px)!important;padding-top:1rem!important}.updates-action-grid{grid-template-columns:1fr}.update-section>summary{grid-template-columns:46px minmax(0,1fr) 24px;gap:12px;padding:18px 15px}.update-section>summary::before{width:44px;height:44px;border-radius:13px}.update-section .section-heading h2{font-size:1.15rem}.update-section-body{padding:18px 15px 22px}.update-item-row{grid-template-columns:1fr!important}.update-item-row>div:nth-child(2){grid-column:auto;grid-row:auto}.meta-tag{justify-self:start}}
+</style>
 </head>
 <body>
 
@@ -246,16 +357,16 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
   </div>
 </header>
   <!-- PAGE HERO -->
-<section class="hero" style="display:block;background:radial-gradient(circle at 82% 10%,rgba(242,79,180,.15),transparent 34%),linear-gradient(120deg,rgba(24,61,112,.72),rgba(37,16,82,.68) 45%,rgba(59,18,76,.65)),url('../assets/images/hero-updates.jpg') center/cover;color:#fff;padding:58px 28px 50px"><div style="max-width:1440px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center"><div>
+<section class="hero" style="display:block;background:radial-gradient(circle at 82% 10%,rgba(242,79,180,.15),transparent 34%),linear-gradient(120deg,rgba(24,61,112,.72),rgba(37,16,82,.68) 45%,rgba(59,18,76,.65)),url('../assets/images/hero-updates.jpg') center/cover;color:#fff;padding:58px 28px 50px"><div style="width:100%;max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center"><div>
   <span class="eyebrow" style="display:inline-flex;border:1px solid rgba(241,191,50,.6);background:rgba(241,191,50,.13);color:#ffe18a;border-radius:999px;padding:9px 18px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem">Broadcast Stream</span>
   <h1 style="font-family:'Playfair Display',serif;font-size:clamp(3.2rem,6vw,5rem);line-height:.92;margin:30px 0 18px;letter-spacing:-.05em">Live Updates</h1>
   <p style="font-size:1.15rem;line-height:1.65;color:rgba(255,255,255,.78);max-width:700px">Real-time announcements, schedule changes, and important notices during CAMP21.</p>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:520px">
-    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.9rem;font-weight:900;line-height:1">10</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">Teams</span></div>
-    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.9rem;font-weight:900;line-height:1">5</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">DT Phases</span></div>
-    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.9rem;font-weight:900;line-height:1">3</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">TikTok Video Challenges</span></div>
-    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.9rem;font-weight:900;line-height:1">1</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">Pitch Evaluation</span></div>
+    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.45rem;font-weight:900;line-height:1">LIVE</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">Latest Update</span></div>
+    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.45rem;font-weight:900;line-height:1">CHECK</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">Programme &amp; Venue</span></div>
+    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.45rem;font-weight:900;line-height:1">ACT</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">Deadlines &amp; Alerts</span></div>
+    <div class="hero-insight" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:18px 20px"><strong style="display:block;color:#D9AF37;font-size:1.45rem;font-weight:900;line-height:1">HELP</strong><span style="display:block;color:rgba(255,255,255,.85);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-top:6px">Contact Secretariat</span></div>
   </div>
 </div></section>
 
@@ -273,10 +384,10 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
       <div class="hub-guide-badge"><b>GUIDE</b><span>Quick Start</span></div>
     </div>
     <div class="hub-guide-grid">
-      <article class="hub-guide-card" data-step="1"><h3>Check the pinned notice</h3><p>The pinned card always carries the most important current announcement.</p></article>
-<article class="hub-guide-card" data-step="2"><h3>Browse the stream</h3><p>Scroll the feed for the latest organiser broadcasts in order.</p></article>
-<article class="hub-guide-card" data-step="3"><h3>Filter by category</h3><p>Use the Logistics, Deadlines and Workshop filters to narrow the feed.</p></article>
-<article class="hub-guide-card" data-step="4"><h3>Check daily</h3><p>Updates are pushed throughout each camp day — revisit regularly.</p></article>
+      <article class="hub-guide-card" data-step="1"><h3>Check the pinned notice</h3><ul><li>Read the priority announcement first</li><li>Confirm whether immediate action is required</li></ul></article>
+<article class="hub-guide-card" data-step="2"><h3>Browse the stream</h3><ul><li>Review the newest organiser broadcasts</li><li>Check the date, time and status of each notice</li></ul></article>
+<article class="hub-guide-card" data-step="3"><h3>Filter the updates</h3><ul><li>Select an update type</li><li>Choose your audience or programme role</li></ul></article>
+<article class="hub-guide-card" data-step="4"><h3>Check regularly</h3><ul><li>Revisit before every programme session</li><li>Follow the newest official instruction</li></ul></article>
     </div>
     <div class="hub-guide-focus">
       <div class="focus-icon">★</div>
@@ -291,57 +402,54 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
     </div>
   </section>
 
-    
 
 
-    <section style="margin-bottom:4rem">
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.8vw,2.2rem);color:#20103E;margin:0 0 6px">Notifications &amp; Performance</h2>
-      <p style="color:#726b82;font-weight:600;margin:0 0 20px;max-width:640px">Live notification cards and team performance highlights will appear here during CAMP21.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="np-grid">
-        <div style="background:#fffdf9;border:1px dashed #d9c8a8;border-radius:22px;padding:26px 22px;text-align:center"><div style="font-size:2rem;margin-bottom:10px">📢</div><h3 style="margin:0 0 6px;color:#20103E;font-size:1.05rem">Push Notifications</h3><p style="margin:0;color:#726b82;font-weight:600;font-size:.9rem;line-height:1.5">Urgent organiser alerts will appear here in real time.</p></div>
-        <div style="background:#fffdf9;border:1px dashed #d9c8a8;border-radius:22px;padding:26px 22px;text-align:center"><div style="font-size:2rem;margin-bottom:10px">📅</div><h3 style="margin:0 0 6px;color:#20103E;font-size:1.05rem">Schedule Changes</h3><p style="margin:0;color:#726b82;font-weight:600;font-size:.9rem;line-height:1.5">Session time or venue adjustments will be pinned here.</p></div>
-        <div style="background:#fffdf9;border:1px dashed #d9c8a8;border-radius:22px;padding:26px 22px;text-align:center"><div style="font-size:2rem;margin-bottom:10px">📊</div><h3 style="margin:0 0 6px;color:#20103E;font-size:1.05rem">Team Performance</h3><p style="margin:0;color:#726b82;font-weight:600;font-size:.9rem;line-height:1.5">Daily badge and submission highlights will be published here.</p></div>
+
+    <section class="updates-action-panel" aria-labelledby="updates-action-title">
+      <h2 id="updates-action-title">What You Need To Do</h2>
+      <p>Use the official update stream as your single source of current programme information.</p>
+      <div class="updates-action-grid">
+        <article><strong>Check regularly</strong><ul><li>Open this page before every session</li><li>Read the pinned notice first</li></ul></article>
+        <article><strong>Confirm relevance</strong><ul><li>Check the category and audience</li><li>Identify whether your role is affected</li></ul></article>
+        <article><strong>Take action</strong><ul><li>Follow the stated instruction</li><li>Complete it before the deadline</li></ul></article>
+        <article><strong>Ask for help</strong><ul><li>Do not rely on unofficial messages</li><li>Contact the secretariat if unclear</li></ul></article>
       </div>
     </section>
 
-    <section class="reveal" style="margin-bottom: 5rem;">
-      <div class="sequence-block" style="min-height:auto;padding:3rem;background:linear-gradient(135deg,#20103E,#5A36C9);color:#fff">
-        <span class="stage-badge" style="background:#D9AF37;color:#20103E">Pinned CAMP21 Notice</span>
-        <h2 id="pinnedNoticeTitle" style="font-size: 2.2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 1rem; color: #fff;">Official Updates Will Appear Here</h2>
-        <p id="pinnedNoticeBody" style="font-size: 1.15rem; font-weight: 600; line-height: 1.5; max-width: 900px;">
-          This page will be used for official CAMP21 announcements, schedule adjustments, venue reminders and urgent notices during the programme. Please check this page daily during CAMP21.
-        </p>
-      </div>
-    </section>
-
-    <section style="margin-bottom: 6rem;">
-      
-      <div class="sync-status-indicator class-reveal">
-        <div class="pulse-dot"></div>
-        <span id="dataPipelineStatusLabel">Polling real-time database updates from the SMART DT Hub...</span>
-      </div>
-
-      <div class="filter-row-container reveal">
-        <button class="filter-badge-pill active" onclick="filterBroadcastFeed('all')">All Feeds</button>
-        <button class="filter-badge-pill" onclick="filterBroadcastFeed('logistics')">Logistics 🚌</button>
-        <button class="filter-badge-pill" onclick="filterBroadcastFeed('deadlines')">Deadlines ⏰</button>
-        <button class="filter-badge-pill" onclick="filterBroadcastFeed('workshop')">Workshop Notes 💡</button>
-      </div>
-
-      <div id="centralLiveFeedStreamContainer">
-        
-        <div class="fluid-row reveal update-item-row" data-category="deadlines">
-          <div style="display: flex; flex-direction: column; gap: 0.2rem;">
-            <div style="font-weight: 800; font-size: 1.15rem;">CAMP21 Live Update Board Ready</div>
-            <div style="font-size: 0.85rem; color: #666; font-weight: 600;">Pushed: Pre-camp setup · Official notice</div>
+    <section class="update-sections" aria-label="CAMP21 update sections">
+      <details class="update-section update-theme-navy" id="latest-announcements" open>
+        <summary data-section="01"><div class="section-heading"><h2>Latest Announcements</h2><p>Pinned notices and the complete official broadcast stream.</p></div><span class="section-chevron">⌄</span></summary>
+        <div class="update-section-body">
+          <div class="pinned-update"><span class="stage-badge">Pinned CAMP21 Notice</span><h2 id="pinnedNoticeTitle">Official Updates Will Appear Here</h2><p id="pinnedNoticeBody">This page will be used for official CAMP21 announcements, schedule adjustments, venue reminders and urgent notices during the programme. Please check this page daily during CAMP21.</p></div>
+          <div class="sync-status-indicator"><div class="pulse-dot"></div><span id="dataPipelineStatusLabel">Polling real-time database updates from the SMART DT Hub...</span></div>
+          <p class="update-filter-label">Filter by update type</p>
+          <div class="filter-row-container" aria-label="Update category filters">
+            <button class="filter-badge-pill category-filter active" data-filter="all" onclick="filterBroadcastFeed('all')">All Updates</button>
+            <button class="filter-badge-pill category-filter" data-filter="logistics" onclick="filterBroadcastFeed('logistics')">Programme &amp; Venue</button>
+            <button class="filter-badge-pill category-filter" data-filter="deadlines" onclick="filterBroadcastFeed('deadlines')">Deadlines</button>
+            <button class="filter-badge-pill category-filter" data-filter="workshop" onclick="filterBroadcastFeed('workshop')">Resources</button>
+            <button class="filter-badge-pill category-filter" data-filter="urgent" onclick="filterBroadcastFeed('urgent')">Urgent Alerts</button>
           </div>
-          <div style="font-weight: 700; max-width: 450px; font-size: 0.95rem; color: #333;">
-            Latest updates will appear here when the organiser team publishes official announcements through the CAMP21 update stream.
+          <p class="update-filter-label">Filter by audience</p>
+          <div class="filter-row-container" aria-label="Audience filters">
+            <button class="filter-badge-pill role-filter active" data-role="all" onclick="filterByRole('all')">Everyone</button>
+            <button class="filter-badge-pill role-filter" data-role="participants" onclick="filterByRole('participants')">Participants</button>
+            <button class="filter-badge-pill role-filter" data-role="trainers" onclick="filterByRole('trainers')">Trainers</button>
+            <button class="filter-badge-pill role-filter" data-role="facilitators" onclick="filterByRole('facilitators')">Facilitators</button>
+            <button class="filter-badge-pill role-filter" data-role="judges" onclick="filterByRole('judges')">Judges</button>
+            <button class="filter-badge-pill role-filter" data-role="organisers" onclick="filterByRole('organisers')">Organisers</button>
           </div>
-          <span class="meta-tag" style="background:#5A36C9;color:#fff;font-weight:900;border-radius:999px;padding:6px 14px;font-size:.78rem">Info</span>
+          <div id="centralLiveFeedStreamContainer" class="update-stream">
+            <div class="update-item-row" data-category="deadlines" data-audience="all"><div><strong>CAMP21 Live Update Board Ready</strong><small>Pushed: Pre-camp setup · Official notice</small></div><div>Latest updates will appear here when the organiser team publishes official announcements through the CAMP21 update stream.</div><span class="meta-tag" style="background:#6540dd;color:#fff;font-weight:900;border-radius:999px;padding:6px 14px">Info</span></div>
+          </div>
         </div>
+      </details>
 
-      </div>
+      <details class="update-section update-theme-violet" id="programme-changes"><summary data-section="02"><div class="section-heading"><h2>Programme &amp; Venue Changes</h2><p>Session times, room movements, transport and venue notices.</p></div><span class="section-chevron">⌄</span></summary><div class="update-section-body"><div class="update-empty-card"><h3>Use this section when:</h3><ul><li>A session time or programme sequence changes</li><li>A team must move to another room or activity area</li><li>Transport, arrival or venue instructions are updated</li></ul></div><button class="section-jump" onclick="openFeedFilter('logistics')">View programme and venue updates</button></div></details>
+      <details class="update-section update-theme-olive" id="submission-deadlines"><summary data-section="03"><div class="section-heading"><h2>Submission Deadlines</h2><p>Template, reflection, pitch and evidence submission cut-offs.</p></div><span class="section-chevron">⌄</span></summary><div class="update-section-body"><div class="update-empty-card"><h3>Check each deadline for:</h3><ul><li>The exact submission item and responsible audience</li><li>The due date, time and approved submission channel</li><li>Any action required before the next programme phase</li></ul></div><button class="section-jump" onclick="openFeedFilter('deadlines')">View deadline updates</button></div></details>
+      <details class="update-section update-theme-gold" id="resource-updates"><summary data-section="04"><div class="section-heading"><h2>Resources &amp; Template Updates</h2><p>Smart DT templates, workshop notes and official resource releases.</p></div><span class="section-chevron">⌄</span></summary><div class="update-section-body"><div class="update-empty-card"><h3>Resource notices may include:</h3><ul><li>Newly unlocked template or phase folders</li><li>Corrected files, workshop notes or replacement links</li><li>Instructions about which official version to use</li></ul></div><button class="section-jump" onclick="openFeedFilter('workshop')">View resource updates</button></div></details>
+      <details class="update-section update-theme-rose" id="important-alerts"><summary data-section="05"><div class="section-heading"><h2>Important Alerts</h2><p>Urgent instructions requiring immediate attention or action.</p></div><span class="section-chevron">⌄</span></summary><div class="update-section-body"><div class="update-empty-card"><h3>If an urgent alert appears:</h3><ul><li>Stop and read the entire official instruction</li><li>Confirm who is affected and what action is required</li><li>Inform your team and contact the secretariat if clarification is needed</li></ul></div><button class="section-jump" onclick="openFeedFilter('urgent')">View urgent alerts</button></div></details>
+      <details class="update-section update-theme-navy" id="archived-updates"><summary data-section="06"><div class="section-heading"><h2>Archived Updates</h2><p>Completed, superseded or no-longer-active notices for reference.</p></div><span class="section-chevron">⌄</span></summary><div class="update-section-body"><div class="update-empty-card"><h3>Archive guidance</h3><ul><li>Use archived notices only for reference</li><li>Follow the newest active announcement if instructions differ</li><li>Confirm uncertain information with the secretariat</li></ul></div></div></details>
     </section>
   </main>
 
@@ -374,11 +482,11 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 
     async function synchronizeLiveBroadcasts() {
       const stateLabel = document.getElementById('dataPipelineStatusLabel');
-      
+
       try {
         const response = await fetch(`${MASTER_APPS_SCRIPT_UPDATES_URL}?action=getAnnouncements`);
         const dataset = await response.json();
-        
+
         if (dataset && dataset.length > 0) {
           rebuildBroadcastDOM(dataset);
           stateLabel.innerText = "Synchronized directly with central web sheets console.";
@@ -391,7 +499,7 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 
     function rebuildBroadcastDOM(itemsArray) {
       const container = document.getElementById('centralLiveFeedStreamContainer');
-      container.innerHTML = ''; 
+      container.innerHTML = '';
 
       itemsArray.forEach(msg => {
         if (msg.isPinned === true || msg.isPinned === "TRUE") {
@@ -402,35 +510,58 @@ summary.qa-trigger .qa-chev, .qa-home .qa-h-chev{color:#fff!important}
 
         const row = document.createElement('div');
         row.className = 'fluid-row reveal active update-item-row';
-        row.setAttribute('data-category', msg.category.toLowerCase());
-        
+        const category = String(msg.category || 'general').toLowerCase();
+        const audience = String(msg.audience || msg.role || 'all').toLowerCase();
+        row.setAttribute('data-category', category);
+        row.setAttribute('data-audience', audience);
+
         row.innerHTML = `
           <div style="display: flex; flex-direction: column; gap: 0.2rem;">
             <div style="font-weight: 800; font-size: 1.15rem;">${msg.title}</div>
             <div style="font-size: 0.85rem; color: #666; font-weight: 600;">Pushed: ${msg.timestamp}</div>
           </div>
-          <div style="font-weight: 700; max-width: 450px; font-size: 0.95rem; color: #333;">${msg.text}</div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: #333;">${msg.text}${msg.action ? `<div style="margin-top:8px;color:#151044"><strong>Action:</strong> ${msg.action}</div>` : ''}</div>
           <span class="meta-tag" style="background: ${msg.category === 'Deadlines' ? '#F05AA6' : '#5A36C9'}; color:#fff; font-weight:900;">${msg.tagLabel}</span>
         `;
         container.appendChild(row);
       });
+      applyUpdateFilters();
     }
 
     function filterBroadcastFeed(categoryKey) {
-      document.querySelectorAll('.filter-badge-pill').forEach(btn => {
+      document.querySelectorAll('.category-filter').forEach(btn => {
         btn.classList.remove('active');
-        if(btn.innerText.toLowerCase().includes(categoryKey.toLowerCase()) || (categoryKey === 'all' && btn.innerText.includes('All'))) {
+        if(btn.dataset.filter === categoryKey) {
           btn.classList.add('active');
         }
       });
+      window.activeUpdateCategory = categoryKey;
+      applyUpdateFilters();
+    }
 
+    function filterByRole(roleKey) {
+      document.querySelectorAll('.role-filter').forEach(btn => btn.classList.toggle('active', btn.dataset.role === roleKey));
+      window.activeUpdateRole = roleKey;
+      applyUpdateFilters();
+    }
+
+    function applyUpdateFilters() {
+      const category = window.activeUpdateCategory || 'all';
+      const role = window.activeUpdateRole || 'all';
       document.querySelectorAll('.update-item-row').forEach(row => {
-        if (categoryKey === 'all' || row.getAttribute('data-category') === categoryKey) {
-          row.style.display = 'flex';
-        } else {
-          row.style.display = 'none';
-        }
+        const rowCategory = row.dataset.category || 'general';
+        const audiences = (row.dataset.audience || 'all').split(',').map(value => value.trim());
+        const categoryMatch = category === 'all' || rowCategory === category;
+        const roleMatch = role === 'all' || audiences.includes('all') || audiences.includes(role);
+        row.style.display = categoryMatch && roleMatch ? 'grid' : 'none';
       });
+    }
+
+    function openFeedFilter(categoryKey) {
+      const latest = document.getElementById('latest-announcements');
+      latest.open = true;
+      filterBroadcastFeed(categoryKey);
+      latest.scrollIntoView({behavior:'smooth', block:'start'});
     }
 
     setInterval(synchronizeLiveBroadcasts, 60000);
